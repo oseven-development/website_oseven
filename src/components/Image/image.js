@@ -1,6 +1,16 @@
-import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+/** @format */
+
+import React from 'react'
+import {StaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image'
+
+/* Philipp Schmid */
+/* TODO:// für später
+Gastby-Image ist für performance da. siehe https://codebushi.com/using-gatsby-image/
+
+- Damit kann man dynamisch skallierende Bilder laden //#endregion
+ABER!!
+- mann muss diese alle registieren und das mit einbauen wann er was laden soll.
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -17,7 +27,7 @@ const Image = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        placeholderImage: file(relativePath: {eq: "gatsby-astronaut.png"}) {
           childImageSharp {
             fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
@@ -28,6 +38,6 @@ const Image = () => (
     `}
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
-);
+)
 
-export default Image;
+export default Image

@@ -1,0 +1,16 @@
+{
+    "extends": ["react-app", "prettier", "prettier/react"],
+    "plugins": ["prettier", "jsx-a11y", "react", "flowtype", "import"],
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "generators": true,
+            "experimentalObjectRestSpread": true
+        }
+    }
+}
