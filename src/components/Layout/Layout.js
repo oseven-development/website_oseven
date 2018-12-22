@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+
 import {StaticQuery, graphql, Link} from 'gatsby'
 
 import {Header} from '../Header'
@@ -42,11 +42,6 @@ const Layout = ({children}) => {
         <>
           <ResetStyle />
 
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[{name: 'description', content: 'Sample'}, {name: 'keywords', content: 'sample, something'}]}>
-            <html lang="en" />
-          </Helmet>
           <Header title={data.site.siteMetadata.title} navigation={navigationItems} />
 
           <Container>{children}</Container>

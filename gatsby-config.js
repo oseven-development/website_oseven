@@ -3,6 +3,8 @@
 module.exports = {
   siteMetadata: {
     title: 'O-Seven',
+    description: 'O-Seven Website',
+    author: 'Philipp Schmid',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
