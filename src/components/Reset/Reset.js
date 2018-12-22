@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import { darken, rgba } from 'polished';
+/** @format */
 
-import { COLOR } from '../../constants';
+import {createGlobalStyle} from 'styled-components'
+import {darken, rgba} from 'polished'
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 const normalize = `
@@ -39,13 +39,13 @@ const normalize = `
   summary{display:list-item}
   template{display:none}
   [hidden]{display:none}
-`;
+`
 
 const headerStyle = `
   margin: 0;
   margin-bottom: 1rem;
   font-weight: 700;
-`;
+`
 
 export const ResetStyle = createGlobalStyle`
   ${normalize}
@@ -60,11 +60,11 @@ export const ResetStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: ${COLOR.BLACK};
+    
   }
 
   body {
-    background: ${COLOR.WHITE};
+    
   }
 
   h1 {
@@ -102,13 +102,12 @@ export const ResetStyle = createGlobalStyle`
   }
 
   a {
-    background-color: transparent;
-    color: ${COLOR.BLUE};
+  
     text-decoration: none;
 
     &:focus,
     &:hover {
-      color: ${darken(0.2, COLOR.BLUE)};
+
       text-decoration: underline;
     }
   }
@@ -126,14 +125,14 @@ export const ResetStyle = createGlobalStyle`
   hr {
     margin: 1rem 0;
     height: 0.2rem;
-    background: ${rgba(COLOR.BLACK, 0.15)};
+
     border: none;
   }
 
   blockquote {
     margin: 0 0 1rem 1rem;
     padding: 0.25rem 0 0.25rem 1rem;
-    border-left: 0.2rem solid ${rgba(COLOR.BLACK, 0.15)};
+ 
 
     p:last-child {
       margin-bottom: 0;
@@ -142,14 +141,14 @@ export const ResetStyle = createGlobalStyle`
 
   code {
     padding: 0.05rem 0.4rem;
-    background-color: ${rgba(COLOR.BLACK, 0.075)};
+ 
   }
 
   pre {
     margin: 0;
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: ${rgba(COLOR.BLACK, 0.075)};
+
     font-size: 0.8rem;
 
     code {
@@ -157,4 +156,4 @@ export const ResetStyle = createGlobalStyle`
       background-color: transparent;
     }
   }
-`;
+`

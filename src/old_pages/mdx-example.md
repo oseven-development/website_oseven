@@ -1,3 +1,5 @@
+<!-- @format -->
+
 import { Button } from '../components/Button';
 
 # Markdown Example

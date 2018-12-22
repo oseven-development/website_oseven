@@ -1,3 +1,5 @@
-import { ResetStyle } from './Reset';
+/** @format */
 
-export { ResetStyle };
+import {ResetStyle} from './Reset'
+
+export {ResetStyle}
