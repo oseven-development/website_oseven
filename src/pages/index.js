@@ -7,15 +7,15 @@ import {Layout} from '../components/Layout'
 
 import {BackgroundImage} from '../components/backgroundImage'
 import {Container} from '../components/Container'
-
+import Logo from '../assets/images/logo-white.svg'
 import background from '../assets/images/backgrounds/home.jpg'
+import {AnimatedLogo} from '../components/Animate/animatedLogo'
 
 const IndexPage = () => (
   <Layout>
     <section className="background-Section" id="bg1">
-      <BackgroundImage img={background} style={{position: 'fixed'}} />
       <Container>
-        <h1>Hi there!</h1>
+        <AnimatedLogo />
         <p>
           <strong>Thanks for using awesome-gatsby-starter!</strong> Remember to
           <a href="https://github.com/South-Paw/awesome-gatsby-starter">drop a ⭐ on the project</a> if you find it
@@ -28,3 +28,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+// <BackgroundImage img={background} style={{position: 'fixed'}} />
