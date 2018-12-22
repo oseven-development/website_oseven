@@ -16,20 +16,14 @@ const Header = props => (
 		style={{
 			background: theme.colors.lightwhite,
 		}}
+		alignItems="center"
 		justifyContent="space-between">
-		<Box>
-			<div>
-				<Link
-					to="/"
-					style={{
-						color: theme.colors.black,
-						textDecoration: 'none',
-					}}>
-					<Image width={[1, 1, 1 / 2]} src={logo} />
-				</Link>
-			</div>
+		<Box style={{height: '60px'}}>
+			<Link to="/">
+				<Image width={[1, 1, 1]} src={logo} height={55} />
+			</Link>
 		</Box>
-		<Box>
+		<Box style={{marginRight: '20px'}}>
 			<div className={`button ${props.isMenuVisible ? 'active' : ''}`} onClick={props.onToggleMenu}>
 				<span />
 			</div>

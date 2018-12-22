@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import {OpacityTransition} from '../Transition'
+import {Flex, Box} from 'rebass'
 import '../../assets/style/navigation.styl'
 
 const NAV_ITEMS = [
@@ -37,7 +38,9 @@ const NavList = NAV_ITEMS.map(e => {
 
 export const Navigation = props => (
 	<OpacityTransition className={`overlay-navigation ${props.isMenuVisible ? 'overlay-slide-down' : ''}`}>
-		<ul className="level1">{NavList}</ul>
+		<Flex justifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
+			<ul className="level1">{NavList}</ul>
+		</Flex>
 	</OpacityTransition>
 )
 
