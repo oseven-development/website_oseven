@@ -15,17 +15,11 @@ const IndexPage = () => (
   <Layout>
     <section className="background-Section" id="bg1">
       <Container>
+        <BackgroundImage img={background} style={{position: 'fixed'}} />
         <AnimatedLogo />
-        <p>
-          <strong>Thanks for using awesome-gatsby-starter!</strong> Remember to
-          <a href="https://github.com/South-Paw/awesome-gatsby-starter">drop a ⭐ on the project</a> if you find it
-          useful.
-        </p>
-        <Link to="/page-2/">Go to page 2</Link>
       </Container>
     </section>
   </Layout>
 )
 
 export default IndexPage
-// <BackgroundImage img={background} style={{position: 'fixed'}} />

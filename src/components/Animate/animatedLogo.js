@@ -11,6 +11,7 @@ export class AnimatedLogo extends Component {
       .add({
         targets: '#lineDrawing .lines path',
         strokeDashoffset: [anime.setDashoffset, 0],
+        stroke: '#ccc',
         easing: 'easeInOutCubic',
         duration: 1000,
         delay: function(el, i) {
@@ -46,40 +47,40 @@ export class AnimatedLogo extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{width: 500}}>
         <svg viewBox="0 0 1 0" />
         <div id="lineDrawing" className="logo">
           <svg viewBox="0 0 558.07 130.48">
-            <g fill="none" fillRule="evenodd" stroke="#fff" strokeWidth="1" className="lines">
+            <g fill="none" fillRule="evenodd" stroke="#ccc" strokeWidth="1" className="lines">
               <path
                 className="pt"
                 d="M0,36.6V95.13H52.43l19.4-20.4V15.19H22.41Zm51.88-1.47V66.46L45,75.19H16.94V43.71l8.81-8.58Z"
                 strokeDasharray="316.8546142578125"
-                style={{strokeDasharray: 316.855, fill: 'transparent'}}
+                style={{strokeDasharray: 316.855, fill: 'transparent', stroke: 'transparent'}}
               />
               <path
                 className="pt"
                 d="m 82.82,44.869999 h 39.5 v 19.94 h -39.5 z"
                 strokeDasharray="150"
-                style={{strokeDasharray: 150, fill: 'transparent'}}
+                style={{strokeDasharray: 150, fill: 'transparent' , stroke: 'transparent'}}
               />
               <path
                 className="pt"
                 d="M 538.13,14.96 V 59.82 L 478.31,0 V 14.96 H 398.55 V 34.9 h 79.76 v 9.97 h -79.76 v 19.94 h 79.76 v 9.97 h -79.76 v 19.94 h 79.76 6.26 13.68 V 49.85 l 59.82,59.82 V 14.96 Z"
                 strokeDasharray="1000"
-                style={{strokeDasharray: 1000, fill: 'transparent'}}
+                style={{strokeDasharray: 1000, fill: 'transparent' , stroke: 'transparent'}}
               />
               <path
                 className="pt"
                 d="M 207.07,34.9 227.01,14.96 H 152.24 L 132.3,34.9 v 29.91 h 59.82 l -9.97,9.97 h -44.87 l -19.94,19.94 h 74.78 L 212.06,74.78 V 44.87 h -59.82 l 9.97,-9.97 z"
                 strokeDasharray="900"
-                style={{strokeDasharray: 900, fill: 'transparent'}}
+                style={{strokeDasharray: 900, fill: 'transparent' , stroke: 'transparent'}}
               />
               <path
                 className="pt"
                 d="M 331.7,14.96 H 311.76 232 V 34.9 h 79.76 v 9.97 H 232 v 19.94 h 79.76 v 9.97 H 232 v 19.94 h 79.76 v 29.91 L 391.52,44.87 V 14.96 L 331.7,74.78 Z"
                 strokeDasharray="900"
-                style={{strokeDasharray: 900, fill: 'transparent'}}
+                style={{strokeDasharray: 900, fill: 'transparent' , stroke: 'transparent'}}
               />
               />
             </g>
