@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import theme from '../theme'
 import {Header, Navigation} from '../Header'
-import {Spinner} from './spinner'
+import '../../assets/style/stylesheet.styl'
 
 const GlobalStyle = createGlobalStyle`
   * { box-sizing: border-box; }
@@ -55,15 +55,7 @@ class Layout extends React.Component {
         <ThemeProvider theme={theme}>
           <div>
             <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
-            <div
-              style={{
-                margin: '0 auto',
-                maxWidth: '40rem',
-                padding: '0px 1.0875rem 1.45rem',
-                paddingTop: 0,
-              }}>
-              {children}
-            </div>
+            {children}
             {this.state.isMenuVisible && (
               <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
             )}

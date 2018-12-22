@@ -1,3 +1,5 @@
-import { Button } from './Button';
+/** @format */
 
-export { Button };
+import {Button} from './Button'
+
+export {Button}
