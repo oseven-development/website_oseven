@@ -1,9 +1,11 @@
-import React from 'react';
+/** @format */
 
-import { ButtonWrapper } from './styled';
+import React from 'react'
 
-export const Button = ({ children, ...props }) => (
-  <ButtonWrapper type="button" {...props}>
-    {children}
-  </ButtonWrapper>
-);
+import {ButtonWrapper} from './styled'
+
+export const Button = ({children, ...props}) => (
+	<ButtonWrapper type="button" {...props}>
+		{children}
+	</ButtonWrapper>
+)

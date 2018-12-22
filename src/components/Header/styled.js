@@ -1,41 +1,77 @@
-import styled from 'styled-components';
-import { darken } from 'polished';
+/** @format */
 
-import { COLOR } from '../../constants';
+import styled from 'styled-components'
+import {darken} from 'polished'
 
-export const HeaderWrapper = styled.div`
-  background-color: ${COLOR.REBECCA_PURPLE};
-  border-bottom: 0.2rem solid ${darken(0.2, COLOR.REBECCA_PURPLE)};
-`;
+import theme from '../theme'
 
-export const HeaderInner = styled.div`
-  display: flex;
-  flex-flow: nowrap row;
-`;
+import React from 'react'
 
-export const SiteTitle = styled.h1`
-  margin: 0;
-  color: ${COLOR.WHITE};
-`;
+// export const HeaderWrapper = styled.div`
+//   background-color: ${theme.color.lightwhite};
+// `
 
-export const Navigation = styled.div`
-  margin-left: auto;
-  display: flex;
-  flex-flow: nowrap row;
-  align-items: flex-end;
+// export const HeaderInner = styled.div`
+//   display: flex;
+//   flex-flow: nowrap row;
+// `
+export const styledMenu = styled.svg`
+	animation: rotate 2s linear infinite;
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
 
-  & > * {
-    margin-left: 1rem;
-    color: ${COLOR.WHITE};
-    cursor: pointer;
+	& .path {
+		stroke: #5652bf;
+		stroke-linecap: round;
+		animation: dash 1.5s ease-in-out infinite;
+	}
 
-    &:focus,
-    &:hover {
-      color: ${darken(0.2, COLOR.WHITE)};
-    }
-  }
+	@keyframes rotate {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 
-  & > *:first-child {
-    margin-left: 0;
-  }
-`;
+	@keyframes dash {
+		0% {
+			stroke-dasharray: 1, 150;
+			stroke-dashoffset: 0;
+		}
+		50% {
+			stroke-dasharray: 90, 150;
+			stroke-dashoffset: -35;
+		}
+		100% {
+			stroke-dasharray: 90, 150;
+			stroke-dashoffset: -124;
+		}
+	}
+`
+
+// export const SiteTitle = styled.h1`
+//   margin: 0;
+//   color: ${COLOR.WHITE};
+// `
+
+// export const Navigation = styled.div`
+//   margin-left: auto;
+//   display: flex;
+//   flex-flow: nowrap row;
+//   align-items: flex-end;
+
+//   & > * {
+//     margin-left: 1rem;
+//     color: ${COLOR.WHITE};
+//     cursor: pointer;
+
+//     &:focus,
+//     &:hover {
+//       color: ${darken(0.2, COLOR.WHITE)};
+//     }
+//   }
+
+//   & > *:first-child {
+//     margin-left: 0;
+//   }
+// `
