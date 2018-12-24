@@ -10,30 +10,86 @@ import '../../assets/style/navigation.styl'
 const nav_items = [
   {
     to: '/',
-    label: 'Index',
+    label: 'Home',
   },
   {
-    to: '/page-3',
-    label: 'Page 2',
+    label: 'Produkte',
+    to: [
+      {
+        to: '/website',
+        label: 'Webseiten',
+      },
+      {
+        to: '/Applikation',
+        label: 'Applikation',
+      },
+    ],
   },
   {
-    to: '/page-4',
-    label: 'Test',
+    label: 'Consulting & Solutions',
+    to: [
+      {
+        to: '/businessReportingAndAnalysis',
+        label: 'Business Reporting & Analysis',
+      },
+      {
+        to: '/consulting',
+        label: 'Consutling',
+      },
+    ],
   },
   {
-    to: '/mdx-example',
-    label: 'Markdown Example',
+    label: 'Referenzen',
+    to: [
+      {
+        to: '/referenzen',
+        label: 'Partner',
+      },
+      {
+        to: '/story',
+        label: 'Stories',
+      },
+    ],
+  },
+  {
+    to: '/contact',
+    label: 'Kontakt',
+  },
+  {
+    to: '/impressum',
+    label: 'Impressum',
   },
 ]
 
-const NavList = nav_items.map(e => {
-  return (
+const hierachyList = arr => {
+  return arr.map(e => (
     <li key={e.to}>
       <Link className="li-level1" to={e.to}>
         {e.label}
       </Link>
     </li>
-  )
+  ))
+}
+
+const NavList = nav_items.map(e => {
+  if (Array.isArray(e.to)) {
+    return (
+      <React.Fragment>
+        <span className="li-level1">{e.label}</span>
+        <ul key={e.to} className="level1">
+          {hierachyList(e.to)}
+        </ul>
+      </React.Fragment>
+    )
+  } else {
+    return (
+      <li key={e.to}>
+        <Link className="li-level1" to={e.to}>
+          {e.label}
+        </Link>
+      </li>
+    )
+  }
 })
 
 export const Navigation = props => (
