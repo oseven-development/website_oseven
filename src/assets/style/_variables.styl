@@ -1,0 +1,70 @@
+// main: ../main.styl
+
+
+// $desktop = "all and (min-width: 1500px)"
+// $laptop = "(min-width:1025px) and (max-width: 1499px)"
+// $tablet = "(min-width: 481px) and (max-width: 1024px)"
+// $mobile = "all and (max-width:480px)"
+// $global = ($desktop $laptop $tablet $mobile)
+// Media--
+// $fourk  = "(min-width: 2000px)"
+// $xhuge  = "(min-width: 1500px)"
+// $huge   = "(min-width: 1281px)"
+// $xlarge = "(min-width: 1025px)"
+// $large  = "(min-width: 961px)"
+// $medium = "(min-width: 641px)"
+// $small  = "(min-width: 481px)"
+// $tiny   = "(min-width: 0px)"
+// $global = ($tiny $small $medium $large $xlarge $huge $xhuge $fourk)
+
+
+// $SmallAsHigh =  (1 .9 .8 .75 .65 .55 .5 .45)
+// $SmallAsLow =   (.45 .5 .55 .65 .75 .8 .9 1)
+// $mobilepadding =   (15 20 20 0 0 0 0 0)
+// :root
+//   for i in (0..(length($global) - 1))
+//     $a = $SmallAsHigh[i]
+//     $b = $SmallAsLow[i]
+//     $c = $mobilepadding[i]
+//     @media $global[i]
+//       --SmallAsHigh $a
+//       --SmallAsLow $b
+//       --mobilePadding $c px
+
+
+// Colors!
+
+$color-navigation-bg = #232323
+$heigh-navigation = 55px
+$color-main = #ff7e00
+$color-second = #2A326C
+
+$color-contrast = #306efe
+$text-color = #333
+$color-black = #232323
+
+
+// Fonts!
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+// @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic")
+
+@font-face
+  font-family 'Quicksand'
+  src url('../fonts/Quicksand/Quicksand-Light.ttf')
+  format('truetype')
+  font-weight 100, 200, 300
+
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/Open_Sans/OpenSans-Light.ttf')
+  format('truetype')
+  font-weight 100
+  font-weight 200
+  font-weight 300
+@font-face
+  font-family 'OpenSans'
+  src url('../fonts/Open_Sans/OpenSans-Bold.ttf')
+  format('truetype')
+  font-weight 500
+  font-weight 600
+  font-weight 700

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import theme from '../theme'
 import {Header, Navigation} from '../Header'
+import {Footer} from '../Footer'
 import '../../assets/style/stylesheet.styl'
 
 const GlobalStyle = createGlobalStyle`
@@ -62,6 +63,7 @@ class Layout extends React.Component {
             {this.state.isMenuVisible && (
               <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
             )}
+            <Footer />
           </div>
         </ThemeProvider>
       </div>
