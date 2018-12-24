@@ -2,15 +2,13 @@
 
 import React from 'react'
 import {Flex} from 'rebass'
-import {Layout} from '../components/Layout'
+import {Layout, Seo, AnimatedLogo, Container, BackgroundImage} from '../components'
 
-import {BackgroundImage} from '../components/backgroundImage'
-import {Container} from '../components/Container'
 import background from '../assets/images/backgrounds/home.jpg'
-import {AnimatedLogo} from '../components/Animate/animatedLogo'
 
 const IndexPage = () => (
   <Layout>
+    <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <BackgroundImage img={background} bgColor={'linear-gradient(90deg, #111 0%, #555 100%)'}>
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
         <Container>
