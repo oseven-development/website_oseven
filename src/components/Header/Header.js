@@ -10,12 +10,7 @@ import '../../assets/style/menu.styl'
 // import {HeaderWrapper, HeaderInner, SiteTitle, Navigation} from './styled'
 
 const Header = props => (
-  <Flex
-    style={{
-      background: theme.colors.lightwhite,
-    }}
-    alignItems="center"
-    justifyContent="space-between">
+  <Flex className={`strip ${props.isMenuVisible ? 'active' : ''}`} alignItems="center" justifyContent="space-between">
     <Box style={{height: '60px'}}>
       <Link to="/">
         <Image width={[1, 1, 1]} src={logo} height={55} />

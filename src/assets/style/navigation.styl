@@ -1,5 +1,22 @@
 @import './_variables.styl'
 
+.strip
+  width: 100%
+  height: $heigh-navigation
+  background: whitesmoke
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  padding-right: 20px
+  box-shadow: 0 0 5px black
+  transition: .5s all
+  opacity: 0.95
+  &.active
+    background: $color-navigation-bg
+    box-shadow: none
+
+
 .overlay-navigation
   position: absolute;
   z-index: 10
