@@ -20,7 +20,7 @@ const nav_items = [
         label: 'Webseiten',
       },
       {
-        to: '/Applikation',
+        to: '/application',
         label: 'Applikation',
       },
     ],
@@ -29,7 +29,7 @@ const nav_items = [
     label: 'Consulting & Solutions',
     to: [
       {
-        to: '/businessReportingAndAnalysis',
+        to: '/businessreportingandanalysis',
         label: 'Business Reporting & Analysis',
       },
       {
