@@ -13,6 +13,9 @@ body {
   margin: 0;
   font-family: Cabin;
 }
+ul {
+  list-style-type: none;
+}
 `
 
 class Layout extends React.Component {

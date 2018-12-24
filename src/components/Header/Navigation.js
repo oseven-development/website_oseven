@@ -64,7 +64,7 @@ const nav_items = [
 const hierachyList = arr => {
   return arr.map(e => (
     <li key={e.to}>
-      <Link className="li-level1" to={e.to}>
+      <Link className="slide-in-nav-item" to={e.to}>
         {e.label}
       </Link>
     </li>
@@ -74,12 +74,12 @@ const hierachyList = arr => {
 const NavList = nav_items.map(e => {
   if (Array.isArray(e.to)) {
     return (
-      <React.Fragment>
+      <li className="li-level1 slide-in-nav-item ">
         <span className="li-level1">{e.label}</span>
-        <ul key={e.to} className="level1">
+        <ul key={e.to} className="level2">
           {hierachyList(e.to)}
         </ul>
-      </React.Fragment>
+      </li>
     )
   } else {
     return (
