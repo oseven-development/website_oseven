@@ -5,7 +5,7 @@ import {Link} from 'gatsby'
 
 import {Layout} from '../components/Layout'
 
-const ImpressumPage = () => (
+const ContactPage = () => (
   <Layout>
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
@@ -13,4 +13,4 @@ const ImpressumPage = () => (
   </Layout>
 )
 
-export default ImpressumPage
+export default ContactPage

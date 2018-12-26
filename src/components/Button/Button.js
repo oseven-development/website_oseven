@@ -1,11 +1,11 @@
 /** @format */
 
-// import React from 'react'
+import React from 'react'
 
-// import {ButtonWrapper} from './styled'
+import {ButtonWrapper} from './styled'
 
-// export const Button = ({children, ...props}) => (
-//   <ButtonWrapper type="button" {...props}>
-//     {children}
-//   </ButtonWrapper>
-// )
+export const Button = ({children, ...props}) => (
+  <ButtonWrapper type="button" {...props}>
+    {children}
+  </ButtonWrapper>
+)
