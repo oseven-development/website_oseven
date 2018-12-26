@@ -17,6 +17,9 @@ body {
 ul {
   list-style-type: none;
 }
+a {
+  text-decoration: none;
+}
 `
 
 class Layout extends React.Component {
@@ -60,10 +63,13 @@ class Layout extends React.Component {
           <div>
             <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
             {children}
-            {this.state.isMenuVisible && (
-              <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
-            )}
+
             <Footer />
+            <nav id="menu">
+              {this.state.isMenuVisible && (
+                <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
+              )}
+            </nav>
           </div>
         </ThemeProvider>
       </div>

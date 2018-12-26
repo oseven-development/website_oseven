@@ -5,11 +5,14 @@ import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
 import '../../assets/style/footer.styl'
 import logo from '../../assets/images/logo-o-seven-07.svg'
+import {FaPhone, FaEnvelope} from 'react-icons/fa'
+import theme from '../theme'
+
 // import {Container} from '../Container'
 // import {HeaderWrapper, HeaderInner, SiteTitle, Navigation} from './styled'
 
 const Footer = props => (
-  <Flex id="bottom-footer" flexDirection="column">
+  <Flex id="bottom-footer" flexDirection="column" style={{color: '#333'}}>
     <Box>
       <Flex flexDirection="row">
         <Box width={[1 / 2, 1 / 2]}>
@@ -22,13 +25,14 @@ const Footer = props => (
           <ul className="contact">
             <li>Maximilian Hänsel</li>
             <li>
-              <a href="tel:+491634412159">
-                <i className="fa fa-phone" /> Tel: 01634412159
+              <a href="tel:+491634412159" className="icon-wrapper">
+                <FaPhone style={{fill: theme.colors.text, magrinRight: 3}} className="icon" /> Tel: 01634412159
               </a>
             </li>
             <li>
-              <a href="mailto:info@o-seven.de">
-                <i className="fas fa-envelope" /> info@o-seven.de
+              <a href="mailto:info@o-seven.de" className="icon-wrapper">
+                <FaEnvelope style={{fill: theme.colors.text, magrinRight: 3}} className="icon" />
+                info@o-seven.de
               </a>
             </li>
             <li>

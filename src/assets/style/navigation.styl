@@ -1,16 +1,24 @@
 @import './_variables.styl'
 
+#menu
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
 .strip
   width: 100%
-  height: $heigh-navigation
+  height: 55px
   background: whitesmoke
   position: fixed
   top: 0
   left: 0
   z-index: 100
-  padding-right: 20px
   box-shadow: 0 0 5px black
-  transition: .5s all
+  transition: 0s all
   opacity: 0.95
   &.active
     background: $color-navigation-bg
@@ -25,7 +33,7 @@
   width: 100%;
   height: calc(100% - 55px);
   overflow:hidden
-  background-color: hsla(0, 0%, 0%, 0.8);
+  background-color: $color-navigation-bg
   ul.level1
     text-align: center
     text-decoration: none
