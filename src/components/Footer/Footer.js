@@ -7,20 +7,43 @@ import '../../assets/style/footer.styl'
 import logo from '../../assets/images/logo-o-seven-07.svg'
 import {FaPhone, FaEnvelope} from 'react-icons/fa'
 import theme from '../theme'
+import nav_items from '../Header/NavigationItems'
 
-// import {Container} from '../Container'
-// import {HeaderWrapper, HeaderInner, SiteTitle, Navigation} from './styled'
+const NavList = nav_items.map(e => {
+  if (Array.isArray(e.to)) {
+    return e.to.map(e2 => {
+      console.log(e2.to)
+      return (
+        <li key={e2.to}>
+          <Link to={e2.to}>{e2.label}</Link>
+        </li>
+      )
+    })
+  } else {
+    return (
+      <li key={e.to}>
+        <Link className="li-level1" to={e.to}>
+          {e.label}
+        </Link>
+      </li>
+    )
+  }
+})
 
 const Footer = props => (
-  <Flex id="bottom-footer" flexDirection="column" style={{color: '#333'}}>
+  <Flex id="bottom-footer" flexDirection="column" style={{color: '#333', width: '100%'}}>
     <Box>
-      <Flex flexDirection="row">
-        <Box width={[1 / 2, 1 / 2]}>
+      <Flex flexDirection="row" flexWrap="wrap">
+        <Box width={[1, 1 / 3, 1 / 3]}>
+          <h3>Navigation</h3>
+          <ul className="navigation-bottom">{NavList}</ul>
+        </Box>
+        <Box width={[1, 1 / 3, 1 / 3]}>
           <Link to="/">
             <Image width={250} src={logo} />
           </Link>
         </Box>
-        <Box width={[1 / 2, 1 / 2]}>
+        <Box width={[1, 1 / 3, 1 / 3]}>
           <h3>Kontaktdaten</h3>
           <ul className="contact">
             <li>Maximilian Hänsel</li>

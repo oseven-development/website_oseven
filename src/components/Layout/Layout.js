@@ -63,9 +63,8 @@ class Layout extends React.Component {
           <div>
             <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
             {children}
-
             <Footer />
-            <nav id="menu">
+            <nav id="menu" style={this.state.isMenuVisible ? {height: '100%'} : {}}>
               {this.state.isMenuVisible && (
                 <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
               )}

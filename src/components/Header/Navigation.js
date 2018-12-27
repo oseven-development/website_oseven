@@ -6,60 +6,7 @@ import {Link} from 'gatsby'
 import {OpacityTransition} from '../Transition'
 import {Flex} from 'rebass'
 import '../../assets/style/navigation.styl'
-
-const nav_items = [
-  {
-    to: '/',
-    label: 'Home',
-  },
-  {
-    label: 'Produkte',
-    to: [
-      {
-        to: '/website',
-        label: 'Webseiten',
-      },
-      {
-        to: '/application',
-        label: 'Applikation',
-      },
-    ],
-  },
-  {
-    label: 'Consulting & Solutions',
-    to: [
-      {
-        to: '/businessreportingandanalysis',
-        label: 'Business Reporting & Analysis',
-      },
-      {
-        to: '/consulting',
-        label: 'Consutling',
-      },
-    ],
-  },
-  {
-    label: 'Referenzen',
-    to: [
-      {
-        to: '/referenzen',
-        label: 'Partner',
-      },
-      {
-        to: '/story',
-        label: 'Stories',
-      },
-    ],
-  },
-  {
-    to: '/contact',
-    label: 'Kontakt',
-  },
-  {
-    to: '/impressum',
-    label: 'Impressum',
-  },
-]
+import nav_items from './NavigationItems'
 
 const hierachyList = arr => {
   return arr.map(e => (

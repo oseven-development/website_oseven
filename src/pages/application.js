@@ -2,14 +2,19 @@
 
 import React from 'react'
 import {Link} from 'gatsby'
+import {createGlobalStyle, ThemeProvider} from 'styled-components'
+import {Flex, Box} from 'rebass'
+import theme from '../components/theme'
 
 import {Layout} from '../components/Layout'
 
 const ApplicationPage = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Flex style={{height: 400}}>
+      <Box p={5} fontSize={4} width={[1, 1, 1 / 2]} color="white" bg="magenta">
+        Box
+      </Box>
+    </Flex>
   </Layout>
 )
 
