@@ -40,7 +40,7 @@ const Footer = props => (
         </Box>
         <Box width={[1, 1 / 3, 1 / 3]}>
           <Link to="/">
-            <Image width={250} src={logo} />
+            <Image width={450} src={logo} />
           </Link>
         </Box>
         <Box width={[1, 1 / 3, 1 / 3]}>
@@ -65,7 +65,7 @@ const Footer = props => (
         </Box>
       </Flex>
     </Box>
-    <Box>
+    <Box style={{borderTop: '1px solid #666', paddingTop: 10}}>
       <div class="footer-bottom-wrapper">
         O-SEVEN
         <address class="footer-address" role="company address">

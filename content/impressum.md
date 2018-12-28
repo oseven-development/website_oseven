@@ -1,26 +1,22 @@
 <!-- @format -->
 
-import {Layout} from '../components/Layout'
-
-<Layout>
-
 # Impressum
 
 # Angaben gemäß § 5 TMG
 
-Maximilian Hänsel
-Nordring 171
-90409 Nürnberg
+Maximilian Hänsel  
+Nordring 171  
+90409 Nürnberg  
 
 # Vertreten durch
 
-Maximilian Hänsel
-Steuernummer: 238/224/30791
+Maximilian Hänsel  
+Steuernummer: 238/224/30791  
 
 # Kontakt
 
-Telefon: +49(0)163-4412159
-E-Mail: info@o-seven.de
+Telefon: +49(0)163-4412159  
+E-Mail: info@o-seven.de  
 
 # Streitschlichtung
 
@@ -121,5 +117,3 @@ Diese Webseite verwendet das Produkt Google Maps von Google Inc. Durch Nutzung d
     Icons made by Those Icons from www.flaticon.com is licensed by CC 3.0 BY
     Icons made by pongsakornRed from www.flaticon.com is licensed by CC 3.0 BY
     Icons made by Puppets from www.flaticon.com is licensed by CC 3.0 BY
-
-</Layout>

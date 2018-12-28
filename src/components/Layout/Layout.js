@@ -16,10 +16,12 @@ body {
 }
 ul {
   list-style-type: none;
+  padding: 0;
 }
 a {
   text-decoration: none;
 }
+
 `
 
 class Layout extends React.Component {
