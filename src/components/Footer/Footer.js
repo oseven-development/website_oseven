@@ -3,7 +3,6 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
-import '../../assets/style/footer.styl'
 import logo from '../../assets/images/logo-o-seven-07.svg'
 import {FaPhone, FaEnvelope} from 'react-icons/fa'
 import theme from '../theme'

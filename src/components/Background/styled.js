@@ -62,3 +62,8 @@ export const StyledParallax = styled.div`
   background-size: cover;
 `
 // background-attachment: fixed if window with kleiner als dann fixed
+export const StyledFullscreenBackground = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-image: url(${props => props.img});
+`
