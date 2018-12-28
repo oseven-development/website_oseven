@@ -11,11 +11,11 @@ import opera from './icon/opera.svg'
 
 ## Wir optimieren
 
-<Image width={100} src={chrome} style={{margin:20}} />
-<Image width={100} src={firefox} style={{margin:20}}/>
-<Image width={100} src={edge} style={{margin:20}} />
-<Image width={100} src={safari} style={{margin:20}}/>
-<Image width={100} src={opera} style={{margin:20}}/>
+<Image width={[80,100,120]} src={chrome} style={{margin:20}} />
+<Image width={[80,100,120]} src={firefox} style={{margin:20}}/>
+<Image width={[80,100,120]} src={edge} style={{margin:20}} />
+<Image width={[80,100,120]} src={safari} style={{margin:20}}/>
+<Image width={[80,100,120]} src={opera} style={{margin:20}}/>
 
 
 

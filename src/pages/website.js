@@ -1,7 +1,6 @@
 /** @format */
 
 import React from 'react'
-import {Link} from 'gatsby'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
 import {Layout, SkewedBackground, Container, ServiceContainer, Parallax} from '../components'
