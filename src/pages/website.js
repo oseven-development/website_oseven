@@ -3,7 +3,7 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
-import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo} from '../components'
+import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo, Headline} from '../components'
 import Praesenz from '../../content/service/website/zeigenSiePräsens.md'
 import OhneGehtsNicht from '../../content/service/website/ohneGehtsnicht.md'
 import Beratung from '../../content/service/website/beratung.md'
@@ -29,20 +29,22 @@ const WebsitePage = () => (
         rotation="rotate(6.6deg) translateZ(0)"
       />
       <Container style={{color: theme.colors.textBlack}}>
-        <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
-          <span class="span">Deine </span>Webseite
-        </h1>
-        <h2 class="awesome-headline">mehr als nur Code</h2>
-        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
-          <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-              <Praesenz />
-            </Box>
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-              <OhneGehtsNicht />
-            </Box>
-          </Flex>
-        </ServiceContainer>
+        <Headline>
+          <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
+            <span class="span">Deine </span>Webseite
+          </h1>
+          <h2 class="awesome-headline">mehr als nur Code</h2>
+          <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
+            <Flex flexDirection="row" flexWrap="wrap">
+              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+                <Praesenz />
+              </Box>
+              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+                <OhneGehtsNicht />
+              </Box>
+            </Flex>
+          </ServiceContainer>
+        </Headline>
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>
