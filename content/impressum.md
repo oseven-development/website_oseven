@@ -6,17 +6,17 @@
 
 Maximilian Hänsel  
 Nordring 171  
-90409 Nürnberg  
+90409 Nürnberg
 
 # Vertreten durch
 
 Maximilian Hänsel  
-Steuernummer: 238/224/30791  
+Steuernummer: 238/224/30791
 
 # Kontakt
 
 Telefon: +49(0)163-4412159  
-E-Mail: info@o-seven.de  
+E-Mail: info@o-seven.de
 
 # Streitschlichtung
 
@@ -120,3 +120,7 @@ Diese Webseite verwendet das Produkt Google Maps von Google Inc. Durch Nutzung d
     Icons made by pongsakornRedfrom is licensed by CC 3.0 BY
     Icons made by  from www.flaticon.com is licensed by CC 3.0 BY
     Icons made by Freepik from is licensed by CC 3.0 BY
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

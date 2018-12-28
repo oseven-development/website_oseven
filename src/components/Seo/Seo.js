@@ -10,10 +10,9 @@ export const Seo = ({title, description, keywords}) => {
       query={detailsQuery}
       render={data => {
         const siteMetadata = data.site.siteMetadata
-        console.log(siteMetadata)
         return (
           <Helmet
-            title={title || siteMetadata.title}
+            title={`${siteMetadata.title} | ${title}`}
             meta={[
               {name: 'description', content: description || siteMetadata.description},
               {name: 'keywords', content: keywords || siteMetadata.keywords},
@@ -25,7 +24,7 @@ export const Seo = ({title, description, keywords}) => {
     />
   )
 }
-
+// {`${siteMetadata.title} | ${title}`}
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {

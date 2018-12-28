@@ -3,7 +3,7 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
-import {Layout, SkewedBackground, Container, ServiceContainer, Parallax} from '../components'
+import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo} from '../components'
 import App from '../../content/service/application/app.md'
 import Chancen from '../../content/service/application/chancen.md'
 import Aktuell from '../../content/service/application/aktuell.md'
@@ -14,6 +14,11 @@ import parallax2 from '../assets/images/backgrounds/digital-marketing.jpg'
 
 const ApplicationPage = () => (
   <Layout>
+    <Seo
+      title="Applikation"
+      description="Übersicht des Services Webseiten"
+      keywords="Cool Fancy Beste Seite Webdeveloper"
+    />
     <div>
       <SkewedBackground
         img={background}

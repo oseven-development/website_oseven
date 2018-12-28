@@ -3,7 +3,7 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
-import {Layout, SkewedBackground, Container, ServiceContainer, Parallax} from '../components'
+import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo} from '../components'
 import Praesenz from '../../content/service/website/zeigenSiePräsens.md'
 import OhneGehtsNicht from '../../content/service/website/ohneGehtsnicht.md'
 import Beratung from '../../content/service/website/beratung.md'
@@ -16,6 +16,11 @@ import parallax from '../assets/images/backgrounds/meeting_with_text.jpg'
 
 const WebsitePage = () => (
   <Layout>
+    <Seo
+      title="Webseiten"
+      description="Übersicht des Services Webseiten"
+      keywords="Cool Fancy Beste Seite Webdeveloper"
+    />
     <div>
       <SkewedBackground
         img={background}

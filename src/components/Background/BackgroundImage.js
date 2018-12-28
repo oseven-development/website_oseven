@@ -5,7 +5,6 @@ import React from 'react'
 import {StyledBackgroundImage} from './styled'
 
 export const BackgroundImage = ({children, ...props}) => {
-  console.log(props)
   return (
     <StyledBackgroundImage {...props}>
       <div

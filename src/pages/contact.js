@@ -1,15 +1,15 @@
 /** @format */
 
 import React from 'react'
-import {Link} from 'gatsby'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
-import {Layout, FullscreenBackground, Button} from '../components'
+import {Layout, FullscreenBackground, Button, Seo} from '../components'
 import parallax from '../assets/images/backgrounds/contact.jpg'
 import {FaPhone, FaEnvelope} from 'react-icons/fa'
 
 const ContactPage = () => (
   <Layout>
+    <Seo title="Kontakt" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <FullscreenBackground img={parallax}>
       <Flex>
         <Box style={{backgroundColor: 'white', margin: '20vw', padding: '60px', opacity: 0.9}}>

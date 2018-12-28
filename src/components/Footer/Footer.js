@@ -11,7 +11,6 @@ import nav_items from '../Header/NavigationItems'
 const NavList = nav_items.map(e => {
   if (Array.isArray(e.to)) {
     return e.to.map(e2 => {
-      console.log(e2.to)
       return (
         <li key={e2.to}>
           <Link to={e2.to}>{e2.label}</Link>
@@ -65,12 +64,12 @@ const Footer = props => (
       </Flex>
     </Box>
     <Box style={{borderTop: '1px solid #666', paddingTop: 10}}>
-      <div class="footer-bottom-wrapper">
+      <div className="footer-bottom-wrapper">
         O-SEVEN
-        <address class="footer-address" role="company address">
+        <address className="footer-address" role="company address">
           Nordring 171, 90409 Nürnberg
         </address>
-        <span class="footer-bottom-rights"> - All Rights Reserved - </span>
+        <span className="footer-bottom-rights"> - All Rights Reserved - </span>
       </div>
     </Box>
   </Flex>
