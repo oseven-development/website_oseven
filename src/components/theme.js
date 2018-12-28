@@ -3,9 +3,9 @@
 export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   colors: {
-    main: '#ff7e00',
+    main: '#306efe',
     second: '#2A326C',
-    contrast: '#306efe',
+    contrast: '#ff7e00',
     text: '#333',
     textBlack:'#121212',
     black: '#232323',

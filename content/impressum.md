@@ -117,3 +117,6 @@ Diese Webseite verwendet das Produkt Google Maps von Google Inc. Durch Nutzung d
     Icons made by Those Icons from www.flaticon.com is licensed by CC 3.0 BY
     Icons made by pongsakornRed from www.flaticon.com is licensed by CC 3.0 BY
     Icons made by Puppets from www.flaticon.com is licensed by CC 3.0 BY
+    Icons made by pongsakornRedfrom is licensed by CC 3.0 BY
+    Icons made by  from www.flaticon.com is licensed by CC 3.0 BY
+    Icons made by Freepik from is licensed by CC 3.0 BY

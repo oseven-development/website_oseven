@@ -9,6 +9,8 @@ import Praesenz from '../../content/service/website/zeigenSiePräsens.md'
 import OhneGehtsNicht from '../../content/service/website/ohneGehtsnicht.md'
 import Beratung from '../../content/service/website/beratung.md'
 import Technik from '../../content/service/website/aktuelleTechnik.md'
+import Unterschied from '../../content/service/website/unterschied.md'
+import Optimieren from '../../content/service/website/optimieren.md'
 import Information from '../../content/service/website/ihreInformation.md'
 import background from '../assets/images/backgrounds/website.jpg'
 import parallax from '../assets/images/backgrounds/meeting_with_text.jpg'
@@ -27,7 +29,9 @@ const WebsitePage = () => (
           <span class="span">Deine </span>Webseite
         </h1>
         <h2 class="awesome-headline">mehr als nur Code</h2>
-        <ServiceContainer style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}>
+        <ServiceContainer
+          style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}
+          color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={3} width={[1, 1, 1 / 2]}>
               <Praesenz />
@@ -40,7 +44,9 @@ const WebsitePage = () => (
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>
-        <ServiceContainer style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}>
+        <ServiceContainer
+          style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}
+          color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={3} width={[1, 1, 1 / 3]}>
               <Beratung />
@@ -49,13 +55,18 @@ const WebsitePage = () => (
               <Technik />
             </Box>
             <Box p={3} width={[1, 1, 1 / 3]}>
-            <Information />
-          </Box>
-          </Flex>
-          <Flex>
-          
+              <Information />
+            </Box>
           </Flex>
         </ServiceContainer>
+      </Container>
+      <ServiceContainer style={{backgroundColor: theme.colors.second, color: 'white'}}>
+        <Container style={{padding: '40px 0'}}>
+          <Unterschied />
+        </Container>
+      </ServiceContainer>
+      <Container style={{textAlign:'center'}}>
+      <Optimieren />
       </Container>
     </div>
   </Layout>
