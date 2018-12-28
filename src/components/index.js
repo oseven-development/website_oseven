@@ -2,8 +2,8 @@
 
 import {OpacityTransition} from './Transition'
 import {AnimatedLogo} from './Animate/animatedLogo'
-import {BackgroundImage} from './BackgroundImage'
-import {Container} from './Container'
+import {BackgroundImage, SkewedBackground} from './Background'
+import {Container, ServiceContainer} from './Container'
 import {Footer} from './Footer'
 import {Header, Navigation} from './Header'
 import {Layout} from './Layout'
@@ -21,4 +21,6 @@ export {
   Layout,
   ResetStyle,
   Seo,
+  ServiceContainer,
+  SkewedBackground,
 }

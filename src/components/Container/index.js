@@ -1,5 +1,5 @@
 /** @format */
 
 import {Container} from './Container'
-
-export {Container}
+import {ServiceContainer} from './styledContainer'
+export {Container, ServiceContainer}

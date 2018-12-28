@@ -27,20 +27,29 @@ export const StyledBackgroundImage = styled.div`
     z-index: -1;
   }
 `
-
-// .background-Section
-// height:100vh
-// min-height: 600px
-// width: 100%
-// position: relative
-// overflow:hidden
-
-// background-image: linear-gradient(90deg, #111 0%, #555 100%)
-// //     &#bg1
-
-//     &#bg2
-//         background-image: linear-gradient(90deg, #111 0%, #323 100%)
-//     &#bg3
-//         background-image: linear-gradient(161deg, #000 0%,  #555 100%)
-//     &#bg4
-//         background-image: linear-gradient(12deg, #323 0%, #455 100%)
+export const StyledSkewedBackground = styled.div`
+  height: calc(100vw * 0.3);
+  max-height: 500px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -3;
+  background-image: url(${props => props.img});
+  transform: ${props => props.rotation};
+  position: absolute;
+  left: -25%;
+  width: 150%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: ${props => props.bgPosition};
+  &:after {
+    content: '';
+    background-image: ${props => props.color};
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -4;
+  }
+`
