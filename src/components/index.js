@@ -1,7 +1,7 @@
 /** @format */
 
 import {OpacityTransition} from './Transition'
-import {AnimatedLogo} from './Animate/animatedLogo'
+import {AnimatedLogo, AnimatedArrow} from './Animate'
 import {BackgroundImage, SkewedBackground, Parallax, FullscreenBackground} from './Background'
 import {Container, ServiceContainer} from './Container'
 import {Footer} from './Footer'
@@ -15,6 +15,7 @@ import {Headline} from './typo'
 export {
   OpacityTransition,
   AnimatedLogo,
+  AnimatedArrow,
   BackgroundImage,
   Container,
   Footer,

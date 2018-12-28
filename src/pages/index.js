@@ -3,7 +3,7 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import theme from '../components/theme'
-import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline} from '../components'
+import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline, AnimatedArrow} from '../components'
 import Wir from '../../content/home/wir.md'
 import background from '../assets/images/backgrounds/home.jpg'
 import {IconList} from '../../content/home/AboutIcon'
@@ -15,6 +15,7 @@ const IndexPage = () => (
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
         <Container>
           <AnimatedLogo />
+          <AnimatedArrow />
         </Container>
       </Flex>
     </BackgroundImage>
