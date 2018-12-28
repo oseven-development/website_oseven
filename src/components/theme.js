@@ -5,9 +5,9 @@ export default {
   colors: {
     main: '#306efe',
     second: '#2A326C',
-    contrast: '#ff7e00',
+    contrast: '#FFB600',
     text: '#333',
-    textBlack:'#121212',
+    textBlack: '#121212',
     black: '#232323',
     lightwhite: '#f5f5f5',
   },

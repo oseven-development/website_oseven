@@ -6,6 +6,7 @@ import {darken} from 'polished'
 // import {COLOR} from '../../constants'
 
 export const StyledServiceContainer = styled.div`
+  background-color: ${props => props.bgcolor};
   * {
     text-align: center;
   }
@@ -20,7 +21,7 @@ export const StyledServiceContainer = styled.div`
     text-align: justify;
     margin: 0;
   }
-  img{
-    margin:10px 25px;
+  img {
+    margin: 10px 25px;
   }
 `

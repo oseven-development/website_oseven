@@ -29,14 +29,12 @@ const WebsitePage = () => (
           <span class="span">Deine </span>Webseite
         </h1>
         <h2 class="awesome-headline">mehr als nur Code</h2>
-        <ServiceContainer
-          style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}
-          color={theme.colors.second}>
+        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={3} width={[1, 1, 1 / 2]}>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <Praesenz />
             </Box>
-            <Box p={3} width={[1, 1, 1 / 2]}>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <OhneGehtsNicht />
             </Box>
           </Flex>
@@ -44,29 +42,33 @@ const WebsitePage = () => (
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>
-        <ServiceContainer
-          style={{backgroundColor: 'white', padding: '1rem 2rem', marginTop: '1em'}}
-          color={theme.colors.second}>
+        <ServiceContainer bgcolor="white" style={{marginTop: '1em'}} color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={3} width={[1, 1, 1 / 3]}>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
               <Beratung />
             </Box>
-            <Box p={3} width={[1, 1, 1 / 3]}>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
               <Technik />
             </Box>
-            <Box p={3} width={[1, 1, 1 / 3]}>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
               <Information />
             </Box>
           </Flex>
         </ServiceContainer>
       </Container>
-      <ServiceContainer style={{backgroundColor: theme.colors.second, color: 'white'}}>
+      <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
         <Container style={{padding: '40px 0'}}>
-          <Unterschied />
+          <Box p={[1, 2, 3]}>
+            <Unterschied />
+          </Box>
         </Container>
       </ServiceContainer>
-      <Container style={{textAlign:'center'}}>
-      <Optimieren />
+      <Container>
+        <ServiceContainer color={theme.colors.contrast} style={{marginBottom: 20}}>
+          <Box p={[1, 2, 3]}>
+            <Optimieren />
+          </Box>
+        </ServiceContainer>
       </Container>
     </div>
   </Layout>
