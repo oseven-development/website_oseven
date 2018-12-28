@@ -7,6 +7,7 @@ export default {
     second: '#2A326C',
     contrast: '#306efe',
     text: '#333',
+    textBlack:'#121212',
     black: '#232323',
     lightwhite: '#f5f5f5',
   },

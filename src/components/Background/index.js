@@ -2,4 +2,5 @@
 
 import {BackgroundImage} from './BackgroundImage'
 import {SkewedBackground} from './SkewedBackground'
-export {BackgroundImage, SkewedBackground}
+import {Parallax} from './Parallax'
+export {BackgroundImage, SkewedBackground, Parallax}

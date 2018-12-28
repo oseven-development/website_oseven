@@ -2,7 +2,7 @@
 
 import {OpacityTransition} from './Transition'
 import {AnimatedLogo} from './Animate/animatedLogo'
-import {BackgroundImage, SkewedBackground} from './Background'
+import {BackgroundImage, SkewedBackground, Parallax} from './Background'
 import {Container, ServiceContainer} from './Container'
 import {Footer} from './Footer'
 import {Header, Navigation} from './Header'
@@ -23,4 +23,5 @@ export {
   Seo,
   ServiceContainer,
   SkewedBackground,
+  Parallax,
 }

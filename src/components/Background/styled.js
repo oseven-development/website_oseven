@@ -53,3 +53,12 @@ export const StyledSkewedBackground = styled.div`
     z-index: -4;
   }
 `
+export const StyledParallax = styled.div`
+  background-image: url(${props => props.img});
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
+// background-attachment: fixed if window with kleiner als dann fixed
