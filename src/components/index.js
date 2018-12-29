@@ -12,6 +12,7 @@ import {Button} from './Button'
 import {Seo} from './Seo'
 import {Headline} from './Typo'
 import {Slider} from './Slider'
+import {ImageBackground} from './Image'
 
 export {
   OpacityTransition,
@@ -32,4 +33,5 @@ export {
   Button,
   Slider,
   Headline,
+  ImageBackground,
 }

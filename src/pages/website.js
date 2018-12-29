@@ -29,22 +29,21 @@ const WebsitePage = () => (
         rotation="rotate(6.6deg) translateZ(0)"
       />
       <Container style={{color: theme.colors.textBlack}}>
-        <Headline>
-          <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
-            <span class="span">Deine </span>Webseite
-          </h1>
-          <h2 class="awesome-headline">mehr als nur Code</h2>
-          <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
-            <Flex flexDirection="row" flexWrap="wrap">
-              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-                <Praesenz />
-              </Box>
-              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-                <OhneGehtsNicht />
-              </Box>
-            </Flex>
-          </ServiceContainer>
-        </Headline>
+        <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
+          <span class="span">Deine </span>Webseite
+        </h1>
+        <h2 class="awesome-headline">mehr als nur Code</h2>
+
+        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
+          <Flex flexDirection="row" flexWrap="wrap">
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+              <Praesenz />
+            </Box>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+              <OhneGehtsNicht />
+            </Box>
+          </Flex>
+        </ServiceContainer>
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>

@@ -15,13 +15,13 @@ export const _Slider = ({children, ...props}) => {
     autoplay: true,
     autoplaySpeed: 5000,
     cssEase: 'linear',
+    arrows: false
   }
   console.log({...props})
   return (
     <StyledSlider {...props}>
       <Slider {...settings}>
         {props.items.map(e => {
-          console.log(e)
           return (
             <div key={e} className="slider">
               <div
@@ -37,12 +37,24 @@ export const _Slider = ({children, ...props}) => {
           )
         })}
       </Slider>
+      <div
+      style={{display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        height: props.height,
+        overflow: 'hidden',
+        zIndex: 10,
+        alignItems: 'center',
+        position: 'absolute',
+      top:0}}
+      >{children}</div>
+
     </StyledSlider>
   )
 }
 
 // var images = require.context('../../images', true)
-//FIXME: Dynamic require / import funktioniert nicht mit gatsby require context funktioniert
+//FIXME: Dynamic require / import funktioniert nicht mit gatsby und require context funktioniert
 //auch nicht das webpack das davor zusammen baut
 // wenn man zeit ist schauen wie man dynamich webpack baut
 //
