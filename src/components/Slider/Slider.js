@@ -15,7 +15,7 @@ export const _Slider = ({children, ...props}) => {
     autoplay: true,
     autoplaySpeed: 5000,
     cssEase: 'linear',
-    arrows: false
+    arrows: false,
   }
   console.log({...props})
   return (
@@ -38,17 +38,19 @@ export const _Slider = ({children, ...props}) => {
         })}
       </Slider>
       <div
-      style={{display: 'flex',
-        justifyContent: 'center',
-        width: '100%',
-        height: props.height,
-        overflow: 'hidden',
-        zIndex: 10,
-        alignItems: 'center',
-        position: 'absolute',
-      top:0}}
-      >{children}</div>
-
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '100%',
+          height: props.height,
+          overflow: 'hidden',
+          zIndex: 2,
+          alignItems: 'center',
+          position: 'absolute',
+          top: 0,
+        }}>
+        {children}
+      </div>
     </StyledSlider>
   )
 }
