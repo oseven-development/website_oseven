@@ -24,8 +24,15 @@ export const _Slider = ({children, ...props}) => {
           console.log(e)
           return (
             <div key={e} className="slider">
-              <div style={{backgroundImage: `url(${e})`, width: '100%', height: '100%',backgroundRepeat: 'no-repeat'
-              ,backgroundPosition: 'center',}} />
+              <div
+                style={{
+                  backgroundImage: `url(${e})`,
+                  width: '100%',
+                  height: '100%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                }}
+              />
             </div>
           )
         })}
