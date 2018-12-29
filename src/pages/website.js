@@ -33,7 +33,6 @@ const WebsitePage = () => (
           <span class="span">Deine </span>Webseite
         </h1>
         <h2 class="awesome-headline">mehr als nur Code</h2>
-
         <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>

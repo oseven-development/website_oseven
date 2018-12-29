@@ -17,7 +17,6 @@ export const _Slider = ({children, ...props}) => {
     cssEase: 'linear',
     arrows: false,
   }
-  console.log({...props})
   return (
     <StyledSlider {...props}>
       <Slider {...settings}>

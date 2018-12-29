@@ -58,7 +58,7 @@ class Layout extends React.Component {
     //   return <Spinner />
     // } else {
     return (
-      <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
+      <div className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <div>

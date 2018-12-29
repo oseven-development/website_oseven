@@ -8,6 +8,7 @@ import Wir from '../../content/home/wir.md'
 import background from '../assets/images/backgrounds/home.jpg'
 import {IconList} from '../../content/home/AboutIcon'
 import Aboutus from '../../content/home/aboutus.md'
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
@@ -25,7 +26,6 @@ const IndexPage = () => (
           Über <span style={{backgroundColor: theme.colors.contrast, color: 'white', padding: '0 10px'}}>O-Seven</span>
         </h1>
       </Headline>
-
       <Box p={[1, 2, 3]}>
         <Headline h2color={theme.colors.main}>
           <Wir />
