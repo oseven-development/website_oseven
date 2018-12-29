@@ -10,7 +10,8 @@ import {Layout} from './Layout'
 import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
-import {Headline} from './typo'
+import {Headline} from './Typo'
+import {Slider} from './Slider'
 
 export {
   OpacityTransition,
@@ -29,5 +30,6 @@ export {
   SkewedBackground,
   Parallax,
   Button,
+  Slider,
   Headline,
 }
