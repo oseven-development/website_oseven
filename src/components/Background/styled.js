@@ -21,7 +21,7 @@ export const StyledBackgroundImage = styled.div`
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    background-position: 50% center;
+    background-position: ${props => (props.bgPosition ? props.bgPosition : '50% center')}; 
     background-attachment: fixed;
     background-repeat: no-repeat;
     z-index: -1;
@@ -32,6 +32,7 @@ export const StyledSkewedBackground = styled.div`
   max-height: 500px;
   position: absolute;
   overflow: hidden;
+  margin-top: 75px;
   z-index: -3;
   background-image: url(${props => props.img});
   transform: ${props => props.rotation};

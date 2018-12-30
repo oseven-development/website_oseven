@@ -4,10 +4,10 @@ import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
 import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo, Headline} from '../components'
-import App from '../../content/service/application/app.md'
-import Chancen from '../../content/service/application/chancen.md'
-import Aktuell from '../../content/service/application/aktuell.md'
-import Verwenden from '../../content/service/application/verwenden.md'
+import App from '../../content/produkt/application/app.md'
+import Chancen from '../../content/produkt/application/chancen.md'
+import Aktuell from '../../content/produkt/application/aktuell.md'
+import Verwenden from '../../content/produkt/application/verwenden.md'
 import background from '../assets/images/backgrounds/application.jpg'
 import parallax from '../assets/images/backgrounds/code-javascript.jpg'
 import parallax2 from '../assets/images/backgrounds/digital-marketing.jpg'
@@ -19,7 +19,7 @@ const ApplicationPage = () => (
       description="Übersicht des Services Webseiten"
       keywords="Cool Fancy Beste Seite Webdeveloper"
     />
-    <div>
+    <div style={{position: 'relative', width: '100%', overflow: 'hidden'}}>
       <SkewedBackground
         img={background}
         color="linear-gradient(161deg, #21D4FD 0%, green 100%)"

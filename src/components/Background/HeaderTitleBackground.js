@@ -10,12 +10,13 @@ export const HeaderTitleBackground = ({children, ...props}) => {
     <BackgroundImage
       img={props.img}
       bgColor={'linear-gradient(90deg, rgb(0,0,0,1) 8%, rgb(255,255,255,0.2) 140%)'}
-      bgOpacity={1}>
+      bgOpacity={1}
+      bgPosition={props.bgPosition}>
       <ConsultingHeadline h1color="white" h2color="whitesmoke" style={{height: '100%'}}>
         <Flex alignItems="center" justifyContent="flex-start" style={{height: '100%'}}>
           <Box width={[1, 1, 1 / 2]}>
-            <h1>Business Intelligence & Reporting</h1>
-            <h3>Mehr Informationen über ihre Kunden, Produkte und Standorte</h3>s
+            <h1>{props.h1Text}</h1>
+            <h3>{props.h3Text}</h3>
           </Box>
         </Flex>
       </ConsultingHeadline>

@@ -3,13 +3,18 @@
 import React from 'react'
 import {Link} from 'gatsby'
 
-import {Layout} from '../components/Layout'
+import {Layout, Seo, HeaderTitleBackground} from '../components'
+import background from '../assets/images/backgrounds/consutling.jpg'
 
 const ConsultingPage = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Seo title="Consulting" />
+    <HeaderTitleBackground
+      bgPosition="center right"
+      img={background}
+      h1Text="Business & Projekt Consulting"
+      h3Text="Wir beraten Sie bei IT-Projekte und IT-Management etc."
+    />
   </Layout>
 )
 

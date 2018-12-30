@@ -3,14 +3,14 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
-import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo, Headline} from '../components'
-import Praesenz from '../../content/service/website/zeigenSiePräsens.md'
-import OhneGehtsNicht from '../../content/service/website/ohneGehtsnicht.md'
-import Beratung from '../../content/service/website/beratung.md'
-import Technik from '../../content/service/website/aktuelleTechnik.md'
-import Unterschied from '../../content/service/website/unterschied.md'
-import Optimieren from '../../content/service/website/optimieren.md'
-import Information from '../../content/service/website/ihreInformation.md'
+import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo} from '../components'
+import Praesenz from '../../content/produkt/website/zeigenSiePräsens.md'
+import OhneGehtsNicht from '../../content/produkt/website/ohneGehtsnicht.md'
+import Beratung from '../../content/produkt/website/beratung.md'
+import Technik from '../../content/produkt/website/aktuelleTechnik.md'
+import Unterschied from '../../content/produkt/website/unterschied.md'
+import Optimieren from '../../content/produkt/website/optimieren.md'
+import Information from '../../content/produkt/website/ihreInformation.md'
 import background from '../assets/images/backgrounds/website.jpg'
 import parallax from '../assets/images/backgrounds/meeting_with_text.jpg'
 
@@ -21,7 +21,7 @@ const WebsitePage = () => (
       description="Übersicht des Services Webseiten"
       keywords="Cool Fancy Beste Seite Webdeveloper"
     />
-    <div>
+    <div style={{position: 'relative', width: '100%', overflow: 'hidden'}}>
       <SkewedBackground
         img={background}
         color="linear-gradient(161deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%)"
