@@ -12,9 +12,9 @@ const ContactPage = () => (
     <Seo title="Kontakt" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <Headline>
       <FullscreenBackground img={parallax}>
-        <Flex>
-          <Box style={{backgroundColor: 'white', margin: '20vw', padding: '60px', opacity: 0.9}}>
-            <h1>Den Ersten Kontakt vergisst man nie</h1>
+        <Flex alignItems="center" justifyContent="center">
+          <Box mt={[65, 75, '8%', '10%']} style={{backgroundColor: 'white', padding: '40px', opacity: 0.9}}>
+            <h2>Den Ersten Kontakt vergisst man nie</h2>
             <h3>O-SEVEN</h3>
 
             <ul className="contact" style={{color: theme.colors.text}}>

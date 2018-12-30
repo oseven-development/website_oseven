@@ -2,7 +2,7 @@
 
 import {OpacityTransition} from './Transition'
 import {AnimatedLogo, AnimatedArrow} from './Animate'
-import {BackgroundImage, SkewedBackground, Parallax, FullscreenBackground} from './Background'
+import {BackgroundImage, SkewedBackground, Parallax, FullscreenBackground, HeaderTitleBackground} from './Background'
 import {Container, ServiceContainer} from './Container'
 import {Footer} from './Footer'
 import {Header, Navigation} from './Header'
@@ -10,7 +10,7 @@ import {Layout} from './Layout'
 import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
-import {Headline} from './Typo'
+import {Headline, ConsultingHeadline} from './Typo'
 import {Slider} from './Slider'
 import {ImageBackground} from './Image'
 
@@ -34,4 +34,6 @@ export {
   Slider,
   Headline,
   ImageBackground,
+  ConsultingHeadline,
+  HeaderTitleBackground,
 }

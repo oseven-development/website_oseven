@@ -22,8 +22,8 @@ export default [
     label: 'Consulting & Solutions',
     to: [
       {
-        to: '/businessreportingandanalysis',
-        label: 'Business Reporting & Analysis',
+        to: '/businessintelligenceandreporting',
+        label: 'Business Intelligence & Reporting',
       },
       {
         to: '/consulting',

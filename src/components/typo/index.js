@@ -1,4 +1,5 @@
 /** @format */
 
 import {Headline} from './headline'
-export {Headline}
+import {ConsultingHeadline} from './ConstulingHeadline'
+export {Headline, ConsultingHeadline}

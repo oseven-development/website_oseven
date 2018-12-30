@@ -34,3 +34,15 @@ export const StyledHeadline = styled.div`
     color: ${props => props.h6color};
   }
 `
+export const StyledConsultingHeadline = styled.div`
+  h1 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+    color: ${props => props.h1color};
+  }
+  h3 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 100;
+    color: ${props => props.h2color};
+  }
+`

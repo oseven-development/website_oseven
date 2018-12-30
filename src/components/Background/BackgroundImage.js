@@ -15,7 +15,7 @@ export const BackgroundImage = ({children, ...props}) => {
           left: 0,
           width: '100%',
           height: '100%',
-          opacity: 0.9,
+          opacity: props.bgOpacity ? props.bgOpacity : 0.9,
         }}>
         {children}
       </div>
