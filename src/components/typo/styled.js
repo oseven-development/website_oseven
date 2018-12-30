@@ -40,9 +40,22 @@ export const StyledConsultingHeadline = styled.div`
     font-weight: 600;
     color: ${props => props.h1color};
   }
-  h3 {
+  h2 {
     font-family: 'OpenSans', sans-serif;
     font-weight: 100;
     color: ${props => props.h2color};
+  }
+  h3 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: ${props => (props.weight ? props.weight : '100')};
+    color: ${props => props.h3color};
+  }
+  h4 {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: ${props => (props.weight ? props.weight : '100')};
+    color: ${props => props.h4color};
+  }
+  p {
+    color: ${props => props.pcolor};
   }
 `
