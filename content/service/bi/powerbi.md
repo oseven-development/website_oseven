@@ -1,6 +1,8 @@
+<!-- @format -->
+
 ### PowerBi - Das Datenvisualierungs-Tool für Alle
 
-Power BI is a business analytics solution that lets you visualize your data and share insights across your organization, or embed them in your app or website. Connect to hundreds of data sources and bring your data to life with live dashboards and reports.
+Power BI ist eine Business Intelligence Lösung, mit der Sie Ihre Daten visualisieren und Erkenntnisse in Ihrem Unternehmen austauschen oder in Ihre App oder Website einbetten können. Erwecken Sie Ihre Daten mit Live-Dashboards und Berichten zum Leben.
 
 #### Mit PowerBi ermöglichen wir dir
 
@@ -10,4 +12,3 @@ Power BI is a business analytics solution that lets you visualize your data 
 <p style="font-weight: 600">&#8226 Desktop als auch mobile Berichte <br/></p>
 
 </div>
-
