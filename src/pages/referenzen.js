@@ -43,9 +43,11 @@ const Kunden = () => {
 
 const ReferencePage = () => (
   <Layout>
-    <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height="500px">
+    <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height="800px">
       <Headline h1color="white" bgColor="#232323" padding="7px 30px">
-        <h1 className="headline">Unsere Referenzen</h1>
+        <h1 className="headline" style={{opacity: 0.95}}>
+          Unsere Referenzen
+        </h1>
       </Headline>
     </Slider>
     <Container>

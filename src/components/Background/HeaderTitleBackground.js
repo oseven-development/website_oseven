@@ -14,7 +14,7 @@ export const HeaderTitleBackground = ({children, ...props}) => {
       bgPosition={props.bgPosition}>
       <ConsultingHeadline h1color="white" h3color="whitesmoke" style={{height: '100%'}}>
         <Flex alignItems="center" justifyContent="flex-start" style={{height: '100%'}}>
-          <Box width={[1, 1, 1 / 2]}>
+          <Box pl={[1, 3, 3, 5]} width={[1, 1, 1 / 2]}>
             <h1>{props.h1Text}</h1>
             <h3>{props.h3Text}</h3>
           </Box>

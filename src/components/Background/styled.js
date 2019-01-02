@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const StyledBackgroundImage = styled.div`
   width: 100%;
-  height: 100vh;
+  height: ${props => (props.bgHeight ? props.bgHeight : '100vh')};
   display: block;
   position: relative;
   &:after {

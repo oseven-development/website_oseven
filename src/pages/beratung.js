@@ -1,12 +1,10 @@
 /** @format */
 
 import React from 'react'
-import {Link} from 'gatsby'
 import {Flex, Box, Image} from 'rebass'
 import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSublime, AnimatedArrow} from '../components'
 import background from '../assets/images/backgrounds/consutling.jpg'
 import Projekte from '../../content/service/consulting/projekte.md'
-import Zitat from '../../content/service/consulting/zitat.md'
 import projekt1 from '../../content/service/consulting/icon/content.svg'
 import projekt2 from '../../content/service/consulting/icon/checklist.svg'
 import projekt3 from '../../content/service/consulting/icon/presentation.svg'

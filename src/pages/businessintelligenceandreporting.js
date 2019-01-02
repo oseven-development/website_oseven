@@ -65,12 +65,12 @@ const BusinessIntelligenceAndReporting = () => (
         <h1>Power Bi Beispiel</h1>
         <h3>Beispiel Berichte mit echten Daten erstellen</h3>
       </ConsultingHeadline>
+
       <iframe
-        width="1300"
-        height="900"
         src="https://app.powerbi.com/view?r=eyJrIjoiZDRhYjljNjAtMGQ5MC00ODE3LWIyMWEtOTJkMzUyNzIyZjQwIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
         frameborder="0"
         allowFullScreen="true"
+        style={{width: window.innerWidth - 20, height: window.innerWidth / 1.65 - 20, maxWidth: 1330, maxHeight: 795}}
       />
     </Flex>
   </Layout>
