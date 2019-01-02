@@ -23,7 +23,7 @@ const ConsultingPage = () => (
       bgPosition="center right"
       img={background}
       h1Text="Business & Projekt Consulting"
-      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Abwägung Unternehmensentscheidungen.">
+      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen.">
       <AnimatedArrow />
     </HeaderTitleBackground>
     <Container>

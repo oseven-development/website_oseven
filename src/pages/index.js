@@ -14,10 +14,10 @@ const IndexPage = () => (
     <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <BackgroundImage img={background} bgColor={'linear-gradient(90deg, #111 0%, #555 100%)'}>
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
-        <Container>
+        <div style={{width:'100%'}}>
           <AnimatedLogo />
           <AnimatedArrow />
-        </Container>
+        </div>
       </Flex>
     </BackgroundImage>
     <Container>

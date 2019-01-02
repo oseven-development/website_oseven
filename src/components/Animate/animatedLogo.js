@@ -46,7 +46,7 @@ export class AnimatedLogo extends Component {
   }
   render() {
     return (
-      <div style={{maxWidth: 700, marginTop: '-85px'}}>
+      <div style={{maxWidth: 700, margin: '-85px auto auto auto'}}>
         <svg viewBox="0 0 1 0" />
         <div id="lineDrawing" className="logo">
           <svg viewBox="0 0 558.07 130.48">
