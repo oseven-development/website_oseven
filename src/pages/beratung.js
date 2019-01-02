@@ -18,7 +18,7 @@ import Business from '../../content/service/consulting/business.md'
 
 const ConsultingPage = () => (
   <Layout>
-    <Seo title="Consulting" />
+    <Seo title="Business & Projekt Consulting" />
     <HeaderTitleBackground
       bgPosition="center right"
       img={background}
