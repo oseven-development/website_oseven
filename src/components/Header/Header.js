@@ -13,7 +13,7 @@ const Header = props => (
   <Flex className={`strip ${props.isMenuVisible ? 'active' : ''}`} alignItems="center" justifyContent="space-between">
     <Box style={{height: '60px'}}>
       <Link to="/">
-        <Image width={[1, 1, 1]} src={logo} height={55} />
+        <Image width={200} src={logo} />
       </Link>
     </Box>
     <Box style={{marginRight: '20px'}}>
