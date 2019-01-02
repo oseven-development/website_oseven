@@ -2,4 +2,5 @@
 
 import {Headline} from './headline'
 import {ConsultingHeadline} from './ConstulingHeadline'
-export {Headline, ConsultingHeadline}
+import {HeadingWithSublime} from './HeadingWithSublime'
+export {Headline, ConsultingHeadline, HeadingWithSublime}

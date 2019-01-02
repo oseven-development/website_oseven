@@ -10,7 +10,7 @@ import {Layout} from './Layout'
 import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
-import {Headline, ConsultingHeadline} from './Typo'
+import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
 import {Slider} from './Slider'
 import {ImageBackground} from './Image'
 
@@ -36,4 +36,5 @@ export {
   ImageBackground,
   ConsultingHeadline,
   HeaderTitleBackground,
+  HeadingWithSublime,
 }

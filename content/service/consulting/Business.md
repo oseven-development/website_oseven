@@ -1,17 +1,13 @@
-<!-- @format -->
 
-### Der Weg zu erfolgreichen Projekte - Organisation, Konzeption, Planung und Steuerung
 
-IT-Projekte benötigen aufgrund ihrer starken Veränderungswirkung auf
-das Unternehmen ein hohes Maß an Aufmerksamkeit, es gibt viele Aspekte
-die beachtet werden müssen. Wir unterstützen Sie bei der
+Wer mit Abstand auf ein Unternehmen blickt, erkennt darin Zusammenhänge und Chancen, die dem Insider verborgen bleiben. Wir schaffen uns allgemeines Bild von der Situation, analysieren die Situation und erarbeiten Vorschläge, wie Verbesserungen in Ihrem Sinne durchgeführt werden können. Wir haben uns auf kleine und mittlere Unternehmen fokusiert, da Sie viel flexibler sind und die Chance der Veränderungen perfekt nutzen können.  
+Wir beraten Sie dabei die für Sie passenden Antworten in folgenden Bereichen zu finden.
 
 <div >
-<p style="font-weight: 600">&#8226 Projekt- & Ideenvalidierung <br/></p>
-<p style="font-weight: 600">&#8226 Priosierung der Ziele <br/></p>
-<p style="font-weight: 600">&#8226 Erstellung eines Projektsturkturplan <br/></p>
-<p style="font-weight: 600">&#8226 Einhalten von Timemanagement <br/></p>
-<p style="font-weight: 600">&#8226 Aufteilung des Taskmanagement <br/></p>
-<p style="font-weight: 600">&#8226 Überprüfung durch Risikomanagement <br/></p>
-<p style="font-weight: 600">&#8226 Projektcontrolling <br/></p>
+<p style="font-weight: 600">&#8226 Optimierung von Geschäftsprozessen <br/></p>
+<p style="font-weight: 600">&#8226 Umgang mit Software <br/></p>
+<p style="font-weight: 600">&#8226 Auswahl und Einführung neuer Software <br/></p>
+<p style="font-weight: 600">&#8226 Product Design <br/></p>
+<p style="font-weight: 600">&#8226 Optimierung der Unternehmenslandschaft <br/></p>
+<p style="font-weight: 600">&#8226 Digitalisierung des Unternehmens<br/></p>
 </div>

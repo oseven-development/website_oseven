@@ -1,5 +1,5 @@
-
-# IT-Projekt - gemeinsam erfolgreich
+<!-- 
+# IT-Projekt - gemeinsam erfolgreich -->
 
 <!-- IT-Projekte benötigen aufgrund ihrer starken Veränderungswirkung auf
 das Unternehmen ein hohes Maß an Aufmerksamkeit, es gibt viele Aspekte
@@ -19,7 +19,17 @@ Wir können Sie beratend bei der Einführung neuer Software, Erstellung
 eines Projektplans, Definieren von Projektzielen und noch vielem mehr
 beratend unterstützen. -->
 
-### der Weg zu erfolgreichen Projekte - Organisation, Konzeption und Planung
 
+IT-Projekte benötigen aufgrund ihrer starken Veränderungswirkung auf
+das Unternehmen ein hohes Maß an Aufmerksamkeit, es gibt viele Aspekte
+die beachtet werden müssen. Wir unterstützen Sie bei der
 
-_"Ein klar formuliertes Problem ist schon halb gelöst."_ - **Charles Kettering, US-amerikanischer Wissenschaftler**
+<div >
+<p style="font-weight: 600">&#8226 Projekt- & Ideenvalidierung <br/></p>
+<p style="font-weight: 600">&#8226 Priosierung der Ziele <br/></p>
+<p style="font-weight: 600">&#8226 Erstellung eines Projektsturkturplan <br/></p>
+<p style="font-weight: 600">&#8226 Einhalten von Timemanagement <br/></p>
+<p style="font-weight: 600">&#8226 Aufteilung des Taskmanagement <br/></p>
+<p style="font-weight: 600">&#8226 Etablierung von Risikomanagement <br/></p>
+<p style="font-weight: 600">&#8226 Projektcontrolling <br/></p>
+</div>
