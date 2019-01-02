@@ -3,7 +3,7 @@
 import React from 'react'
 import {Link} from 'gatsby'
 import {Flex, Box, Image} from 'rebass'
-import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSublime} from '../components'
+import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSublime, AnimatedArrow} from '../components'
 import background from '../assets/images/backgrounds/consutling.jpg'
 import Projekte from '../../content/service/consulting/projekte.md'
 import Zitat from '../../content/service/consulting/zitat.md'
@@ -25,8 +25,9 @@ const ConsultingPage = () => (
       bgPosition="center right"
       img={background}
       h1Text="Business & Projekt Consulting"
-      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Abwägung Unternehmensentscheidungen."
-    />
+      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Abwägung Unternehmensentscheidungen.">
+      <AnimatedArrow />
+    </HeaderTitleBackground>
     <Container>
       <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>

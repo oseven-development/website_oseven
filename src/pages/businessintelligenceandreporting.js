@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
-import {Layout, Seo, HeaderTitleBackground, Container, ConsultingHeadline} from '../components'
+import {Layout, Seo, HeaderTitleBackground, Container, ConsultingHeadline, AnimatedArrow} from '../components'
 import background from '../assets/images/backgrounds/beard.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon from '../../content/service/bi/icon/presentation.svg'
@@ -19,8 +19,9 @@ const BusinessIntelligenceAndReporting = () => (
       img={background}
       h1Text="Business Intelligence & Reporting"
       h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
-      bgPosition="center right"
-    />
+      bgPosition="center right">
+      <AnimatedArrow />
+    </HeaderTitleBackground>
     <Container>
       <Flex flexDirection="row" flexWrap="wrap" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>

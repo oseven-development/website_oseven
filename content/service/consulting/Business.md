@@ -1,6 +1,6 @@
+<!-- @format -->
 
-
-Wer mit Abstand auf ein Unternehmen blickt, erkennt darin Zusammenhänge und Chancen, die dem Insider verborgen bleiben. Wir schaffen uns ein allgemeines Bild von der Situation, analysieren die Situation und erarbeiten Vorschläge, wie Verbesserungen, die in Ihrem Sinne durchgeführt werden können. Wir haben uns auf kleine und mittlere Unternehmen fokusiert, da Sie viel flexibler sind und die Chance der Veränderungen perfekt nutzen können.  
+Wer mit Abstand auf ein Unternehmen blickt, erkennt darin Zusammenhänge und Chancen, die dem Insider verborgen bleiben. Wir schaffen uns ein allgemeines Bild von der Situation, analysieren die Situation und erarbeiten Vorschläge, wie Verbesserungen, die in Ihrem Sinne durchgeführt werden können.
 Wir beraten Sie dabei die für Sie passenden Antworten in folgenden Bereichen zu finden.
 
 <div >
@@ -11,3 +11,5 @@ Wir beraten Sie dabei die für Sie passenden Antworten in folgenden Bereichen zu
 <p style="font-weight: 600">&#8226 Optimierung der Unternehmenslandschaft <br/></p>
 <p style="font-weight: 600">&#8226 Digitalisierung des Unternehmens<br/></p>
 </div>
+
+Wir haben uns auf kleine und mittlere Unternehmen fokusiert, da Sie viel flexibler sind und die Chance der Veränderungen perfekt nutzen können.

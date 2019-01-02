@@ -19,6 +19,7 @@ export const HeaderTitleBackground = ({children, ...props}) => {
             <h3>{props.h3Text}</h3>
           </Box>
         </Flex>
+        {children}
       </ConsultingHeadline>
     </BackgroundImage>
   )
