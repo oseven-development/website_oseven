@@ -7,10 +7,12 @@ import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSubl
 import background from '../assets/images/backgrounds/consutling.jpg'
 import Projekte from '../../content/service/consulting/projekte.md'
 import Zitat from '../../content/service/consulting/zitat.md'
-import icon from '../../content/service/consulting/icon/content.svg'
-import icon2 from '../../content/service/consulting/icon/checklist.svg'
-import icon3 from '../../content/service/consulting/icon/analytics.svg'
-import icon4 from '../../content/service/consulting/icon/mountains.svg'
+import projekt1 from '../../content/service/consulting/icon/content.svg'
+import projekt2 from '../../content/service/consulting/icon/checklist.svg'
+import projekt3 from '../../content/service/consulting/icon/presentation.svg'
+import consulting1 from '../../content/service/consulting/icon/analytics.svg'
+import consulting2 from '../../content/service/consulting/icon/mountains.svg'
+import consulting3 from '../../content/service/consulting/icon/folder.svg'
 import {Schritte} from '../../content/service/consulting/schritte'
 import theme from '../components/theme'
 import parallax from '../assets/images/backgrounds/consultingparallax.jpg'
@@ -29,8 +31,9 @@ const ConsultingPage = () => (
       <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon2} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt1} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt2} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt3} />
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
@@ -60,8 +63,9 @@ const ConsultingPage = () => (
         </Box>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon3} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon4} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting1} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting2} />
+            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting3} />
           </Flex>
         </Box>
       </Flex>
