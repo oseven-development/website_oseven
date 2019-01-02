@@ -18,7 +18,7 @@ const BusinessIntelligenceAndReporting = () => (
     <HeaderTitleBackground
       img={background}
       h1Text="Business Intelligence & Reporting"
-      h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte"
+      h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
       bgPosition="center right"
     />
     <Container>

@@ -21,7 +21,7 @@ export const StyledBackgroundImage = styled.div`
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    background-position: ${props => (props.bgPosition ? props.bgPosition : '50% center')}; 
+    background-position: ${props => (props.bgPosition ? props.bgPosition : '50% center')};
     background-attachment: fixed;
     background-repeat: no-repeat;
     z-index: -1;
@@ -57,6 +57,7 @@ export const StyledSkewedBackground = styled.div`
 export const StyledParallax = styled.div`
   background-image: url(${props => props.img});
   min-height: 400px;
+  max-height: ${props => (props.height ? props.height : '')};
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
