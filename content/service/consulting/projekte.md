@@ -29,7 +29,7 @@ die beachtet werden müssen. Wir unterstützen Sie bei der
 <p style="font-weight: 600">&#8226 Priosierung der Ziele <br/></p>
 <p style="font-weight: 600">&#8226 Erstellung eines Projektsturkturplan <br/></p>
 <p style="font-weight: 600">&#8226 Einhalten von Timemanagement <br/></p>
-<p style="font-weight: 600">&#8226 Aufteilung des Taskmanagement <br/></p>
+<p style="font-weight: 600">&#8226 Umsetzen des Taskmanagement <br/></p>
 <p style="font-weight: 600">&#8226 Etablierung von Risikomanagement <br/></p>
 <p style="font-weight: 600">&#8226 Projektcontrolling <br/></p>
 </div>

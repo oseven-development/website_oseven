@@ -61,7 +61,7 @@ const WebsitePage = () => (
         </ServiceContainer>
       </Container>
       <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
-        <Container style={{padding: '40px 0'}}>
+        <Container >
           <Box p={[1, 2, 3]}>
             <Unterschied />
           </Box>

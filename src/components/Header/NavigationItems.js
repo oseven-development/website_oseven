@@ -19,15 +19,15 @@ export default [
     ],
   },
   {
-    label: 'Consulting & Solutions',
+    label: 'Leistungen',
     to: [
       {
         to: '/businessintelligenceandreporting',
         label: 'Business Intelligence & Reporting',
       },
       {
-        to: '/consulting',
-        label: 'Consutling',
+        to: '/beratung',
+        label: 'Projekt- & Unternehmensberatung',
       },
     ],
   },
