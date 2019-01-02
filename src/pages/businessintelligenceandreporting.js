@@ -2,7 +2,15 @@
 
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
-import {Layout, Seo, HeaderTitleBackground, Container, ConsultingHeadline, AnimatedArrow,HeadingWithSublime} from '../components'
+import {
+  Layout,
+  Seo,
+  HeaderTitleBackground,
+  Container,
+  ConsultingHeadline,
+  AnimatedArrow,
+  HeadingWithSublime,
+} from '../components'
 import background from '../assets/images/backgrounds/beard.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon from '../../content/service/bi/icon/presentation.svg'
@@ -31,10 +39,7 @@ const BusinessIntelligenceAndReporting = () => (
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime
-            headline="Buisness Intelligence"
-            sublime="Der Weg zur Datenkontrolle"
-          />
+          <HeadingWithSublime headline="Buisness Intelligence" sublime="Der Weg zur Datenkontrolle" />
           <Bitext />
         </Box>
       </Flex>
@@ -60,10 +65,7 @@ const BusinessIntelligenceAndReporting = () => (
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-        <HeadingWithSublime
-        headline="Power BI"
-        sublime="Das Datenvisualierungs-Tool für Alle"
-      />
+          <HeadingWithSublime headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
           <PowerBi />
         </Box>
       </Flex>
