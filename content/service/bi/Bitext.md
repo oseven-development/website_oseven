@@ -1,6 +1,6 @@
 <!-- @format -->
 
-### Der Weg zur Datenkontrolle - Buisness Intelligence
+
 
 Business Intelligence (BI) ist im Zeitalter der Digitalisierung der Unternehmen ein nicht mehr wegzudenkendes Instrument bei der Steuerung eines Unternehmens. Es ermöglicht
 
