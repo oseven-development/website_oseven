@@ -24,8 +24,8 @@ export class AnimatedArrow extends Component {
         id="ArrowDrawing"
         style={{position: 'absolute', bottom: 0, left: '50%', width: 50, height: 50, marginLeft: '-25px'}}>
         <svg viewBox="0 0 418.35938 418.35938">
-          <g fill="white" fill-rule="evenodd" stroke-width="1" class="lines">
-            <path class="pt" d="M 153,247.35 306,94.35 270.3,58.65 153,175.95 35.7,58.65 0,94.35 Z" />
+          <g fill="white" fillRule="evenodd" strokeWidth="1" className="lines">
+            <path className="pt" d="M 153,247.35 306,94.35 270.3,58.65 153,175.95 35.7,58.65 0,94.35 Z" />
           </g>
         </svg>
       </div>

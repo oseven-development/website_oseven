@@ -3,6 +3,8 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import theme from '../components/theme'
+import Fade from 'react-reveal/Fade'
+
 import {Layout, SkewedBackground, Container, ServiceContainer, Parallax, Seo} from '../components'
 import Praesenz from '../../content/produkt/website/zeigenSiePräsens.md'
 import OhneGehtsNicht from '../../content/produkt/website/ohneGehtsnicht.md'
@@ -29,10 +31,17 @@ const WebsitePage = () => (
         rotation="rotate(6.6deg) translateZ(0)"
       />
       <Container style={{color: theme.colors.textBlack}}>
-        <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
-          <span class="span">Deine </span>Webseite
-        </h1>
-        <h2 class="awesome-headline">mehr als nur Code</h2>
+        <Box mt={['90px', '140px', '240px', '300px']}>
+          <Fade left>
+            <h1 className="awesome-headline-h1" style={{color: theme.colors.lightwhite}}>
+              <span className="span">Deine </span>Webseite
+            </h1>
+          </Fade>
+          <Fade right>
+            <h2 className="awesome-headline-h2">mehr als nur Code</h2>
+          </Fade>
+        </Box>
+
         <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
@@ -49,19 +58,25 @@ const WebsitePage = () => (
         <ServiceContainer bgcolor="white" style={{marginTop: '1em'}} color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Beratung />
+              <Fade left>
+                <Beratung />
+              </Fade>
             </Box>
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Technik />
+              <Fade bottom>
+                <Technik />
+              </Fade>
             </Box>
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Information />
+              <Fade right>
+                <Information />
+              </Fade>
             </Box>
           </Flex>
         </ServiceContainer>
       </Container>
       <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
-        <Container >
+        <Container>
           <Box p={[1, 2, 3]}>
             <Unterschied />
           </Box>

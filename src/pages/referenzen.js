@@ -63,7 +63,7 @@ const ReferencePage = () => (
           </h1>
         </Headline>
       </Container>
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" style={{maxWidth: 1330, margin: 'auto'}}>
         <Box width={[1, 1 / 2, 1 / 4]}>
           <ImageBackground img={kd1} />
         </Box>

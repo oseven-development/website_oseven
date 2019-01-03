@@ -11,6 +11,7 @@ import Verwenden from '../../content/produkt/application/verwenden.md'
 import background from '../assets/images/backgrounds/application.jpg'
 import parallax from '../assets/images/backgrounds/code-javascript.jpg'
 import parallax2 from '../assets/images/backgrounds/digital-marketing.jpg'
+import Fade from 'react-reveal/Fade'
 
 const ApplicationPage = () => (
   <Layout>
@@ -26,23 +27,28 @@ const ApplicationPage = () => (
         bgPosition="center"
         rotation="rotate(6.6deg) translateZ(0)"
       />
+
       <Container style={{color: theme.colors.textBlack}}>
-        <Headline>
-          <h1 class="awesome-headline" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
-            <span class="span">Deine </span>Application
-          </h1>
-          <h2 class="awesome-headline">einfach immer und überall</h2>
-          <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
-            <Flex flexDirection="row" flexWrap="wrap">
-              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-                <App />
-              </Box>
-              <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
-                <Chancen />
-              </Box>
-            </Flex>
-          </ServiceContainer>
-        </Headline>
+        <Box mt={['90px', '140px', '240px', '300px']}>
+          <Fade left>
+            <h1 className="awesome-headline-h1" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
+              <span className="span">Deine </span>Application
+            </h1>
+          </Fade>
+          <Fade right>
+            <h2 className="awesome-headline-h2">einfach immer und überall</h2>
+          </Fade>
+        </Box>
+        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
+          <Flex flexDirection="row" flexWrap="wrap">
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+              <App />
+            </Box>
+            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+              <Chancen />
+            </Box>
+          </Flex>
+        </ServiceContainer>
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>
