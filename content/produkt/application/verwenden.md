@@ -15,34 +15,34 @@ import Fade from 'react-reveal/Fade'
 
 <Flex flex-direction="column" alignItems="center" justifyContent="center" flexWrap="wrap">
 <Box>
-    <Fade duration={1200}>
+    <Fade delay={200}>
     <Image width={[80,100,120]} src={icon} />
     </Fade>
-    <Fade duration={1500} >
+    <Fade delay={500} >
     <Image width={[80,100,120]} src={icon2} />
     </Fade>
 </Box>
 <Box>
-    <Fade duration={1800} >
+    <Fade delay={800} >
     <Image width={[80,100,120]} src={icon3} />
     </Fade>
-    <Fade duration={2100} >
+    <Fade delay={1100} >
     <Image width={[80,100,120]} src={icon4} />
     </Fade>
     </Box>
 <Box>
-    <Fade duration={2400} >
+    <Fade delay={1300} >
     <Image width={[80,100,120]} src={icon5} />
     </Fade>
-    <Fade duration={2700}>
+    <Fade delay={1700}>
     <Image width={[80,100,120]} src={icon6} />
     </Fade>
     </Box>
 <Box>
-    <Fade duration={3000} >
+    <Fade delay={2000} >
     <Image width={[80,100,120]} src={icon7} />
     </Fade>
-    <Fade duration={3300} >
+    <Fade delay={2300} >
     <Image width={[80,100,120]} src={icon8} />
     </Fade>
 </Box>

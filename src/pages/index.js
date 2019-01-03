@@ -3,18 +3,19 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import theme from '../components/theme'
-import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline, AnimatedArrow} from '../components'
+import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline, AnimatedArrow, Parallax} from '../components'
 import Wir from '../../content/home/wir.md'
 import background from '../assets/images/backgrounds/home.jpg'
 import {IconList} from '../../content/home/AboutIcon'
 import Aboutus from '../../content/home/aboutus.md'
+import parallax from '../assets/images/backgrounds/team2.jpg'
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <BackgroundImage img={background} bgColor={'linear-gradient(90deg, #111 0%, #555 100%)'}>
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
-        <div style={{width:'100%'}}>
+        <div style={{width: '100%'}}>
           <AnimatedLogo />
           <AnimatedArrow />
         </div>
@@ -30,9 +31,14 @@ const IndexPage = () => (
         <Headline h2color={theme.colors.main}>
           <Wir />
           <IconList />
-          <Aboutus />
         </Headline>
       </Box>
+    </Container>
+    <Parallax img={parallax} bgPosition="center top" />
+    <Container>
+      <Headline h2color={theme.colors.main}>
+        <Aboutus />
+      </Headline>
     </Container>
   </Layout>
 )

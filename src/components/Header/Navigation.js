@@ -52,7 +52,7 @@ export const Navigation = props => (
   <nav
     className={'overlay-navigation'}
     id="menu"
-    style={props.isMenuFadeing ? {height: '100%', transition: 'all 1s'} : {height: '0%', transition: 'all 1s'}}>
+    style={props.isMenuFadeing ? {height: '100%', transition: 'all 0.5s'} : {height: '0%', transition: 'all 1s'}}>
     {props.isMenuVisible && <Nav toggleActive={props.toggleActive} activeTab={props.activeTab} />}
   </nav>
 )

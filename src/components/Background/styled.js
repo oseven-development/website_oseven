@@ -60,7 +60,7 @@ export const StyledParallax = styled.div`
   min-height: 400px;
   max-height: ${props => (props.height ? props.height : '')};
   background-attachment: fixed;
-  background-position: center;
+  background-position: ${props => (props.bgPosition ? props.bgPosition : 'center')};
   background-repeat: no-repeat;
   background-size: cover;
 `
@@ -69,4 +69,5 @@ export const StyledFullscreenBackground = styled.div`
   width: 100%;
   height: 100vh;
   background-image: url(${props => props.img});
+  background-size: cover;
 `
