@@ -30,6 +30,7 @@ class Layout extends React.Component {
     this.state = {
       isMenuVisible: false,
       isMenuFadeing: false,
+      activeTab: '',
       loading: 'is-loading',
     }
     this.handleToggleMenu = this.handleToggleMenu.bind(this)
@@ -65,8 +66,16 @@ class Layout extends React.Component {
     })
   }
 
-  setActiveToSpan(a) {
-    console.log(a)
+  setActiveToSpan(activeTab) {
+    if (this.state.activeTab === activeTab) {
+      this.setState({
+        activeTab: '',
+      })
+    } else {
+      this.setState({
+        activeTab: activeTab,
+      })
+    }
   }
 
   render() {
@@ -86,6 +95,7 @@ class Layout extends React.Component {
               isMenuVisible={this.state.isMenuVisible}
               isMenuFadeing={this.state.isMenuFadeing}
               toggleActive={this.setActiveToSpan}
+              activeTab={this.state.activeTab}
             />
           </div>
         </ThemeProvider>
