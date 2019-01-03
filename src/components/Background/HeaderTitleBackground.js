@@ -17,7 +17,9 @@ export const HeaderTitleBackground = ({children, ...props}) => {
           <Box pl={[1, 3, 3, 5]} width={[1, 1, 1 / 2]}>
             <OpacityTransition>
               <h1>{props.h1Text}</h1>
-              <h3>{props.h3Text}</h3>
+              <OpacityTransition>
+                <h3>{props.h3Text}</h3>
+              </OpacityTransition>
             </OpacityTransition>
           </Box>
         </Flex>
