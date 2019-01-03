@@ -1,7 +1,7 @@
-
+<!-- @format -->
 
 import { Image} from 'rebass'
-import icon from './icon/cloud-computing.svg'
+import icon from './icon/file.svg'
 
 ### Neue Chancen
 
@@ -9,4 +9,4 @@ import icon from './icon/cloud-computing.svg'
 
 #### Was heißt das für mich, ...
 
-Dadurch ergeben sich eine Menge von Vorteilen, Programme sind auf allen Plattformen ohne Mehraufwand verfügbar, ob Windows, Mac oder Linux. Je nach Applikation sind diese meist auch direkt für Mobile Endgeräte wie Tablets oder Smartphones verfügbar. 
+Dadurch ergeben sich eine Menge von Vorteilen, Programme sind auf allen Plattformen ohne Mehraufwand verfügbar, ob Windows, Mac oder Linux. Je nach Applikation sind diese meist auch direkt für Mobile Endgeräte wie Tablets oder Smartphones verfügbar.

@@ -1,7 +1,7 @@
 
 
 import { Image} from 'rebass'
-import icon from './icon/question-mark.svg'
+import icon from './icon/web-design.svg'
 
 ### App was?
 
