@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {Flex, Box} from 'rebass'
-import {ConsultingHeadline, BackgroundImage} from '../index'
+import {ConsultingHeadline, BackgroundImage, OpacityTransition} from '../index'
 import {StyledBackgroundImage} from './styled'
 
 export const HeaderTitleBackground = ({children, ...props}) => {
@@ -15,8 +15,10 @@ export const HeaderTitleBackground = ({children, ...props}) => {
       <ConsultingHeadline h1color="white" h3color="whitesmoke" style={{height: '100%'}}>
         <Flex alignItems="center" justifyContent="flex-start" style={{height: '100%'}}>
           <Box pl={[1, 3, 3, 5]} width={[1, 1, 1 / 2]}>
-            <h1>{props.h1Text}</h1>
-            <h3>{props.h3Text}</h3>
+            <OpacityTransition>
+              <h1>{props.h1Text}</h1>
+              <h3>{props.h3Text}</h3>
+            </OpacityTransition>
           </Box>
         </Flex>
         {children}
