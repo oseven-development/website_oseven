@@ -57,7 +57,9 @@ const BusinessIntelligenceAndReporting = () => (
       <Container>
         <Flex justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
           <ConsultingHeadline h3color="white" h4color="white" pcolor="white" weight={600} style={{textAlign: 'center'}}>
-            <Reporting />
+            <Fade>
+              <Reporting />
+            </Fade>
           </ConsultingHeadline>
         </Flex>
       </Container>
