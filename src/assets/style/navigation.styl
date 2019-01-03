@@ -57,6 +57,9 @@
           color: lighten($color-main, 20%)
           &:after
             width: 60%
+          .arrow 
+            &:after,&:before
+              background: lighten($color-main, 20%)
         &:after
           content: ''
           display: block
@@ -67,6 +70,7 @@
           background: lighten($color-main, 20%)
           transition: width .5s
           position: relative
+
         
     > li.nav-element-level-1.slide-in-nav-item.active
       span
@@ -95,7 +99,7 @@
         text-decoration: none
         padding: .6em .5em
         &:hover
-          color: lighten($color-main, 50%) !important
+          color: lighten($color-main, 20%) !important
           
 for i in range(1, 6, 1)
   $x = i*0.2s
@@ -126,3 +130,56 @@ $value_1 = 0
     -webkit-transform: translateY($value_2);
     transform: translateY($value_2)
     opacity: 0
+
+
+.arrow
+  width: 30px
+  height: 40px
+  position absolute
+  margin-left:10px
+  &:hover
+    &:after,&:before
+      background: lighten($color-main, 20%)
+  &:before
+    top: 20px;
+    transition: 0.3s all;
+    width: 20px;
+    background: whitesmoke;
+    height: 1px;
+    display: block;
+    content: "";
+    right:10%
+    position: absolute;
+  &:after
+    transform: rotate(90deg)
+    top: 20px;
+    transition: 0.3s all;
+    width: 20px;
+    background: whitesmoke;
+    height: 1px;
+    display: block;
+    content: "";
+    right:10%
+    position: absolute;
+  &.active
+    &:after
+      transform: rotate(45deg)
+      top: 20px;
+      transition: 0.3s all;
+      width: 20px;
+      background: lighten($color-main, 20%)
+      height: 1px;
+      display: block;
+      content: "";
+
+      position: absolute;
+    &:before
+      transform: rotate(-45deg)
+      top: 20px;
+      transition: 0.3s all;
+      width: 20px;
+      background: lighten($color-main, 20%)
+      height: 1px;
+      display: block;
+      content: "";
+      position: absolute;

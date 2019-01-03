@@ -24,8 +24,14 @@ const NavList = props =>
       return (
         <li
           key={key}
-          className={`nav-element-level-1 slide-in-nav-item ${props.activeTab === e.label ? 'active' : ''} `}>
-          <span onClick={() => props.toggleActive(e.label)}>{e.label}</span>
+          className={`nav-element-level-1 slide-in-nav-item ${props.activeTab === e.label ? 'active' : ''}`}>
+          <span onClick={() => props.toggleActive(e.label)}>
+            {e.label}
+            <span
+              onClick={() => props.toggleActive(e.label)}
+              className={`arrow ${props.activeTab === e.label ? 'active' : ''}`}
+            />
+          </span>
           <ul key={e.to} className="nav-level-2">
             {HierachyList(e.to)}
           </ul>
