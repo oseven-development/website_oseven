@@ -8,7 +8,7 @@ import {Flex} from 'rebass'
 import '../../assets/style/navigation.styl'
 import nav_items from './NavigationItems'
 
-const hierachyList = arr => {
+const HierachyList = arr => {
   return arr.map(e => (
     <li key={e.to}>
       <Link className="slide-in-nav-item" to={e.to}>
@@ -24,7 +24,7 @@ const NavList = nav_items.map(e => {
       <li className="li-level1 slide-in-nav-item ">
         <span className="li-level1">{e.label}</span>
         <ul key={e.to} className="level2">
-          {hierachyList(e.to)}
+          {HierachyList(e.to)}
         </ul>
       </li>
     )
@@ -39,12 +39,19 @@ const NavList = nav_items.map(e => {
   }
 })
 
+const Nav = props => (
+  <Flex justifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
+    <ul className="level1">{NavList}</ul>
+  </Flex>
+)
+
 export const Navigation = props => (
-  <OpacityTransition className={`overlay-navigation ${props.isMenuVisible ? 'overlay-slide-down' : ''}`}>
-    <Flex justifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
-      <ul className="level1">{NavList}</ul>
-    </Flex>
-  </OpacityTransition>
+  <nav
+    className={'overlay-navigation'}
+    id="menu"
+    style={props.isMenuFadeing ? {height: '100%', transition: 'all 1s'} : {height: '0%', transition: 'all 1s'}}>
+    {props.isMenuVisible && <Nav />}
+  </nav>
 )
 
 Navigation.propTypes = {

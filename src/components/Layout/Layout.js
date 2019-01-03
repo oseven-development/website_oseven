@@ -29,6 +29,7 @@ class Layout extends React.Component {
     super(props)
     this.state = {
       isMenuVisible: false,
+      isMenuFadeing: false,
       loading: 'is-loading',
     }
     this.handleToggleMenu = this.handleToggleMenu.bind(this)
@@ -47,8 +48,19 @@ class Layout extends React.Component {
   }
 
   handleToggleMenu() {
+    if (this.state.isMenuVisible === true) {
+      setTimeout(() => {
+        this.setState({
+          isMenuVisible: !this.state.isMenuVisible,
+        })
+      }, 1000)
+    } else {
+      this.setState({
+        isMenuVisible: !this.state.isMenuVisible,
+      })
+    }
     this.setState({
-      isMenuVisible: !this.state.isMenuVisible,
+      isMenuFadeing: !this.state.isMenuFadeing,
     })
   }
 
@@ -62,14 +74,10 @@ class Layout extends React.Component {
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <div>
-            <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
+            <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuFadeing} />
             {children}
             <Footer />
-            <nav id="menu" style={this.state.isMenuVisible ? {height: '100%'} : {}}>
-              {this.state.isMenuVisible && (
-                <Navigation onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuVisible} />
-              )}
-            </nav>
+            <Navigation isMenuVisible={this.state.isMenuVisible} isMenuFadeing={this.state.isMenuFadeing} />
           </div>
         </ThemeProvider>
       </div>
