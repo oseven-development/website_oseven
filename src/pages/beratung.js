@@ -3,6 +3,7 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSublime, AnimatedArrow} from '../components'
+import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/consutling.jpg'
 import Projekte from '../../content/service/consulting/projekte.md'
 import projekt1 from '../../content/service/consulting/icon/content.svg'
@@ -30,9 +31,15 @@ const ConsultingPage = () => (
       <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt1} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt2} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt3} />
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt1} />
+            </Fade>
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt2} />
+            </Fade>
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt3} />
+            </Fade>
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
@@ -47,7 +54,9 @@ const ConsultingPage = () => (
     </Container>
     <Flex pb={[10, 30, 60, 80]} pt={[10, 40, 40, 40]} style={{background: theme.colors.second}}>
       <Container style={{textAlign: 'center'}}>
-        <Schritte />
+        <Fade>
+          <Schritte />
+        </Fade>
       </Container>
     </Flex>
     <Parallax img={parallax} />
@@ -62,9 +71,15 @@ const ConsultingPage = () => (
         </Box>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting1} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting2} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting3} />
+            <Fade right>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting1} />
+            </Fade>
+            <Fade right>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting2} />
+            </Fade>
+            <Fade right>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting3} />
+            </Fade>
           </Flex>
         </Box>
       </Flex>
