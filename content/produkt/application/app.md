@@ -5,7 +5,7 @@ import icon from './icon/web-design.svg'
 
 ### App was?
 
-<Image width={120} src={icon} />
+<Image m={[1,5,15,20]} width={150}  src={icon} />
 
 #### Was verbirgt sich hinter einer App, ...
 
