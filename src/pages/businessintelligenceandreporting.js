@@ -11,6 +11,7 @@ import {
   AnimatedArrow,
   HeadingWithSublime,
 } from '../components'
+import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon from '../../content/service/bi/icon/presentation.svg'
@@ -34,8 +35,12 @@ const BusinessIntelligenceAndReporting = () => (
       <Flex flexDirection="row" flexWrap="wrap" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon} />
-            <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon2} />
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon} />
+            </Fade>
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon2} />
+            </Fade>
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
@@ -57,11 +62,13 @@ const BusinessIntelligenceAndReporting = () => (
       <Flex flexDirection="row" flexWrap="wrap" mt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Image
-              my={[15, 20, 30]}
-              width={[130, 150, 180]}
-              src={'https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg'}
-            />
+            <Fade left>
+              <Image
+                my={[15, 20, 30]}
+                width={[130, 150, 180]}
+                src={'https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg'}
+              />
+            </Fade>
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
@@ -78,8 +85,8 @@ const BusinessIntelligenceAndReporting = () => (
 
       <iframe
         src="https://app.powerbi.com/view?r=eyJrIjoiZDRhYjljNjAtMGQ5MC00ODE3LWIyMWEtOTJkMzUyNzIyZjQwIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
-        frameborder="0"
-        allowFullScreen="true"
+        frameBorder="0"
+        allowFullScreen={true}
         style={{width: 'calc(500px + 10vw * 5 )', height: 'calc(calc(500px + 10vw * 5 )/4*2.378)'}}
       />
     </Flex>

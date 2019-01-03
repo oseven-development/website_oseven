@@ -28,16 +28,17 @@ export const StyledBackgroundImage = styled.div`
   }
 `
 export const StyledSkewedBackground = styled.div`
-  height: calc(100vw * 0.3);
-  max-height: 500px;
+  height: calc(100vw * 0.4);
+  max-height: 600px;
   position: absolute;
   overflow: hidden;
-  margin-top: 75px;
+  margin-top: 6vw;
   z-index: -3;
   background-image: url(${props => props.img});
   transform: ${props => props.rotation};
   position: absolute;
   left: -25%;
+  top: 4vh;
   width: 150%;
   background-repeat: no-repeat;
   background-size: cover;
