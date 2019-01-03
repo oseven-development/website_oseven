@@ -86,7 +86,7 @@ const Footer = props => (
           </Box>
         </Flex>
       </Box>
-      <Box style={{borderTop: '1px solid #666', paddingTop: 10}}>
+      <Box py={[2, 10, 15, 20]} style={{borderTop: '1px solid #666'}}>
         <div className="footer-bottom-wrapper">
           O-SEVEN
           <address className="footer-address" role="company address">
