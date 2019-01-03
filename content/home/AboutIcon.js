@@ -21,32 +21,30 @@ import zusammenhalt from './icon/newicon/team.svg'
 export const IconList = () => {
   return (
     <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
-      <Box width={[1/2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
+      <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
         <Image width={[60, 75, 90]} src={beraten} />
         <h4>Bertaung</h4>
         <Image width={[60, 75, 90]} src={zielstrebig} />
         <h4>Ehrgeiz</h4>
-
       </Box>
-      <Box width={[1/2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
+      <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
         <Image width={[60, 75, 90]} src={innovativ} />
         <h4>Innovation</h4>
 
         <Image width={[60, 75, 90]} src={erfolg} />
         <h4>Erfolg</h4>
       </Box>
-      <Box width={[1/2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
+      <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
         <Image width={[60, 75, 90]} src={zuverlässig} />
         <h4>Zuverlässigkeit</h4>
         <Image width={[60, 75, 90]} src={zusammenhalt} />
         <h4>Teamwork</h4>
       </Box>
-      <Box width={[1/2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
+      <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
         <Image width={[60, 75, 90]} src={ausgebildet} />
         <h4>Bildung</h4>
         <Image width={[60, 75, 90]} src={sicher} />
         <h4>Sicherheit</h4>
-
       </Box>
     </Flex>
   )
