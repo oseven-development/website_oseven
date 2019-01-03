@@ -1,11 +1,11 @@
 <!-- @format -->
 
 import { Image} from 'rebass'
-import icon from './icon/target-s.svg'
+import icon from './icon/newicon/radar.svg'
 
 ### ohne Gehts nicht
 
-<Image width={120} src={icon} />
+<Image py={[1,15,30]} width={200} src={icon} />
 
 #### Überall und immer erreichbar, ...
 

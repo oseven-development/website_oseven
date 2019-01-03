@@ -1,11 +1,11 @@
 <!-- @format -->
 
 import { Image} from 'rebass'
-import icon from './icon/id-card-s.svg'
+import icon from './icon/newicon/image.svg'
 
 ### Zeigen Sie Präsenz
 
-<Image width={120} src={icon} />
+<Image py={[1,15,30]} width={200} src={icon} />
 
 #### Wie eine Visitenkarte für Ihr Unternehmen, ...
 

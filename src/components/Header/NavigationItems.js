@@ -19,7 +19,7 @@ export default [
     ],
   },
   {
-    label: 'Leistungen',
+    label: 'Portfolio',
     to: [
       {
         to: '/businessintelligenceandreporting',

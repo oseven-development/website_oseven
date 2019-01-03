@@ -1,9 +1,9 @@
 <!-- @format -->
 
 import { Image} from 'rebass'
-import icon from './icon/seo.svg'
-import icon2 from './icon/computer.svg'
-import icon3 from './icon/devices.svg'
+import icon from './icon/newicon/chat.svg'
+import icon2 from './icon/newicon/chat2.svg'
+import icon3 from './icon/newicon/share.svg'
 
 ## Der Unterschied machts!
 

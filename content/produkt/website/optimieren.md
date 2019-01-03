@@ -15,19 +15,19 @@ import Fade from 'react-reveal/Fade'
 <Fade duration={2000}>
    <Image width={[60,70,80]} src={chrome} style={{margin:20}} />
 </Fade>
-<Fade duration={2500} >
+<Fade duration={3000} >
     <Image width={[60,70,80]} src={firefox} style={{margin:20}}/>
 </Fade>
 
-<Fade duration={3000}>
+<Fade duration={4000}>
     <Image width={[60,70,80]} src={edge} style={{margin:20}} />
 </Fade>
 
-<Fade duration={3500}>
+<Fade duration={5000}>
     <Image width={[60,70,80]} src={safari} style={{margin:20}}/>
 </Fade>
 
-<Fade duration={4000}>
+<Fade duration={6000}>
    <Image width={[60,70,80]} src={opera} style={{margin:20}}/>
    </Fade>
 </Flex>

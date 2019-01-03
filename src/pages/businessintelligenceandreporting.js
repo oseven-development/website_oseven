@@ -14,8 +14,9 @@ import {
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
-import icon from '../../content/service/bi/icon/presentation.svg'
-import icon2 from '../../content/service/bi/icon/presentation2.svg'
+import icon1 from '../../content/service/bi/icon/bi1.svg'
+import icon2 from '../../content/service/bi/icon/bi2.svg'
+import icon3 from '../../content/service/bi/icon/bi3.svg'
 import picon from '../../content/service/bi/icon/picon.svg'
 import theme from '../components/theme'
 import Reporting from '../../content/service/bi/reporting.md'
@@ -36,10 +37,13 @@ const BusinessIntelligenceAndReporting = () => (
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon} />
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon1} />
             </Fade>
             <Fade left>
               <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon2} />
+            </Fade>
+            <Fade left>
+              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon3} />
             </Fade>
           </Flex>
         </Box>

@@ -1,13 +1,15 @@
 <!-- @format -->
 
 import { Image} from 'rebass'
-import icon from './icon/growth.svg'
-import icon2 from './icon/report.svg'
+import icon from './icon/report1.svg'
+import icon2 from './icon/report2.svg'
+import icon3 from './icon/report3.svg'
 
 ### Business Reporting - Berichtswesen richtig verstehen
 
 <Image m={[5,10,25]} width={[100,150,180]} src={icon} />
 <Image m={[5,10,25]} width={[100,150,180]} src={icon2} />
+<Image m={[5,10,25]} width={[100,150,180]} src={icon3} />
 
 Das Berichtswesen, auch Reporting genannt, ist das systematische Erstellen von Berichten, die das Treffen von unternehmensrelevanten Entscheidungen ermöglichen sollen.
 
