@@ -6,30 +6,29 @@ import firefox from './icon/firefox.svg'
 import edge from './icon/edge.svg'
 import safari from './icon/safari.svg'
 import opera from './icon/opera.svg'
-import Reveal from 'react-reveal/Reveal';
 import Fade from 'react-reveal/Fade'
 
 ## Wir optimieren
 
 <Flex flex-direction="column" alignItems="center" justifyContent="center">
 
-<Fade >
-   <Image width={[80,100,120]} src={chrome} style={{margin:20}} />
-</Fade>
-<Fade duration={500} >
-    <Image width={[80,100,120]} src={firefox} style={{margin:20}}/>
-</Fade>
-
-<Fade duration={1000}>
-    <Image width={[80,100,120]} src={edge} style={{margin:20}} />
-</Fade>
-
-<Fade duration={1500}>
-    <Image width={[80,100,120]} src={safari} style={{margin:20}}/>
-</Fade>
-
 <Fade duration={2000}>
-   <Image width={[80,100,120]} src={opera} style={{margin:20}}/>
+   <Image width={[60,70,80]} src={chrome} style={{margin:20}} />
+</Fade>
+<Fade duration={2500} >
+    <Image width={[60,70,80]} src={firefox} style={{margin:20}}/>
+</Fade>
+
+<Fade duration={3000}>
+    <Image width={[60,70,80]} src={edge} style={{margin:20}} />
+</Fade>
+
+<Fade duration={3500}>
+    <Image width={[60,70,80]} src={safari} style={{margin:20}}/>
+</Fade>
+
+<Fade duration={4000}>
+   <Image width={[60,70,80]} src={opera} style={{margin:20}}/>
    </Fade>
 </Flex>
 

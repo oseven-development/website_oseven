@@ -58,13 +58,19 @@ const WebsitePage = () => (
         <ServiceContainer bgcolor="white" style={{marginTop: '1em'}} color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Beratung />
+              <Fade left>
+                <Beratung />
+              </Fade>
             </Box>
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Technik />
+              <Fade bottom>
+                <Technik />
+              </Fade>
             </Box>
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
-              <Information />
+              <Fade right>
+                <Information />
+              </Fade>
             </Box>
           </Flex>
         </ServiceContainer>
