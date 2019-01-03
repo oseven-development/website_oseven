@@ -4,7 +4,7 @@
 
 ## Unsere Werte und Motivation
 
-Digitalisierung, Industrie 4.0, Vernetzung – Schlagworte wie diese sind in aller Munde – Wichtig ist dabei die passende Antwort!
+Digitalisierung, Industrie 4.0, Vernetzung – Schlagworte wie diese sind in aller Munde – Wichtig ist dabei die passende Antwort! Wir setzen auf ...
 
 <!--
 

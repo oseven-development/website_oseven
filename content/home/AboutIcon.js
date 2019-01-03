@@ -18,32 +18,34 @@ import erfolg from './icon/newicon/quality.svg'
 import zielstrebig from './icon/newicon/startup.svg'
 import zusammenhalt from './icon/newicon/team.svg'
 
+const paddingImage = ['0.2em 0 0.1em 0', '2em 0 0.1em 0', '3em 0 0.1em 0']
+
 export const IconList = () => {
   return (
     <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
       <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
-        <Image width={[60, 75, 90]} src={beraten} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={beraten} />
         <h4>Bertaung</h4>
-        <Image width={[60, 75, 90]} src={zielstrebig} />
-        <h4>Ehrgeiz</h4>
+        <Image p={paddingImage} width={[70, 85, 100]} src={zielstrebig} />
+        <h4>Technologie</h4>
       </Box>
       <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
-        <Image width={[60, 75, 90]} src={innovativ} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={innovativ} />
         <h4>Innovation</h4>
 
-        <Image width={[60, 75, 90]} src={erfolg} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={erfolg} />
         <h4>Erfolg</h4>
       </Box>
       <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
-        <Image width={[60, 75, 90]} src={zuverlässig} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={zuverlässig} />
         <h4>Zuverlässigkeit</h4>
-        <Image width={[60, 75, 90]} src={zusammenhalt} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={zusammenhalt} />
         <h4>Teamwork</h4>
       </Box>
       <Box width={[1 / 2, 1 / 2, 1 / 4]} style={{textAlign: 'center'}}>
-        <Image width={[60, 75, 90]} src={ausgebildet} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={ausgebildet} />
         <h4>Bildung</h4>
-        <Image width={[60, 75, 90]} src={sicher} />
+        <Image p={paddingImage} width={[70, 85, 100]} src={sicher} />
         <h4>Sicherheit</h4>
       </Box>
     </Flex>

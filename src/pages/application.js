@@ -39,7 +39,7 @@ const ApplicationPage = () => (
             <h2 className="awesome-headline-h2">einfach immer und überall</h2>
           </Fade>
         </Box>
-        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
+        <ServiceContainer color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <App />
@@ -61,7 +61,7 @@ const ApplicationPage = () => (
         </ServiceContainer>
       </Container>
       <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
-        <Container style={{padding: '40px 0'}}>
+        <Container style={{padding: '20px 0'}}>
           <Box p={[1, 2, 3]}>
             <Verwenden />
           </Box>

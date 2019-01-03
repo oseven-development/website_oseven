@@ -8,6 +8,6 @@ Power BI ist eine Business Intelligence Lösung, mit der Sie Ihre Daten visualis
 <div  >
 <p style="font-weight: 600;text-align: left;">&#8226 Interaktive dynamische Berichte <br/></p>
 <p style="font-weight: 600;text-align: left;">&#8226 Zugriff auf deine Berichte von überall <br/></p>
-<p style="font-weight: 600;text-align: left;">&#8226 Desktop als auch mobile Berichte <br/></p>
+<p style="font-weight: 600;text-align: left;">&#8226 Mobile & Desktop Berichte <br/></p>
 
 </div>

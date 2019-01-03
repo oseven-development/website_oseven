@@ -55,7 +55,7 @@ const BusinessIntelligenceAndReporting = () => (
     </Container>
     <div style={{background: theme.colors.second}}>
       <Container>
-        <Flex justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
+        <Flex justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
           <ConsultingHeadline h3color="white" h4color="white" pcolor="white" weight={600} style={{textAlign: 'center'}}>
             <Reporting />
           </ConsultingHeadline>
@@ -84,7 +84,7 @@ const BusinessIntelligenceAndReporting = () => (
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
       <ConsultingHeadline style={{textAlign: 'center'}}>
         <h1>Power Bi Beispiel</h1>
-        <h3>Beispiel Berichte mit echten Daten erstellen</h3>
+        <h3>Beispiel Berichte mit echten Daten eines Onlineshop</h3>
       </ConsultingHeadline>
 
       <iframe

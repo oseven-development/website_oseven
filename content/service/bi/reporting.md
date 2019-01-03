@@ -16,24 +16,16 @@ Das Berichtswesen, auch Reporting genannt, ist das systematische Erstellen von B
 
 #### Der Zweck von Berichten
 
-Berichte unterstützen einzelnen Entscheidungsebenen bis hin zu Team oder Einzelentscheidungen. Dazu werden im Rahmen des Berichtswesens Informationen gesammelt, verarbeitet und präsentiert.
+Berichte unterstützen einzelne Entscheidungsebenen bis hin zu Team oder Einzelentscheidungen. Dazu werden im Rahmen des Berichtswesens Informationen gesammelt, verarbeitet und präsentiert.
 
 So wird für Transparenz gesorgt, Entscheidungsträger erhalten einen Überblick über das Unternehmen und können so fundierte Entscheidungen treffen. Durch die Auswertung der Daten aus dem bisherigen Geschäft können Entscheidungen für die Zukunft getroffen werden.
 
 #### ein gutes Berichtswesen ermöglicht
 
-<Flex flexWrap="wrap" justifyContent="center" alignItems="center" px={['1px','5px','10px']}>
-<Box px={[1]} width={[1,1/3,1/3]}>
-<p>Soll-Ist-Vergleiche</p>
-<p>Entscheidungshilfe </p>
-<p>Schaffen von Transparenz </p>
-<p>Optimierung von Prozesse </p>
-</Box>
-<Box px={[1]} width={[1,1/4,1/3]}><Image m={[1,10,25]} width={[60,80,100]} src={icon4} /></Box>
-<Box px={[1]} width={[1,1/3,1/3]}>
-<p>Überblick</p>
-<p>Komplexitätsreduktion </p>
-<p>Klarheit </p>
-<p>Effizienzsteigerung</p>
-</Box>
-</Flex>
+
+<div >
+<p style="font-weight: 600;text-align: left;">&#8226 Soll-Ist-Vergleiche für einen besser Überblick <br/></p>
+<p style="font-weight: 600;text-align: left;">&#8226 Kompleixtätsreduktion zur Entscheidungshilfe <br/></p>
+<p style="font-weight: 600;text-align: left;">&#8226 Transparenz im Unternehmen <br/></p>
+<p style="font-weight: 600;text-align: left;">&#8226 Effizienzsetierung durch Optimierung von Prozessen <br/></p>
+</div>
