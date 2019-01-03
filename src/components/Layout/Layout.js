@@ -33,6 +33,7 @@ class Layout extends React.Component {
       loading: 'is-loading',
     }
     this.handleToggleMenu = this.handleToggleMenu.bind(this)
+    this.setActiveToSpan = this.setActiveToSpan.bind(this)
   }
 
   componentDidMount() {
@@ -64,6 +65,10 @@ class Layout extends React.Component {
     })
   }
 
+  setActiveToSpan(a) {
+    console.log(a)
+  }
+
   render() {
     const {children} = this.props
     // if (this.state.loading === 'is-loading') {
@@ -77,7 +82,11 @@ class Layout extends React.Component {
             <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuFadeing} />
             {children}
             <Footer />
-            <Navigation isMenuVisible={this.state.isMenuVisible} isMenuFadeing={this.state.isMenuFadeing} />
+            <Navigation
+              isMenuVisible={this.state.isMenuVisible}
+              isMenuFadeing={this.state.isMenuFadeing}
+              toggleActive={this.setActiveToSpan}
+            />
           </div>
         </ThemeProvider>
       </div>
