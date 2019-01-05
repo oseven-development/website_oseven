@@ -2,7 +2,16 @@
 
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
-import {Layout, Seo, HeaderTitleBackground, Container, Parallax, HeadingWithSublime, AnimatedArrow} from '../components'
+import {
+  Layout,
+  Seo,
+  HeaderTitleBackground,
+  Container,
+  Parallax,
+  HeadingWithSublime,
+  AnimatedArrow,
+  smallNav,
+} from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/consutling.jpg'
 import Projekte from '../../content/service/consulting/projekte.md'
@@ -17,6 +26,11 @@ import theme from '../components/theme'
 import parallax from '../assets/images/backgrounds/consultingparallax.jpg'
 import Business from '../../content/service/consulting/business.md'
 
+const navObject = [
+  {name: 'Projekt Consulting', to: 'Projektberatung'},
+  {name: 'Business Consulting', to: 'Unternehmensberatung'},
+]
+
 const ConsultingPage = () => (
   <Layout>
     <Seo title="Business & Projekt Consulting" />
@@ -24,11 +38,18 @@ const ConsultingPage = () => (
       bgPosition="center right"
       img={background}
       h1Text="Business & Projekt Consulting"
-      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen.">
+      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen."
+      nav={smallNav(navObject)}>
       <AnimatedArrow />
     </HeaderTitleBackground>
     <Container>
-      <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" mt={[5, 20, 30]}>
+      <Flex
+        id="Projektberatung"
+        flexDirection="row"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="center"
+        pt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
@@ -61,7 +82,13 @@ const ConsultingPage = () => (
     </Flex>
     <Parallax img={parallax} />
     <Container>
-      <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" mt={[5, 20, 30]}>
+      <Flex
+        id="Unternehmensberatung"
+        flexDirection="row"
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="center"
+        pt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
           <HeadingWithSublime
             headline="Business Consulting"

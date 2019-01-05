@@ -5,7 +5,7 @@ import {AnimatedLogo, AnimatedArrow} from './Animate'
 import {BackgroundImage, SkewedBackground, Parallax, FullscreenBackground, HeaderTitleBackground} from './Background'
 import {Container, ServiceContainer} from './Container'
 import {Footer} from './Footer'
-import {Header, Navigation} from './Header'
+import {Header, Navigation, smallNav} from './Header'
 import {Layout} from './Layout'
 import {ResetStyle} from './Reset'
 import {Button} from './Button'
@@ -37,4 +37,5 @@ export {
   ConsultingHeadline,
   HeaderTitleBackground,
   HeadingWithSublime,
+  smallNav,
 }

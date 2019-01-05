@@ -15,37 +15,21 @@ import React from 'react'
 //   display: flex;
 //   flex-flow: nowrap row;
 // `
-export const styledMenu = styled.svg`
-  animation: rotate 2s linear infinite;
-  margin: -25px 0 0 -25px;
-  width: 50px;
-  height: 50px;
-
-  & .path {
-    stroke: #5652bf;
-    stroke-linecap: round;
-    animation: dash 1.5s ease-in-out infinite;
+export const StyledSmallNav = styled.div`
+  position: absolute;
+  bottom: 2%;
+  left: 0%;
+  li {
+    display: inline;
+    padding: 0px 7px;
   }
-
-  @keyframes rotate {
-    100% {
-      transform: rotate(360deg);
-    }
+  a {
+    color: whitesmoke;
+    font-size: 1.2em;
+    transition: all 0.4s ease-in-out;
   }
-
-  @keyframes dash {
-    0% {
-      stroke-dasharray: 1, 150;
-      stroke-dashoffset: 0;
-    }
-    50% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -35;
-    }
-    100% {
-      stroke-dasharray: 90, 150;
-      stroke-dashoffset: -124;
-    }
+  a:hover {
+    color: ${theme.colors.main};
   }
 `
 

@@ -10,6 +10,7 @@ import {
   ConsultingHeadline,
   AnimatedArrow,
   HeadingWithSublime,
+  smallNav,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
@@ -17,10 +18,15 @@ import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
 import icon3 from '../../content/service/bi/icon/bi3.svg'
-import picon from '../../content/service/bi/icon/picon.svg'
 import theme from '../components/theme'
 import Reporting from '../../content/service/bi/reporting.md'
 import PowerBi from '../../content/service/bi/powerbi.md'
+
+const navObject = [
+  {name: 'Business Intelligence', to: 'BusinessIntelligence'},
+  {name: 'Business Reporting', to: 'BusinessReporting'},
+  {name: 'Power Bi', to: 'PowerBi'},
+]
 
 const BusinessIntelligenceAndReporting = () => (
   <Layout>
@@ -29,11 +35,12 @@ const BusinessIntelligenceAndReporting = () => (
       img={background}
       h1Text="Business Intelligence & Reporting"
       h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
-      bgPosition="center right">
+      bgPosition="center right"
+      nav={smallNav(navObject)}>
       <AnimatedArrow />
     </HeaderTitleBackground>
     <Container>
-      <Flex flexDirection="row" flexWrap="wrap" mt={[5, 20, 30]}>
+      <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
@@ -55,7 +62,7 @@ const BusinessIntelligenceAndReporting = () => (
     </Container>
     <div style={{background: theme.colors.second}}>
       <Container>
-        <Flex justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
+        <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
           <ConsultingHeadline h3color="white" h4color="white" pcolor="white" weight={600} style={{textAlign: 'center'}}>
             <Fade>
               <Reporting />
@@ -65,7 +72,7 @@ const BusinessIntelligenceAndReporting = () => (
       </Container>
     </div>
     <Container>
-      <Flex flexDirection="row" flexWrap="wrap" mt={[5, 20, 30]}>
+      <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
