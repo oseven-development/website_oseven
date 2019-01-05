@@ -17,11 +17,13 @@ const IndexPage = () => (
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
         <div style={{width: '100%'}}>
           <AnimatedLogo />
-          <AnimatedArrow />
+          <a href="#ÜberUns">
+            <AnimatedArrow />
+          </a>
         </div>
       </Flex>
     </BackgroundImage>
-    <Container>
+    <Container id="ÜberUns" style={{paddingTop: '1em'}}>
       <Headline>
         <h1 className="headline">
           Über <span style={{backgroundColor: theme.colors.contrast, color: 'white', padding: '0 10px'}}>O-Seven</span>

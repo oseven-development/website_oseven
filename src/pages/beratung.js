@@ -40,7 +40,9 @@ const ConsultingPage = () => (
       h1Text="Business & Projekt Consulting"
       h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen."
       nav={smallNav(navObject)}>
-      <AnimatedArrow />
+      <a href="#Projektberatung">
+        <AnimatedArrow />
+      </a>
     </HeaderTitleBackground>
     <Container>
       <Flex

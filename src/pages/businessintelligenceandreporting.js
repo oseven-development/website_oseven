@@ -37,7 +37,9 @@ const BusinessIntelligenceAndReporting = () => (
       h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
       bgPosition="center right"
       nav={smallNav(navObject)}>
-      <AnimatedArrow />
+      <a href="#BusinessIntelligence">
+        <AnimatedArrow />
+      </a>
     </HeaderTitleBackground>
     <Container>
       <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>

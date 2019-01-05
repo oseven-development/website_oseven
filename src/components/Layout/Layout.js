@@ -21,6 +21,11 @@ ul {
 a {
   text-decoration: none;
 }
+@media (max-width: 769px) {
+ #ArrowDrawing{
+   Display:none;
+ }
+}
 
 `
 
