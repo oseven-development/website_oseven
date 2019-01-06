@@ -44,10 +44,10 @@ const WebsitePage = () => (
 
         <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <Praesenz />
             </Box>
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <OhneGehtsNicht />
             </Box>
           </Flex>
@@ -55,7 +55,7 @@ const WebsitePage = () => (
       </Container>
       <Parallax img={parallax} />
       <Container style={{color: theme.colors.textBlack}}>
-        <ServiceContainer bgcolor="white" style={{marginTop: '1em'}} color={theme.colors.second}>
+        <ServiceContainer bgcolor="white" style={{margin: '2em 0'}} color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
             <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
               <Fade left>
@@ -77,7 +77,7 @@ const WebsitePage = () => (
       </Container>
       <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
         <Container>
-          <Box p={[1, 2, 3]}>
+          <Box py={[1, 4, 5, 10]} px={[1, 2, 3]}>
             <Unterschied />
           </Box>
         </Container>
