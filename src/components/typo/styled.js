@@ -46,7 +46,7 @@ export const StyledConsultingHeadline = styled.div`
     color: ${props => props.h2color};
   }
   h3 {
-    font-family: 'OpenSans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: ${props => (props.weight ? props.weight : '100')};
     color: ${props => props.h3color};
   }
@@ -60,13 +60,8 @@ export const StyledConsultingHeadline = styled.div`
   }
 `
 export const StyledHeadingWithSublime = styled.div`
-h2{
-  margin-top:15px;
-  margin-bottom:15px;
-}
-<div><h2 style="margin-top:15px;margin-bottom:15px">Business Consulting</h2></div>
-
-<div style="width:4em;height:1px;background:black;margin-bottom:10px"></div>
-
-### Beratung für jeden Schritt in Ihrem Unternehmen
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 `

@@ -11,9 +11,11 @@ import {
   AnimatedArrow,
   HeadingWithSublime,
   smallNav,
+  Parallax,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
+import powerbiBg from '../assets/images/backgrounds/Powerbi.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
@@ -21,6 +23,9 @@ import icon3 from '../../content/service/bi/icon/bi3.svg'
 import theme from '../components/theme'
 import Reporting from '../../content/service/bi/reporting.md'
 import PowerBi from '../../content/service/bi/powerbi.md'
+import Berichtswesen from '../../content/service/bi/berichtswesen.md'
+import Zweck from '../../content/service/bi/zweck.md'
+import {lighten} from 'polished'
 
 const navObject = [
   {name: 'Business Intelligence', to: 'BusinessIntelligence'},
@@ -57,7 +62,7 @@ const BusinessIntelligenceAndReporting = () => (
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime headline="Buisness Intelligence" sublime="Der Weg zur Datenkontrolle" />
+          <HeadingWithSublime spanColor="black" headline="Buisness Intelligence" sublime="Der Weg zur Datenkontrolle" />
           <Bitext />
         </Box>
       </Flex>
@@ -65,14 +70,43 @@ const BusinessIntelligenceAndReporting = () => (
     <div style={{background: theme.colors.second}}>
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
-          <ConsultingHeadline h3color="white" h4color="white" pcolor="white" weight={600} style={{textAlign: 'center'}}>
+          <ConsultingHeadline
+            h2color="white"
+            h3color="white"
+            h4color="white"
+            pcolor="white"
+            weight={200}
+            style={{textAlign: 'center'}}>
             <Fade>
+              <HeadingWithSublime
+                spanColor="transparent"
+                headline="Business Reporting"
+                sublime="Berichtswesen richtig verstehen"
+              />
               <Reporting />
             </Fade>
           </ConsultingHeadline>
         </Flex>
       </Container>
     </div>
+    <div style={{background: lighten(0.65, theme.colors.second)}}>
+      <Container>
+        <Flex
+          justifyContent="center"
+          alignItems="flex-start"
+          px={[1, 2, 3]}
+          py={[5, 20, 40]}
+          style={{textAlign: 'center'}}>
+          <Box width={[1, 1, 1 / 2]} px={[1, 2, 3]}>
+            <Zweck />
+          </Box>
+          <Box width={[1, 1, 1 / 2]} px={[1, 2, 3]}>
+            <Berichtswesen />
+          </Box>
+        </Flex>
+      </Container>
+    </div>
+    <Parallax img={powerbiBg} />
     <Container>
       <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
@@ -87,7 +121,7 @@ const BusinessIntelligenceAndReporting = () => (
           </Flex>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
+          <HeadingWithSublime spanColor="black" headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
           <PowerBi />
         </Box>
       </Flex>

@@ -9,7 +9,9 @@ import {Footer} from '../Footer'
 import '../../assets/style/stylesheet.styl'
 
 const GlobalStyle = createGlobalStyle`
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; 
+    scroll-behavior: smooth;
+  }
 body {
   margin: 0;
   font-family: Cabin;
@@ -21,6 +23,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 @media (max-width: 769px) {
  #ArrowDrawing{
    Display:none;

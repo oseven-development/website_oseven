@@ -69,6 +69,7 @@ const ConsultingPage = () => (
           <HeadingWithSublime
             headline="Erfolgreiche Projekte"
             sublime="Organisation, Konzeption, Planung und Steuerung"
+            spanColor="black"
           />
 
           <Projekte />
@@ -95,6 +96,7 @@ const ConsultingPage = () => (
           <HeadingWithSublime
             headline="Business Consulting"
             sublime="Beratung für jeden Schritt in Ihrem Unternehmen"
+            spanColor="black"
           />
           <Business />
         </Box>

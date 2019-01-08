@@ -10,7 +10,7 @@ export const HeadingWithSublime = ({children, ...props}) => (
       <h2>{props.headline}</h2>
     </Fade>
     <Fade>
-      <div style={{width: '4em', height: '1px', background: 'black', marginBottom: '10px'}} />
+      <div style={{width: '4em', height: '1px', background: props.spanColor, marginBottom: '10px'}} />
     </Fade>
     <Fade>
       <h3>{props.sublime}</h3>
