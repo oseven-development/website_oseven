@@ -11,7 +11,7 @@ import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
 import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
-import {Slider} from './Slider'
+import {Slider,TextSlider} from './Slider'
 import {ImageBackground} from './Image'
 
 export {
@@ -37,5 +37,5 @@ export {
   ConsultingHeadline,
   HeaderTitleBackground,
   HeadingWithSublime,
-  smallNav,
+  smallNav,TextSlider
 }

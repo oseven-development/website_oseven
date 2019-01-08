@@ -12,6 +12,8 @@ import {
   HeadingWithSublime,
   smallNav,
   Parallax,
+  Slider,
+  TextSlider,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
@@ -67,9 +69,11 @@ const BusinessIntelligenceAndReporting = () => (
         </Box>
       </Flex>
     </Container>
+    <Parallax img={powerbiBg} />
+
     <div style={{background: theme.colors.second}}>
       <Container>
-        <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} py={[5, 20, 40]}>
+        <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
           <ConsultingHeadline
             h2color="white"
             h3color="white"
@@ -78,32 +82,16 @@ const BusinessIntelligenceAndReporting = () => (
             weight={200}
             style={{textAlign: 'center'}}>
             <Fade>
-              <HeadingWithSublime
-                spanColor="transparent"
-                headline="Business Reporting"
-                sublime="Berichtswesen richtig verstehen"
-              />
-              <Reporting />
+              <HeadingWithSublime spanColor="transparent" headline="Business Reporting" />
             </Fade>
           </ConsultingHeadline>
         </Flex>
-      </Container>
-    </div>
-    <div style={{background: lighten(0.65, theme.colors.second)}}>
-      <Container>
-        <Flex
-          justifyContent="center"
-          alignItems="flex-start"
-          px={[1, 2, 3]}
-          py={[5, 20, 40]}
-          style={{textAlign: 'center'}}>
-          <Box width={[1, 1, 1 / 2]} px={[1, 2, 3]}>
-            <Zweck />
-          </Box>
-          <Box width={[1, 1, 1 / 2]} px={[1, 2, 3]}>
-            <Berichtswesen />
-          </Box>
-        </Flex>
+        <TextSlider
+          textColor="white"
+          headingColor="white"
+          items={[<Reporting />, <Zweck />, <Berichtswesen />]}
+          height="500px"
+        />
       </Container>
     </div>
     <Parallax img={powerbiBg} />
