@@ -13,33 +13,27 @@ const ContactPage = () => (
     <Headline>
       <FullscreenBackground img={parallax}>
         <Flex alignItems="center" justifyContent="center">
-          <Box mt={[65, 75, '8%', '10%']} style={{backgroundColor: 'white', padding: '40px', opacity: 0.9}}>
+          <Box
+            mt={[65, 75, '5%', '5%']}
+            style={{padding: '0 40px', backgroundColor: 'rgba(255,255,255,0.9)', flexBasis: '500px'}}>
             <h2>Den Ersten Kontakt vergisst man nie</h2>
-            <h3>O-SEVEN</h3>
-
-            <ul className="contact" style={{color: theme.colors.text}}>
-              <li>Maximilian Hänsel</li>
-              <li>
-                <a
-                  href="tel:+491634412159"
-                  className="icon-wrapper"
-                  style={{justifyContent: 'start', color: theme.colors.text}}>
-                  <FaPhone style={{fill: theme.colors.text, magrinRight: 3}} className="icon" /> Tel: 01634412159
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@o-seven.de"
-                  className="icon-wrapper"
-                  style={{justifyContent: 'start', color: theme.colors.text}}>
-                  <FaEnvelope style={{fill: theme.colors.text, magrinRight: 3}} className="icon" />
-                  info@o-seven.de
-                </a>
-              </li>
-              <li>
-                Nordring 171 <br /> 90409 Nürnberg
-              </li>
-            </ul>
+            <p style={{color: theme.colors.text, lineHeight: '2em'}}>
+              Maximilian Hänsel
+              <a
+                href="tel:+491634412159"
+                className="icon-wrapper"
+                style={{justifyContent: 'start', color: theme.colors.text}}>
+                <FaPhone style={{fill: theme.colors.text, magrinRight: 3}} className="icon" /> Tel: 01634412159
+              </a>
+              <a
+                href="mailto:info@o-seven.de"
+                className="icon-wrapper"
+                style={{justifyContent: 'start', color: theme.colors.text}}>
+                <FaEnvelope style={{fill: theme.colors.text, magrinRight: 3}} className="icon" />
+                info@o-seven.de
+              </a>
+              Nordring 171 <br style={{marginBottom: 0}} /> 90409 Nürnberg
+            </p>
             <a href="tel:+491634412159">
               <Button color={theme.colors.second} icon={<FaPhone style={{fill: theme.colors.second}} />}>
                 Tel: 0163 - 44 12 159

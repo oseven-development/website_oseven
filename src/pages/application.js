@@ -27,11 +27,10 @@ const ApplicationPage = () => (
         bgPosition="center"
         rotation="rotate(6.6deg) translateZ(0)"
       />
-
       <Container style={{color: theme.colors.textBlack}}>
         <Box mt={['90px', '140px', '240px', '300px']}>
           <Fade left>
-            <h1 className="awesome-headline-h1" style={{color: theme.colors.lightwhite, marginTop: '2em'}}>
+            <h1 className="awesome-headline-h1" style={{color: theme.colors.lightwhite}}>
               <span className="span">Deine </span>Application
             </h1>
           </Fade>
@@ -39,12 +38,12 @@ const ApplicationPage = () => (
             <h2 className="awesome-headline-h2">einfach immer und überall</h2>
           </Fade>
         </Box>
-        <ServiceContainer color={theme.colors.second} bgcolor="white">
+        <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <App />
             </Box>
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
               <Chancen />
             </Box>
           </Flex>

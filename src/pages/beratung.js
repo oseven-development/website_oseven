@@ -11,6 +11,7 @@ import {
   HeadingWithSublime,
   AnimatedArrow,
   smallNav,
+  ListContainer as Mylist,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/consutling.jpg'
@@ -71,8 +72,9 @@ const ConsultingPage = () => (
             sublime="Organisation, Konzeption, Planung und Steuerung"
             spanColor="black"
           />
-
-          <Projekte />
+          <Mylist bgcolor={'#eee'} dotColor={'#334D5C'}>
+            <Projekte />
+          </Mylist>
         </Box>
       </Flex>
     </Container>
@@ -98,7 +100,9 @@ const ConsultingPage = () => (
             sublime="Beratung für jeden Schritt in Ihrem Unternehmen"
             spanColor="black"
           />
-          <Business />
+          <Mylist bgcolor={'#eee'} dotColor={'#45B39C'}>
+            <Business />
+          </Mylist>
         </Box>
         <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">

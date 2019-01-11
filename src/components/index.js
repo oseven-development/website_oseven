@@ -2,8 +2,15 @@
 
 import {OpacityTransition} from './Transition'
 import {AnimatedLogo, AnimatedArrow} from './Animate'
-import {BackgroundImage, SkewedBackground, Parallax, FullscreenBackground, HeaderTitleBackground} from './Background'
-import {Container, ServiceContainer} from './Container'
+import {
+  BackgroundImage,
+  SkewedBackground,
+  Parallax,
+  FullscreenBackground,
+  HeaderTitleBackground,
+  ParallaxClaimed,
+} from './Background'
+import {Container, ServiceContainer, ListContainer} from './Container'
 import {Footer} from './Footer'
 import {Header, Navigation, smallNav} from './Header'
 import {Layout} from './Layout'
@@ -11,7 +18,7 @@ import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
 import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
-import {Slider,TextSlider} from './Slider'
+import {Slider, TextSlider} from './Slider'
 import {ImageBackground} from './Image'
 
 export {
@@ -37,5 +44,8 @@ export {
   ConsultingHeadline,
   HeaderTitleBackground,
   HeadingWithSublime,
-  smallNav,TextSlider
+  smallNav,
+  TextSlider,
+  ListContainer,
+  ParallaxClaimed,
 }

@@ -57,7 +57,7 @@ export const StyledSkewedBackground = styled.div`
 `
 export const StyledParallax = styled.div`
   background-image: url(${props => props.img});
-  min-height: 400px;
+  min-height: ${props => (props.minHeight ? props.minHeight : '400px')};
   max-height: ${props => (props.height ? props.height : '')};
   background-attachment: fixed;
   background-position: ${props => (props.bgPosition ? props.bgPosition : 'center')};
@@ -70,4 +70,31 @@ export const StyledFullscreenBackground = styled.div`
   height: 100vh;
   background-image: url(${props => props.img});
   background-size: cover;
+`
+
+export const StyledParallaxClaimed = styled.div`
+  .watcher {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    padding: 0em;
+    color: white;
+    transform: translateY(-50%);
+    opacity: ${props => props.opacity}
+  }
+  .contentBox {
+    background: rgba(0,0,0,0.7);
+    padding: 1em;
+  }
+  h1,h2{
+    font-family: "OpenSans", sans-serif
+  }
+  h1 {
+    font-size: 1.5em;
+    font-style: italic
+  }
+  h2 {
+    font-size: .8em;
+    font-weight: 600}
+  }
 `

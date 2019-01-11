@@ -14,6 +14,8 @@ import {
   Parallax,
   Slider,
   TextSlider,
+  ListContainer as Mylist,
+  ParallaxClaimed,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
@@ -65,12 +67,13 @@ const BusinessIntelligenceAndReporting = () => (
         </Box>
         <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
           <HeadingWithSublime spanColor="black" headline="Buisness Intelligence" sublime="Der Weg zur Datenkontrolle" />
-          <Bitext />
+          <Mylist bgcolor={'#eee'} dotColor={'#334D5C'}>
+            <Bitext />
+          </Mylist>
         </Box>
       </Flex>
     </Container>
-    <Parallax img={powerbiBg} />
-
+    <ParallaxClaimed img={powerbiBg} claim={{title: 'Stillstand ist Rückschritt', subtitle: 'Winston Churchchill, Britischer Staatsmann'}} />
     <div style={{background: theme.colors.second}}>
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
@@ -131,3 +134,5 @@ const BusinessIntelligenceAndReporting = () => (
 )
 
 export default BusinessIntelligenceAndReporting
+
+// <Parallax img={powerbiBg} />
