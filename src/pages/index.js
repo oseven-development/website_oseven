@@ -6,6 +6,7 @@ import theme from '../components/theme'
 import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline, AnimatedArrow, Parallax} from '../components'
 import Wir from '../../content/home/wir.md'
 import background from '../assets/images/backgrounds/home.jpg'
+import maxhaensel from '../assets/images/maxhaensel.jpg'
 import {IconList} from '../../content/home/AboutIcon'
 import Aboutus from '../../content/home/aboutus.md'
 import parallax from '../assets/images/backgrounds/team2.jpg'
@@ -38,9 +39,16 @@ const IndexPage = () => (
     </Container>
     <Parallax img={parallax} bgPosition="center top" />
     <Container>
-      <Headline h2color={theme.colors.main}>
-        <Aboutus />
-      </Headline>
+      <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]} alignItems="center">
+        <Box p={[1, 2, 3]} width={[1, 2 / 3, 3 / 4]}>
+          <Headline h2color={theme.colors.main}>
+            <Aboutus />
+          </Headline>
+        </Box>
+        <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 4]}>
+          <Image src={maxhaensel} />
+        </Box>
+      </Flex>
     </Container>
   </Layout>
 )

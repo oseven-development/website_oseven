@@ -75,7 +75,7 @@ const WebsitePage = () => (
           </Flex>
         </ServiceContainer>
       </Container>
-      <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white'}}>
+      <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white', paddingBottom: '3em'}}>
         <Container>
           <Box py={[1, 4, 5, 10]} px={[1, 2, 3]}>
             <Unterschied />

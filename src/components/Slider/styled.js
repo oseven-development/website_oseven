@@ -16,7 +16,6 @@ export const StyledTextSlider = styled.div`
   .slider,
   .slick-list,
   .slick-track {
-    height: ${props => props.height};
     text-align: center;
   }
   .slick-prev::before,

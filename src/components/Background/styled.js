@@ -87,7 +87,7 @@ export const StyledParallaxClaimed = styled.div`
     padding: 1em;
   }
   h1,h2{
-    font-family: "OpenSans", sans-serif
+    font-family:"Roboto Slab", sans-serif;
   }
   h1 {
     font-size: 1.5em;

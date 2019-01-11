@@ -73,7 +73,10 @@ const BusinessIntelligenceAndReporting = () => (
         </Box>
       </Flex>
     </Container>
-    <ParallaxClaimed img={powerbiBg} claim={{title: 'Stillstand ist Rückschritt', subtitle: 'Winston Churchchill, Britischer Staatsmann'}} />
+    <ParallaxClaimed
+      img={powerbiBg}
+      claim={{title: 'Stillstand ist Rückschritt', subtitle: 'Winston Churchchill, Britischer Staatsmann'}}
+    />
     <div style={{background: theme.colors.second}}>
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
@@ -89,12 +92,7 @@ const BusinessIntelligenceAndReporting = () => (
             </Fade>
           </ConsultingHeadline>
         </Flex>
-        <TextSlider
-          textColor="white"
-          headingColor="white"
-          items={[<Reporting />, <Zweck />, <Berichtswesen />]}
-          height="500px"
-        />
+        <TextSlider textColor="white" headingColor="white" items={[<Reporting />, <Zweck />, <Berichtswesen />]} />
       </Container>
     </div>
     <Parallax img={powerbiBg} />
