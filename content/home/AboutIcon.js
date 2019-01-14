@@ -27,18 +27,19 @@ const item = [
   {title: 'Innovation', icon: iconInnovation},
   {title: 'Erfolg', icon: iconErfolg},
   {title: 'Zuverlässigkeit', icon: iconZuverlaessigkeit},
-  {title: 'Teamwork', icon: iconTeamwork},
+  // {title: 'Teamwork', icon: iconTeamwork},
   {title: 'Bildung', icon: iconBildung},
-  {title: 'Sicherheit', icon: iconSicherheit},
+  // {title: 'Sicherheit', icon: iconSicherheit},
 ]
 class IconList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeTab: false,
+      activeTab: <Beratung />,
     }
   }
   handleActiveTab(active) {
+    console.log(active)
     let content
     switch (active) {
       case 'Beratung':
@@ -68,43 +69,46 @@ class IconList extends React.Component {
       default:
         content = false
     }
+    // console.log(content)
     this.setState({activeTab: content})
   }
 
   render() {
     return (
       <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
-        {item.map(item => {
-          return (
-            <Box
-              key={item.title}
-              width={[1 / 2, 1 / 2, 1 / 4]}
-              style={{textAlign: 'center'}}
-              onClick={() => this.handleActiveTab(item.title)}>
-              <StyledIcon>
-                <Image p={paddingImage} width={[70, 85, 100]} src={item.icon} />
-              </StyledIcon>
-              <h4>{item.title}</h4>
-            </Box>
-          )
-        })}
-        {this.state.activeTab ? (
-          <Box
-            my={['1em', '2em', '2em']}
-            px={['30px']}
-            pt={['1em']}
-            width={[1]}
-            style={{
-              textAlign: 'center',
-              background: 'rgb(230,230,230)',
-              borderRadius: '4px',
-              boxShadow: '1px 1px 1px #ccc',
-            }}>
-            {this.state.activeTab}
-          </Box>
-        ) : (
-          ''
-        )}
+        <Box key={item.title} width={[1, 1, 50 / 100]} style={{textAlign: 'center'}} mx={[5]}>
+          <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
+            {item.map(item => {
+              return (
+                <Box
+                  key={item.title}
+                  width={[1 / 3, 1 / 3, 1 / 3]}
+                  style={{textAlign: 'center'}}
+                  onClick={() => this.handleActiveTab(item.title)}>
+                  <StyledIcon>
+                    <Image p={paddingImage} width={[70, 85, 100]} src={item.icon} />
+                  </StyledIcon>
+                  <h4>{item.title}</h4>
+                </Box>
+              )
+            })}
+          </Flex>
+        </Box>
+
+        <Box
+          my={['1em', '2em', '2em']}
+          width={[1, 1, 30 / 100]}
+          px={['0']}
+          pt={['0']}
+          style={{
+            textAlign: 'center',
+            background: 'rgb(230,230,230)',
+            borderRadius: '4px',
+            boxShadow: '1px 1px 1px #ccc',
+            overflow: 'hidden',
+          }}>
+          {this.state.activeTab}
+        </Box>
       </Flex>
     )
   }
@@ -112,46 +116,112 @@ class IconList extends React.Component {
 //
 export const Beratung = () => {
   return (
-    <div>
+    <div style={{borderTop: '6px #45B39C solid', padding: '0 20px 10px 20px'}}>
       <h3>Beratung</h3>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet.
+        Als kleines Unternehmen sind Sie viel flexibler und können diese Chance der Veränderungen perfekt nutzen, wir
+        möchten Sie dabei beraten die für Sie passenden Antworten zu erarbeiten, sowie diese umzusetzen. Gerade für
+        kleinere und mittelgroße Unternehmen wird die digitale Kompetenz des Unternehmens zu einem entscheidenden
+        Wettbewerbsfaktor, den es nicht zu vernachlässigen gilt.
       </p>
     </div>
   )
 }
 
 export const Technologie = () => {
-  return <div>Technologie</div>
+  return (
+    <div style={{borderTop: '6px #ADD8E6 solid', padding: '0 20px 10px 20px'}}>
+      <h3>Technologie</h3>
+      <p>
+        Digitalisierung führt nicht nur bei den großen Konzernen zur Veränderung, sondern auch bei den kleinen und
+        mittelgroßen Unternehmen. Doch was bedeutet das alles und wie können Sie von dieser Veränderung in der digitalen
+        Welt profitieren. Wir führen Sie in die richtige Richtung, sodass Sie den Anschluss an die Konkurrenz nicht
+        verlieren.
+      </p>
+    </div>
+  )
 }
 
 export const Innovation = () => {
-  return <div>Innovation</div>
+  return (
+    <div style={{borderTop: '6px #E05B49 solid', padding: '0 20px 10px 20px'}}>
+      <h3>Innovation</h3>
+      <p>
+        Was bedeutet es Innovativ zu sein? Unter Innovation ist eine geplante und kontrollierte Veränderung, Neuerung in
+        einem System durch Anwendung neuer Ideen und Techniken zu verstehen. Wir setzen bei unsere Projekte stets
+        modernen Technologien und Methoden und erarbeiten so eine optimale Lösung für Sie.
+      </p>
+    </div>
+  )
 }
 
 export const Erfolg = () => {
-  return <div>Erfolg</div>
+  return (
+    <div style={{borderTop: '6px #800080 solid', padding: '0 20px 10px 20px'}}>
+      <h3>Erfolg</h3>
+      <p>
+        Wichtig ist es die passende Antwort auf Hindernisse zu finden. Es geht nicht nur um die Optimierung von
+        bestehenden Prozessen, sondern vielmehr um das Ergreifen neuer Chancen und Möglichkeiten, wie das Kreieren neuer
+        Produkte oder Dienstleistungsangebote. Wir helfen Ihnen den Schritt in die richtige Richtung zu machen.
+      </p>
+    </div>
+  )
 }
 
 export const Zuverlaessigkeit = () => {
-  return <div>Zuverlässigkeit</div>
+  return (
+    <div style={{borderTop: '6px #334D5C solid', padding: '0 20px 10px 20px'}}>
+      <h3>Zuverlaessigkeit</h3>
+      <p>
+        Digitalisierung führt nicht nur bei den großen Konzernen zur Veränderung, sondern auch bei den kleinen und
+        mittelgroßen Unternehmen. Doch was bedeutet das alles und wie können Sie von dieser Veränderung in der digitalen
+        Welt profitieren. Wir führen Sie in die richtige Richtung, sodass Sie den Anschluss an die Konkurrenz nicht
+        verlieren.
+      </p>
+    </div>
+  )
 }
 
 export const Teamwork = () => {
-  return <div>Teamwork</div>
+  return (
+    <div style={{borderTop: '6px #EFC84A solid', padding: '0 20px 10px 20px'}}>
+      <h3>Teamwork</h3>
+      <p>
+        Digitalisierung führt nicht nur bei den großen Konzernen zur Veränderung, sondern auch bei den kleinen und
+        mittelgroßen Unternehmen. Doch was bedeutet das alles und wie können Sie von dieser Veränderung in der digitalen
+        Welt profitieren. Wir führen Sie in die richtige Richtung, sodass Sie den Anschluss an die Konkurrenz nicht
+        verlieren.
+      </p>
+    </div>
+  )
 }
 
 export const Bildung = () => {
-  return <div>Bildung</div>
+  return (
+    <div style={{borderTop: '6px #EFC84A solid', padding: '0 20px 10px 20px'}}>
+      <h3>Bildung</h3>
+      <p>
+        Die Arbeits­welt wandelt sich Ständig und damit auch die Anforderungen. Auch der tech­nische Fort­schritt und
+        die Globalisierung, das Internet und der demogra­fische Wandel verändern Arbeits­märkte und Anforderungen. Um
+        für morgen gewappnet zu sein, müssen auch wir ständig unser Wissen anpassen und erweitern. Und das bedeutet
+        lebens­lang zu lernen.
+      </p>
+    </div>
+  )
 }
 
 export const Sicherheit = () => {
-  return <div>Sicherheit</div>
+  return (
+    <div style={{borderTop: '6px red solid', padding: '0 20px 10px 20px'}}>
+      <h3>Sicherheit</h3>
+      <p>
+        Digitalisierung führt nicht nur bei den großen Konzernen zur Veränderung, sondern auch bei den kleinen und
+        mittelgroßen Unternehmen. Doch was bedeutet das alles und wie können Sie von dieser Veränderung in der digitalen
+        Welt profitieren. Wir führen Sie in die richtige Richtung, sodass Sie den Anschluss an die Konkurrenz nicht
+        verlieren.
+      </p>
+    </div>
+  )
 }
 
 export {IconList}

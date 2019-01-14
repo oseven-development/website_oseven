@@ -73,6 +73,9 @@ class Layout extends React.Component {
       isMenuFadeing: !this.state.isMenuFadeing,
     })
   }
+  x() {
+    console.log('asd')
+  }
 
   setActiveToSpan(activeTab) {
     if (this.state.activeTab === activeTab) {
