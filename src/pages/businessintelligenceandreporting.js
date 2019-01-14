@@ -29,7 +29,9 @@ import Reporting from '../../content/service/bi/reporting.md'
 import PowerBi from '../../content/service/bi/powerbi.md'
 import Berichtswesen from '../../content/service/bi/berichtswesen.md'
 import Zweck from '../../content/service/bi/zweck.md'
-import {lighten} from 'polished'
+import {PowerbiforYou} from '../../content/service/bi/powerbiforyou'
+import {PowerbiService} from '../../content/service/bi/PowerBiServices'
+import {PowerBiExamples} from '../../content/service/bi/powerBiExamples'
 
 const navObject = [
   {name: 'Business Intelligence', to: 'BusinessIntelligence'},
@@ -96,38 +98,38 @@ const BusinessIntelligenceAndReporting = () => (
       </Container>
     </div>
     <Parallax img={powerbiBg} />
+    <div style={{backgroundColor: '#f2c811'}}>
+      <Container>
+        <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
+          <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
+            <Flex flexDirection="column" justifyContent="center" alignItems="center">
+              <Fade left>
+                <Image
+                  my={[15, 20, 30]}
+                  width={[130, 150, 180]}
+                  src={'https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg'}
+                />
+              </Fade>
+            </Flex>
+          </Box>
+          <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
+            <HeadingWithSublime spanColor="black" headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
+            <PowerBi />
+          </Box>
+        </Flex>
+      </Container>
+    </div>
     <Container>
-      <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
-        <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
-          <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Fade left>
-              <Image
-                my={[15, 20, 30]}
-                width={[130, 150, 180]}
-                src={'https://upload.wikimedia.org/wikipedia/commons/c/c9/Power_bi_logo_black.svg'}
-              />
-            </Fade>
-          </Flex>
-        </Box>
-        <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime spanColor="black" headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
-          <PowerBi />
-        </Box>
-      </Flex>
+      <PowerbiforYou />
     </Container>
-    <Flex justifyContent="center" alignItems="center" flexDirection="column">
-      <ConsultingHeadline style={{textAlign: 'center'}}>
-        <h1>Power Bi Beispiel</h1>
-        <h3>Beispiel Berichte mit echten Daten eines Onlineshop</h3>
-      </ConsultingHeadline>
-
-      <iframe
-        src="https://app.powerbi.com/view?r=eyJrIjoiZDRhYjljNjAtMGQ5MC00ODE3LWIyMWEtOTJkMzUyNzIyZjQwIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
-        frameBorder="0"
-        allowFullScreen={true}
-        style={{width: 'calc(500px + 10vw * 5 )', height: 'calc(calc(500px + 10vw * 5 )/4*2.378)'}}
-      />
-    </Flex>
+    <div style={{backgroundColor: '#f2c811'}}>
+      <Container>
+        <PowerbiService />
+      </Container>
+    </div>
+    <Container>
+      <PowerBiExamples />
+    </Container>
   </Layout>
 )
 
