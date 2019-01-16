@@ -7,7 +7,7 @@ import {Layout, BackgroundImage, Headline, Container} from '../components'
 import Index from '../../content/story/index.md'
 
 const StoryPage = () => (
-  <Layout>
+  <div>
     <BackgroundImage
       img={background}
       bgHeight="800px"
@@ -25,7 +25,7 @@ const StoryPage = () => (
         <Index />
       </div>
     </Container>
-  </Layout>
+  </div>
 )
 
 export default StoryPage

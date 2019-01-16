@@ -12,7 +12,7 @@ import Aboutus from '../../content/home/aboutus.md'
 import parallax from '../assets/images/backgrounds/team2.jpg'
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <BackgroundImage img={background} bgColor={'linear-gradient(90deg, #111 0%, #555 100%)'}>
       <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
@@ -50,7 +50,7 @@ const IndexPage = () => (
         </Box>
       </Flex>
     </Container>
-  </Layout>
+  </div>
 )
 
 export default IndexPage

@@ -33,7 +33,7 @@ const navObject = [
 ]
 
 const ConsultingPage = () => (
-  <Layout>
+  <div>
     <Seo title="Business & Projekt Consulting" />
     <HeaderTitleBackground
       bgPosition="center right"
@@ -119,7 +119,7 @@ const ConsultingPage = () => (
         </Box>
       </Flex>
     </Container>
-  </Layout>
+  </div>
 )
 
 export default ConsultingPage

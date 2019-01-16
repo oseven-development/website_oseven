@@ -6,6 +6,9 @@ import {createGlobalStyle, ThemeProvider} from 'styled-components'
 import theme from '../theme'
 import {Header, Navigation} from '../Header'
 import {Footer} from '../Footer'
+import {Navigation as NewNav} from '../Navigation'
+import navItems from '../Header/NavigationItems'
+import oseven from '../../assets/images/logo-o-seven-black-small.svg'
 import '../../assets/style/stylesheet.styl'
 
 const GlobalStyle = createGlobalStyle`
@@ -33,81 +36,24 @@ a {
 `
 
 class Layout extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isMenuVisible: false,
-      isMenuFadeing: false,
-      activeTab: '',
-      loading: 'is-loading',
-    }
-    this.handleToggleMenu = this.handleToggleMenu.bind(this)
-    this.setActiveToSpan = this.setActiveToSpan.bind(this)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
-  componentDidMount() {
-    this.timeoutId = setTimeout(() => {
-      this.setState({loading: ''})
-    }, 100)
-  }
+  componentDidMount() {}
 
-  componentWillUnmount() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId)
-    }
-  }
-
-  handleToggleMenu() {
-    if (this.state.isMenuVisible === true) {
-      setTimeout(() => {
-        this.setState({
-          isMenuVisible: !this.state.isMenuVisible,
-        })
-      }, 1000)
-    } else {
-      this.setState({
-        isMenuVisible: !this.state.isMenuVisible,
-      })
-    }
-    this.setState({
-      isMenuFadeing: !this.state.isMenuFadeing,
-    })
-  }
-  x() {
-    console.log('asd')
-  }
-
-  setActiveToSpan(activeTab) {
-    if (this.state.activeTab === activeTab) {
-      this.setState({
-        activeTab: '',
-      })
-    } else {
-      this.setState({
-        activeTab: activeTab,
-      })
-    }
-  }
+  componentWillUnmount() {}
 
   render() {
     const {children} = this.props
-    // if (this.state.loading === 'is-loading') {
-    //   return <Spinner />
-    // } else {
     return (
-      <div className={`body ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
+      <div className={`body`}>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
           <div>
-            <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuFadeing} />
+            <NewNav nav={navItems} brand={oseven} />
             {children}
             <Footer />
-            <Navigation
-              isMenuVisible={this.state.isMenuVisible}
-              isMenuFadeing={this.state.isMenuFadeing}
-              toggleActive={this.setActiveToSpan}
-              activeTab={this.state.activeTab}
-            />
           </div>
         </ThemeProvider>
       </div>
@@ -120,5 +66,15 @@ Layout.propTypes = {
 }
 
 export {Layout}
-
+//
 // <Header siteTitle={data.site.siteMetadata.title} />
+//      <NewNav nav={navItems} brand={oseven} />
+//    <NewNav nav={navItems} brand={oseven} />
+
+// <Header onToggleMenu={this.handleToggleMenu} isMenuVisible={this.state.isMenuFadeing} />
+// <Navigation
+//   isMenuVisible={this.state.isMenuVisible}
+//   isMenuFadeing={this.state.isMenuFadeing}
+//   toggleActive={this.setActiveToSpan}
+//   activeTab={this.state.activeTab}
+// />
