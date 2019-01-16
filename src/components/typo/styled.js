@@ -58,6 +58,9 @@ export const StyledConsultingHeadline = styled.div`
   p {
     color: ${props => props.pcolor};
   }
+  li {
+    font-size: 0.9em;
+  }
 `
 export const StyledHeadingWithSublime = styled.div`
   h2 {
