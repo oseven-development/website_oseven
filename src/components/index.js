@@ -19,7 +19,7 @@ import {Button} from './Button'
 import {Seo} from './Seo'
 import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
 import {Slider, TextSlider} from './Slider'
-import {ImageBackground} from './Image'
+import {ImageBackground, Lightbox} from './Image'
 
 export {
   OpacityTransition,
@@ -48,4 +48,5 @@ export {
   TextSlider,
   ListContainer,
   ParallaxClaimed,
+  Lightbox,
 }

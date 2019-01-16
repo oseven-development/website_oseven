@@ -16,6 +16,7 @@ import {
   TextSlider,
   ListContainer as Mylist,
   ParallaxClaimed,
+  Lightbox,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
@@ -29,9 +30,10 @@ import Reporting from '../../content/service/bi/reporting.md'
 import PowerBi from '../../content/service/bi/powerbi.md'
 import Berichtswesen from '../../content/service/bi/berichtswesen.md'
 import Zweck from '../../content/service/bi/zweck.md'
-import {PowerbiforYou} from '../../content/service/bi/powerbiforyou'
 import {PowerbiService} from '../../content/service/bi/PowerBiServices'
 import {PowerBiExamples} from '../../content/service/bi/powerBiExamples'
+import powerbi1 from '../../content/service/bi/powerbi1.png'
+import powerbi2 from '../../content/service/bi/powerbi2.png'
 
 const navObject = [
   {name: 'Business Intelligence', to: 'BusinessIntelligence'},
@@ -120,7 +122,23 @@ const BusinessIntelligenceAndReporting = () => (
       </Container>
     </div>
     <Container>
-      <PowerbiforYou />
+      <Flex
+        flexDirection="column"
+        flexWrap="wrap"
+        justifyContent="center"
+        alignItems="center"
+        style={{textAlign: 'center'}}>
+        <Box>
+          <h2 style={{marginBottom: 0}}>PowerBi für Sie</h2>
+          <p>
+            Hier finden Sie nun ein paar Beispielbilder, wie Power Bi Reports aussehen können und was alles möglich ist.
+            Weiterunten finden Sie noch Live-Demo Berichte, die Sie sich gerne ansehen dürfen.
+          </p>
+        </Box>
+        <Box>
+          <Lightbox images={[powerbi1, powerbi2]} />
+        </Box>
+      </Flex>
     </Container>
     <div style={{backgroundColor: '#f2c811'}}>
       <Container>
