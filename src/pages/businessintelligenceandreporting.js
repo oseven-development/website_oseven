@@ -40,7 +40,7 @@ const navObject = [
 ]
 
 const BusinessIntelligenceAndReporting = () => (
-  <Layout>
+  <div>
     <Seo title="Business Intelligence & Reporting" />
     <HeaderTitleBackground
       img={background}
@@ -130,7 +130,7 @@ const BusinessIntelligenceAndReporting = () => (
     <Container>
       <PowerBiExamples />
     </Container>
-  </Layout>
+  </div>
 )
 
 export default BusinessIntelligenceAndReporting
