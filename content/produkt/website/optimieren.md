@@ -13,22 +13,22 @@ import Fade from 'react-reveal/Fade'
 <Flex flex-direction="column" alignItems="center" justifyContent="center">
 
 <Fade delay={500} duration={500}>
-   <Image width={[60,70,80]} src={chrome} style={{margin:20}} />
+   <Image width={[45,70,80]} src={chrome} style={{margin:20}} />
 </Fade>
 <Fade delay={1000} duration={500} >
-    <Image width={[60,70,80]} src={firefox} style={{margin:20}}/>
+    <Image width={[45,70,80]} src={firefox} style={{margin:20}}/>
 </Fade>
 
 <Fade delay={1500} duration={500}>
-    <Image width={[60,70,80]} src={edge} style={{margin:20}} />
+    <Image width={[45,70,80]} src={edge} style={{margin:20}} />
 </Fade>
 
 <Fade delay={2000} duration={500}>
-    <Image width={[60,70,80]} src={safari} style={{margin:20}}/>
+    <Image width={[45,70,80]} src={safari} style={{margin:20}}/>
 </Fade>
 
 <Fade delay={2500} duration={500}>
-   <Image width={[60,70,80]} src={opera} style={{margin:20}}/>
+   <Image width={[45,70,80]} src={opera} style={{margin:20}}/>
    </Fade>
 </Flex>
 

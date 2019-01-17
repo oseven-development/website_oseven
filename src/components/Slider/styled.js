@@ -35,5 +35,6 @@ export const StyledTextSlider = styled.div`
   }
   p {
     color: ${props => props.textColor};
+    padding: ${props => (props.padding ? props.padding : '0px')};
   }
 `

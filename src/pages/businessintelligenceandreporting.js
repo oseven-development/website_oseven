@@ -96,7 +96,12 @@ const BusinessIntelligenceAndReporting = () => (
             </Fade>
           </ConsultingHeadline>
         </Flex>
-        <TextSlider textColor="white" headingColor="white" items={[<Reporting />, <Zweck />, <Berichtswesen />]} />
+        <TextSlider
+          textColor="white"
+          headingColor="white"
+          padding={'0px 5px'}
+          items={[<Reporting />, <Zweck />, <Berichtswesen />]}
+        />
       </Container>
     </div>
     <Parallax img={powerbiBg} />
