@@ -17,7 +17,7 @@ import background from '../assets/images/backgrounds/website.jpg'
 import parallax from '../assets/images/backgrounds/meeting_with_text.jpg'
 
 const WebsitePage = () => (
-  <div>
+  <React.Fragment>
     <Seo
       title="Webseiten"
       description="Übersicht des Services Webseiten"
@@ -90,7 +90,7 @@ const WebsitePage = () => (
         </ServiceContainer>
       </Container>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 export default WebsitePage

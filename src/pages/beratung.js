@@ -33,7 +33,7 @@ const navObject = [
 ]
 
 const ConsultingPage = () => (
-  <div>
+  <React.Fragment>
     <Seo title="Business & Projekt Consulting" />
     <HeaderTitleBackground
       bgPosition="center right"
@@ -119,7 +119,7 @@ const ConsultingPage = () => (
         </Box>
       </Flex>
     </Container>
-  </div>
+  </React.Fragment>
 )
 
 export default ConsultingPage

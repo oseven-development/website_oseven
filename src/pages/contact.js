@@ -8,7 +8,7 @@ import parallax from '../assets/images/backgrounds/contact.jpg'
 import {FaPhone, FaEnvelope} from 'react-icons/fa'
 
 const ContactPage = () => (
-  <div>
+  <React.Fragment>
     <Seo title="Kontakt" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <Headline>
       <FullscreenBackground img={parallax}>
@@ -49,7 +49,7 @@ const ContactPage = () => (
         </Flex>
       </FullscreenBackground>
     </Headline>
-  </div>
+  </React.Fragment>
 )
 
 export default ContactPage

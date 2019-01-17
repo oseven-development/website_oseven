@@ -14,7 +14,7 @@ import parallax2 from '../assets/images/backgrounds/digital-marketing.jpg'
 import Fade from 'react-reveal/Fade'
 
 const ApplicationPage = () => (
-  <div>
+  <React.Fragment>
     <Seo
       title="Applikation"
       description="Übersicht des Services Webseiten"
@@ -68,7 +68,7 @@ const ApplicationPage = () => (
       </ServiceContainer>
       <Parallax img={parallax2} />
     </div>
-  </div>
+  </React.Fragment>
 )
 
 export default ApplicationPage

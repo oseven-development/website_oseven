@@ -7,14 +7,14 @@ import {Layout, Container, Headline, Seo} from '../components'
 // import Markdown from 'react-markdown'
 
 const impressumPage = () => (
-  <div>
+  <React.Fragment>
     <Seo title="Impressum" />
     <Headline>
       <Container style={{textAlign: 'center', marginTop: 60}}>
         <Text />
       </Container>
     </Headline>
-  </div>
+  </React.Fragment>
 )
 
 export default impressumPage

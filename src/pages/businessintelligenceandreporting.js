@@ -3,7 +3,6 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import {
-  Layout,
   Seo,
   HeaderTitleBackground,
   Container,
@@ -12,15 +11,13 @@ import {
   HeadingWithSublime,
   smallNav,
   Parallax,
-  Slider,
   TextSlider,
   ListContainer as Mylist,
-  ParallaxClaimed,
   Lightbox,
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
-import powerbiBg from '../assets/images/backgrounds/Powerbi.jpg'
+import powerbiBg from '../assets/images/backgrounds/powerbi.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
@@ -42,7 +39,7 @@ const navObject = [
 ]
 
 const BusinessIntelligenceAndReporting = () => (
-  <div>
+  <React.Fragment>
     <Seo title="Business Intelligence & Reporting" />
     <HeaderTitleBackground
       img={background}
@@ -77,10 +74,7 @@ const BusinessIntelligenceAndReporting = () => (
         </Box>
       </Flex>
     </Container>
-    <ParallaxClaimed
-      img={powerbiBg}
-      claim={{title: 'Stillstand ist Rückschritt', subtitle: 'Winston Churchchill, Britischer Staatsmann'}}
-    />
+    <Parallax img={powerbiBg} />
     <div style={{background: theme.colors.second}}>
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
@@ -153,7 +147,7 @@ const BusinessIntelligenceAndReporting = () => (
     <Container>
       <PowerBiExamples />
     </Container>
-  </div>
+  </React.Fragment>
 )
 
 export default BusinessIntelligenceAndReporting

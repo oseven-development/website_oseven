@@ -42,7 +42,7 @@ const Kunden = () => {
 }
 
 const ReferencePage = () => (
-  <div>
+  <React.Fragment>
     <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height="800px">
       <Headline h1color="white" bgColor="#232323" padding="7px 30px">
         <h1 className="headline" style={{opacity: 0.95}}>
@@ -78,7 +78,7 @@ const ReferencePage = () => (
         </Box>
       </Flex>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 export default ReferencePage
