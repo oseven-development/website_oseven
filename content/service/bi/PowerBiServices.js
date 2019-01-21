@@ -14,7 +14,10 @@ export const PowerbiService = props => (
       justifyContent="center"
       alignItems="flex-start"
       style={{textAlign: 'center'}}>
-      <h2>Was wir Ihnen ermöglichen </h2>
+      <Box width={1}>
+        <h2>Was wir Ihnen ermöglichen </h2>
+      </Box>
+
       <Box width={[1, 1 / 3, 1 / 3]} py={[1, 2, 3]} px={[1, 4, 10]}>
         <Image src={powerbi3} my={[15, 20, 30]} width={[120, 120, 120]} />
         <h4>Interaktive dynamische Berichte</h4>

@@ -20,7 +20,8 @@ import {
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
-import powerbiBg from '../assets/images/backgrounds/Powerbi.jpg'
+import powerbiBg from '../assets/images/backgrounds/Powerbi_parallax.jpg'
+import powerbiBg2 from '../assets/images/backgrounds/clock.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
@@ -77,11 +78,8 @@ const BusinessIntelligenceAndReporting = () => (
         </Box>
       </Flex>
     </Container>
-    <ParallaxClaimed
-      img={powerbiBg}
-      claim={{title: 'Stillstand ist Rückschritt', subtitle: 'Winston Churchchill, Britischer Staatsmann'}}
-    />
-    <div style={{background: theme.colors.second}}>
+    <Parallax img={powerbiBg} />
+    <div style={{background: theme.colors.second, overflow: 'hidden'}}>
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
           <ConsultingHeadline
@@ -99,7 +97,7 @@ const BusinessIntelligenceAndReporting = () => (
         <TextSlider textColor="white" headingColor="white" items={[<Reporting />, <Zweck />, <Berichtswesen />]} />
       </Container>
     </div>
-    <Parallax img={powerbiBg} />
+    <Parallax img={powerbiBg2} />
     <div style={{backgroundColor: '#f2c811'}}>
       <Container>
         <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
