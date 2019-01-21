@@ -53,7 +53,7 @@ const ConsultingPage = () => (
         alignItems="center"
         justifyContent="center"
         pt={[5, 20, 30]}>
-        <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
+        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
               <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt1} />
@@ -66,7 +66,7 @@ const ConsultingPage = () => (
             </Fade>
           </Flex>
         </Box>
-        <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
+        <Box p={theme.paddings} width={[1, 2 / 3, 2 / 3]}>
           <HeadingWithSublime
             headline="Erfolgreiche Projekte"
             sublime="Organisation, Konzeption, Planung und Steuerung"
@@ -104,7 +104,7 @@ const ConsultingPage = () => (
             <Business />
           </Mylist>
         </Box>
-        <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
+        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade right>
               <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting1} />

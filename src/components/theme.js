@@ -2,6 +2,7 @@
 
 export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  paddings: [3, 2, 3],
   colors: {
     main: '#306efe',
     second: '#2A326C',

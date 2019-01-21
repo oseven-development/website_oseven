@@ -40,12 +40,12 @@ const IndexPage = () => (
     <Parallax img={parallax} bgPosition="center top" />
     <Container>
       <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]} alignItems="center">
-        <Box p={[3]} width={[1, 2 / 3, 3 / 4]}>
+        <Box p={theme.paddings} width={[1, 2 / 3, 3 / 4]}>
           <Headline h2color={theme.colors.main}>
             <Aboutus />
           </Headline>
         </Box>
-        <Box p={[3]} width={[1, 1 / 3, 1 / 4]}>
+        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 4]}>
           <Image src={maxhaensel} />
         </Box>
       </Flex>

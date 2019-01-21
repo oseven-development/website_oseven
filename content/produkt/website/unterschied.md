@@ -1,6 +1,6 @@
 <!-- @format -->
 
-import { Image} from 'rebass'
+import { Image, Flex, Box} from 'rebass'
 import icon from './icon/newicon/chat.svg'
 import icon2 from './icon/newicon/chat2.svg'
 import icon3 from './icon/newicon/share.svg'
@@ -11,6 +11,7 @@ Ihre eigene Webseite ist rund um die Uhr unabhängig von Öffnungszeiten zu erre
 
 <Image width={150} src={icon3} style={{fill:'white'}} />
 <Image width={150} src={icon2} />
+
 <Image width={150} src={icon} />
 
 Wie finden neue Kunden zu Ihnen? Richtig, über Empfehlungen. Das Internet ist eine kostengünstige Möglichkeit, den Erstkontakt zu ermöglichen und Unsicherheiten abzubauen.  

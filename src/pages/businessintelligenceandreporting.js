@@ -53,7 +53,7 @@ const BusinessIntelligenceAndReporting = () => (
     </HeaderTitleBackground>
     <Container>
       <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
-        <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
+        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
           <Flex flexDirection="column" justifyContent="center" alignItems="center">
             <Fade left>
               <Image my={[15, 20, 30]} width={[130, 150, 180]} src={icon1} />
@@ -66,7 +66,7 @@ const BusinessIntelligenceAndReporting = () => (
             </Fade>
           </Flex>
         </Box>
-        <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
+        <Box p={theme.paddings} width={[1, 2 / 3, 2 / 3]}>
           <HeadingWithSublime spanColor="black" headline="Buisness Intelligence" sublime="Der Weg zur Datenkontrolle" />
           <Mylist bgcolor={'#eee'} dotColor={'#334D5C'}>
             <Bitext />
@@ -102,7 +102,7 @@ const BusinessIntelligenceAndReporting = () => (
     <div style={{backgroundColor: '#f2c811'}}>
       <Container>
         <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
-          <Box p={[1, 2, 3]} width={[1, 1 / 3, 1 / 3]}>
+          <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
             <Flex flexDirection="column" justifyContent="center" alignItems="center">
               <Fade left>
                 <Image
@@ -113,13 +113,14 @@ const BusinessIntelligenceAndReporting = () => (
               </Fade>
             </Flex>
           </Box>
-          <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
+          <Box p={theme.paddings} width={[1, 2 / 3, 2 / 3]}>
             <HeadingWithSublime spanColor="black" headline="Power BI" sublime="Das Datenvisualierungs-Tool für Alle" />
             <PowerBi />
           </Box>
         </Flex>
       </Container>
     </div>
+
     <Container>
       <Flex
         flexDirection="column"
@@ -127,7 +128,7 @@ const BusinessIntelligenceAndReporting = () => (
         justifyContent="center"
         alignItems="center"
         style={{textAlign: 'center'}}>
-        <Box>
+        <Box p={theme.paddings}>
           <h2 style={{marginBottom: 0}}>PowerBi für Sie</h2>
           <p>
             Hier finden Sie nun ein paar Beispielbilder, wie Power Bi Reports aussehen können und was alles möglich ist.

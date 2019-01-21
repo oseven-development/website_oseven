@@ -77,7 +77,7 @@ class IconList extends React.Component {
   render() {
     return (
       <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
-        <Box key={item.title} width={[1, 1, 50 / 100]} style={{textAlign: 'center'}} mx={[5]}>
+        <Box key={item.title} width={[1, 1, 50 / 100]} style={{textAlign: 'center'}} mx={[0, 5]}>
           <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
             {item.map(item => {
               return (

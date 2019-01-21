@@ -44,10 +44,10 @@ const WebsitePage = () => (
 
         <ServiceContainer style={{marginTop: '1em'}} color={theme.colors.second} bgcolor="white">
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={theme.paddings} width={[1, 1, 1 / 2]}>
               <Praesenz />
             </Box>
-            <Box py={['0.5em', '1em', '2em']} p={[1, 2, 3]} width={[1, 1, 1 / 2]}>
+            <Box py={['0.5em', '1em', '2em']} p={theme.paddings} width={[1, 1, 1 / 2]}>
               <OhneGehtsNicht />
             </Box>
           </Flex>
@@ -57,17 +57,17 @@ const WebsitePage = () => (
       <Container style={{color: theme.colors.textBlack}}>
         <ServiceContainer bgcolor="white" style={{margin: '2em 0'}} color={theme.colors.second}>
           <Flex flexDirection="row" flexWrap="wrap">
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
+            <Box p={theme.paddings} width={[1, 1, 1 / 3]}>
               <Fade left fraction={0.6}>
                 <Beratung />
               </Fade>
             </Box>
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
+            <Box p={theme.paddings} width={[1, 1, 1 / 3]}>
               <Fade bottom fraction={0.6}>
                 <Technik />
               </Fade>
             </Box>
-            <Box p={[1, 2, 3]} width={[1, 1, 1 / 3]}>
+            <Box p={theme.paddings} width={[1, 1, 1 / 3]}>
               <Fade right fraction={0.6}>
                 <Information />
               </Fade>
@@ -77,14 +77,14 @@ const WebsitePage = () => (
       </Container>
       <ServiceContainer bgcolor={theme.colors.second} style={{color: 'white', paddingBottom: '3em'}}>
         <Container>
-          <Box py={[1, 4, 5, 10]} px={[1, 2, 3]}>
+          <Box p={theme.paddings} py={[1, 4, 5, 10]}>
             <Unterschied />
           </Box>
         </Container>
       </ServiceContainer>
       <Container>
         <ServiceContainer color={theme.colors.contrast} style={{marginBottom: 20}}>
-          <Box p={[1, 2, 3]}>
+          <Box p={theme.paddings}>
             <Optimieren />
           </Box>
         </ServiceContainer>
