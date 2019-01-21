@@ -76,11 +76,7 @@ const BusinessIntelligenceAndReporting = () => (
       </Flex>
     </Container>
     <Parallax img={powerbiBg} />
-<<<<<<< HEAD
-    <div style={{background: theme.colors.second}}>
-=======
     <div style={{background: theme.colors.second, overflow: 'hidden'}}>
->>>>>>> powerbi
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
           <ConsultingHeadline
