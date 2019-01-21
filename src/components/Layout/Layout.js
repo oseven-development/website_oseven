@@ -27,7 +27,7 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 910px) {
  #ArrowDrawing{
    Display:none;
  }
