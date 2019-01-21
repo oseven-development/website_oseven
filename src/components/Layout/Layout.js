@@ -47,19 +47,18 @@ class Layout extends React.Component {
   render() {
     const {children} = this.props
     return (
-      <div className={`body`}>
+      <main className={`body`}>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <div>
+          <React.Fragment>
             <NewNav nav={navItems} brand={oseven} />
-            {children}
+            <div className={'content'}>{children}</div>
             <Footer />
-          </div>
+          </React.Fragment>
         </ThemeProvider>
-      </div>
+      </main>
     )
   }
-  //   }
 }
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
