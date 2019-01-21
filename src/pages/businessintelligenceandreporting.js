@@ -17,7 +17,11 @@ import {
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
+<<<<<<< HEAD
 import powerbiBg from '../assets/images/backgrounds/powerbi.jpg'
+=======
+import powerbiBg from '../assets/images/backgrounds/Powerbi_parallax.jpg'
+>>>>>>> powerbi
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
@@ -31,6 +35,7 @@ import {PowerbiService} from '../../content/service/bi/PowerBiServices'
 import {PowerBiExamples} from '../../content/service/bi/powerBiExamples'
 import powerbi1 from '../../content/service/bi/powerbi1.png'
 import powerbi2 from '../../content/service/bi/powerbi2.png'
+import powerbiBg2 from '../assets/images/backgrounds/clock.jpg'
 
 const navObject = [
   {name: 'Business Intelligence', to: 'BusinessIntelligence'},
@@ -75,7 +80,11 @@ const BusinessIntelligenceAndReporting = () => (
       </Flex>
     </Container>
     <Parallax img={powerbiBg} />
+<<<<<<< HEAD
     <div style={{background: theme.colors.second}}>
+=======
+    <div style={{background: theme.colors.second, overflow: 'hidden'}}>
+>>>>>>> powerbi
       <Container>
         <Flex id="BusinessReporting" justifyContent="center" alignItems="center" px={[1, 2, 3]} pt={[5, 20, 40]}>
           <ConsultingHeadline
@@ -98,7 +107,7 @@ const BusinessIntelligenceAndReporting = () => (
         />
       </Container>
     </div>
-    <Parallax img={powerbiBg} />
+    <Parallax img={powerbiBg2} />
     <div style={{backgroundColor: '#f2c811'}}>
       <Container>
         <Flex id="PowerBi" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]}>
