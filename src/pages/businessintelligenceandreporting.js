@@ -21,7 +21,6 @@ import {
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
 import powerbiBg from '../assets/images/backgrounds/Powerbi_parallax.jpg'
-import powerbiBg2 from '../assets/images/backgrounds/clock.jpg'
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
@@ -35,6 +34,7 @@ import {PowerbiService} from '../../content/service/bi/PowerBiServices'
 import {PowerBiExamples} from '../../content/service/bi/powerBiExamples'
 import powerbi1 from '../../content/service/bi/powerbi1.png'
 import powerbi2 from '../../content/service/bi/powerbi2.png'
+import powerbiBg2 from '../assets/images/backgrounds/clock.jpg'
 
 const navObject = [
   {name: 'Business Intelligence', to: 'BusinessIntelligence'},
