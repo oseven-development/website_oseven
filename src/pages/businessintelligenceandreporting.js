@@ -17,11 +17,7 @@ import {
 } from '../components'
 import Fade from 'react-reveal/Fade'
 import background from '../assets/images/backgrounds/beard.jpg'
-<<<<<<< HEAD
-import powerbiBg from '../assets/images/backgrounds/powerbi.jpg'
-=======
 import powerbiBg from '../assets/images/backgrounds/Powerbi_parallax.jpg'
->>>>>>> powerbi
 import Bitext from '../../content/service/bi/Bitext.md'
 import icon1 from '../../content/service/bi/icon/bi1.svg'
 import icon2 from '../../content/service/bi/icon/bi2.svg'
