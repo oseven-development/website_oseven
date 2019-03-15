@@ -20,11 +20,17 @@ export class _Lightbox extends Component {
     const {photoIndex, isOpen} = this.state
 
     return (
-      <Flex my={['1px', '10px', '25px']}>
-        <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center" pt={[5, 20, 30]}>
+      <React.Fragment>
+        <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
           {this.props.images.map(img => (
             <Box>
-              <Image src={img} width={250} m={10} onClick={() => this.setState({isOpen: true})} />
+              <Image
+                src={img}
+                width={250}
+                m={10}
+                onClick={() => this.setState({isOpen: true})}
+                style={{cursor: 'pointer'}}
+              />
             </Box>
           ))}
         </Flex>
@@ -46,7 +52,7 @@ export class _Lightbox extends Component {
             }
           />
         )}
-      </Flex>
+      </React.Fragment>
     )
   }
 }

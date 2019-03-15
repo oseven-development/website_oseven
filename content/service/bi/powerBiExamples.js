@@ -9,9 +9,6 @@ import {FaMagic, FaBalanceScale} from 'react-icons/fa'
 export const PowerBiExamples = props => (
   <Flex flexDirection="column" justifyContent="center" alignItems="center" style={{textAlign: 'center'}}>
     <Box width={1}>
-      <h2>Live-Demo Berichte</h2>
-    </Box>
-    <Box width={1}>
       <Flex flexDirection="row" flexWrap="wrap" justifyContent="center" alignItems="flex-start">
         <Box width={[1, 1 / 2, 1 / 3]} my={['1', 5, 10]} mx={[1, 15, 40]}>
           <a

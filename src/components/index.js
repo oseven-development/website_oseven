@@ -21,7 +21,16 @@ import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
 import {Slider, TextSlider} from './Slider'
 import {ImageBackground, Lightbox} from './Image'
 
+// Headline
+import {RobotoSlab} from './Headline/robotoSlab'
+import {IndieFlower} from './Headline/indieFlower'
+import {DefaultHeadline} from './Headline/defaultHeadline'
+
+// ImageBox
+import FadeImageOrIconBox from './ImageBox/fadeImageOrIconBox'
+
 export {
+  IndieFlower,
   OpacityTransition,
   AnimatedLogo,
   AnimatedArrow,
@@ -49,4 +58,7 @@ export {
   ListContainer,
   ParallaxClaimed,
   Lightbox,
+  RobotoSlab,
+  DefaultHeadline,
+  FadeImageOrIconBox,
 }

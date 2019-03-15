@@ -4,6 +4,7 @@ import React from 'react'
 import {Flex, Box} from 'rebass'
 import {ConsultingHeadline, BackgroundImage, OpacityTransition} from '../index'
 import {StyledBackgroundImage} from './styled'
+import {AnimatedArrow} from '../'
 
 export const HeaderTitleBackground = ({children, ...props}) => {
   return (
@@ -24,7 +25,9 @@ export const HeaderTitleBackground = ({children, ...props}) => {
           </Box>
           {props.nav}
         </Flex>
-        {children}
+        <a href="#BusinessIntelligence">
+          <AnimatedArrow />
+        </a>
       </ConsultingHeadline>
     </BackgroundImage>
   )

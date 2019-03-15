@@ -5,11 +5,14 @@ module.exports = {
     title: 'O-Seven',
     description: 'O-Seven Website',
     author: 'Philipp Schmid',
+    siteUrl: 'https://www.o-seven.de',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-stylus',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-mdx',
       options: {
@@ -17,6 +20,14 @@ module.exports = {
         defaultLayouts: {
           // default: require.resolve('./src/components/Layout/index2.js'),
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.o-seven.de',
+        sitemap: 'https://www.o-seven.de/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}],
       },
     },
     {

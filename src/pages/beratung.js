@@ -1,9 +1,32 @@
 /** @format */
-
+// React and Libarys
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
+import Fade from 'react-reveal/Fade'
+
+// Bilder
+import consutling from '../assets/images/backgrounds/consutling.jpg'
+import consultingparallax from '../assets/images/backgrounds/consultingparallax.jpg'
+
+// Icons
+import projekt1 from '../assets/icon/beratung/content.svg'
+import projekt2 from '../assets/icon/beratung/checklist.svg'
+import projekt3 from '../assets/icon/beratung/presentation.svg'
+import consulting1 from '../assets/icon/beratung/analytics.svg'
+import consulting2 from '../assets/icon/beratung/mountains.svg'
+import consulting3 from '../assets/icon/beratung/folder.svg'
+
+import lightBulb from '../assets/icon/beratung/light-bulb.svg'
+import checklistflat from '../assets/icon/beratung/checklistflat.svg'
+import build from '../assets/icon/beratung/build.svg'
+import checked from '../assets/icon/beratung/checked.svg'
+import refresh from '../assets/icon/beratung/refresh.svg'
+
+// Containers
+import {SmallContainers, ContentBox} from '../container'
+
+// Old components maybe Merge
 import {
-  Layout,
   Seo,
   HeaderTitleBackground,
   Container,
@@ -12,19 +35,12 @@ import {
   AnimatedArrow,
   smallNav,
   ListContainer as Mylist,
+  FadeImageOrIconBox,
 } from '../components'
-import Fade from 'react-reveal/Fade'
-import background from '../assets/images/backgrounds/consutling.jpg'
-import Projekte from '../../content/service/consulting/projekte.md'
-import projekt1 from '../../content/service/consulting/icon/content.svg'
-import projekt2 from '../../content/service/consulting/icon/checklist.svg'
-import projekt3 from '../../content/service/consulting/icon/presentation.svg'
-import consulting1 from '../../content/service/consulting/icon/analytics.svg'
-import consulting2 from '../../content/service/consulting/icon/mountains.svg'
-import consulting3 from '../../content/service/consulting/icon/folder.svg'
-import {Schritte} from '../../content/service/consulting/schritte'
+
+// ????
 import theme from '../components/theme'
-import parallax from '../assets/images/backgrounds/consultingparallax.jpg'
+import Projekte from '../../content/service/consulting/projekte.md'
 import Business from '../../content/service/consulting/business.md'
 
 const navObject = [
@@ -37,7 +53,7 @@ const ConsultingPage = () => (
     <Seo title="Business & Projekt Consulting" />
     <HeaderTitleBackground
       bgPosition="center right"
-      img={background}
+      img={consutling}
       h1Text="Business & Projekt Consulting"
       h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen."
       nav={smallNav(navObject)}>
@@ -45,6 +61,7 @@ const ConsultingPage = () => (
         <AnimatedArrow />
       </a>
     </HeaderTitleBackground>
+
     <Container>
       <Flex
         id="Projektberatung"
@@ -78,14 +95,33 @@ const ConsultingPage = () => (
         </Box>
       </Flex>
     </Container>
-    <Flex pb={[10, 30, 60, 80]} pt={[10, 40, 40, 40]} style={{background: theme.colors.second}}>
-      <Container style={{textAlign: 'center'}}>
-        <Fade>
-          <Schritte />
-        </Fade>
-      </Container>
-    </Flex>
-    <Parallax img={parallax} />
+
+    <SmallContainers backgroundColor={'second'}>
+      <ContentBox
+        width={[1, 2 / 3]}
+        h1={{content: 'Projekte gelingen mit einfachen Werkzeugen', color: 'white', style: 'sublime'}}
+        h2={{content: 'Phasen des Projektmanagements', color: 'white', style: 'sublime'}}
+        textColor={'white'}
+        paragraph={
+          'Wichtig ist ein Projekt in die einzelne Phasen einzuteilen, um das Projektziel auf Teilschritte herunter zu brechen. Dieser Aspekt reduziert außerdem die Komplexität des Projektes. Auf diese 5 Phasen setzen wir.'
+        }
+        componentMid={
+          <FadeImageOrIconBox
+            spacebetween={25}
+            colorSubtitle={'white'}
+            icons={[
+              {icon: lightBulb, fade: {delay: 500, duration: 500}, width: [35, 40, 80], subtitle: 'Entwickeln'},
+              {icon: checklistflat, fade: {delay: 1000, duration: 500}, width: [35, 40, 80], subtitle: 'Planen'},
+              {icon: build, fade: {delay: 1500, duration: 500}, width: [35, 40, 80], subtitle: 'Umsetzen'},
+              {icon: checked, fade: {delay: 2000, duration: 500}, width: [35, 40, 80], subtitle: 'Überprüfen'},
+              {icon: refresh, fade: {delay: 2500, duration: 500}, width: [35, 40, 80], subtitle: 'Optimieren'},
+            ]}
+          />
+        }
+      />
+    </SmallContainers>
+
+    <Parallax img={consultingparallax} />
     <Container>
       <Flex
         id="Unternehmensberatung"

@@ -96,5 +96,5 @@ export const StyledParallaxClaimed = styled.div`
   h2 {
     font-size: .8em;
     font-weight: 600}
-  }
-`
+  }`
+  

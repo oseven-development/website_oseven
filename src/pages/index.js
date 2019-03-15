@@ -1,64 +1,60 @@
 /** @format */
 
 import React from 'react'
-import {Flex, Box, Image} from 'rebass'
-import theme from '../components/theme'
-import {Layout, Seo, AnimatedLogo, Container, BackgroundImage, Headline, AnimatedArrow, Parallax} from '../components'
-import Wir from '../../content/home/wir.md'
-import background from '../assets/images/backgrounds/home.jpg'
-import maxhaensel from '../assets/images/maxhaensel.jpg'
+import {Seo} from '../components'
+
+import {Image} from 'rebass'
+
 import {IconList} from '../../content/home/AboutIcon'
-import Aboutus from '../../content/home/aboutus.md'
-import parallax from '../assets/images/backgrounds/team2.jpg'
+
+import {SmallContainers, ContentBox, IntroScreen, Parallax} from '../container'
+
+import team2 from '../assets/images/backgrounds/team2.jpg'
+import maxhaensel from '../assets/images/maxhaensel.jpg'
 
 const IndexPage = () => (
   <React.Fragment>
     <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
-    <BackgroundImage img={background} bgColor={'linear-gradient(90deg, #111 0%, #555 100%)'}>
-      <Flex ajustifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
-        <div style={{width: '100%'}}>
-          <AnimatedLogo />
-          <a href="#ÜberUns">
-            <AnimatedArrow />
-          </a>
-        </div>
-      </Flex>
-    </BackgroundImage>
-    <Container id="ÜberUns" style={{paddingTop: '1em'}}>
-      <Headline>
-        <h1 className="headline">
-          Über <span style={{backgroundColor: theme.colors.contrast, color: 'white', padding: '0 10px'}}>O-Seven</span>
-        </h1>
-      </Headline>
-      <Box p={[3]}>
-        <Headline h2color={theme.colors.main}>
-          <Wir />
-          <IconList />
-        </Headline>
-      </Box>
-    </Container>
-    <Parallax img={parallax} bgPosition="center top" />
-    <Container>
-      <Flex id="BusinessIntelligence" flexDirection="row" flexWrap="wrap" pt={[5, 20, 30]} alignItems="center">
-        <Box p={theme.paddings} width={[1, 2 / 3, 3 / 4]}>
-          <Headline h2color={theme.colors.main}>
-            <Aboutus />
-          </Headline>
-        </Box>
-        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 4]}>
-          <Image src={maxhaensel} />
-        </Box>
-      </Flex>
-    </Container>
+    <IntroScreen />
+    <SmallContainers backgroundColor={'white'}>
+      <ContentBox
+        width={1}
+        h1={{content: ['ÜBER', 'O-SEVEN'], style: 'block', color: ['blue', 'contrast']}}
+        h2={{content: 'Unsere Werte und Motivation', color: 'main'}}
+        // h1={{content: 'Swift Style', style: 'swift', color: 'main'}}
+        paragraph={
+          'Digitalisierung, Industrie 4.0, Vernetzung – Schlagworte wie diese sind in aller Munde – Wichtig ist dabei die passende Antwort! Wir setzen auf ...'
+        }
+        textCenter
+        // componentTop={<Inside width={[1]} />}
+        componentBottom={<IconList width={[1]} />}
+        // componentBottom={<Inside width={[1]} />}
+      />
+    </SmallContainers>
+    <Parallax image={team2} />
+    <SmallContainers backgroundColor={'white'}>
+      <ContentBox
+        width={[1, 3 / 4]}
+        h2={{content: 'WER SIND WIR', color: 'main'}}
+        // h1={{content: 'Swift Style', style: 'swift', color: 'main'}}
+        paragraph={
+          'Hallo mein Name ist Max. Die Idee zu O-SEVEN kam mir im Studium, Wir möchten damit auch kleinen Unternehmen helfen das Beste aus ihrer IT rauszuholen. In der IT gibt es viele faszinierende Möglichkeiten doch muss man bei all den technischen Möglichkeiten immer die Wirtschaftlichkeit berücksichtigen. IT-Lösungen die etwas zu 100% lösen sollen sind durch die hohe Komplexität sehr teuer und oftmals einfach nicht mehr wirtschaftlich. Als Wirtschaftsinformatiker versucht man immer die Balance zwischen einer umfangreichen sowie einer Wirtschaftlichen Lösung zu finden, und den Kunden dabei bestmöglich zu beraten.'
+        }
+        componentBottom={<Image src={maxhaensel} width={'200px'} style={{borderRadius: '50%'}} />}
+      />
+    </SmallContainers>
   </React.Fragment>
 )
 
 export default IndexPage
+// {renderEngine(data)}
 
-// load all Icon from Folder
-// const reqSvgs = require.context('../../content/home/icon', true, /\.svg$/)
-// const paths = reqSvgs.keys()
+//     <IconBoxWithClickableContent />
 
-// const svgs = paths.map(path => {
-//   return <Image width={[80, 100, 120]} src={reqSvgs(path)} />
-// })
+// <ContantBox width={1 / 2} h1={{content: ['Text', 'h1'], style: 'block', color: ['blue', 'contrast']}} />
+
+// <Headline width={[1]} h2color={'blue'}>
+//   <h2>{'subtitle'}</h2>
+//   <p>{'content'}</p>
+// </Headline>
+// <IconList width={[1]} />

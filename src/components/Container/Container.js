@@ -12,10 +12,6 @@ const Wrapper = styled.div`
 
 const Container = ({children, ...props}) => <Wrapper {...props}>{children}</Wrapper>
 
-Container.defaultProps = {
-  isDebug: false,
-}
-
 Container.propTypes = {
   isDebug: PropTypes.bool,
 }

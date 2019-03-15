@@ -1,0 +1,41 @@
+apps:
+  - script: "pm2 start npm -- run prod"
+    name: "testpm2"
+    env:
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+      PORT: 8888
+deploy:
+  production:
+    # SSH key path, default to $HOME/.ssh
+    # key: "/path/to/some.pem"
+    # SSH user
+    user: "react"
+
+    # SSH host
+    host: "81.169.243.158"
+
+    # SSH options with no command-line flag, see 'man ssh'
+    # can be either a single string or an array of strings
+    ssh_options: "StrictHostKeyChecking=no"
+
+    # GIT remote/branch
+    ref: "origin/master"
+
+    # GIT remote
+    repo: "git@bitbucket.org:o_seven/gastby_oseven.git"
+
+    # path in the server
+    path: "/home/react/test/oseven"
+
+    # Pre-setup command or path to a script on your local machine
+    # presetup: 'rm -Rf /home/react/testpm2',
+    # presetup: "npm install"
+    # Post-setup commands or path to a script on the host machine
+    # eg: placing configurations in the shared dir etc
+    post-setup: "npm install && npm run build"
+    # pre-deploy action
+    # 'pre-deploy-local': "echo 'This is a local executed command'",
+    # post-deploy action
+    post-deploy: "pm2 reload deploy.yaml --env production"

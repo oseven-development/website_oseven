@@ -1,6 +1,6 @@
 {
   "name": "gastby_oseven",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "keywords": [
     "gatsby"
@@ -10,22 +10,25 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "prod": "gatsby serve -p 4000",
+    "prod": "gatsby serve -p 5000",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "pm2 deploy deploy.yaml production update",
+    "setup": "pm2 deploy deploy.yaml production setup"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
     "animejs": "^2.2.0",
-    "gatsby": "^2.0.72",
+    "gatsby": "^2.0.100",
     "gatsby-image": "^2.0.25",
     "gatsby-mdx": "^0.2.0",
     "gatsby-plugin-manifest": "^2.0.12",
-    "gatsby-plugin-offline": "^2.0.20",
+    "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-react-svg": "^2.0.0-beta1",
+    "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sharp": "^2.0.15",
     "gatsby-plugin-styled-components": "^3.0.4",
     "gatsby-source-filesystem": "^2.0.12",
@@ -33,6 +36,7 @@
     "invariant": "^2.2.4",
     "lodash": "^4.17.11",
     "lodash.throttle": "^4.1.1",
+    "pm2": "^3.4.0",
     "polished": "^2.3.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
