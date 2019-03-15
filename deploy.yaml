@@ -21,7 +21,7 @@ deploy:
     ssh_options: "StrictHostKeyChecking=no"
 
     # GIT remote/branch
-    ref: "origin/master"
+    ref: "origin/refactor"
 
     # GIT remote
     repo: "git@bitbucket.org:o_seven/gastby_oseven.git"
