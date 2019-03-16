@@ -1,5 +1,5 @@
 apps:
-  - script: "pm2 start npm -- run prod"
+  - script: "pm2 start -n testoseven npm -- run prod"
     name: "oseven"
     env:
       NODE_ENV: development
