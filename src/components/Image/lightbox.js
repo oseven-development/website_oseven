@@ -25,7 +25,8 @@ export class _Lightbox extends Component {
           {this.props.images.map(img => (
             <Box key={Math.random()}>
               <Image
-                src={img}
+                alt={img.alt}
+                src={img.img}
                 width={250}
                 m={10}
                 onClick={() => this.setState({isOpen: true})}

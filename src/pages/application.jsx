@@ -13,7 +13,7 @@ import parallax from '../assets/images/backgrounds/code-javascript.jpg'
 import parallax2 from '../assets/images/backgrounds/digital-marketing.jpg'
 import Fade from 'react-reveal/Fade'
 
-const ApplicationPage = () => (
+export default () => (
   <React.Fragment>
     <Seo
       title="Applikation"
@@ -70,5 +70,3 @@ const ApplicationPage = () => (
     </div>
   </React.Fragment>
 )
-
-export default ApplicationPage

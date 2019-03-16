@@ -7,7 +7,7 @@ import {Layout, FullscreenBackground, Button, Seo, Headline} from '../components
 import parallax from '../assets/images/backgrounds/contact.jpg'
 import {FaPhone, FaEnvelope} from 'react-icons/fa'
 
-const ContactPage = () => (
+export default () => (
   <React.Fragment>
     <Seo title="Kontakt" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
     <Headline>
@@ -51,5 +51,3 @@ const ContactPage = () => (
     </Headline>
   </React.Fragment>
 )
-
-export default ContactPage

@@ -47,7 +47,7 @@ const navObject = [
   {name: 'Power Bi', to: 'PowerBi'},
 ]
 
-const BusinessIntelligenceAndReporting = () => (
+export default () => (
   <React.Fragment>
     <Seo title="Business Intelligence & Reporting" />
 
@@ -151,7 +151,7 @@ const BusinessIntelligenceAndReporting = () => (
         paragraph={
           'Hier finden Sie nun ein paar Beispielbilder, wie Power Bi Reports aussehen können und was alles möglich ist. Weiterunten finden Sie noch Live-Demo Berichte, die Sie sich gerne ansehen dürfen.'
         }
-        componentBottom={<Lightbox images={[powerbi1, powerbi2]} />}
+        componentBottom={<Lightbox images={[{img: powerbi1, alt: 'Beispiel Business Intelligence Reports'}, {img: powerbi2, alt: 'Beispiel Business Intelligence Reports'}]} />}
       />
     </WrapperBox>
 
@@ -226,8 +226,6 @@ const BusinessIntelligenceAndReporting = () => (
     </WrapperBox>
   </React.Fragment>
 )
-
-export default BusinessIntelligenceAndReporting
 
 const Reporting = () => (
   <ContentBox

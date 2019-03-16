@@ -35,7 +35,7 @@ import {SkewedBackground, Container, ServiceContainer, Parallax, Seo, FadeImageO
 import Praesenz from '../../content/produkt/website/zeigenSiePräsens.md'
 import OhneGehtsNicht from '../../content/produkt/website/ohneGehtsnicht.md'
 
-const WebsitePage = () => (
+export default () => (
   <React.Fragment>
     <Seo
       title="Webseiten"
@@ -127,8 +127,6 @@ const WebsitePage = () => (
     </WrapperBox>
   </React.Fragment>
 )
-
-export default WebsitePage
 
 const Spinner = () => (
   <ServiceContainer>

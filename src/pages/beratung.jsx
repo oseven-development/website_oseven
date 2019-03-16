@@ -48,7 +48,7 @@ const navObject = [
   {name: 'Business Consulting', to: 'Unternehmensberatung'},
 ]
 
-const ConsultingPage = () => (
+export default () => (
   <React.Fragment>
     <Seo title="Business & Projekt Consulting" />
     <HeaderTitleBackground
@@ -157,5 +157,3 @@ const ConsultingPage = () => (
     </Container>
   </React.Fragment>
 )
-
-export default ConsultingPage

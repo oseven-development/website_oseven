@@ -55,7 +55,9 @@ export default () => (
         paragraph={
           'Hallo mein Name ist Max. Die Idee zu O-SEVEN kam mir im Studium, Wir möchten damit auch kleinen Unternehmen helfen das Beste aus ihrer IT rauszuholen. In der IT gibt es viele faszinierende Möglichkeiten doch muss man bei all den technischen Möglichkeiten immer die Wirtschaftlichkeit berücksichtigen. IT-Lösungen die etwas zu 100% lösen sollen sind durch die hohe Komplexität sehr teuer und oftmals einfach nicht mehr wirtschaftlich. Als Wirtschaftsinformatiker versucht man immer die Balance zwischen einer umfangreichen sowie einer Wirtschaftlichen Lösung zu finden, und den Kunden dabei bestmöglich zu beraten.'
         }
-        componentBottom={<Image src={maxhaensel} width={'200px'} style={{borderRadius: '50%'}} />}
+        componentBottom={
+          <Image alt="Maximilian Hänsel" src={maxhaensel} width={'200px'} style={{borderRadius: '50%'}} />
+        }
       />
     </WrapperBox>
   </React.Fragment>

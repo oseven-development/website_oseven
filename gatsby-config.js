@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-stylus',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-mdx',
       options: {

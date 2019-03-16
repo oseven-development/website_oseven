@@ -20,15 +20,14 @@ import img8 from '../assets/images/slider/notebook2.jpg'
 import img9 from '../assets/images/slider/office.jpg'
 import img10 from '../assets/images/slider/paper.jpg'
 import img11 from '../assets/images/slider/table.jpg'
-import Index from '../../content/referenzen/index.md'
 
 // Kunden
-import kd1 from '../../content/referenzen/logo/heikehänsel.png'
-import kd2 from '../../content/referenzen/logo/paulschaefer.png'
-import kd3 from '../../content/referenzen/logo/priofol.png'
-import kd4 from '../../content/referenzen/logo/wagner.png'
+import kd1 from '../../content/kundenlogos/heikehänsel.png'
+import kd2 from '../../content/kundenlogos/paulschaefer.png'
+import kd3 from '../../content/kundenlogos/priofol.png'
+import kd4 from '../../content/kundenlogos/wagner.png'
 
-const ReferencePage = () => (
+export default () => (
   <React.Fragment>
     <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height="800px">
       <Headline h1color="white" bgColor="#232323" padding="7px 30px">
@@ -68,5 +67,3 @@ const ReferencePage = () => (
     </WrapperBox>
   </React.Fragment>
 )
-
-export default ReferencePage

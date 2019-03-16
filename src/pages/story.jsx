@@ -9,7 +9,7 @@ import {WrapperBox, ContentBox} from '../container'
 // Components
 import {BackgroundImage, Headline} from '../components'
 
-const StoryPage = () => (
+export default () => (
   <React.Fragment>
     <BackgroundImage
       img={background}
@@ -35,5 +35,3 @@ const StoryPage = () => (
     </WrapperBox>
   </React.Fragment>
 )
-
-export default StoryPage
