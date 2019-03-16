@@ -2,7 +2,7 @@
 
 import {ImageWithText} from './imageWithText'
 
-import {Parallax} from './Parallax'
+import {Parallax} from './parallax'
 import {IntroScreen} from './introScreen'
 import {ContentBox} from './contantBox'
 import {SmallContainers} from './smallContainers'
