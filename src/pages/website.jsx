@@ -26,7 +26,7 @@ import background from '../assets/images/backgrounds/website.jpg'
 import meetingWithText from '../assets/images/backgrounds/meeting_with_text.jpg'
 
 // Containers
-import {SmallContainers, ContentBox} from '../container'
+import {WrapperBox, ContentBox} from '../container'
 
 // Old components maybe Merge
 import {SkewedBackground, Container, ServiceContainer, Parallax, Seo, FadeImageOrIconBox} from '../components'
@@ -76,11 +76,11 @@ const WebsitePage = () => (
 
     <Parallax img={meetingWithText} />
 
-    <SmallContainers>
+    <WrapperBox>
       <ContentBox width={[1]} componentMid={<Spinner />} />
-    </SmallContainers>
+    </WrapperBox>
 
-    <SmallContainers backgroundColor={'second'}>
+    <WrapperBox backgroundColor={'second'}>
       <ContentBox
         width={[1, 3 / 4]}
         h2={{content: 'DER UNTERSCHIED MACHTS!', color: 'white', style: 'swift'}}
@@ -103,9 +103,9 @@ const WebsitePage = () => (
           />
         }
       />
-    </SmallContainers>
+    </WrapperBox>
 
-    <SmallContainers backgroundColor={'white'}>
+    <WrapperBox backgroundColor={'white'}>
       <ContentBox
         width={[1, 3 / 4]}
         h2={{content: 'WIR OPTIMIEREN', color: 'contrast', style: 'swift'}}
@@ -124,7 +124,7 @@ const WebsitePage = () => (
           />
         }
       />
-    </SmallContainers>
+    </WrapperBox>
   </React.Fragment>
 )
 

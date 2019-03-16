@@ -3,10 +3,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
-import {OpacityTransition} from '../Transition'
 import {Flex} from 'rebass'
 import '../../assets/style/navigation.styl'
-import nav_items from './NavigationItems'
+import navItems from '../../routes/routes'
 
 const HierachyList = arr => {
   return arr.map(e => (
@@ -19,7 +18,7 @@ const HierachyList = arr => {
 }
 
 const NavList = props =>
-  nav_items.map((e, key) => {
+  navItems.map((e, key) => {
     if (Array.isArray(e.to)) {
       return (
         <li

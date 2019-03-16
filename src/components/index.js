@@ -11,9 +11,7 @@ import {
   ParallaxClaimed,
 } from './Background'
 import {Container, ServiceContainer, ListContainer} from './Container'
-import {Footer} from './Footer'
 import {Header, Navigation, smallNav} from './Header'
-import {Layout} from './Layout'
 import {ResetStyle} from './Reset'
 import {Button} from './Button'
 import {Seo} from './Seo'
@@ -22,24 +20,19 @@ import {Slider, TextSlider} from './Slider'
 import {ImageBackground, Lightbox} from './Image'
 
 // Headline
-import {RobotoSlab} from './Headline/robotoSlab'
-import {IndieFlower} from './Headline/indieFlower'
-import {DefaultHeadline} from './Headline/defaultHeadline'
+import {RobotoSlab, IndieFlower, DefaultHeadline, HeadlineWithSublime} from './Headline'
 
 // ImageBox
-import FadeImageOrIconBox from './ImageBox/fadeImageOrIconBox'
+import {VerticalAndHorizontalImageBox, FadeImageOrIconBox} from './ImageBox'
 
 export {
-  IndieFlower,
   OpacityTransition,
   AnimatedLogo,
   AnimatedArrow,
   BackgroundImage,
   Container,
-  Footer,
   Header,
   Navigation,
-  Layout,
   ResetStyle,
   Seo,
   ServiceContainer,
@@ -58,7 +51,12 @@ export {
   ListContainer,
   ParallaxClaimed,
   Lightbox,
+  // Headline
   RobotoSlab,
+  IndieFlower,
   DefaultHeadline,
+  HeadlineWithSublime,
+  //ImageBox
+  VerticalAndHorizontalImageBox,
   FadeImageOrIconBox,
 }

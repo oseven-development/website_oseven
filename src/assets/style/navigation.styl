@@ -1,47 +1,11 @@
 @import './_variables.styl'
 
-#menu
-  overflow: hidden;
-  height: 0%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10
-.active-menu
-  height 100%
-
-.strip
-  width: 100%
-  height: 55px
-  background: whitesmoke
-  position: fixed
-  top: 0
-  left: 0
-  z-index: 100
-  box-shadow: 0 0 5px black
-  transition: 0s all
-  opacity: 0.95
-  &.active
-    background: $color-navigation-bg
-    box-shadow: none
-
-
 .overlay-navigation
-  position: absolute;
-  z-index: 10
-  top 50px
-  left: 0;
-  width: 100%;
-  height: calc(100% - 55px);
-  overflow:hidden
-  background-color: $color-navigation-bg
   ul.nav-level-1
     text-align: center
     text-decoration: none
     > li.nav-element-level-1
       padding: 0
-      color: #fff
       text-transform: uppercase
       font-family: 'Quicksand', sans-serif
       display: block
@@ -53,14 +17,13 @@
         font-size: 2rem
         text-decoration: none
         color: #fff
-        &:hover
-          color: lighten($color-main, 20%)
-          &:after
-            width: 60%
-          .arrow 
-            &:after,&:before
-              background: lighten($color-main, 20%)
-        &:after
+        // FIXME: passenden Media Queries für handys, sonst reagieren die auf Hover
+        @media (min-width: 400px)
+          > &:hover
+            color: lighten($color-main, 20%)
+            > &:after
+              width: 60%
+        > &:after
           content: ''
           display: block
           left: 20%
@@ -74,9 +37,11 @@
         
     > li.nav-element-level-1.slide-in-nav-item.active
       > a
-        color: lighten($color-main, 20%)
+        color: lighten($color-contrast, 20%)
+
       span
         color: lighten($color-main, 20%)
+
       ul.nav-level-2
           li
             max-height: 100px
@@ -134,7 +99,7 @@ $value_1 = 0
     opacity: 0
 
 
-.arrow
+span.arrow
   width: 30px
   height: 40px
   position absolute
@@ -142,45 +107,29 @@ $value_1 = 0
   &:hover
     &:after,&:before
       background: lighten($color-main, 20%)
-  &:before
-    top: 20px;
-    transition: 0.3s all;
-    width: 20px;
+  &:before, &:after
     background: whitesmoke;
+    width: 20px ;
+    transition: 0.3s all;
+    top: 20px ;
     height: 1px;
     display: block;
     content: "";
     right:10%
     position: absolute;
+    margin-top: 0;
   &:after
     transform: rotate(90deg)
-    top: 20px;
-    transition: 0.3s all;
-    width: 20px;
-    background: whitesmoke;
-    height: 1px;
-    display: block;
-    content: "";
-    right:10%
-    position: absolute;
   &.active
     &:after
       transform: rotate(45deg)
-      top: 20px;
-      transition: 0.3s all;
-      width: 20px;
-      background: lighten($color-main, 20%)
-      height: 1px;
-      display: block;
-      content: "";
-
-      position: absolute;
     &:before
       transform: rotate(-45deg)
+    &:after, &:before
       top: 20px;
       transition: 0.3s all;
       width: 20px;
-      background: lighten($color-main, 20%)
+      background: lighten($color-main, 20%) !important;
       height: 1px;
       display: block;
       content: "";

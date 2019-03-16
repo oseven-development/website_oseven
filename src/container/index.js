@@ -1,10 +1,24 @@
 /** @format */
+import {WrapperBox, ContentBox} from './BoxLayout'
+import {Layout} from './Layout'
+import {Footer} from './Footer'
+import {Navigation} from './Navigation'
 
-import {ImageWithText} from './imageWithText'
+import {IntroScreen} from './Screens'
 
-import {Parallax} from './parallax'
-import {IntroScreen} from './introScreen'
-import {ContentBox} from './contantBox'
-import {SmallContainers} from './smallContainers'
+export {
+  // BoxLayout
+  WrapperBox,
+  ContentBox,
+  // Layout
+  Layout,
+  // Footer
+  Footer,
+  // Navigation
+  Navigation,
+  // Screens
+  IntroScreen,
+}
 
-export {ImageWithText, Parallax, IntroScreen, ContentBox, SmallContainers}
+// Only exported so `gatsby-mdx` can access
+export default Layout

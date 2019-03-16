@@ -11,3 +11,4 @@ export const Button = ({children, ...props}) => (
     <div style={{marginLeft: 10}}>{children}</div>
   </ButtonWrapper>
 )
+

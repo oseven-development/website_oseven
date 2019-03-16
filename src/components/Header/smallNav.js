@@ -10,7 +10,7 @@ export const smallNav = arr => {
         <ul>
           {arr.map(params => {
             return (
-              <li>
+              <li key={Math.random()}>
                 <a href={`#${params.to}`}>{params.name}</a>
               </li>
             )

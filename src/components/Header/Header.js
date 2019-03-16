@@ -5,7 +5,7 @@ import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
 import theme from '../theme'
 import logo from '../../assets/images/logo-o-seven-black-small.svg'
-import '../../assets/style/menu.styl'
+
 // import {Container} from '../Container'
 // import {HeaderWrapper, HeaderInner, SiteTitle, Navigation} from './styled'
 

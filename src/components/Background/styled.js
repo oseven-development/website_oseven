@@ -1,6 +1,7 @@
 /** @format */
 
 import styled from 'styled-components'
+import theme from '../theme'
 
 export const StyledBackgroundImage = styled.div`
   width: 100%;
@@ -22,9 +23,16 @@ export const StyledBackgroundImage = styled.div`
     margin-left: auto;
     margin-right: auto;
     background-position: ${props => (props.bgPosition ? props.bgPosition : '50% center')};
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     z-index: -1;
+    @media (min-width: ${theme.breakpoints[1]}) {
+      background-attachment: fixed;
+    }
+    /* Mobile */
+    @media (max-width: ${theme.breakpoints[1]}) {
+      background-attachment: scroll;
+    }
   }
 `
 export const StyledSkewedBackground = styled.div`
@@ -57,12 +65,29 @@ export const StyledSkewedBackground = styled.div`
 `
 export const StyledParallax = styled.div`
   background-image: url(${props => props.img});
-  min-height: ${props => (props.minHeight ? props.minHeight : '400px')};
   max-height: ${props => (props.height ? props.height : '')};
-  background-attachment: fixed;
-  background-position: ${props => (props.bgPosition ? props.bgPosition : 'center')};
+
   background-repeat: no-repeat;
+
+  background-position: ${props => (props.bgPosition ? props.bgPosition : 'center')};
+
+  /* background-size: cover; */
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  background-color: #333;
+  /* Rest Device */
+  @media (min-width: ${theme.breakpoints[1]}) {
+    min-height: ${props => (props.minHeight ? props.minHeight : '400px')};
+    background-attachment: fixed;
+  }
+  /* Mobile */
+  @media (max-width: ${theme.breakpoints[1]}) {
+    min-height: ${props => (props.minHeight ? props.minHeight : '200px')};
+    background-attachment: scroll;
+  }
 `
 // background-attachment: fixed if window with kleiner als dann fixed
 export const StyledFullscreenBackground = styled.div`
@@ -71,8 +96,19 @@ export const StyledFullscreenBackground = styled.div`
   background-image: url(${props => props.img});
   background-size: cover;
 `
-
 export const StyledParallaxClaimed = styled.div`
+  h1,
+  h2 {
+    font-family: 'Roboto Slab', sans-serif;
+  }
+  h1 {
+    font-size: 1.5em;
+    font-style: italic;
+  }
+  h2 {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
   .watcher {
     position: fixed;
     top: 50%;
@@ -80,21 +116,10 @@ export const StyledParallaxClaimed = styled.div`
     padding: 0em;
     color: white;
     transform: translateY(-50%);
-    opacity: ${props => props.opacity}
+    opacity: ${props => props.opacity};
   }
   .contentBox {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     padding: 1em;
   }
-  h1,h2{
-    font-family:"Roboto Slab", sans-serif;
-  }
-  h1 {
-    font-size: 1.5em;
-    font-style: italic
-  }
-  h2 {
-    font-size: .8em;
-    font-weight: 600}
-  }`
-  
+`

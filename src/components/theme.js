@@ -1,5 +1,7 @@
 /** @format */
 
+const sizes = ['481px', '769px', '1601px', '2001px']
+
 export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
   paddings: [3, 2, 3],
@@ -22,4 +24,10 @@ export default {
     large: '0 0 24px rgba(0, 0, 0, .125)',
   },
   breakpoints: ['481px', '769px', '1601px', '2001px'],
+  device: {
+    mobile: `(min-width: 481px)`,
+    laptop: `(min-width: 769px)`,
+    desktop: `(min-width: 1601px)`,
+    desktopL: `(min-width: 2001px)`,
+  },
 }

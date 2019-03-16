@@ -23,7 +23,7 @@ export class _Lightbox extends Component {
       <React.Fragment>
         <Flex flexDirection="row" flexWrap="wrap" alignItems="center" justifyContent="center">
           {this.props.images.map(img => (
-            <Box>
+            <Box key={Math.random()}>
               <Image
                 src={img}
                 width={250}
