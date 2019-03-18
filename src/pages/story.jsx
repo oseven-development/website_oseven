@@ -13,7 +13,7 @@ export default () => (
   <React.Fragment>
     <BackgroundImage
       img={background}
-      bgHeight="800px"
+      bgHeight={['30vh', '80vh']}
       bgColor={'linear-gradient(90deg, rgb(0,0,0,0.6) 8%, rgb(255,255,255,0.2) 140%)'}>
       <Flex justifyContent="center" alignItems="center" style={{height: '100%', width: '100%'}}>
         <Headline h1color="white" bgColor="#232323" padding="7px 30px">

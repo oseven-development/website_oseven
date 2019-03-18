@@ -18,8 +18,10 @@ export default props => (
             right={icon.fade.right || false}
             key={Math.random()}>
             <Box style={{textAlign: 'center', maxWidth: '200px'}} my={props.spacebetween || 15} mx={15}>
-              <Image width={icon.width || [70, 100, 120]} src={icon.icon} />
-              <StyledH4 {...props}>{icon.subtitle}</StyledH4>
+              <a href={icon.linkto}>
+                <Image width={icon.width || [70, 100, 120]} src={icon.icon} />
+                <StyledH4 {...props}>{icon.subtitle}</StyledH4>
+              </a>
             </Box>
           </Fade>
         )
@@ -34,6 +36,8 @@ export default props => (
     })}
   </Flex>
 )
+
+const RenderLink = props => <a />
 
 // import {COLOR} from '../../constants'
 export const StyledH4 = styled.h4`

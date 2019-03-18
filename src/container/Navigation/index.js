@@ -1,5 +1,6 @@
 /** @format */
 
 import Navigation from './navigation'
+import HeadlineBackgroundWithSubNavigation from './headlineBackgroundWithSubNavigation'
 
-export {Navigation}
+export {Navigation, HeadlineBackgroundWithSubNavigation}

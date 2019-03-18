@@ -17,7 +17,7 @@ const StyledFlexer = styled.div`
 `
 
 const Flexer = ({children, ...props}) => (
-  <StyledContainer {...props}>
+  <StyledContainer {...props} id={props.id}>
     <StyledFlexer {...props}>
       <Flex
         flexDirection="row"

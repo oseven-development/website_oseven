@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "pm2 deploy deploy.yaml production update",
-    "setup": "pm2 deploy deploy.yaml production setup"
+    "setup": "pm2 deploy deploy.yaml production setup",
+    "onlinedev": "ngrok http 8000"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.16.6",
@@ -37,6 +38,7 @@
     "invariant": "^2.2.4",
     "lodash": "^4.17.11",
     "lodash.throttle": "^4.1.1",
+    "ngrok": "^3.1.1",
     "pm2": "^3.4.0",
     "polished": "^2.3.1",
     "prop-types": "^15.6.2",

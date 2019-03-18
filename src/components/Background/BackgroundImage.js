@@ -6,7 +6,7 @@ import {StyledBackgroundImage} from './styled'
 
 export const BackgroundImage = ({children, ...props}) => {
   return (
-    <StyledBackgroundImage {...props}>
+    <StyledBackgroundImage bgHeight={['60vh', '80vh']} {...props}>
       <div
         style={{
           backgroundImage: props.bgColor,

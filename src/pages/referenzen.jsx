@@ -29,7 +29,7 @@ import kd4 from '../../content/kundenlogos/wagner.png'
 
 export default () => (
   <React.Fragment>
-    <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height="800px">
+    <Slider items={[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11]} height={['30vh', '80vh']}>
       <Headline h1color="white" bgColor="#232323" padding="7px 30px">
         <h1 className="headline" style={{opacity: 0.95}}>
           Unsere Referenzen
@@ -56,10 +56,15 @@ export default () => (
           <FadeImageOrIconBox
             direction={['column', 'row']}
             icons={[
-              {icon: kd1, width: [200], fade: {delay: 500, duration: 500}},
-              {icon: kd2, width: [200], fade: {delay: 1000, duration: 500}},
-              {icon: kd3, width: [200], fade: {delay: 1500, duration: 500}},
-              {icon: kd4, width: [200], fade: {delay: 2000, duration: 500}},
+              {icon: kd1, width: [200], linkto: 'https://heikehaensel.de', fade: {delay: 500, duration: 500}},
+              {
+                icon: kd2,
+                width: [200],
+                linkto: 'https://kfz-gutachter-schaefer.de',
+                fade: {delay: 1000, duration: 500},
+              },
+              {icon: kd3, width: [200], linkto: 'https://priofol.de', fade: {delay: 1500, duration: 500}},
+              {icon: kd4, width: [200], linkto: 'https://wagnerbauservice.de', fade: {delay: 2000, duration: 500}},
             ]}
           />
         }

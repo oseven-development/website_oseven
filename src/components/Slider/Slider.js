@@ -2,7 +2,9 @@
 
 import React from 'react'
 import Slider from 'react-slick'
+import styled from 'styled-components'
 import {StyledSlider} from './styled'
+
 // import {Image} from 'rebass'
 // import {StaticQuery, graphql} from 'gatsby'
 
@@ -36,23 +38,29 @@ export const _Slider = ({children, ...props}) => {
           )
         })}
       </Slider>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          height: props.height,
-          overflow: 'hidden',
-          zIndex: 2,
-          alignItems: 'center',
-          position: 'absolute',
-          top: 0,
-        }}>
-        {children}
-      </div>
+      <StyledSliderContent {...props}>{children}</StyledSliderContent>
     </StyledSlider>
   )
 }
+
+export const StyledSliderContent = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  z-index: 2;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    height: ${props => props.height[0]};
+  }
+  /* Mobile */
+  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+    height: ${props => props.height[1]};
+  }
+`
 
 // var images = require.context('../../images', true)
 //FIXME: Dynamic require / import funktioniert nicht mit gatsby und require context funktioniert

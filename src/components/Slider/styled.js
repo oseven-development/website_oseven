@@ -8,8 +8,14 @@ export const StyledSlider = styled.div`
   .slider,
   .slick-list,
   .slick-track {
-    height: ${props => props.height};
     text-align: center;
+    @media (max-width: ${props => props.theme.breakpoints[1]}) {
+      height: ${props => props.height[0]};
+    }
+    /* Mobile */
+    @media (min-width: ${props => props.theme.breakpoints[1]}) {
+      height: ${props => props.height[1]};
+    }
   }
 `
 export const StyledTextSlider = styled.div`

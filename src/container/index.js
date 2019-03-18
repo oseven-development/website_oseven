@@ -2,7 +2,7 @@
 import {WrapperBox, ContentBox} from './BoxLayout'
 import {Layout} from './Layout'
 import {Footer} from './Footer'
-import {Navigation} from './Navigation'
+import {Navigation, HeadlineBackgroundWithSubNavigation} from './Navigation'
 
 import {IntroScreen} from './Screens'
 
@@ -16,6 +16,7 @@ export {
   Footer,
   // Navigation
   Navigation,
+  HeadlineBackgroundWithSubNavigation,
   // Screens
   IntroScreen,
 }

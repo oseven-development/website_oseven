@@ -5,7 +5,7 @@ import {Flex, Box, Image} from 'rebass'
 import Fade from 'react-reveal/Fade'
 
 // Bilder
-import consutling from '../assets/images/backgrounds/consutling.jpg'
+import ConsutlingBackground from '../assets/images/backgrounds/consutling.jpg'
 import consultingparallax from '../assets/images/backgrounds/consultingparallax.jpg'
 
 // Icons
@@ -22,79 +22,64 @@ import build from '../assets/icon/beratung/build.svg'
 import checked from '../assets/icon/beratung/checked.svg'
 import refresh from '../assets/icon/beratung/refresh.svg'
 
-// Containers
-import {WrapperBox, ContentBox} from '../container'
-
 // Old components maybe Merge
-import {
-  Seo,
-  HeaderTitleBackground,
-  Container,
-  Parallax,
-  HeadingWithSublime,
-  AnimatedArrow,
-  smallNav,
-  ListContainer as Mylist,
-  FadeImageOrIconBox,
-} from '../components'
+import {Seo, Parallax, ListContainer as Mylist, FadeImageOrIconBox} from '../components'
 
-// ????
-import theme from '../components/theme'
-import Projekte from '../../content/service/consulting/projekte.md'
-import Business from '../../content/service/consulting/business.md'
-
-const navObject = [
-  {name: 'Projekt Consulting', to: 'Projektberatung'},
-  {name: 'Business Consulting', to: 'Unternehmensberatung'},
-]
+// Containers
+import {WrapperBox, ContentBox, HeadlineBackgroundWithSubNavigation} from '../container'
 
 export default () => (
   <React.Fragment>
     <Seo title="Business & Projekt Consulting" />
-    <HeaderTitleBackground
-      bgPosition="center right"
-      img={consutling}
-      h1Text="Business & Projekt Consulting"
-      h3Text="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen."
-      nav={smallNav(navObject)}>
-      <a href="#Projektberatung">
-        <AnimatedArrow />
-      </a>
-    </HeaderTitleBackground>
 
-    <Container>
-      <Flex
-        id="Projektberatung"
-        flexDirection="row"
-        flexWrap="wrap"
-        alignItems="center"
-        justifyContent="center"
-        pt={[5, 20, 30]}>
-        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
-          <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Fade left>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt1} />
-            </Fade>
-            <Fade left>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt2} />
-            </Fade>
-            <Fade left>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={projekt3} />
-            </Fade>
-          </Flex>
-        </Box>
-        <Box p={theme.paddings} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime
-            headline="Erfolgreiche Projekte"
-            sublime="Organisation, Konzeption, Planung und Steuerung"
-            spanColor="black"
+    <HeadlineBackgroundWithSubNavigation
+      img={ConsutlingBackground}
+      Headline={'Business & Projekt Consulting'}
+      Subtitle="Wir beraten Sie bei der Durchführung von IT-Projekte und Unternehmensspezifischen Problemstellungen."
+      SubNavigation={[
+        {name: 'Projekt Consulting', to: 'Projektberatung'},
+        {name: 'Business Consulting', to: 'Unternehmensberatung'},
+      ]}
+      ArrowNavigationTarget="#Projektberatung"
+    />
+
+    <WrapperBox id={'Projektberatung'}>
+      <ContentBox
+        width={[1, 1 / 3]}
+        componentTop={
+          <FadeImageOrIconBox
+            direction={['row', 'column']}
+            icons={[
+              {icon: projekt1, fade: {delay: 500, duration: 500, left: true}},
+              {icon: projekt2, fade: {delay: 1000, duration: 500, left: true}},
+              {icon: projekt3, fade: {delay: 1500, duration: 500, left: true}},
+            ]}
           />
+        }
+      />
+      <ContentBox
+        width={[1, 2 / 3]}
+        h1={{content: 'Erfolgreiche Projekte', color: 'black', style: 'sublime'}}
+        h2={{content: 'Organisation, Konzeption, Planung und Steuerung', color: 'black', style: 'sublime'}}
+        componentBottom={
           <Mylist bgcolor={'#eee'} dotColor={'#334D5C'}>
-            <Projekte />
+            <p>
+              IT-Projekte benötigen aufgrund ihrer starken Veränderungswirkung auf das Unternehmen ein hohes Maß an
+              Aufmerksamkeit, es gibt viele Aspekte die beachtet werden müssen. Wir unterstützen Sie bei der
+            </p>
+            <ul>
+              <li> Projekt- & Ideenvalidierung</li>
+              <li> Priosierung der Ziele</li>
+              <li> Erstellung eines Projektsturkturplan</li>
+              <li> Einhalten von Timemanagement</li>
+              <li>Umsetzen des Taskmanagement</li>
+              <li> Etablierung von Risikomanagement</li>
+              <li> Projektcontrolling</li>
+            </ul>
           </Mylist>
-        </Box>
-      </Flex>
-    </Container>
+        }
+      />
+    </WrapperBox>
 
     <WrapperBox backgroundColor={'second'}>
       <ContentBox
@@ -122,38 +107,46 @@ export default () => (
     </WrapperBox>
 
     <Parallax img={consultingparallax} />
-    <Container>
-      <Flex
-        id="Unternehmensberatung"
-        flexDirection="row"
-        flexWrap="wrap"
-        alignItems="center"
-        justifyContent="center"
-        pt={[5, 20, 30]}>
-        <Box p={[1, 2, 3]} width={[1, 2 / 3, 2 / 3]}>
-          <HeadingWithSublime
-            headline="Business Consulting"
-            sublime="Beratung für jeden Schritt in Ihrem Unternehmen"
-            spanColor="black"
-          />
-          <Mylist bgcolor={'#eee'} dotColor={'#45B39C'}>
-            <Business />
+
+    <WrapperBox id={'Unternehmensberatung'}>
+      <ContentBox
+        width={[1, 2 / 3]}
+        h1={{content: 'Business Consulting', color: 'black', style: 'sublime'}}
+        h2={{content: 'Beratung für jeden Schritt in Ihrem Unternehmen', color: 'black', style: 'sublime'}}
+        componentBottom={
+          <Mylist bgcolor={'#eee'} dotColor={'#334D5C'}>
+            <p>
+              Wer mit Abstand auf ein Unternehmen blickt, erkennt darin Zusammenhänge und Chancen, die dem Insider
+              verborgen bleiben. Wir schaffen uns ein allgemeines Bild von der Situation, analysieren diese und
+              erarbeiten Vorschläge, wie Verbesserungen, die in Ihrem Sinne durchgeführt werden können. Wir haben uns
+              auf kleine und mittlere Unternehmen fokusiert, da Sie viel flexibler sind und die Chance der Veränderungen
+              perfekt nutzen können. Wir beraten Sie dabei die für Sie passenden Antworten in folgenden Bereichen zu
+              finden.
+            </p>
+            <ul>
+              <li> Optimierung von Geschäftsprozessen</li>
+              <li> Umgang mit Software</li>
+              <li> Auswahl und Einführung neuer Software</li>
+              <li> Product Design</li>
+              <li> Optimierung der Unternehmenslandschaft</li>
+              <li> Digitalisierung des Unternehmens</li>
+            </ul>
           </Mylist>
-        </Box>
-        <Box p={theme.paddings} width={[1, 1 / 3, 1 / 3]}>
-          <Flex flexDirection="column" justifyContent="center" alignItems="center">
-            <Fade right>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting1} />
-            </Fade>
-            <Fade right>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting2} />
-            </Fade>
-            <Fade right>
-              <Image my={[15, 20, 30]} width={[130, 150, 180]} src={consulting3} />
-            </Fade>
-          </Flex>
-        </Box>
-      </Flex>
-    </Container>
+        }
+      />
+      <ContentBox
+        width={[1, 1 / 3]}
+        componentTop={
+          <FadeImageOrIconBox
+            direction={['row', 'column']}
+            icons={[
+              {icon: consulting1, fade: {delay: 500, duration: 500, right: true}},
+              {icon: consulting2, fade: {delay: 1000, duration: 500, right: true}},
+              {icon: consulting3, fade: {delay: 1500, duration: 500, right: true}},
+            ]}
+          />
+        }
+      />
+    </WrapperBox>
   </React.Fragment>
 )

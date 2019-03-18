@@ -25,41 +25,29 @@ import powerbi1 from '../../content/service/bi/powerbi1.png'
 import powerbi2 from '../../content/service/bi/powerbi2.png'
 
 // Containers
-import {WrapperBox, ContentBox} from '../container'
+import {WrapperBox, ContentBox, HeadlineBackgroundWithSubNavigation} from '../container'
 
 // Old components maybe Merge
-import {
-  Seo,
-  HeaderTitleBackground,
-  smallNav,
-  Parallax,
-  TextSlider,
-  ListContainer as Mylist,
-  Lightbox,
-  FadeImageOrIconBox,
-  Button,
-} from '../components'
+import {Seo, Parallax, TextSlider, ListContainer as Mylist, Lightbox, FadeImageOrIconBox, Button} from '../components'
 import {FaMagic, FaBalanceScale} from 'react-icons/fa'
-
-const navObject = [
-  {name: 'Business Intelligence', to: 'BusinessIntelligence'},
-  {name: 'Business Reporting', to: 'BusinessReporting'},
-  {name: 'Power Bi', to: 'PowerBi'},
-]
 
 export default () => (
   <React.Fragment>
     <Seo title="Business Intelligence & Reporting" />
 
-    <HeaderTitleBackground
+    <HeadlineBackgroundWithSubNavigation
       img={HeadlineBackground}
-      h1Text="Business Intelligence & Reporting"
-      h3Text="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
-      bgPosition="center right"
-      nav={smallNav(navObject)}
+      Headline={'Business Intelligence & Reporting'}
+      Subtitle="Mehr Informationen über ihre Kunden, Produkte und Standorte gewinnen."
+      SubNavigation={[
+        {name: 'Business Intelligence', to: 'BusinessIntelligence'},
+        {name: 'Business Reporting', to: 'BusinessReporting'},
+        {name: 'Power Bi', to: 'PowerBi'},
+      ]}
+      ArrowNavigationTarget="#BusinessIntelligence"
     />
 
-    <WrapperBox>
+    <WrapperBox id={'BusinessIntelligence'}>
       <ContentBox
         width={[1, 1 / 3]}
         componentTop={
@@ -99,7 +87,7 @@ export default () => (
 
     <Parallax img={ParallaxBackgroundBi1} />
 
-    <WrapperBox backgroundColor={'second'}>
+    <WrapperBox backgroundColor={'second'} id={'BusinessReporting'}>
       <ContentBox
         width={[1]}
         h2={{content: 'Business Reporting', color: 'white'}}
@@ -120,7 +108,7 @@ export default () => (
 
     <Parallax img={ParallaxBackgroundBi2} />
 
-    <WrapperBox backgroundColor={'#f2c811'}>
+    <WrapperBox backgroundColor={'#f2c811'} id={'PowerBi'}>
       <ContentBox
         width={[1, 1 / 3]}
         componentTop={
@@ -151,7 +139,14 @@ export default () => (
         paragraph={
           'Hier finden Sie nun ein paar Beispielbilder, wie Power Bi Reports aussehen können und was alles möglich ist. Weiterunten finden Sie noch Live-Demo Berichte, die Sie sich gerne ansehen dürfen.'
         }
-        componentBottom={<Lightbox images={[{img: powerbi1, alt: 'Beispiel Business Intelligence Reports'}, {img: powerbi2, alt: 'Beispiel Business Intelligence Reports'}]} />}
+        componentBottom={
+          <Lightbox
+            images={[
+              {img: powerbi1, alt: 'Beispiel Business Intelligence Reports'},
+              {img: powerbi2, alt: 'Beispiel Business Intelligence Reports'},
+            ]}
+          />
+        }
       />
     </WrapperBox>
 

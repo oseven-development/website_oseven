@@ -5,7 +5,13 @@ import theme from '../theme'
 
 export const StyledBackgroundImage = styled.div`
   width: 100%;
-  height: ${props => (props.bgHeight ? props.bgHeight : '100vh')};
+  @media only screen and (max-width: ${theme.breakpoints[1]}) {
+    height: ${props => (props.bgHeight ? props.bgHeight[0] : '100vh')};
+  }
+  @media only screen and (min-width: ${theme.breakpoints[1]}) {
+    height: ${props => (props.bgHeight ? props.bgHeight[1] : props.bgHeight[0])};
+  }
+
   display: block;
   position: relative;
   &:after {

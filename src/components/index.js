@@ -19,6 +19,9 @@ import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
 import {Slider, TextSlider} from './Slider'
 import {ImageBackground, Lightbox} from './Image'
 
+// Navigation
+import {InBackgroundSubNavigation} from './Navigation'
+
 // Headline
 import {RobotoSlab, IndieFlower, DefaultHeadline, HeadlineWithSublime} from './Headline'
 
@@ -51,6 +54,8 @@ export {
   ListContainer,
   ParallaxClaimed,
   Lightbox,
+  // Navigation
+  InBackgroundSubNavigation,
   // Headline
   RobotoSlab,
   IndieFlower,
