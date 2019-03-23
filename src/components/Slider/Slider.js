@@ -4,11 +4,12 @@ import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
 import {StyledSlider} from './styled'
+import theme from '../theme'
 
 // import {Image} from 'rebass'
 // import {StaticQuery, graphql} from 'gatsby'
 
-export const _Slider = ({children, ...props}) => {
+export default ({children, ...props}) => {
   const settings = {
     className: 'slider',
     infinite: true,
@@ -53,11 +54,11 @@ export const StyledSliderContent = styled.div`
   align-items: center;
   position: absolute;
   top: 0;
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+  @media (max-width: ${props => theme.breakpoints[1]}) {
     height: ${props => props.height[0]};
   }
   /* Mobile */
-  @media (min-width: ${props => props.theme.breakpoints[1]}) {
+  @media (min-width: ${props => theme.breakpoints[1]}) {
     height: ${props => props.height[1]};
   }
 `

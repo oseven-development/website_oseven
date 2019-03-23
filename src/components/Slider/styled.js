@@ -3,17 +3,18 @@
 // /** @format */
 
 import styled from 'styled-components'
+import theme from '../theme'
 
 export const StyledSlider = styled.div`
   .slider,
   .slick-list,
   .slick-track {
     text-align: center;
-    @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    @media (max-width: ${props => theme.breakpoints[1]}) {
       height: ${props => props.height[0]};
     }
     /* Mobile */
-    @media (min-width: ${props => props.theme.breakpoints[1]}) {
+    @media (min-width: ${props => theme.breakpoints[1]}) {
       height: ${props => props.height[1]};
     }
   }
