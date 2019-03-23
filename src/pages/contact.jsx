@@ -13,9 +13,7 @@ export default () => (
     <Headline>
       <FullscreenBackground img={parallax}>
         <Flex alignItems="center" justifyContent="center" style={{height: '100%'}}>
-          <Box
-            mt={[65, 75, '5%', '5%']}
-            style={{padding: '0 40px', backgroundColor: 'rgba(255,255,255,0.9)', flexBasis: '500px'}}>
+          <Box style={{padding: '0 40px', backgroundColor: 'rgba(255,255,255,0.9)', flexBasis: '500px'}}>
             <h2>Den Ersten Kontakt vergisst man nie</h2>
             <p style={{color: theme.colors.text, lineHeight: '2em'}}>
               Maximilian Hänsel
@@ -36,17 +34,14 @@ export default () => (
               <br />
               Nordring 171 <br style={{marginBottom: 0}} /> 90409 Nürnberg
             </p>
-            <a href="tel:+491634412159">
-              <Button color={theme.colors.second} icon={<FaPhone style={{fill: theme.colors.second}} />}>
-                Tel: 0163 - 44 12 159
-              </Button>
-            </a>
 
-            <a href="mailto:info@o-seven.de">
-              <Button color={theme.colors.second} icon={<FaEnvelope style={{fill: theme.colors.second}} />}>
-                info@o-seven.de
-              </Button>
-            </a>
+            <Button linkto={'tel:+491634412159'} color={'second'} icon={<FaPhone />}>
+              Tel: 0163 - 44 12 159
+            </Button>
+
+            <Button linkto={'mailto:info@o-seven.de'} color={'second'} icon={<FaEnvelope />}>
+              info@o-seven.de
+            </Button>
           </Box>
         </Flex>
       </FullscreenBackground>

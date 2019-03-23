@@ -57,7 +57,9 @@ export default class Layout extends React.Component {
         <ThemeProvider theme={theme}>
           <React.Fragment>
             <Navigation nav={navItems} brand={oseven} />
-            <div className={'content'}>{children}</div>
+            <div className={'content'} style={{paddingTop: 55}}>
+              {children}
+            </div>
             <Footer />
           </React.Fragment>
         </ThemeProvider>

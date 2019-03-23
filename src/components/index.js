@@ -17,6 +17,8 @@ import {Button} from './Button'
 import {Seo} from './Seo'
 import {Headline, ConsultingHeadline, HeadingWithSublime} from './Typo'
 import {Slider, TextSlider} from './Slider'
+
+// Image
 import {ImageBackground, Lightbox} from './Image'
 
 // Navigation
@@ -26,9 +28,24 @@ import {InBackgroundSubNavigation} from './Navigation'
 import {RobotoSlab, IndieFlower, DefaultHeadline, HeadlineWithSublime} from './Headline'
 
 // ImageBox
-import {VerticalAndHorizontalImageBox, FadeImageOrIconBox} from './ImageBox'
+import {VerticalAndHorizontalImageBox, FadeImageOrIconBox, EmployerBox} from './ImageBox'
 
 export {
+  // Image
+  ImageBackground,
+  Lightbox,
+  // Navigation
+  InBackgroundSubNavigation,
+  // Headline
+  RobotoSlab,
+  IndieFlower,
+  DefaultHeadline,
+  HeadlineWithSublime,
+  //ImageBox
+  VerticalAndHorizontalImageBox,
+  FadeImageOrIconBox,
+  EmployerBox,
+  //
   OpacityTransition,
   AnimatedLogo,
   AnimatedArrow,
@@ -45,7 +62,6 @@ export {
   Button,
   Slider,
   Headline,
-  ImageBackground,
   ConsultingHeadline,
   HeaderTitleBackground,
   HeadingWithSublime,
@@ -53,15 +69,4 @@ export {
   TextSlider,
   ListContainer,
   ParallaxClaimed,
-  Lightbox,
-  // Navigation
-  InBackgroundSubNavigation,
-  // Headline
-  RobotoSlab,
-  IndieFlower,
-  DefaultHeadline,
-  HeadlineWithSublime,
-  //ImageBox
-  VerticalAndHorizontalImageBox,
-  FadeImageOrIconBox,
 }

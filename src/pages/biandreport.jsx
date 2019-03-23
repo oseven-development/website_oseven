@@ -150,7 +150,7 @@ export default () => (
       />
     </WrapperBox>
 
-    <WrapperBox backgroundColor={'#f2c811'}>
+    <WrapperBox backgroundColor={'bi'}>
       <ContentBox
         width={1}
         h2={{content: 'WAS WIR IHNEN ERMÖGLICHEN', color: 'black'}}
@@ -191,30 +191,25 @@ export default () => (
         h2={{content: 'LIVE-DEMO BERICHTE', color: 'black'}}
         componentBottom={
           <React.Fragment>
-            <a
-              href="https://app.powerbi.com/view?r=eyJrIjoiY2E0M2I3ZjktYmYyOS00ZWI5LTg3ODQtNjFkOTliZDVmNjVmIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
-              target="blank">
-              <Button
-                color="black"
-                bgRadius={'0px'}
-                border={false}
-                bgColor={'#f2c811'}
-                icon={<FaBalanceScale size="1.3em" style={{fill: 'black'}} />}>
-                Jahresvergleichsbericht
-              </Button>
-            </a>
-            <a
-              href="https://app.powerbi.com/view?r=eyJrIjoiYTM0YmVlMzgtNWY3OC00ZjEyLTg1ZDgtMWFhNzQ3ZmU3ZWFiIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
-              target="blank">
-              <Button
-                bgRadius={'0px'}
-                color="black"
-                bgColor={'#f2c811'}
-                border={false}
-                icon={<FaMagic size="1.3em" style={{fill: 'black'}} />}>
-                Produktdetailbericht
-              </Button>
-            </a>
+            <Button
+              linkto="https://app.powerbi.com/view?r=eyJrIjoiY2E0M2I3ZjktYmYyOS00ZWI5LTg3ODQtNjFkOTliZDVmNjVmIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9"
+              background={true}
+              color={'bi'}
+              border={false}
+              icon={<FaBalanceScale />}>
+              Jahresvergleichsbericht
+            </Button>
+
+            <Button
+              linkto={
+                'https://app.powerbi.com/view?r=eyJrIjoiYTM0YmVlMzgtNWY3OC00ZjEyLTg1ZDgtMWFhNzQ3ZmU3ZWFiIiwidCI6Ijk5MjA2Nzg3LWRiMzEtNGRiMy1hYTRjLTlhNjNkZWNmNjVmNSIsImMiOjl9'
+              }
+              background={true}
+              color={'bi'}
+              border={false}
+              icon={<FaMagic />}>
+              Produktdetailbericht
+            </Button>
           </React.Fragment>
         }
       />

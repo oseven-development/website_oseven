@@ -14,6 +14,8 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-mdx',
       options: {
@@ -46,8 +48,6 @@ module.exports = {
       },
     },
 
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

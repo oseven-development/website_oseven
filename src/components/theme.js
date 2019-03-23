@@ -13,6 +13,7 @@ export default {
     textBlack: '#121212',
     black: '#232323',
     lightwhite: '#f5f5f5',
+    bi: '#f2c811',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

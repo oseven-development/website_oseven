@@ -13,16 +13,17 @@
       letter-spacing: 4px
       cursor: pointer
       padding: 1em 1em
+
       > a, > span
         font-size: 2rem
         text-decoration: none
         color: #fff
         // FIXME: passenden Media Queries für handys, sonst reagieren die auf Hover
         @media (min-width: 400px)
-          > &:hover
+          &:hover
             color: lighten($color-main, 20%)
-            > &:after
-              width: 60%
+          &:after
+            width: 60%
         > &:after
           content: ''
           display: block
