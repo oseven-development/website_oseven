@@ -4,7 +4,7 @@
 import React from 'react'
 import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
-import theme from '../../components/theme'
+import theme from '../../library/theme'
 import navItems from '../../routes/routes'
 
 // Icons

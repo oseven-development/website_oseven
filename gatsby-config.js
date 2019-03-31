@@ -16,6 +16,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-mdx',
       options: {

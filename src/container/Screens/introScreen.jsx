@@ -2,7 +2,7 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import {AnimatedLogo, BackgroundImage, AnimatedArrow} from '../../components'
-import background from '../../assets/images/backgrounds/home.jpg'
+import background from '../../assets/images/backgrounds/homess.jpg'
 
 export default () => (
   <React.Fragment>
