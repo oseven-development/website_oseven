@@ -59,31 +59,31 @@ const StyledNav = styled.nav`
   li a {
     display: block;
     text-transform: uppercase;
-    color: ${({theme}: any) => theme.colors.default};
+    color: ${({theme}) => theme.colors.default};
   }
   [aria-current]:not([aria-current='false']) {
     font-weight: bold;
-    color: ${({theme}: any) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.primary};
   }
   li a:after,
   li a:hover {
     transition: all 0.5s;
   }
   li a:hover {
-    color: ${({theme}: any) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.primary};
     /* border-bottom: 1px solid ${({theme}: any) => theme.colors.primary}; */
   }
 `
 
 const StyledFullScreenNav = styled.nav`
   position:absolute;
-  top:60;
+  top:60px;
   left:0;
   display:flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height:${window.innerHeight-60}px;
+  height:calc(100vh - 60px);
   width:100vw;
   background:${props => props.theme.colors.background};
   li {
