@@ -1,45 +1,18 @@
 /** @format */
 
-// Animate
-import {AnimatedArrow, AnimatedLogo} from './animate'
+// BoxLayoutType
+import Container from './container'
+import {Layout} from './Layout'
+import Typography from './typography'
+import Header from './header'
+import Image from './image'
+import Navigation from './navigation'
+import {Seo} from './uniqueComponents/seo'
+// import {Navigation, HeadlneBackgroundWithSubNavigation} from './Navigation'
 
-// Assets
-import {Button, Lightbox, TextSlider} from './assets'
+// import {IntroScreen} from './Screens'
 
-// Background
-import {Parallax, BackgroundImage} from './background'
+// BoxLayoutType
+// export {ContantBox, WrapperBox, CentertContant, ContantBoxFull, ContantBoxHalf, ContantBoxFullThirds}
 
-// BoxedIcons
-import {EmployerBox, IconBox} from './boxedIcons'
-
-// Headline
-import {RobotoSlab, IndieFlower, DefaultHeadline, HeadlineWithSublime} from './headline'
-
-// Navigation
-import {SubNavigation} from './navigation'
-
-// Seo
-import {Seo} from './seo'
-
-// !!!_____ EXPORTS _____!!!
-
-// Animate
-export {AnimatedArrow, AnimatedLogo}
-
-// Assets
-export {Button, Lightbox, TextSlider}
-
-// Background
-export {Parallax, BackgroundImage}
-
-// BoxedIcons
-export {EmployerBox, IconBox}
-
-// Headline
-export {RobotoSlab, IndieFlower, DefaultHeadline, HeadlineWithSublime}
-
-// Navigation
-export {SubNavigation}
-
-// Seo
-export {Seo}
+export {Layout, Container, Seo, Typography, Navigation, Header, Image}

@@ -17,15 +17,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-typescript',
-    {
-      resolve: 'gatsby-mdx',
-      options: {
-        extensions: ['.mdx', '.md'],
-        defaultLayouts: {
-          // default: require.resolve('./src/components/Layout/index2.js'),
-        },
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -34,13 +26,7 @@ module.exports = {
         policy: [{userAgent: '*', allow: '/'}],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `slider`,
-        path: `${__dirname}/src/assets/images/slider`,
-      },
-    },
+ 
     {
       resolve: `gatsby-source-filesystem`,
       options: {

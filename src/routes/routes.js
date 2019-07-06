@@ -6,50 +6,19 @@ export default [
     label: 'Home',
   },
   {
-    label: 'Produkte',
-    to: [
-      {
-        to: '/website',
-        label: 'Webseiten',
-      },
-      {
-        to: '/application',
-        label: 'Applikation',
-      },
-    ],
+    to: '/leistungen',
+    label: 'Leistungen',
   },
   {
+    to: '/portfolio',
     label: 'Portfolio',
-    to: [
-      {
-        to: '/biandreport',
-        label: 'Business Intelligence & Reporting',
-      },
-      {
-        to: '/beratung',
-        label: 'Projekt- & Unternehmensberatung',
-      },
-    ],
   },
   {
-    label: 'Referenzen',
-    to: [
-      {
-        to: '/referenzen',
-        label: 'Partner',
-      },
-      {
-        to: '/story',
-        label: 'Stories',
-      },
-    ],
-  },
-  {
-    to: '/contact',
+    to: '/kontakt',
     label: 'Kontakt',
   },
   {
-    to: '/impressum',
-    label: 'Impressum',
+    to: '/referenzen',
+    label: 'Referenzen',
   },
 ]
