@@ -11,7 +11,7 @@ interface INavigation {
 
 const Navigation = (props: INavigation) => {
   const {links, active} = props
-  // const [menu, setMenu] = React.useState(false)
+  const [menu, setMenu] = React.useState(false)
   const mobile = window.innerWidth < 768 ? true : false
 
   return (
@@ -19,13 +19,20 @@ const Navigation = (props: INavigation) => {
       {mobile ? (
         <React.Fragment>
           <NavigationButton
-            className={'active'}
+            className={menu?'active':''}
             onClick={() => {
               setMenu(!menu)
             }}>
             <span />
           </NavigationButton>
-          <nav />
+          {menu ?  <StyledFullScreenNav>
+          {links.map((link: any) => (
+            <li>
+              <Link to={link.to}>{link.label}</Link>
+            </li>
+          ))}
+          </StyledFullScreenNav>: null}
+         
         </React.Fragment>
       ) : (
         <StyledNav>
@@ -42,6 +49,7 @@ const Navigation = (props: INavigation) => {
 export default Navigation
 
 const StyledNav = styled.nav`
+  
   li {
     list-style-type: none;
     margin: 0;
@@ -66,6 +74,45 @@ const StyledNav = styled.nav`
     /* border-bottom: 1px solid ${({theme}: any) => theme.colors.primary}; */
   }
 `
+
+const StyledFullScreenNav = styled.nav`
+  position:absolute;
+  top:60;
+  left:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:${window.innerHeight-60}px;
+  width:100vw;
+  background:${props => props.theme.colors.background};
+  li {
+    margin:auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 8px;
+    text-align:center;
+  }
+  li a {
+    display: block;
+    text-transform: uppercase;
+    color: ${({theme}: any) => theme.colors.default};
+  }
+  [aria-current]:not([aria-current='false']) {
+    font-weight: bold;
+    color: ${({theme}: any) => theme.colors.primary};
+  }
+  li a:after,
+  li a:hover {
+    transition: all 0.5s;
+  }
+  li a:hover {
+    color: ${({theme}: any) => theme.colors.primary};
+    /* border-bottom: 1px solid ${({theme}: any) => theme.colors.primary}; */
+  }
+`
+
+
 const NavigationButton = styled.div`
   cursor: pointer;
   display: flex;
@@ -73,12 +120,13 @@ const NavigationButton = styled.div`
   align-items: center;
   padding: 0 10px;
   z-index: 101;
+  margin-right:-20px;
   span,
   span:after,
   span:before {
     transition: 0.3s all;
     width: 30px;
-    background: ${props => props.theme.colors.black};
+    background: ${props => props.theme.colors.default};
     height: 1px;
     display: block;
     content: '';
@@ -94,15 +142,16 @@ const NavigationButton = styled.div`
   }
   &.active {
     span {
+      background: transparent;
       &:after {
         transform: rotate(-45deg);
         top: -1px;
-        background: whitesmoke;
+        background: ${props => props.theme.colors.default};
       }
       &:before {
         transform: rotate(45deg);
         top: 0;
-        background: whitesmoke;
+        background: ${props => props.theme.colors.default};
       }
     }
   }
