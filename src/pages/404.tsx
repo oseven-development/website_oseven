@@ -10,7 +10,11 @@ import {SvgImage, Container, Content} from '../components'
 export default () => (
   <React.Fragment>
     <Container height={700}>
-      <Content text={'einfach normal navigieren'} titleAlign={'center'} title={'Falsche Seite'} image={{src: <SvgImage src={VierNullVier} dWidth={700} />, type: 'svg'}} />
+      <Content
+        titleAlign={'center'}
+        title={'Falsche Seite'}
+        image={{src: <SvgImage src={VierNullVier} dWidth={700} />, type: 'svg'}}
+      />
     </Container>
   </React.Fragment>
 )
