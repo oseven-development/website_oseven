@@ -49,17 +49,21 @@ export default createGlobalStyle`
     font-weight: 600;
     font-family: "Khula", sans-serif;
     font-size: ${buildString('32px', '70px')};
+    margin:0;
     }
   .title {
     font-size: 60px;
   }
-  h2{  font-weight: 400;
+  h2{  
+    margin:0;
+    font-weight: 400;
     font-family: "Khula", sans-serif;
-    font-size: ${buildString('28px', '60px')}};
+    font-size: ${buildString('20px', '50px')}};
   p{
       font-size: ${buildString('16px', '22px')};
       line-height: 1.5em;
       font-family: "Roboto", sans-serif;
+      text-align: justify;
       /* font-weight: 100; */
     }
   a {

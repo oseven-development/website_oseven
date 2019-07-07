@@ -2,6 +2,7 @@
 
 // BoxLayoutType
 import Container from './container'
+import Content from './content'
 import {Layout} from './Layout'
 import Typography from './typography'
 import Header from './header'
@@ -15,4 +16,4 @@ import {Seo} from './uniqueComponents/seo'
 // BoxLayoutType
 // export {ContantBox, WrapperBox, CentertContant, ContantBoxFull, ContantBoxHalf, ContantBoxFullThirds}
 
-export {Layout, Container, Seo, Typography, Navigation, Header, Image}
+export {Layout, Container, Seo, Typography, Navigation, Header, Image, Content}

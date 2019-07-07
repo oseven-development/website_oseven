@@ -8,10 +8,11 @@ interface ITypography {
   variant?: 'h1' | 'h2' | 'h3' | 'title' | 'p'
   children: any
   color?: TColor
+  margin?: string
 }
 
 const Typography = (props: ITypography) => {
-  const {variant, children} = props
+  const {variant, children, margin} = props
   return (
     <StyledTypograhpy {...props}>
       {variant === 'title' ? (
@@ -33,9 +34,7 @@ const Typography = (props: ITypography) => {
 
 const StyledTypograhpy = styled.div`
   color: ${({color}) => (color ? theme.colors[color] : theme.colors.textColor)};
-  h1 {
-    margin: 10px 0px 20px 0px;
-  }
+  margin: ${({margin}: any) => (margin ? margin : '5px 0px 10px 0px')};
 `
 
 export default Typography

@@ -6,17 +6,15 @@ import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
 
 // Components
-import {Seo, Container, Typography} from '../components'
+import {Seo, Container, Typography, Content} from '../components'
 
 // Bilder Backgrounds
 
 export default props => (
   <React.Fragment>
     {/* <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" /> */}
-    <Container bg="primary" fullscreen>
-      <Typography variant={'h1'} color={'inherit'}>
-        OSEVEN
-      </Typography>
+    <Container>
+      <Content title="Test" subtitle="test2" text={"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."} />
     </Container>
     <Container>
       <Typography color={'secondary'} variant="h2">

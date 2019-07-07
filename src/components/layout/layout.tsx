@@ -27,7 +27,7 @@ export default class Layout extends React.Component {
         <ThemeProvider theme={theme}>
           <React.Fragment>
             <Header logo={Logo} navigation={<Navigation links={navItems} />} />
-            <main style={{paddingTop: 55}}>{children}</main>
+            <main>{children}</main>
             {/* <Footer /> */}
           </React.Fragment>
         </ThemeProvider>

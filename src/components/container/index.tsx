@@ -18,6 +18,9 @@ interface IContainer {
 }
 const Container = (props: IContainer) => {
   const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children, fullscreen, bg} = props
+  const marginDesktop = '0px 0px 0px 0px'
+  const marginMobile = '0px 8px 0px 8px'
+  const margin = [marginMobile, marginDesktop]
   return (
     <Flex
       flexDirection={flexDirection ? flexDirection : 'row'}
@@ -34,20 +37,34 @@ const Container = (props: IContainer) => {
         ratio && children.length === 2 ? (
           ratio === 21 ? (
             <React.Fragment>
-              <Box width={[1, 2 / 3]}>{children[0]}</Box>
-              <Box width={[1, 1 / 3]}>{children[1]}</Box>
+              <Box m={margin} width={[1, 2 / 3]}>
+                {children[0]}
+              </Box>
+              <Box m={margin} width={[1, 1 / 3]}>
+                {children[1]}
+              </Box>
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <Box width={[1, 1 / 3]}>{children[0]}</Box>
-              <Box width={[1, 2 / 3]}>{children[1]}</Box>
+              <Box m={margin} width={[1, 1 / 3]}>
+                {children[0]}
+              </Box>
+              <Box m={margin} width={[1, 2 / 3]}>
+                {children[1]}
+              </Box>
             </React.Fragment>
           )
         ) : (
-          children.map((child: any) => <Box width={[1, 1 / children.length]}>{child}</Box>)
+          children.map((child: any) => (
+            <Box m={margin} width={[1, 1 / children.length]}>
+              {child}
+            </Box>
+          ))
         )
       ) : (
-        <Box width={1}>{children}</Box>
+        <Box m={margin} width={1}>
+          {children}
+        </Box>
       )}
     </Flex>
   )
