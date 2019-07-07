@@ -18,11 +18,13 @@ interface IContent {
         src: any
         alt?: string
         type: 'svg' | 'jpg'
+        padding?: string | number
       }
     | {
         src: any
         alt?: string
         type: 'svg' | 'jpg'
+        padding?: string | number
       }[]
   text?: string | JSX.Element
   imageDirection?: 'row' | 'column'
@@ -57,7 +59,7 @@ const Content = (props: IContent) => {
               alignItems={'center'}
               style={{width: '100%', height: '100%'}}>
               {image.map((e: any) => (
-                <Box key={e.alt} style={{height: '100%', width: '100%'}}>
+                <Box key={e.alt} style={{height: '100%', width: '100%'}} p={e.padding}>
                   {e.type === 'svg' ? e.src : <Image src={e.src} alt={e.alt} />}
                 </Box>
               ))}
@@ -65,7 +67,13 @@ const Content = (props: IContent) => {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            {image.type === 'svg' ? image.src : <Image src={image.src} alt={image.alt} />}
+            {image.type === 'svg' ? (
+              <div style={{padding: image.padding}}>{image.src}</div>
+            ) : (
+              <div style={{padding: image.padding}}>
+                <Image src={image.src} alt={image.alt} />
+              </div>
+            )}
           </React.Fragment>
         )
       ) : null}
