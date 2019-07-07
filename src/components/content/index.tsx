@@ -13,6 +13,7 @@ interface IContent {
   titleColor?: TColor
   subtitleColor?: TColor
   subtitle?: string
+  maxTitle?: boolean
   image?:
     | {
         src: any
@@ -28,21 +29,24 @@ interface IContent {
       }[]
   text?: string | JSX.Element
   imageDirection?: 'row' | 'column'
+  divider?: boolean
 }
 
 const Content = (props: IContent) => {
-  const {title, subtitle, image, text, titleColor, subtitleColor, imageDirection} = props
-  console.log(Array.isArray(image))
+  const {title, subtitle, image, text, titleColor, subtitleColor, imageDirection, maxTitle, divider} = props
   return (
     <React.Fragment>
       {title ? (
         <React.Fragment>
-          <Typography variant="h1" color={titleColor ? titleColor : 'default'} margin={subtitle ? '0' : ''}>
+          <Typography
+            variant={maxTitle ? 'title' : 'h1'}
+            color={titleColor ? titleColor : 'default'}
+            margin={subtitle ? '0' : ''}>
             {title}
           </Typography>
           {subtitle ? (
             <React.Fragment>
-              <StyledSubtitle />
+              {divider ? <StyledSubtitle /> : null}
               <Typography variant="h2" color={subtitleColor ? subtitleColor : 'default'} margin={'0'}>
                 {subtitle}
               </Typography>

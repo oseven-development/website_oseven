@@ -5,6 +5,7 @@ import styled, {ThemeContext} from 'styled-components'
 
 import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
+import theme from '../../assets/theme'
 interface IContainer {
   flexDirection?: 'row' | 'column'
   flexWrap?: 'wrap' | 'nowrap'
@@ -15,14 +16,28 @@ interface IContainer {
   children: any
   fullscreen?: true
   bg?: TColor
+  height?: number | string
+  transparent?: boolean
 }
 const Container = (props: IContainer) => {
-  const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children, fullscreen, bg} = props
+  const {
+    flexDirection,
+    flexWrap,
+    alignItems,
+    transparent,
+    justifyContent,
+    alignContent,
+    ratio,
+    children,
+    fullscreen,
+    bg,
+    height,
+  } = props
   const marginDesktop = '0px 0px 0px 0px'
   const marginMobile = '0px 8px 0px 8px'
   const margin = [marginMobile, marginDesktop]
   const padding = [0, '0px 8px 0px 8px']
-  const theme = React.useContext(ThemeContext)
+  // const theme = React.useContext(ThemeContext)
   return (
     <Flex
       flexDirection={flexDirection ? flexDirection : 'row'}
@@ -30,10 +45,11 @@ const Container = (props: IContainer) => {
       alignItems={alignItems ? alignItems : 'center'}
       alignContent={alignContent ? alignContent : 'center'}
       justifyContent={justifyContent ? justifyContent : 'center'}
-      bg={bg ? theme.colors[bg] : theme.colors.background}
+      bg={bg ? theme.colors[bg] : transparent ? 'transparent' : theme.colors.background}
       style={{
         maxWidth: fullscreen ? '100%' : '1000px',
         margin: 'auto',
+        height: height ? height : '',
       }}>
       {Array.isArray(children) ? (
         ratio && children.length === 2 ? (

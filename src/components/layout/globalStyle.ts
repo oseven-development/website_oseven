@@ -52,7 +52,7 @@ export default createGlobalStyle`
     margin:0;
     }
   .title {
-    font-size: 60px;
+    font-size:${buildString('40px', '70px')};
   }
   h2{  
     margin:0;
