@@ -5,6 +5,9 @@ import styled from 'styled-components'
 import {Typography, Image} from '..'
 import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
+
+// * Am unteren der Seite sind alle möglichen Beispiele
+
 interface IContent {
   title?: string
   titleColor?: TColor
@@ -86,3 +89,20 @@ const StyledSubtitle = styled.span`
     background: ${({theme}) => theme.colors.default};
   }
 `
+/*
+
+ ? Content mit Überschrift unter Überschrift und Text
+     <Content
+          title="Test"
+          titleColor="primary"
+          subtitle="test2"
+          text={
+            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+          }
+        />
+ ? Content mit Array von Imagen 
+ ? bei Image entweder Type svg oder jpg bei jpg Image query
+        <Content image={[{src: <Homescreen />, type: 'svg'}, {src: <Homescreen />, type: 'svg'}]} />
+? single image
+  <Content image={{src: <Homescreen />, type: 'svg'}} />
+ */
