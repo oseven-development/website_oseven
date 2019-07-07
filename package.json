@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "pm2 deploy deploy.yaml production update",
     "setup": "pm2 deploy deploy.yaml production setup",
-    "onlinedev": "ngrok http 8000"
+    "onlinedev": "ngrok http 4000"
   },
   "dependencies": {
     "@types/styled-components": "^4.1.12",

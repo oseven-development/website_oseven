@@ -12,6 +12,7 @@ import {Seo, Container, Content, SvgImage} from '../components'
 
 export default props => (
   <React.Fragment>
+   <Seo title="Leistungen" description="Leistungsübersicht" keywords="Cloud Cloudnative Serverless Software Development Aws Gcp" />
     <Container transparent pt={'20px'}>
       <Content
         title="Cloudnative Software-entwicklung"
@@ -22,7 +23,7 @@ export default props => (
       />
       <Content
         image={{
-          src: <SvgImage dWidth={400} src={ContainerSvg} />,
+          src: <SvgImage dWidth={450} src={ContainerSvg} />,
           type: 'svg',
         }}
       />

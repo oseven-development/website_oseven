@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 716 201">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff662b;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #20242a;
+      }
+
+      .cls-3 {
+        fill: #343d4b;
+      }
+
+      .cls-4 {
+        font-size: 125px;
+        font-family: GillSans-Light, Gill Sans;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_6" data-name="Gruppe 6" transform="translate(-57 756)">
+    <g id="Gruppe_5" data-name="Gruppe 5">
+      <rect id="Rechteck_2" data-name="Rechteck 2" class="cls-1" width="107" height="47" transform="translate(240 -602)"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="75" cy="75" r="75" transform="translate(263 -705)"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-2" cx="100.5" cy="100.5" r="100.5" transform="translate(132 -756)"/>
+      <rect id="Rechteck_1" data-name="Rechteck 1" class="cls-2" width="110" height="47" transform="translate(132 -602)"/>
+      <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-3" cx="75" cy="75" r="75" transform="translate(57 -705)"/>
+    </g>
+    <text id="oseven" class="cls-4" transform="translate(428 -614)"><tspan x="0" y="0">oseven</tspan></text>
+  </g>
+</svg>

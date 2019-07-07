@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {Link} from 'gatsby'
 import theme from '../../assets/theme'
+import {SvgImage} from '..'
 
 interface IHeader {
   navigation: JSX.Element
@@ -31,7 +32,7 @@ export default (props: any) => (
       <Flex justifyContent={'space-between'} style={{height: '100%'}}>
         <Box mx={'15px'} alignSelf={'center'}>
           <Link to="/" style={{fontFamily: 'none'}}>
-            <img src={props.logo} alt={'logo Oseven'} style={{width: 200}} />
+            <SvgImage src={props.logo}  dWidth={200}/>
           </Link>
         </Box>
         <Box mx={'50px'} alignSelf={'center'}>

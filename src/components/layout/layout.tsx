@@ -14,7 +14,7 @@ import theme from '../../assets/theme'
 import navItems from '../../routes/routes'
 import {Navigation, Header, Image} from '..'
 
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo.svg'
 
 export default class Layout extends React.Component {
   // constructor(props) {

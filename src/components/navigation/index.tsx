@@ -27,7 +27,11 @@ const Navigation = (props: INavigation) => {
           {menu ? (
             <StyledFullScreenNav>
               {links.map((link: any) => (
-                <li key={link.to}>
+                <li
+                  key={link.to}
+                  onClick={() => {
+                    setMenu(!menu)
+                  }}>
                   <Link to={link.to}>{link.label}</Link>
                 </li>
               ))}
