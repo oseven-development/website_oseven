@@ -11,16 +11,18 @@ interface IContainer {
   justifyContent?: 'center' | 'flex-start' | 'space-between'
   ratio?: 21 | 12
   children: any
+  fullscreen?: true
 }
 const Container = (props: IContainer) => {
-  const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children} = props
+  const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children, fullscreen} = props
   return (
     <Flex
       flexDirection={flexDirection ? flexDirection : 'row'}
       flexWrap={flexWrap ? flexWrap : 'wrap'}
       alignItems={alignItems ? alignItems : 'center'}
       alignContent={alignContent ? alignContent : 'center'}
-      justifyContent={justifyContent ? justifyContent : 'center'}>
+      justifyContent={justifyContent ? justifyContent : 'center'}
+      style={{maxWidth: fullscreen ? '100%' : '1000px', margin: 'auto'}}>
       {Array.isArray(children) ? (
         ratio && children.length === 2 ? (
           ratio === 21 ? (

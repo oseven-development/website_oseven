@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import {TColor} from '../../assets/theme/types'
 import theme from '../../assets/theme'
 interface ITypography {
-  variant: 'h1' | 'h2' | 'h3' | 'title' | 'p'
+  variant?: 'h1' | 'h2' | 'h3' | 'title' | 'p'
   children: any
   color?: TColor
 }

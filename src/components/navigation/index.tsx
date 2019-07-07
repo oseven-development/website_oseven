@@ -6,11 +6,10 @@ import {Link} from 'gatsby'
 import {Typography} from '..'
 interface INavigation {
   links: any[]
-  active: string
 }
 
 const Navigation = (props: INavigation) => {
-  const {links, active} = props
+  const {links} = props
   const [menu, setMenu] = React.useState(false)
   const mobile = window.innerWidth < 768 ? true : false
 
