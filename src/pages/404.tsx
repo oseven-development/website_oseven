@@ -3,11 +3,14 @@
 // /** @format */
 
 import React from 'react'
-
+import VierNullVier from '../assets/images/illustrations/404.svg'
+import {SvgImage, Container, Content} from '../components'
 // Containers
 
 export default () => (
   <React.Fragment>
-    <h1>Diese Seite wurde nicht gefunden</h1>
+    <Container height={700}>
+      <Content text={'einfach normal navigieren'} titleAlign={'center'} title={'Falsche Seite'} image={{src: <SvgImage src={VierNullVier} dWidth={700} />, type: 'svg'}} />
+    </Container>
   </React.Fragment>
 )
