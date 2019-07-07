@@ -6,7 +6,7 @@ import ContainerSvg from '../assets/images/illustrations/blocks.svg'
 import RocketSvg from '../assets/images/illustrations/rocket.svg'
 import FirmwareSvg from '../assets/images/illustrations/firmware.svg'
 // Components
-import {Seo, Container, Typography, Content, Parallax, BackgroundImage} from '../components'
+import {Seo, Container, Content, SvgImage} from '../components'
 
 // Bilder Backgrounds
 
@@ -22,8 +22,7 @@ export default props => (
       />
       <Content
         image={{
-          src: <ContainerSvg style={{width: '100%', height: '100%'}} />,
-          alt: 'Image für Leistungen',
+          src: <SvgImage dWidth={400} src={ContainerSvg} />,
           type: 'svg',
         }}
       />
@@ -38,8 +37,7 @@ export default props => (
         <Container transparent alignItems={'flex-start'}>
           <Content
             image={{
-              src: <FirmwareSvg style={{width: '100%', height: '150px', padding: '40px 0px 20px 0px'}} />,
-              alt: 'Image für Leistungen',
+              src: <SvgImage p={'40px 0px 20px 0px'} dWidth={250} src={FirmwareSvg} />,
               type: 'svg',
             }}
             textColor={'inherit'}
@@ -49,8 +47,7 @@ export default props => (
           />
           <Content
             image={{
-              src: <RocketSvg style={{width: '100%', height: '150px', padding: '40px 0px 20px 0px'}} />,
-              alt: 'Image für Leistungen',
+              src: <SvgImage p={'40px 0px 20px 0px'} dWidth={250} src={RocketSvg} />,
               type: 'svg',
             }}
             textColor={'inherit'}

@@ -11,9 +11,9 @@ import {TColor} from '../../assets/theme/types'
 interface IContent {
   title?: string
   titleColor?: TColor
-  titleAlign?:'center'
+  titleAlign?: 'center'
   subtitleColor?: TColor
-  subtitleAlign?:'center'
+  subtitleAlign?: 'center'
   subtitle?: string
   maxTitle?: boolean
   image?:
@@ -30,16 +30,29 @@ interface IContent {
         padding?: string | number
       }[]
   text?: string | JSX.Element
-  textColor?:TColor
+  textColor?: TColor
   imageDirection?: 'row' | 'column'
   divider?: boolean
 }
 
 const Content = (props: IContent) => {
-  const {title, subtitle, textColor,image, text, titleColor, subtitleColor, imageDirection, maxTitle, divider,titleAlign,subtitleAlign} = props
+  const {
+    title,
+    subtitle,
+    textColor,
+    image,
+    text,
+    titleColor,
+    subtitleColor,
+    imageDirection,
+    maxTitle,
+    divider,
+    titleAlign,
+    subtitleAlign,
+  } = props
   return (
     <React.Fragment>
-      {title || subtitle? (
+      {title || subtitle ? (
         <React.Fragment>
           <Typography
             variant={maxTitle ? 'title' : 'h1'}
@@ -51,7 +64,11 @@ const Content = (props: IContent) => {
           {subtitle ? (
             <React.Fragment>
               {divider ? <StyledSubtitle /> : null}
-              <Typography variant="h2" color={subtitleColor ? subtitleColor : 'default'} margin={'0'}  textAlign={subtitleAlign}>
+              <Typography
+                variant="h2"
+                color={subtitleColor ? subtitleColor : 'default'}
+                margin={'0'}
+                textAlign={subtitleAlign}>
                 {subtitle}
               </Typography>
             </React.Fragment>
@@ -68,7 +85,11 @@ const Content = (props: IContent) => {
               style={{width: '100%', height: '100%'}}>
               {image.map((e: any) => (
                 <Box key={e.alt} style={{height: '100%', width: '100%'}} p={e.padding}>
-                  {e.type === 'svg' ? e.src : <Image src={e.src} alt={e.alt} />}
+                  {e.type === 'svg' ? (
+                    <div style={{padding: e.padding ? e.padding : 0, textAlign: 'center'}}>{e.src}</div>
+                  ) : (
+                    <Image src={e.src} alt={e.alt} />
+                  )}
                 </Box>
               ))}
             </Flex>
@@ -76,7 +97,7 @@ const Content = (props: IContent) => {
         ) : (
           <React.Fragment>
             {image.type === 'svg' ? (
-              <div style={{padding: image.padding ? image.padding : 0}}>{image.src}</div>
+              <div style={{padding: image.padding ? image.padding : 0, textAlign: 'center'}}>{image.src}</div>
             ) : (
               <div style={{padding: image.padding ? image.padding : 0}}>
                 <Image src={image.src} alt={image.alt} />
@@ -88,7 +109,9 @@ const Content = (props: IContent) => {
 
       {text ? (
         <React.Fragment>
-          <Typography variant="p" color={textColor ? textColor : 'default'}>{text}</Typography>
+          <Typography variant="p" color={textColor ? textColor : 'default'}>
+            {text}
+          </Typography>
         </React.Fragment>
       ) : null}
     </React.Fragment>
