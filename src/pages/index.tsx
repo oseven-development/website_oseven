@@ -3,7 +3,6 @@
 // react and gatsby
 import React from 'react'
 import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
 import Homescreen from '../assets/images/illustrations/homescreen.svg'
 
 // Components
@@ -14,7 +13,7 @@ import {Seo, Container, Typography, Content} from '../components'
 export default props => {
   return (
     <React.Fragment>
-      {/* <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" /> */}
+      <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
       <Container>
         <Content
           title="Test"

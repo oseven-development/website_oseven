@@ -18,7 +18,15 @@ export default createGlobalStyle`
     main {
       background-color: ${theme.colors.background}
     }
-    @font-face {
+@font-face {
+  font-family: 'Khula';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Khula Light'), local('Khula-Light'), url(https://fonts.gstatic.com/s/khula/v4/OpNPnoEOns3V7G-ljBvTpi9fXBXC.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
   font-family: 'Khula';
   font-style: normal;
   font-weight: 400;
@@ -27,11 +35,11 @@ export default createGlobalStyle`
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Khula';
+  font-family: 'Merriweather';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-display: swap;
-  src: local('Khula SemiBold'), local('Khula-SemiBold'), url(https://fonts.gstatic.com/s/khula/v4/OpNPnoEOns3V7G_RihvTpi9fXBXC.woff2) format('woff2');
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v20/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6hPvhPQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -47,7 +55,7 @@ export default createGlobalStyle`
   }
   h1{
     font-weight: 600;
-    font-family: "Khula", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-size: ${buildString('32px', '70px')};
     margin:0;
     }
@@ -56,7 +64,7 @@ export default createGlobalStyle`
   }
   h2{  
     margin:0;
-    font-weight: 400;
+    font-weight: 300;
     font-family: "Khula", sans-serif;
     font-size: ${buildString('20px', '50px')}};
   p{
