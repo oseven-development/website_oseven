@@ -8,10 +8,12 @@ import GlobalStyle from './globalStyle'
 
 // Theme
 import theme from '../../assets/theme'
+// import {darkTheme as theme} from '../../assets/theme'
 // Containers
 
 import navItems from '../../routes/routes'
 import {Navigation, Header, Image} from '..'
+
 import Logo from '../../assets/images/logo.png'
 
 export default class Layout extends React.Component {
@@ -27,7 +29,7 @@ export default class Layout extends React.Component {
         <ThemeProvider theme={theme}>
           <React.Fragment>
             <Header logo={Logo} navigation={<Navigation links={navItems} />} />
-            <main>{children}</main>
+            <main style={{background: theme.colors.background}}>{children}</main>
             {/* <Footer /> */}
           </React.Fragment>
         </ThemeProvider>

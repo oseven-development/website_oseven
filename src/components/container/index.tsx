@@ -1,10 +1,10 @@
 /** @format */
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, {ThemeContext} from 'styled-components'
+
 import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
-import theme from '../../assets/theme'
 interface IContainer {
   flexDirection?: 'row' | 'column'
   flexWrap?: 'wrap' | 'nowrap'
@@ -21,6 +21,7 @@ const Container = (props: IContainer) => {
   const marginDesktop = '0px 0px 0px 0px'
   const marginMobile = '0px 8px 0px 8px'
   const margin = [marginMobile, marginDesktop]
+  const theme = React.useContext(ThemeContext)
   return (
     <Flex
       flexDirection={flexDirection ? flexDirection : 'row'}

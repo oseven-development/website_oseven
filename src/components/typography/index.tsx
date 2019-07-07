@@ -3,7 +3,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {TColor} from '../../assets/theme/types'
-import theme from '../../assets/theme'
 interface ITypography {
   variant?: 'h1' | 'h2' | 'h3' | 'title' | 'p'
   children: any
@@ -33,7 +32,7 @@ const Typography = (props: ITypography) => {
 }
 
 const StyledTypograhpy = styled.div`
-  color: ${({color}) => (color ? theme.colors[color] : theme.colors.textColor)};
+  color: ${({theme, color}) => (color ? theme.colors[color] : theme.colors.textColor)};
   margin: ${({margin}: any) => (margin ? margin : '5px 0px 10px 0px')};
 `
 

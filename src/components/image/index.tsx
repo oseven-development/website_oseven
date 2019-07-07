@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 interface IImage {
   src: any
-  alt: any
+  alt?: any
   style?: any
 }
 

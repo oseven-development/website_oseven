@@ -33,4 +33,17 @@ const theme: ITheme = {
   },
 }
 
+export const darkTheme = {
+  ...theme,
+  colors: {
+    primary: '#FF662B',
+    secondary: '#20242A',
+    third: '#343D4B',
+    default: '#fff',
+    textColor: '#fff',
+    inherit: '#121212',
+    background: '#121212',
+  },
+}
+
 export default theme
