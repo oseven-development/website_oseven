@@ -10,6 +10,17 @@ interface IHeader {
   logo: any
   transparent?: boolean
 }
+const StyledHeader = styled.div`
+  height: 65px;
+  background: ${({theme, transparent}: any) => (transparent ? 'transparent' : theme.colors.background)};
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 0 5px black;
+  transition: 0s all;
+  opacity: 0.95;
+`
 
 const Header = (props: IHeader) => {
   const {navigation, logo, transparent} = props
@@ -29,14 +40,3 @@ const Header = (props: IHeader) => {
   )
 }
 export default Header
-const StyledHeader = styled.div`
-  height: 65px;
-  background: ${({theme, transparent}: any) => (transparent ? 'transparent' : theme.colors.background)};
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  box-shadow: 0 0 5px black;
-  transition: 0s all;
-  opacity: 0.95;
-`

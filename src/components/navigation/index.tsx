@@ -19,25 +19,26 @@ const Navigation = (props: INavigation) => {
       {mobile ? (
         <React.Fragment>
           <NavigationButton
-            className={menu?'active':''}
+            className={menu ? 'active' : ''}
             onClick={() => {
               setMenu(!menu)
             }}>
             <span />
           </NavigationButton>
-          {menu ?  <StyledFullScreenNav>
-          {links.map((link: any) => (
-            <li>
-              <Link to={link.to}>{link.label}</Link>
-            </li>
-          ))}
-          </StyledFullScreenNav>: null}
-         
+          {menu ? (
+            <StyledFullScreenNav>
+              {links.map((link: any) => (
+                <li key={link.to}>
+                  <Link to={link.to}>{link.label}</Link>
+                </li>
+              ))}
+            </StyledFullScreenNav>
+          ) : null}
         </React.Fragment>
       ) : (
         <StyledNav>
           {links.map((link: any) => (
-            <li>
+            <li key={link.to}>
               <Link to={link.to}>{link.label}</Link>
             </li>
           ))}
@@ -112,7 +113,6 @@ const StyledFullScreenNav = styled.nav`
   }
 `
 
-
 const NavigationButton = styled.div`
   cursor: pointer;
   display: flex;
@@ -120,7 +120,7 @@ const NavigationButton = styled.div`
   align-items: center;
   padding: 0 10px;
   z-index: 101;
-  margin-right:-20px;
+  margin-right: -20px;
   span,
   span:after,
   span:before {
