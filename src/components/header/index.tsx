@@ -4,13 +4,14 @@ import React from 'react'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {Link} from 'gatsby'
+import theme from '../../assets/theme'
 
 interface IHeader {
   navigation: JSX.Element
   logo: any
   transparent?: boolean
 }
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   height: 65px;
   background: ${({theme, transparent}: any) => (transparent === true ? 'transparent' : theme.colors.background)};
   position: sticky;
@@ -25,17 +26,19 @@ const StyledHeader = styled.div`
 //   const {navigation, logo, transparent} = props
 // return (
 export default (props: any) => (
-  <StyledHeader {...props}>
-    <Flex justifyContent={'space-between'} style={{height: '100%'}}>
-      <Box mx={'15px'} alignSelf={'center'}>
-        <Link to="/" style={{fontFamily: 'none'}}>
-          <img src={props.logo} alt={'logo Oseven'} style={{width: 200}} />
-        </Link>
-      </Box>
-      <Box mx={'50px'} alignSelf={'center'}>
-        {props.navigation}
-      </Box>
-    </Flex>
-  </StyledHeader>
+  <React.Fragment>
+    <StyledHeader {...props}>
+      <Flex justifyContent={'space-between'} style={{height: '100%'}}>
+        <Box mx={'15px'} alignSelf={'center'}>
+          <Link to="/" style={{fontFamily: 'none'}}>
+            <img src={props.logo} alt={'logo Oseven'} style={{width: 200}} />
+          </Link>
+        </Box>
+        <Box mx={'50px'} alignSelf={'center'}>
+          {props.navigation}
+        </Box>
+      </Flex>
+    </StyledHeader>
+  </React.Fragment>
 )
 // export default Header
