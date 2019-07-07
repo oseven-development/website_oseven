@@ -1,6 +1,6 @@
 /** @format */
 
-export type TColor = 'primary' | 'secondary' | 'third' | 'default'
+export type TColor = 'primary' | 'secondary' | 'third' | 'default' | 'inherit'
 
 interface IHexColors {
   primary: string
@@ -9,6 +9,7 @@ interface IHexColors {
   default: string
   textColor: string
   background: string
+  inherit: string
 }
 
 export interface ITheme {

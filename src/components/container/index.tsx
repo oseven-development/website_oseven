@@ -3,6 +3,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
+import {TColor} from '../../assets/theme/types'
+import theme from '../../assets/theme'
 interface IContainer {
   flexDirection?: 'row' | 'column'
   flexWrap?: 'wrap' | 'nowrap'
@@ -12,9 +14,10 @@ interface IContainer {
   ratio?: 21 | 12
   children: any
   fullscreen?: true
+  bg?: TColor
 }
 const Container = (props: IContainer) => {
-  const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children, fullscreen} = props
+  const {flexDirection, flexWrap, alignItems, justifyContent, alignContent, ratio, children, fullscreen, bg} = props
   return (
     <Flex
       flexDirection={flexDirection ? flexDirection : 'row'}
@@ -22,7 +25,11 @@ const Container = (props: IContainer) => {
       alignItems={alignItems ? alignItems : 'center'}
       alignContent={alignContent ? alignContent : 'center'}
       justifyContent={justifyContent ? justifyContent : 'center'}
-      style={{maxWidth: fullscreen ? '100%' : '1000px', margin: 'auto'}}>
+      bg={bg ? theme.colors[bg] : theme.colors.background}
+      style={{
+        maxWidth: fullscreen ? '100%' : '1000px',
+        margin: 'auto',
+      }}>
       {Array.isArray(children) ? (
         ratio && children.length === 2 ? (
           ratio === 21 ? (

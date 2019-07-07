@@ -13,8 +13,8 @@ import {Seo, Container, Typography} from '../components'
 export default props => (
   <React.Fragment>
     {/* <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" /> */}
-    <Container>
-      <Typography variant={'h1'} color={'primary'}>
+    <Container bg="primary" fullscreen>
+      <Typography variant={'h1'} color={'inherit'}>
         OSEVEN
       </Typography>
     </Container>

@@ -15,6 +15,7 @@ const theme: ITheme = {
     default: '#121212',
     // textColor: '#FCFCFC',
     textColor: '#121212',
+    inherit: '#fff',
     // background: '#121212',
     background: '#FCFCFC',
   },
