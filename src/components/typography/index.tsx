@@ -32,7 +32,7 @@ const Typography = (props: ITypography) => {
 }
 
 const StyledTypograhpy = styled.div`
-  color: ${({color}) => (color ? theme.colors[color] : theme.colors.default)};
+  color: ${({color}) => (color ? theme.colors[color] : theme.colors.textColor)};
   h1 {
     margin: 10px 0px 20px 0px;
   }

@@ -13,6 +13,7 @@ export default createGlobalStyle`
     * { 
       scroll-behavior: smooth;
       padding: 0;
+      background: ${theme.colors.background}
 
     }
     @font-face {

@@ -60,7 +60,7 @@ const StyledNav = styled.nav`
   li a {
     display: block;
     text-transform: uppercase;
-    color: ${({theme}) => theme.colors.default};
+    color: ${({theme}) => theme.colors.textColor};
   }
   [aria-current]:not([aria-current='false']) {
     font-weight: bold;
