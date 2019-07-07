@@ -60,7 +60,7 @@ export default createGlobalStyle`
     font-family: "Khula", sans-serif;
     font-size: ${buildString('20px', '50px')}};
   p{
-      font-size: ${buildString('16px', '22px')};
+      font-size: ${buildString('14px', '18px')};
       line-height: 1.5em;
       font-family: "Roboto", sans-serif;
       text-align: justify;

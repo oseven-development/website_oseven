@@ -9,6 +9,7 @@ interface ITypography {
   children: any
   color?: TColor
   margin?: string
+  textAlign?:string
 }
 
 const Typography = (props: ITypography) => {
@@ -36,6 +37,7 @@ const StyledTypograhpy = styled.div`
   /* color: ${({theme, color}) => (color ? theme.colors[color] : theme.colors.textColor)}; */
   color: ${({color}) => (color ? theme.colors[color] : theme.colors.textColor)};
   margin: ${({margin}: any) => (margin ? margin : '5px 0px 10px 0px')};
+  text-align: ${({textAlign})=> (textAlign ? textAlign :'left')}
 `
 
 export default Typography

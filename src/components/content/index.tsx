@@ -11,7 +11,9 @@ import {TColor} from '../../assets/theme/types'
 interface IContent {
   title?: string
   titleColor?: TColor
+  titleAlign?:'center'
   subtitleColor?: TColor
+  subtitleAlign?:'center'
   subtitle?: string
   maxTitle?: boolean
   image?:
@@ -28,26 +30,28 @@ interface IContent {
         padding?: string | number
       }[]
   text?: string | JSX.Element
+  textColor?:TColor
   imageDirection?: 'row' | 'column'
   divider?: boolean
 }
 
 const Content = (props: IContent) => {
-  const {title, subtitle, image, text, titleColor, subtitleColor, imageDirection, maxTitle, divider} = props
+  const {title, subtitle, textColor,image, text, titleColor, subtitleColor, imageDirection, maxTitle, divider,titleAlign,subtitleAlign} = props
   return (
     <React.Fragment>
-      {title ? (
+      {title || subtitle? (
         <React.Fragment>
           <Typography
             variant={maxTitle ? 'title' : 'h1'}
             color={titleColor ? titleColor : 'default'}
-            margin={subtitle ? '0' : ''}>
+            margin={subtitle ? '0' : ''}
+            textAlign={titleAlign}>
             {title}
           </Typography>
           {subtitle ? (
             <React.Fragment>
               {divider ? <StyledSubtitle /> : null}
-              <Typography variant="h2" color={subtitleColor ? subtitleColor : 'default'} margin={'0'}>
+              <Typography variant="h2" color={subtitleColor ? subtitleColor : 'default'} margin={'0'}  textAlign={subtitleAlign}>
                 {subtitle}
               </Typography>
             </React.Fragment>
@@ -72,9 +76,9 @@ const Content = (props: IContent) => {
         ) : (
           <React.Fragment>
             {image.type === 'svg' ? (
-              <div style={{padding: image.padding}}>{image.src}</div>
+              <div style={{padding: image.padding ? image.padding : 0}}>{image.src}</div>
             ) : (
-              <div style={{padding: image.padding}}>
+              <div style={{padding: image.padding ? image.padding : 0}}>
                 <Image src={image.src} alt={image.alt} />
               </div>
             )}
@@ -84,7 +88,7 @@ const Content = (props: IContent) => {
 
       {text ? (
         <React.Fragment>
-          <Typography variant="p">{text}</Typography>
+          <Typography variant="p" color={textColor ? textColor : 'default'}>{text}</Typography>
         </React.Fragment>
       ) : null}
     </React.Fragment>

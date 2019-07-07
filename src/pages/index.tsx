@@ -17,7 +17,7 @@ export default props => {
       <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
       <Container fullscreen>
         <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
+          <Container transparent height={900} pt={'10px'}>
             <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
             <Content />
           </Container>
