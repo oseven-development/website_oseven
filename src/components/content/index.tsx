@@ -3,24 +3,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Typography, Image} from '..'
+import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
 interface IContent {
   title?: string
   titleColor?: TColor
   subtitleColor?: TColor
   subtitle?: string
-  image?: {
-    src: any
-    alt?: string
-    type: 'svg' | 'jpg'
-  }
-
+  image?:
+    | {
+        src: any
+        alt?: string
+        type: 'svg' | 'jpg'
+      }
+    | {
+        src: any
+        alt?: string
+        type: 'svg' | 'jpg'
+      }[]
   text?: string | JSX.Element
+  imageDirection?: 'row' | 'column'
 }
 
 const Content = (props: IContent) => {
-  const {title, subtitle, image, text, titleColor, subtitleColor} = props
-  console.log(typeof image)
+  const {title, subtitle, image, text, titleColor, subtitleColor, imageDirection} = props
+  console.log(Array.isArray(image))
   return (
     <React.Fragment>
       {title ? (
@@ -39,8 +46,27 @@ const Content = (props: IContent) => {
         </React.Fragment>
       ) : null}
       {image ? (
-        <React.Fragment>{image.type === 'svg' ? image.src : <Image src={image.src} alt={image.alt} />}</React.Fragment>
+        Array.isArray(image) ? (
+          <React.Fragment>
+            <Flex
+              flexDirection={imageDirection ? imageDirection : 'column'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              style={{width: '100%', height: '100%'}}>
+              {image.map((e: any) => (
+                <Box key={e.alt} style={{height: '100%', width: '100%'}}>
+                  {e.type === 'svg' ? e.src : <Image src={e.src} alt={e.alt} />}
+                </Box>
+              ))}
+            </Flex>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            {image.type === 'svg' ? image.src : <Image src={image.src} alt={image.alt} />}
+          </React.Fragment>
+        )
       ) : null}
+
       {text ? (
         <React.Fragment>
           <Typography variant="p">{text}</Typography>
