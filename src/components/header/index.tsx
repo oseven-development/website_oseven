@@ -12,7 +12,7 @@ interface IHeader {
 }
 const StyledHeader = styled.div`
   height: 65px;
-  background: ${({theme, transparent}: any) => (transparent ? 'transparent' : theme.colors.background)};
+  background: ${({theme, transparent}: any) => (transparent === true ? 'transparent' : theme.colors.background)};
   position: sticky;
   top: 0;
   left: 0;
@@ -21,22 +21,21 @@ const StyledHeader = styled.div`
   transition: 0s all;
   opacity: 0.95;
 `
-
-const Header = (props: IHeader) => {
-  const {navigation, logo, transparent} = props
-  return (
-    <StyledHeader>
-      <Flex justifyContent={'space-between'} style={{height: '100%'}}>
-        <Box mx={'15px'} alignSelf={'center'}>
-          <Link to="/" style={{fontFamily: 'none'}}>
-            <img src={logo} alt={'logo Oseven'} style={{width: 200}} />
-          </Link>
-        </Box>
-        <Box mx={'50px'} alignSelf={'center'}>
-          {navigation}
-        </Box>
-      </Flex>
-    </StyledHeader>
-  )
-}
-export default Header
+// const Header = (props: IHeader) => {
+//   const {navigation, logo, transparent} = props
+// return (
+export default (props: any) => (
+  <StyledHeader {...props}>
+    <Flex justifyContent={'space-between'} style={{height: '100%'}}>
+      <Box mx={'15px'} alignSelf={'center'}>
+        <Link to="/" style={{fontFamily: 'none'}}>
+          <img src={props.logo} alt={'logo Oseven'} style={{width: 200}} />
+        </Link>
+      </Box>
+      <Box mx={'50px'} alignSelf={'center'}>
+        {props.navigation}
+      </Box>
+    </Flex>
+  </StyledHeader>
+)
+// export default Header
