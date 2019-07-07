@@ -6,13 +6,17 @@ import ContainerSvg from '../assets/images/illustrations/blocks.svg'
 import RocketSvg from '../assets/images/illustrations/rocket.svg'
 import FirmwareSvg from '../assets/images/illustrations/firmware.svg'
 // Components
-import {Seo, Container, Content, SvgImage} from '../components'
+import {Seo, Container, Content, SvgImage, Parallax} from '../components'
 
 // Bilder Backgrounds
 
 export default props => (
   <React.Fragment>
-   <Seo title="Leistungen" description="Leistungsübersicht" keywords="Cloud Cloudnative Serverless Software Development Aws Gcp" />
+    <Seo
+      title="Leistungen"
+      description="Leistungsübersicht"
+      keywords="Cloud Cloudnative Serverless Software Development Aws Gcp"
+    />
     <Container transparent pt={'20px'}>
       <Content
         title="Cloudnative Software-entwicklung"
@@ -59,12 +63,51 @@ export default props => (
         </Container>
       </Container>
     </Container>
+    <Container fullscreen>
+      <Parallax src={props.data.domore.childImageSharp.fluid} />
+    </Container>
+    <Container transparent pt={'20px'}>
+      <Content title="Das sind unsere Tools" />
+      <Content
+        image={[
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+        ]}
+      />
+      <Content
+        image={[
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+          {
+            src: <SvgImage dWidth={150} src={ContainerSvg} />,
+            type: 'svg',
+          },
+        ]}
+      />
+    </Container>
   </React.Fragment>
 )
+// props.data.clock.childImageSharp.fluid
 
 export const indexQuery = graphql`
   query {
-    process: file(relativePath: {eq: "process.jpg"}) {
+    domore: file(relativePath: {eq: "parallax/domore.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
