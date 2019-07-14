@@ -16,7 +16,7 @@ interface IContainer {
   children: any
   fullscreen?: true
   bg?: TColor
-  height?: number | string
+  height?: number[] | string[]
   transparent?: boolean
   pt?: number | string
 }
@@ -36,9 +36,9 @@ const Container = (props: IContainer) => {
     pt,
   } = props
   const marginDesktop = '0px 0px 0px 0px'
-  const marginMobile = '0px 8px 0px 8px'
+  const marginMobile = '0px 10px 0px 10px'
   const margin = [marginMobile, marginDesktop]
-  const padding = [0, '0px 15px 0px 15px']
+  const padding = [0, '40px 15px 40px 15px']
   // const theme = React.useContext(ThemeContext)
   return (
     <Flex
@@ -50,40 +50,55 @@ const Container = (props: IContainer) => {
       pt={pt ? pt : 0}
       bg={bg ? theme.colors[bg] : transparent ? 'transparent' : theme.colors.background}
       style={{
-        maxWidth: fullscreen ? '100%' : '1000px',
+        maxWidth: fullscreen ? '100%' : '1200px',
         margin: 'auto',
-        height: height ? height : '',
+        height: window.innerWidth > 768 ? (height ? height[1] : '') : height ? height[0] : '',
       }}>
       {Array.isArray(children) ? (
         ratio && children.length === 2 ? (
           ratio === 21 ? (
             <React.Fragment>
-              <Box p={padding} m={margin} width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
+              <Box
+                p={fullscreen ? 0 : padding}
+                m={fullscreen ? 0 : margin}
+                width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
                 {children[0]}
               </Box>
-              <Box p={padding} m={margin} width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
+              <Box
+                p={fullscreen ? 0 : padding}
+                m={fullscreen ? 0 : margin}
+                width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
                 {children[1]}
               </Box>
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <Box p={padding} m={margin} width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
+              <Box
+                p={fullscreen ? 0 : padding}
+                m={fullscreen ? 0 : margin}
+                width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
                 {children[0]}
               </Box>
-              <Box p={padding} m={margin} width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
+              <Box
+                p={fullscreen ? 0 : padding}
+                m={fullscreen ? 0 : margin}
+                width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
                 {children[1]}
               </Box>
             </React.Fragment>
           )
         ) : (
           children.map((child: any) => (
-            <Box p={padding} m={margin} width={flexDirection === 'row' ? 1 : [1, 1 / children.length]}>
+            <Box
+              p={fullscreen ? 0 : padding}
+              m={fullscreen ? 0 : margin}
+              width={flexDirection === 'row' ? 1 : [1, 1 / children.length]}>
               {child}
             </Box>
           ))
         )
       ) : (
-        <Box p={padding} m={margin} width={1}>
+        <Box p={fullscreen ? 0 : padding} m={fullscreen ? 0 : margin} width={1}>
           {children}
         </Box>
       )}

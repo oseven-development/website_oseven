@@ -3,10 +3,14 @@
 // react and gatsby
 import React from 'react'
 import {graphql} from 'gatsby'
-import Homescreen from '../assets/images/illustrations/homescreen.svg'
+import team from '../assets/images/illustrations/team.svg'
+import business from '../assets/images/illustrations/business.svg'
+import developer from '../assets/images/illustrations/developer.svg'
+import professor from '../assets/images/illustrations/professor.svg'
 
 // Components
-import {Seo, Container, Typography, Content, Parallax, BackgroundImage} from '../components'
+import {Seo, Container, Typography, Content, Parallax, BackgroundImage, SvgImage} from '../components'
+import theme from '../assets/theme'
 
 // Bilder Backgrounds
 
@@ -17,120 +21,76 @@ export default props => {
       <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
       <Container fullscreen>
         <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900} pt={'10px'}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
+          <Container transparent height={[250, 700]} pt={'10px'}>
             <Content />
+            <Content
+              maxTitle
+              titleColor="inherit"
+              subtitleColor="inherit"
+              title="Was steht hier"
+              subtitle={'Cloud-Beratung & Software-Entwicklung'}
+            />
           </Container>
         </BackgroundImage>
       </Container>
-      <Container>
-        <Typography color={'secondary'} variant="h2">
-          OSEVEN
-        </Typography>
-      </Container>
-      <Container>
+      <Container ratio={12}>
+        <Content title="Über uns" titleColor="primary" />
         <Content
-          title="Test"
-          titleColor="primary"
-          subtitle="test2"
+          textPadding={'20px 20px'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+            <React.Fragment>
+              <b style={{color: theme.colors.primary}}>oseven</b> takes big data and turns it into big ideas. We utilise
+              cutting-edge technologies to provide powerful insights, innovation strategies, and tailored solutions for
+              your business.{' '}
+            </React.Fragment>
           }
         />
       </Container>
       <Container>
         <Content
-          title="Test"
-          titleColor="primary"
-          subtitle="test2"
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-          }
+          imageDirection={'row'}
+          image={[
+            {
+              src: <SvgImage dWidth={250} src={business} />,
+              type: 'svg',
+              padding: '5px',
+            },
+            {
+              src: <SvgImage dWidth={250} src={developer} />,
+              type: 'svg',
+              padding: '5px',
+            },
+            {
+              src: <SvgImage dWidth={250} src={professor} />,
+              type: 'svg',
+              padding: '5px',
+            },
+          ]}
         />
       </Container>
       <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
+        <Parallax src={props.data.parallax.childImageSharp.fluid} />
       </Container>
-      <Container>
-        <Content
-          title="Test"
-          titleColor="primary"
-          subtitle="test2"
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-          }
-        />
+      <Container fullscreen bg={'secondary'}>
+        <Container transparent>
+          <Content maxTitle title="Wer sind wir" titleColor="inherit" />
+          <Content
+            image={{
+              src: <SvgImage dWidth={950} src={team} />,
+              type: 'svg',
+            }}
+          />
+        </Container>
       </Container>
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>
-      <Container>
-        <Content
-          title="Test"
-          titleColor="primary"
-          subtitle="test2"
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
-          }
-        />
-      </Container>
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>{' '}
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>{' '}
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>{' '}
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>{' '}
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
-      </Container>{' '}
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={900}>
-            <Content maxTitle title="Cloudnative Anwendungs-entwicklung" subtitle={'simple, flexibel & skalierbar'} />
-            <Content />
-          </Container>
-        </BackgroundImage>
+      <Container fullscreen bg={'secondary'}>
+        <Container transparent>
+          <Content
+            textColor="inherit"
+            text={
+              'Wir bei Oseven glauben, dass Sie in Ihre Prozesse, Infrastruktur und Architektur investieren müssen, um auf modernen, sich schnell verändernden Märkten wettbewerbsfähig bleiben zu können. Um diese Anpassung zu unterstützen, entwickeln wir Cloudnative Software, welche sich auf ihre Bedürfnisse anpasst, flexibel vergrößert und verkleinert ist. Sie müssen keine unnötige Serveradminstration durchführen und können sich voll und ganz auf ihre Kernkompetenzen konzentrieren. Unser Ziel ist die Fähigkeit, hochwertige Apps mit noch größerer Agilität zu liefern.'
+            }
+          />
+        </Container>
       </Container>
     </React.Fragment>
   )
@@ -138,14 +98,14 @@ export default props => {
 // props.data.clock.childImageSharp.fluid
 export const indexQuery = graphql`
   query {
-    process: file(relativePath: {eq: "process.jpg"}) {
+    parallax: file(relativePath: {eq: "parallax/manimcoffe.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    background: file(relativePath: {eq: "process.jpg"}) {
+    background: file(relativePath: {eq: "test/test4.jpg"}) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

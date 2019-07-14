@@ -2,16 +2,12 @@
 
 export default [
   {
-    to: '/',
-    label: 'Home',
-  },
-  {
-    to: '/leistungen',
-    label: 'Leistungen',
-  },
-  {
     to: '/portfolio',
     label: 'Portfolio',
+  },
+  {
+    to: '/',
+    label: 'Uber Uns',
   },
   {
     to: '/kontakt',

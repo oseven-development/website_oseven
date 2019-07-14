@@ -18,20 +18,20 @@ export default createGlobalStyle`
     main {
       background-color: ${theme.colors.background}
     }
-@font-face {
-  font-family: 'Khula';
+    @font-face {
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Khula Regular'), local('Khula-Regular'), url(https://fonts.gstatic.com/s/khula/v4/OpNCnoEOns3V7GcOrg7-hCJ1.woff2) format('woff2');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Merriweather';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v20/u-4n0qyriQwlOrhSvowK_l52xwNZWMf6hPvhPQ.woff2) format('woff2');
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v13/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -42,26 +42,34 @@ export default createGlobalStyle`
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
   body {
     margin: 0;
   }
   h1{
     font-weight: 600;
-    font-family: "Merriweather", sans-serif;
-    font-size: ${buildString('32px', '70px')};
-    margin:0;
+    font-family: "Montserrat", sans-serif;
+    font-size: ${buildString('36px', '60px')};
+    margin: 15px 0px;
     }
   .title {
-    font-size:${buildString('40px', '70px')};
+    font-size:${buildString('42px', '70px')};
   }
   h2{  
-    margin:0;
-    font-weight: 300;
-    font-family: "Khula", sans-serif;
+    margin: 10px 0px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
     font-size: ${buildString('20px', '50px')}};
   p{
-      font-size: ${buildString('14px', '18px')};
-      line-height: 1.5em;
+      font-size: ${buildString('14px', '22px')};
+      line-height: 1.6em;
       font-family: "Roboto", sans-serif;
       text-align: justify;
       /* font-weight: 100; */
@@ -70,6 +78,6 @@ export default createGlobalStyle`
     text-decoration: none;
     font-weight: 400;
     font-size:18px;
-    font-family: "Khula", sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   `

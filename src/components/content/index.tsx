@@ -31,6 +31,7 @@ interface IContent {
       }[]
   text?: string | JSX.Element
   textColor?: TColor
+  textPadding?: number | string
   imageDirection?: 'row' | 'column'
   divider?: boolean
 }
@@ -42,6 +43,7 @@ const Content = (props: IContent) => {
     textColor,
     image,
     text,
+    textPadding,
     titleColor,
     subtitleColor,
     imageDirection,
@@ -109,7 +111,10 @@ const Content = (props: IContent) => {
 
       {text ? (
         <React.Fragment>
-          <Typography variant="p" color={textColor ? textColor : 'default'}>
+          <Typography
+            variant="p"
+            color={textColor ? textColor : 'default'}
+            style={{padding: textPadding ? textPadding : 0}}>
             {text}
           </Typography>
         </React.Fragment>

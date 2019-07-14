@@ -10,24 +10,25 @@ interface ITypography {
   color?: TColor
   margin?: string
   textAlign?:string
+  style?:any
 }
 
 const Typography = (props: ITypography) => {
-  const {variant, children, margin} = props
+  const {variant, children, margin,style} = props
   return (
     <StyledTypograhpy {...props}>
       {variant === 'title' ? (
-        <h1 className="title">{children}</h1>
+        <h1 className="title" style={style}>{children}</h1>
       ) : variant === 'h1' ? (
-        <h1>{children}</h1>
+        <h1 style={style}>{children}</h1>
       ) : variant === 'h2' ? (
-        <h2>{children}</h2>
+        <h2 style={style}>{children}</h2>
       ) : variant === 'h3' ? (
-        <h3>{children}</h3>
+        <h3 style={style}>{children}</h3>
       ) : variant === 'p' ? (
-        <p>{children}</p>
+        <p style={style}>{children}</p>
       ) : (
-        <div>{children}</div>
+        <div style={style}>{children}</div>
       )}
     </StyledTypograhpy>
   )
