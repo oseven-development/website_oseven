@@ -32,7 +32,7 @@ export default (props: any) => (
       <Flex justifyContent={'space-between'} style={{height: '100%'}}>
         <Box mx={'15px'} alignSelf={'center'}>
           <Link to="/" style={{fontFamily: 'none'}}>
-            <SvgImage src={props.logo}  dWidth={150}/>
+            <SvgImage src={props.logo} dWidth={60} />
           </Link>
         </Box>
         <Box mx={'50px'} alignSelf={'center'}>

@@ -1,0 +1,17 @@
+{
+  "header": {"de": {"title": "Your Digital Home", "subtitle": "Cloud-Beratung & Software-Entwicklung"}, "en": {}},
+  "uberuns": {
+    "de": {
+      "title": "Über Uns",
+      "text": "takes big data and turns it into big ideas. We utilise cutting-edge technologies to provide powerful insights, innovation strategies, and tailored solutions for your business."
+    },
+    "en": {}
+  },
+  "team": {
+    "de": {
+      "title": "Wer sind wir",
+      "text": "Wir bei Oseven glauben, dass Sie in Ihre Prozesse, Infrastruktur und Architektur investieren müssen, um auf modernen, sich schnell verändernden Märkten wettbewerbsfähig bleiben zu können. Um diese Anpassung zu unterstützen, entwickeln wir Cloudnative Software, welche sich auf ihre Bedürfnisse anpasst, flexibel vergrößert und verkleinert ist. Sie müssen keine unnötige Serveradminstration durchführen und können sich voll und ganz auf ihre Kernkompetenzen konzentrieren. Unser Ziel ist die Fähigkeit, hochwertige Apps mit noch größerer Agilität zu liefern."
+    },
+    "en": {}
+  }
+}
