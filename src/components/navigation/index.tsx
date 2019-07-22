@@ -52,7 +52,7 @@ const Navigation = (props: INavigation) => {
 }
 export default Navigation
 
-const StyledNav = styled.nav`
+export const StyledNav = styled.nav`
   
   li {
     list-style-type: none;

@@ -114,7 +114,7 @@ const Content = (props: IContent) => {
           <Typography
             variant="p"
             color={textColor ? textColor : 'default'}
-            style={{padding: textPadding ? textPadding : 0}}>
+            style={{padding: textPadding && window.innerWidth > 768 ? textPadding : 0}}>
             {text}
           </Typography>
         </React.Fragment>

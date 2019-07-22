@@ -10,7 +10,21 @@ import Image from './image'
 import SvgImage from './image/ImageSvg'
 import Parallax from './image/parallax'
 import Navigation from './navigation'
+import Footer from './uniqueComponents/footer'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
 
-export {Layout, Container, Seo, Typography, Navigation, Header, Image, Content, Parallax, BackgroundImage, SvgImage}
+export {
+  Layout,
+  Container,
+  Seo,
+  Typography,
+  Navigation,
+  Header,
+  Image,
+  Content,
+  Parallax,
+  BackgroundImage,
+  SvgImage,
+  Footer,
+}

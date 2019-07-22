@@ -12,9 +12,10 @@ import theme from '../../assets/theme'
 // Containers
 
 import navItems from '../../routes/routes'
-import {Navigation, Header, Image} from '..'
+import {Navigation, Header, Footer} from '..'
 
 import Logo from '../../assets/images/logo.svg'
+import LogoFooter from '../../assets/images/logo-footer.svg'
 
 export default class Layout extends React.Component {
   // constructor(props) {
@@ -30,7 +31,7 @@ export default class Layout extends React.Component {
           <React.Fragment>
             <Header logo={Logo} navigation={<Navigation links={navItems} />} />
             <main style={{background: theme.colors.background}}>{children}</main>
-            {/* <Footer /> */}
+            <Footer links={navItems} logo={LogoFooter} />
           </React.Fragment>
         </ThemeProvider>
       </React.Fragment>

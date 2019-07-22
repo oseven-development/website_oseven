@@ -15,6 +15,7 @@ interface IContainer {
   ratio?: 21 | 12
   children: any
   fullscreen?: true
+  style?: any
   bg?: TColor
   height?: number[] | string[]
   transparent?: boolean
@@ -34,11 +35,18 @@ const Container = (props: IContainer) => {
     bg,
     height,
     pt,
+    style,
   } = props
   const marginDesktop = '0px 0px 0px 0px'
   const marginMobile = '0px 10px 0px 10px'
   const margin = [marginMobile, marginDesktop]
   const padding = [0, '40px 15px 40px 15px']
+  const ContainerStyle = {
+    maxWidth: fullscreen ? '100%' : '1200px',
+    margin: 'auto',
+    height: window.innerWidth > 768 ? (height ? height[1] : '') : height ? height[0] : '',
+    ...style,
+  }
   // const theme = React.useContext(ThemeContext)
   return (
     <Flex
@@ -49,11 +57,7 @@ const Container = (props: IContainer) => {
       justifyContent={justifyContent ? justifyContent : 'center'}
       pt={pt ? pt : 0}
       bg={bg ? theme.colors[bg] : transparent ? 'transparent' : theme.colors.background}
-      style={{
-        maxWidth: fullscreen ? '100%' : '1200px',
-        margin: 'auto',
-        height: window.innerWidth > 768 ? (height ? height[1] : '') : height ? height[0] : '',
-      }}>
+      style={ContainerStyle}>
       {Array.isArray(children) ? (
         ratio && children.length === 2 ? (
           ratio === 21 ? (

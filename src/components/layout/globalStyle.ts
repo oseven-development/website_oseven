@@ -52,6 +52,8 @@ export default createGlobalStyle`
 }
   body {
     margin: 0;
+    font-family: "Roboto", sans-serif;
+
   }
   h1{
     font-weight: 600;
@@ -67,6 +69,11 @@ export default createGlobalStyle`
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('20px', '50px')}};
+    h3{  
+    margin: 10px 0px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-size: ${buildString('16px', '28px')}};
   p{
       font-size: ${buildString('14px', '22px')};
       line-height: 1.6em;
@@ -76,8 +83,5 @@ export default createGlobalStyle`
     }
   a {
     text-decoration: none;
-    font-weight: 400;
-    font-size:18px;
-    font-family: "Montserrat", sans-serif;
   }
   `

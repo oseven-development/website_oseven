@@ -17,7 +17,7 @@ const theme: ITheme = {
     textColor: '#121212',
     inherit: '#fff',
     // background: '#121212',
-    background: '#FCFCFC',
+    background: '#fff',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   shadows: {
