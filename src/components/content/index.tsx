@@ -29,7 +29,7 @@ interface IContent {
         type: 'svg' | 'jpg'
         padding?: string | number
       }[]
-  text?: string | JSX.Element
+  text?: string | JSX.Element | any[]
   textColor?: TColor
   textPadding?: number | string
   imageDirection?: 'row' | 'column'
@@ -115,7 +115,15 @@ const Content = (props: IContent) => {
             variant="p"
             color={textColor ? textColor : 'default'}
             style={{padding: textPadding && window.innerWidth > 768 ? textPadding : 0}}>
-            {text}
+            {Array.isArray(text)
+              ? text.map((para: any) => {
+                  return (
+                    <React.Fragment>
+                      {para} <br />
+                    </React.Fragment>
+                  )
+                })
+              : text}
           </Typography>
         </React.Fragment>
       ) : null}

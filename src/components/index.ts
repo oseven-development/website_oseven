@@ -11,6 +11,7 @@ import SvgImage from './image/ImageSvg'
 import Parallax from './image/parallax'
 import Navigation from './navigation'
 import Footer from './uniqueComponents/footer'
+import ContactButton from './uniqueComponents/ContactButton'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -27,4 +28,5 @@ export {
   BackgroundImage,
   SvgImage,
   Footer,
+  ContactButton,
 }

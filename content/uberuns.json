@@ -2,15 +2,30 @@
   "header": {"de": {"title": "Your Digital Home", "subtitle": "Cloud-Beratung & Software-Entwicklung"}, "en": {}},
   "uberuns": {
     "de": {
-      "title": "Über Uns",
-      "text": "takes big data and turns it into big ideas. We utilise cutting-edge technologies to provide powerful insights, innovation strategies, and tailored solutions for your business."
+      "title": "Was Wir tun",
+      "text": [
+        "Wir bauen für Sie lösungen in der Cloud ....",
+        "Warum setzen wir auf die Cloud…..",
+        " … wir bei oseven glauben, dass Sie in Ihre ….. <TEXT>"
+      ]
     },
     "en": {}
   },
   "team": {
     "de": {
       "title": "Wer sind wir",
-      "text": "Wir bei Oseven glauben, dass Sie in Ihre Prozesse, Infrastruktur und Architektur investieren müssen, um auf modernen, sich schnell verändernden Märkten wettbewerbsfähig bleiben zu können. Um diese Anpassung zu unterstützen, entwickeln wir Cloudnative Software, welche sich auf ihre Bedürfnisse anpasst, flexibel vergrößert und verkleinert ist. Sie müssen keine unnötige Serveradminstration durchführen und können sich voll und ganz auf ihre Kernkompetenzen konzentrieren. Unser Ziel ist die Fähigkeit, hochwertige Apps mit noch größerer Agilität zu liefern."
+      "text": [
+        "Wir sind ein Team aus zwei Wirtschaftsinformatikern und einem Account Manager. Wir haben erkannt, dass viele Unternehmen mit Ihrer Internen IT-Infrastruktur an grenzen stoßen und Chancen nicht wahrnehmen können. Dieses Problem möchten wir Lösen und mit Ihnen gemeinsam neue Möglichkeiten eröffnen.",
+        "",
+        "Dazu haben wir uns von Amazon Web Services Zertifizieren lassen."
+      ]
+    },
+    "en": {}
+  },
+  "contact": {
+    "de": {
+      "title": "SPRECH UNS AN!",
+      "text": "Du möchtest mit uns Arbeiten, oder Interessierst dich für unsere Lösungen oder unsere Arbeitsweisen, dann sprich uns an."
     },
     "en": {}
   }

@@ -4,12 +4,14 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import team from '../assets/images/illustrations/team.svg'
+import contact from '../assets/images/illustrations/contact.svg'
 import business from '../assets/images/illustrations/business.svg'
 import developer from '../assets/images/illustrations/developer.svg'
 import professor from '../assets/images/illustrations/professor.svg'
+import arrow from '../assets/images/icons/arrow.svg'
 import SiteContent from '../../content/uberuns.json'
 // Components
-import {Seo, Container, Typography, Content, Parallax, BackgroundImage, SvgImage} from '../components'
+import {Seo, Container, ContactButton, Content, Parallax, BackgroundImage, SvgImage} from '../components'
 import theme from '../assets/theme'
 
 // Bilder Backgrounds
@@ -36,14 +38,7 @@ export default props => {
       </Container>
       <Container ratio={12}>
         <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
-        <Content
-          textPadding={'20px 20px'}
-          text={
-            <React.Fragment>
-              <b style={{color: theme.colors.primary}}>oseven</b> {SiteContent.uberuns[lang].text}
-            </React.Fragment>
-          }
-        />
+        <Content textPadding={'20px 20px'} text={SiteContent.uberuns[lang].text} />
       </Container>
       <Container>
         <Content
@@ -84,6 +79,25 @@ export default props => {
       <Container fullscreen bg={'secondary'}>
         <Container transparent>
           <Content textColor="inherit" text={SiteContent.team[lang].text} />
+        </Container>
+      </Container>
+      <Container fullscreen>
+        <Container transparent>
+          <Content
+            title={SiteContent.contact[lang].title}
+            text={
+              <React.Fragment>
+                {SiteContent.contact[lang].text}
+                <ContactButton text={'kontaktiere uns ...'} icon={arrow} link={'/contact'} />
+              </React.Fragment>
+            }
+          />
+          <Content
+            image={{
+              src: <SvgImage dWidth={450} src={contact} />,
+              type: 'svg',
+            }}
+          />
         </Container>
       </Container>
     </React.Fragment>

@@ -65,13 +65,13 @@ const Container = (props: IContainer) => {
               <Box
                 p={fullscreen ? 0 : padding}
                 m={fullscreen ? 0 : margin}
-                width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
+                width={flexDirection === 'column' ? 1 : [1, 2 / 3]}>
                 {children[0]}
               </Box>
               <Box
                 p={fullscreen ? 0 : padding}
                 m={fullscreen ? 0 : margin}
-                width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
+                width={flexDirection === 'column' ? 1 : [1, 1 / 3]}>
                 {children[1]}
               </Box>
             </React.Fragment>
@@ -80,13 +80,13 @@ const Container = (props: IContainer) => {
               <Box
                 p={fullscreen ? 0 : padding}
                 m={fullscreen ? 0 : margin}
-                width={flexDirection === 'row' ? 1 : [1, 1 / 3]}>
+                width={flexDirection === 'column' ? 1 : [1, 1 / 3]}>
                 {children[0]}
               </Box>
               <Box
                 p={fullscreen ? 0 : padding}
                 m={fullscreen ? 0 : margin}
-                width={flexDirection === 'row' ? 1 : [1, 2 / 3]}>
+                width={flexDirection === 'column' ? 1 : [1, 2 / 3]}>
                 {children[1]}
               </Box>
             </React.Fragment>
@@ -96,7 +96,7 @@ const Container = (props: IContainer) => {
             <Box
               p={fullscreen ? 0 : padding}
               m={fullscreen ? 0 : margin}
-              width={flexDirection === 'row' ? 1 : [1, 1 / children.length]}>
+              width={flexDirection === 'column' ? 1 : [1, 1 / children.length]}>
               {child}
             </Box>
           ))
