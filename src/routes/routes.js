@@ -2,12 +2,12 @@
 
 export default [
   {
-    to: '/portfolio',
-    label: 'Portfolio',
+    to: '/',
+    label: 'Über Uns',
   },
   {
-    to: '/',
-    label: 'Uber Uns',
+    to: '/portfolio',
+    label: 'Portfolio',
   },
   {
     to: '/kontakt',

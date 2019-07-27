@@ -20,18 +20,21 @@ interface IContent {
     | {
         src: any
         alt?: string
-        type: 'svg' | 'jpg'
+        type?: 'svg' | 'jpg'
         padding?: string | number
+        style?: any
       }
     | {
         src: any
         alt?: string
-        type: 'svg' | 'jpg'
+        type?: 'svg' | 'jpg'
         padding?: string | number
+        style?: any
       }[]
   text?: string | JSX.Element | any[]
   textColor?: TColor
   textPadding?: number | string
+  textAlign?: 'center'
   imageDirection?: 'row' | 'column'
   divider?: boolean
 }
@@ -51,6 +54,7 @@ const Content = (props: IContent) => {
     divider,
     titleAlign,
     subtitleAlign,
+    textAlign,
   } = props
   return (
     <React.Fragment>
@@ -90,7 +94,7 @@ const Content = (props: IContent) => {
                   {e.type === 'svg' ? (
                     <div style={{padding: e.padding ? e.padding : 0, textAlign: 'center'}}>{e.src}</div>
                   ) : (
-                    <Image src={e.src} alt={e.alt} />
+                    <Image src={e.src} alt={e.alt} style={e.style} />
                   )}
                 </Box>
               ))}
@@ -102,7 +106,7 @@ const Content = (props: IContent) => {
               <div style={{padding: image.padding ? image.padding : 0, textAlign: 'center'}}>{image.src}</div>
             ) : (
               <div style={{padding: image.padding ? image.padding : 0}}>
-                <Image src={image.src} alt={image.alt} />
+                <Image src={image.src} alt={image.alt} style={image.style} />
               </div>
             )}
           </React.Fragment>
@@ -114,7 +118,8 @@ const Content = (props: IContent) => {
           <Typography
             variant="p"
             color={textColor ? textColor : 'default'}
-            style={{padding: textPadding && window.innerWidth > 768 ? textPadding : 0}}>
+            style={{padding: textPadding && window.innerWidth > 768 ? textPadding : 0}}
+            textAlign={textAlign}>
             {Array.isArray(text)
               ? text.map((para: any) => {
                   return (

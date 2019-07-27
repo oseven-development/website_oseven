@@ -1,0 +1,40 @@
+{
+  "header": {
+    "de": {
+      "title": "Unsere Referenzen & aktuelle Projekte",
+      "text": [
+        "Wir befinden uns noch in unsere Gründungsphase...",
+        "",
+        "... daher können wir Ihnen noch nicht all zu viele Referenzen zeigen. Doch lassen Sie sich davon nicht abschrecken wir können Ihnen trotzdem einige unsere Ideen und Umsetzungen nahe bringen."
+      ]
+    },
+    "en": {}
+  },
+  "customer": {
+    "de": {
+      "subtitle": "Unsere Kunden"
+    },
+    "en": {}
+  },
+  "project": {
+    "de": {
+      "title": "Unsere aktuellen Projekte",
+      "text": "Erfahren Sie mehr über unsere neuesten Engagements, die Innovationen für Behörden und Unternehmen vorantreiben.",
+      "array": [
+        {
+          "title": "Caligraf",
+          "subtitle": "Recognition App",
+          "text": "Eine multidevice App zur Erkennung von Handschrift und Audios mit direkter convertieren und share",
+          "url": "https://caligraf.oseven.de"
+        },
+        {
+          "title": "Talos",
+          "subtitle": "Markt Intelligence Report",
+          "text": "Eine multidevice App zur Erstellung von Markt Intelligence Reports mit Hilfe von künstlicher Intelligence und Natural Language Processing",
+          "url": "https://talosinsights.com"
+        }
+      ]
+    },
+    "en": {}
+  }
+}

@@ -15,33 +15,31 @@ export default props => (
   <React.Fragment>
     <Seo title="Kontakt" description="Kontaktadressen" keywords="Email E-mail Telefon Adresse Kontakt Contact" />
     <Container transparent>
-      <Container transparent flexDirection={'column'}>
-        <Content
-          title={SiteContent.kontakt[lang].title}
-          subtitle={SiteContent.kontakt[lang].subtitle}
-          text={
-            <React.Fragment>
-              {SiteContent.kontakt[lang].text.map((text: string) => (
-                <Typography>{text}</Typography>
-              ))}
-              <ContactButton
-                text={SiteContent.kontakt[lang].email}
-                link={`mailto:${SiteContent.kontakt[lang].email}`}
-                textColor={'primary'}
-                type={'out'}
-                border
-              />
-              <ContactButton
-                text={SiteContent.kontakt[lang].phone}
-                link={`tel:${SiteContent.kontakt[lang].phone}`}
-                textColor={'primary'}
-                type={'out'}
-                border
-              />
-            </React.Fragment>
-          }
-        />
-      </Container>
+      <Content
+        title={SiteContent.kontakt[lang].title}
+        subtitle={SiteContent.kontakt[lang].subtitle}
+        text={
+          <React.Fragment>
+            {SiteContent.kontakt[lang].text.map((text: string) => (
+              <Typography>{text}</Typography>
+            ))}
+            <ContactButton
+              text={SiteContent.kontakt[lang].email}
+              link={`mailto:${SiteContent.kontakt[lang].email}`}
+              textColor={'primary'}
+              type={'out'}
+              border
+            />
+            <ContactButton
+              text={SiteContent.kontakt[lang].phone}
+              link={`tel:${SiteContent.kontakt[lang].phone}`}
+              textColor={'primary'}
+              type={'out'}
+              border
+            />
+          </React.Fragment>
+        }
+      />
 
       <Content
         image={{

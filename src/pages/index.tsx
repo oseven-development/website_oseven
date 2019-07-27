@@ -91,9 +91,9 @@ export default props => {
                 <ContactButton
                   text={'kontaktiere uns hier'}
                   link={'/kontakt'}
-                  bg={'primary'}
-                  textColor={'inherit'}
+                  textColor={'primary'}
                   width={'50%'}
+                  border
                 />
               </React.Fragment>
             }
