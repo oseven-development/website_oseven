@@ -3,7 +3,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
-import {Typography} from '..'
 interface INavigation {
   links: any[]
 }

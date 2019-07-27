@@ -88,7 +88,13 @@ export default props => {
             text={
               <React.Fragment>
                 {SiteContent.contact[lang].text}
-                <ContactButton text={'kontaktiere uns ...'} icon={arrow} link={'/contact'} />
+                <ContactButton
+                  text={'kontaktiere uns hier'}
+                  link={'/kontakt'}
+                  bg={'primary'}
+                  textColor={'inherit'}
+                  width={'50%'}
+                />
               </React.Fragment>
             }
           />
