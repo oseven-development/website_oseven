@@ -28,27 +28,28 @@ export default props => (
         }}
       />
     </Container>
+
     <Container fullscreen bg={'secondary'}>
       <Container transparent flexDirection={'column'}>
-        <Content subtitle={SiteContent.customer[lang].subtitle} subtitleColor="inherit" subtitleAlign={'center'} />
+        <Content title={SiteContent.customer[lang].title} titleColor="inherit" />
         <Content
           imageDirection={'row'}
           image={[
             {
               src: props.data.heike.childImageSharp.fluid,
-              style: {width: 200},
+              style: {width: window.innerWidth > 768 ? 200 : 150},
             },
             {
               src: props.data.paul.childImageSharp.fluid,
-              style: {width: 200},
+              style: {width: window.innerWidth > 768 ? 200 : 150},
             },
             {
               src: props.data.priofol.childImageSharp.fluid,
-              style: {width: 200},
+              style: {width: window.innerWidth > 768 ? 200 : 150},
             },
             {
               src: props.data.wagner.childImageSharp.fluid,
-              style: {width: 200},
+              style: {width: window.innerWidth > 768 ? 200 : 150},
             },
           ]}
         />
@@ -70,7 +71,7 @@ export default props => (
 
 export const indexQuery = graphql`
   query {
-    parallax: file(relativePath: {eq: "parallax/together.jpg"}) {
+    parallax: file(relativePath: {eq: "parallax/process.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

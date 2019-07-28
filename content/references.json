@@ -12,7 +12,8 @@
   },
   "customer": {
     "de": {
-      "subtitle": "Unsere Kunden"
+      "title": "Unsere Kunden",
+      "text": ""
     },
     "en": {}
   },

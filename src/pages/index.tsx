@@ -45,17 +45,17 @@ export default props => {
           imageDirection={'row'}
           image={[
             {
-              src: <SvgImage dWidth={250} src={business} />,
+              src: <SvgImage dWidth={250} mWidth={80} src={business} />,
               type: 'svg',
               padding: '5px',
             },
             {
-              src: <SvgImage dWidth={250} src={developer} />,
+              src: <SvgImage dWidth={250} mWidth={80} src={developer} />,
               type: 'svg',
               padding: '5px',
             },
             {
-              src: <SvgImage dWidth={250} src={professor} />,
+              src: <SvgImage dWidth={250} mWidth={80} src={professor} />,
               type: 'svg',
               padding: '5px',
             },

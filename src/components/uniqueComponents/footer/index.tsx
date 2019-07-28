@@ -19,7 +19,7 @@ const Footer = (props: any) => {
 
   return (
     <React.Fragment>
-      <Container fullscreen flexDirection={'column'} style={{borderTop: '1px solid #00000013'}}>
+      <Container fullscreen flexDirection={'column'} style={{borderTop: '1px solid #7F83885F'}}>
         <Container
           transparent
           style={window.innerWidth > 768 ? {padding: '60px 0px 20px 0px'} : {padding: '20px 0px 10px 0px'}}
@@ -79,7 +79,7 @@ const Footer = (props: any) => {
           </Box>
         </Container>
         <Flex
-          style={{borderTop: '1px solid #7F8388', maxWidth: 1200, margin: 'auto', padding: '15px 0 40px 0'}}
+          style={{borderTop: '1px solid #7F83885F', maxWidth: 1200, margin: 'auto', padding: '15px 0 40px 0'}}
           justifyContent={window.innerWidth > 768 ? 'space-between' : 'center'}
           alignItems="center"
           flexWrap="wrap">
