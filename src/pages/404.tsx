@@ -9,7 +9,7 @@ import {SvgImage, Container, Content} from '../components'
 
 export default () => (
   <React.Fragment>
-    <Container height={700}>
+    <Container height={[700]}>
       <Content
         titleAlign={'center'}
         title={'Falsche Seite'}

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import {Typography, Image} from '..'
 import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
+import {useWindowSize} from '../../assets/hooks/windowWidth'
 
 // * Am unteren der Seite sind alle möglichen Beispiele
 
@@ -23,6 +24,7 @@ interface IContent {
         type?: 'svg' | 'jpg'
         padding?: string | number
         style?: any
+        width?: number[]
       }
     | {
         src: any
@@ -30,6 +32,7 @@ interface IContent {
         type?: 'svg' | 'jpg'
         padding?: string | number
         style?: any
+        width?: number[]
       }[]
   text?: string | JSX.Element | any[]
   textColor?: TColor
@@ -56,6 +59,8 @@ const Content = (props: IContent) => {
     subtitleAlign,
     textAlign,
   } = props
+  const {windowWidth} = useWindowSize()
+
   return (
     <React.Fragment>
       {title || subtitle ? (
@@ -95,7 +100,7 @@ const Content = (props: IContent) => {
                   {e.type === 'svg' ? (
                     <div style={{padding: e.padding ? e.padding : 0, textAlign: 'center'}}>{e.src}</div>
                   ) : (
-                    <Image src={e.src} alt={e.alt} style={e.style} />
+                    <Image src={e.src} alt={e.alt} style={e.style} width={e.width} />
                   )}
                 </Box>
               ))}
@@ -107,7 +112,7 @@ const Content = (props: IContent) => {
               <div style={{padding: image.padding ? image.padding : 0, textAlign: 'center'}}>{image.src}</div>
             ) : (
               <div style={{padding: image.padding ? image.padding : 0}}>
-                <Image src={image.src} alt={image.alt} style={image.style} />
+                <Image src={image.src} alt={image.alt} style={image.style} width={image.width} />
               </div>
             )}
           </React.Fragment>
@@ -119,7 +124,7 @@ const Content = (props: IContent) => {
           <Typography
             variant="p"
             color={textColor ? textColor : 'default'}
-            style={{padding: textPadding && window.innerWidth > 768 ? textPadding : 0}}
+            style={{padding: textPadding && windowWidth > 768 ? textPadding : 0}}
             textAlign={textAlign}>
             {Array.isArray(text)
               ? text.map((para: any) => {

@@ -4,8 +4,7 @@ import {Flex, Box} from 'rebass'
 import {Link} from 'gatsby'
 import {Image} from 'rebass'
 import styled from 'styled-components'
-import {Typography} from '../..'
-
+import theme from '../../../assets/theme/index'
 const ContactButton = (props: any) => {
   const {text, link, icon, type} = props
   return (
@@ -31,20 +30,20 @@ export default ContactButton
 const StyledButton = styled.div`
   margin: 15px 0px;
   text-align: center;
-  border: ${(props: any) => (props.border ? `2px solid ${props.theme.colors[props.textColor]}` : 'none')};
+  border: ${(props: any) => (props.border ? `2px solid ${theme.colors[props.textColor]}` : 'none')};
   border-radius: ${(props: any) => (props.border ? '20px' : 'none')};
   width: ${(props: any) => (props.width ? props.width : '100%')};
-  background: ${(props: any) => (props.bg ? props.theme.colors[props.bg] : 'transparent')};
+  background: ${(props: any) => (props.bg ? theme.colors[props.bg] : 'transparent')};
   transition: 0.4s;
   div > a {
     padding: 10px 20px;
-    color: ${(props: any) => (props.textColor ? props.theme.colors[props.textColor] : props.theme.colors.default)};
+    color: ${(props: any) => (props.textColor ? theme.colors[props.textColor] : theme.colors.default)};
   }
   div > a:hover {
     padding: 10px 20px;
-    color: ${(props: any) => (props.bg ? props.theme.colors[props.bg] : props.theme.colors.inherit)};
+    color: ${(props: any) => (props.bg ? theme.colors[props.bg] : theme.colors.inherit)};
   }
   &:hover {
-    background: ${(props: any) => (props.textColor ? props.theme.colors[props.textColor] : props.theme.colors.default)};
+    background: ${(props: any) => (props.textColor ? theme.colors[props.textColor] : theme.colors.default)};
   }
 `

@@ -17,7 +17,6 @@ import theme from '../assets/theme'
 // Bilder Backgrounds
 
 export default props => {
-  console.log(props)
   const lang = 'de'
   return (
     <React.Fragment>

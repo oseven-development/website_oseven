@@ -6,6 +6,8 @@ import styled, {ThemeContext} from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {TColor} from '../../assets/theme/types'
 import theme from '../../assets/theme'
+import {useWindowSize} from '../../assets/hooks/windowWidth'
+
 interface IContainer {
   flexDirection?: 'row' | 'column'
   flexWrap?: 'wrap' | 'nowrap'
@@ -37,14 +39,16 @@ const Container = (props: IContainer) => {
     pt,
     style,
   } = props
+  const {windowWidth} = useWindowSize()
   const marginDesktop = '0px 0px 0px 0px'
-  const marginMobile = '0px 10px 0px 10px'
+  const marginMobile = '0px 0px 0px 0px'
   const margin = [marginMobile, marginDesktop]
-  const padding = [0, '40px 15px 40px 15px']
+  const padding = ['0px 10px 0px 10px', '40px 15px 40px 15px']
+  const _height = windowWidth > 768 ? (height ? height[1] : 'auto') : height ? height[0] : 'auto'
   const ContainerStyle = {
     maxWidth: fullscreen ? '100%' : '1200px',
     margin: 'auto',
-    height: window.innerWidth > 768 ? (height ? height[1] : '') : height ? height[0] : '',
+    height: _height,
     ...style,
   }
   // const theme = React.useContext(ThemeContext)

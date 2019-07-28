@@ -3,6 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
+import {useWindowSize} from '../../assets/hooks/windowWidth'
 interface INavigation {
   links: any[]
 }
@@ -10,7 +11,8 @@ interface INavigation {
 const Navigation = (props: INavigation) => {
   const {links} = props
   const [menu, setMenu] = React.useState(false)
-  const mobile = window.innerWidth < 768 ? true : false
+  const {windowWidth} = useWindowSize()
+  const mobile = windowWidth < 768 ? true : false
 
   return (
     <React.Fragment>

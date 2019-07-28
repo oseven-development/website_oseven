@@ -13,21 +13,22 @@ import xing from '../../../assets/images/icons/xing.svg'
 import phone from '../../../assets/images/icons/phone.svg'
 import mail from '../../../assets/images/icons/mail.svg'
 import {StyledNav} from '../../navigation'
+import {useWindowSize} from '../../../assets/hooks/windowWidth'
 
 const Footer = (props: any) => {
   const {links, logo} = props
-
+  const {windowWidth} = useWindowSize()
   return (
-    <React.Fragment>
-      <Container fullscreen flexDirection={'column'} style={{borderTop: '1px solid #7F83885F'}}>
+    <footer>
+      <Container fullscreen flexDirection={'column'} style={{width: '100%', borderTop: '1px solid #7F83885F'}}>
         <Container
           transparent
-          style={window.innerWidth > 768 ? {padding: '60px 0px 20px 0px'} : {padding: '20px 0px 10px 0px'}}
+          style={{padding: windowWidth > 768 ? '60px 0px 20px 0px' : '20px 0px 10px 0px'}}
           alignItems={'flex-start'}>
           <Box>
             <Flex flexDirection={'column'}>
               <Box>
-                <Typography style={{textAlign: window.innerWidth > 768 ? 'left' : 'center'}}>
+                <Typography style={{textAlign: windowWidth > 768 ? 'left' : 'center'}}>
                   <b>Kontaktdaten</b> <br />
                   Nordring 171 <br /> 90409 Nürnberg
                   <br /> Deutschland
@@ -41,7 +42,7 @@ const Footer = (props: any) => {
                       color: 'inherit',
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: window.innerWidth > 768 ? 'flex-start' : 'center',
+                      justifyContent: windowWidth > 768 ? 'flex-start' : 'center',
                     }}>
                     <Image width={20} src={mail} style={{marginRight: 10}} />
                     hallo@oseven.de
@@ -56,7 +57,7 @@ const Footer = (props: any) => {
                       color: 'inherit',
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: window.innerWidth > 768 ? 'flex-start' : 'center',
+                      justifyContent: windowWidth > 768 ? 'flex-start' : 'center',
                     }}>
                     <Image width={20} src={phone} style={{marginRight: 10}} />
                     +49 1634412159
@@ -65,7 +66,7 @@ const Footer = (props: any) => {
               </Box>
             </Flex>
           </Box>
-          <Box style={{textAlign: window.innerWidth > 768 ? 'left' : 'center'}}>
+          <Box style={{textAlign: windowWidth > 768 ? 'left' : 'center'}}>
             <SvgImage src={logo} dWidth={300} />
           </Box>
           <Box style={{textAlign: 'center'}}>
@@ -80,7 +81,7 @@ const Footer = (props: any) => {
         </Container>
         <Flex
           style={{borderTop: '1px solid #7F83885F', maxWidth: 1200, margin: 'auto', padding: '15px 0 40px 0'}}
-          justifyContent={window.innerWidth > 768 ? 'space-between' : 'center'}
+          justifyContent={windowWidth > 768 ? 'space-between' : 'center'}
           alignItems="center"
           flexWrap="wrap">
           <Box style={{display: 'flex', flexDirection: 'row', fontSize: '0.8em', color: '#121212'}} pt={'15px'}>
@@ -112,7 +113,7 @@ const Footer = (props: any) => {
           </Box>
         </Flex>
       </Container>
-    </React.Fragment>
+    </footer>
   )
 }
 export default Footer
