@@ -91,7 +91,7 @@ const Content = (props: IContent) => {
           <React.Fragment>
             <Flex
               flexDirection={imageDirection ? imageDirection : 'column'}
-              justifyContent={'space-between'}
+              justifyContent={'space-evenly'}
               alignItems={'center'}
               flexWrap={'wrap'}
               style={{width: '100%', height: '100%'}}>

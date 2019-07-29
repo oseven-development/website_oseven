@@ -1,0 +1,96 @@
+{
+  "header": {
+    "de": {
+      "title": "Cloud-Native Software-Entwicklung, Beratung & Workshops",
+      "text": [
+        "Bei uns dreht sich alles rund um Cloud-Software. Wir beraten Sie für den Aufbau einer optimalen Cloud-Infrastruktur. Entwickeln skalierbare und flexible Cloud-Native Applikationen, die sich an Ihre Bedingungen anpassen und mit Ihnen wachsen."
+      ],
+      "nav": [
+        {"label": "Software-Entwicklung", "href": "sw"},
+        {"label": "Machine Learning & AI", "href": "ml"},
+        {"label": "Beratung & Workshops", "href": "bw"}
+      ]
+    },
+    "en": {}
+  },
+  "cn": {
+    "de": {
+      "title": "Was sind Cloud-Native Applikationen",
+      "text": [
+        "Cloudnative Anwendungen sind eine Ansammlung kleiner, unabhängiger und lose gekoppelter Services. Sie sind darauf ausgelegt, anerkannte Geschäftswerte bereitzustellen, darunter die Fähigkeit zur schnellen Integration von Benutzer-Feedback für kontinuierliche Verbesserungen.",
+        "Kurz gesagt, haben wir es hier mit einer Methode zur Beschleunigung der Entwicklung neuer bzw. Optimierung bestehender Anwendungen sowie deren Verknüpfung zu tun. Ziel ist die Bereitstellung maßgeschneiderter, auf die Geschwindigkeit des geschäftlichen Wandels ausgerichteter Anwendungen."
+      ]
+    },
+    "en": {}
+  },
+  "partners": {
+    "de": {
+      "title": "Unsere Key-Partner",
+      "text": ["Nordring 171 ", "90409 Nürnberg", "Deutschland"]
+    },
+    "en": {}
+  },
+  "sw": {
+    "de": {
+      "title": "Software-Entwicklung",
+      "sbutitle": "Cloud-native und dessen Bedeutung",
+      "text": [
+        "Cloudnative Anwendungen sind eine Ansammlung kleiner, unabhängiger und lose gekoppelter Services. Sie sind darauf ausgelegt, anerkannte Geschäftswerte bereitzustellen, darunter die Fähigkeit zur schnellen Integration von Benutzer-Feedback für kontinuierliche Verbesserungen. Kurz gesagt, haben wir es hier mit einer Methode zur Beschleunigung der Entwicklung neuer bzw. Optimierung bestehender Anwendungen sowie deren Verknüpfung zu tun. Ziel ist die Bereitstellung maßgeschneiderter, auf die Geschwindigkeit des geschäftlichen Wandels ausgerichteter Anwendungen.",
+        ""
+      ]
+    },
+    "en": {}
+  },
+  "pro": {
+    "de": {
+      "subtitle": "Gründe für die Entwicklung Cloud-native Applikationen",
+      "text": ["Nordring 171 ", "90409 Nürnberg", "Deutschland"]
+    },
+    "en": {}
+  },
+  "ml": {
+    "de": {
+      "title": "Machine Learning & AI in der Cloud",
+      "text": [
+        "levarge Machine Learning und AI durch die Unterstützung der Cloud",
+        "Wir setzen auf Service von AWS und GCP um den Effizienz zu steigern",
+        "Wir setzen darüber hinaus auf Open-Source Technologien und Tools, wie z.B. Tensorflow"
+      ]
+    },
+    "en": {}
+  },
+  "mlpro": {
+    "de": {
+      "subtitle": "Vorteile des Einsatz von ML & AI in der Cloud",
+      "text": ["Nordring 171 ", "90409 Nürnberg", "Deutschland"]
+    },
+    "en": {}
+  },
+  "tools": {
+    "de": {
+      "title": "Unsere Tools",
+      "subtitle": "levarge Machine Learning und AI durch die Unterstützung der Cloud",
+      "text": ["Nordring 171 ", "90409 Nürnberg", "Deutschland"]
+    },
+    "en": {}
+  },
+  "consulting": {
+    "de": {
+      "title": "Strategische Cloud Beratung",
+      "text": [
+        "Mit ihnen gemeinsam wollen wir herausfinden auf welchem Stand Ihre IT ist und wo sie gerne sein will?",
+        "Dabei unterstützen wir sie bei dem Umzug in die Cloud und können Ihnen dazu die anfallenden Fragen beantworten.",
+        "Wenn Sie schon vorhanden Software haben helfen wir Ihnen diese in die Cloud zu Migrieren um von den vorteilen zu profitieren."
+      ]
+    },
+    "en": {}
+  },
+  "workshops": {
+    "de": {
+      "title": "Cloud-Workshops",
+      "subtitle": "Entwicklung, Architektur, Infrastruktur & Sicherheit",
+      "text": ["Key-Faktoren für die Cloud"]
+    },
+    "en": {}
+  }
+}

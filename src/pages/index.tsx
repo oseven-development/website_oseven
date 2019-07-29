@@ -9,7 +9,7 @@ import business from '../assets/images/illustrations/business.svg'
 import developer from '../assets/images/illustrations/developer.svg'
 import professor from '../assets/images/illustrations/professor.svg'
 import arrow from '../assets/images/icons/arrow.svg'
-import SiteContent from '../../content/uberuns.json'
+import SiteContent from '../assets/content/uberuns.json'
 // Components
 import {Seo, Container, ContactButton, Content, Parallax, BackgroundImage, SvgImage} from '../components'
 import theme from '../assets/theme'

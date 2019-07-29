@@ -11,7 +11,7 @@ const theme: ITheme = {
   colors: {
     primary: '#FF662B',
     secondary: '#20242A',
-    third: '#343D4B',
+    third: '#fbfbfb',
     default: '#121212',
     // textColor: '#FCFCFC',
     textColor: '#121212',
@@ -38,7 +38,7 @@ export const darkTheme = {
   colors: {
     primary: '#FF662B',
     secondary: '#20242A',
-    third: '#343D4B',
+    third: '#fbfbfb',
     default: '#fff',
     textColor: '#fff',
     inherit: '#121212',

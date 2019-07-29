@@ -20,7 +20,11 @@ const Footer = (props: any) => {
   const {windowWidth} = useWindowSize()
   return (
     <footer>
-      <Container fullscreen flexDirection={'column'} style={{width: '100%', borderTop: '1px solid #7F83885F'}}>
+      <Container
+        fullscreen
+        flexDirection={'column'}
+        bg={'third'}
+        style={{width: '100%', borderTop: '1px solid #7F83885F'}}>
         <Container
           transparent
           style={{padding: windowWidth > 768 ? '60px 0px 20px 0px' : '20px 0px 10px 0px'}}
@@ -117,3 +121,4 @@ const Footer = (props: any) => {
   )
 }
 export default Footer
+// 1px solid #00000013

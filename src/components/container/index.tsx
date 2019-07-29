@@ -22,6 +22,7 @@ interface IContainer {
   height?: number[] | string[]
   transparent?: boolean
   pt?: number | string
+  id?: string
 }
 const Container = (props: IContainer) => {
   const {
@@ -54,6 +55,7 @@ const Container = (props: IContainer) => {
   // const theme = React.useContext(ThemeContext)
   return (
     <Flex
+      id={props.id}
       flexDirection={flexDirection ? flexDirection : 'row'}
       flexWrap={flexWrap ? flexWrap : 'wrap'}
       alignItems={alignItems ? alignItems : 'center'}

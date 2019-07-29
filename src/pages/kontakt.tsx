@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {graphql} from 'gatsby'
-import SiteContent from '../../content/contact.json'
+import SiteContent from '../assets/content/contact.json'
 import ContactSvg from '../assets/images/illustrations/contactSite.svg'
 
 // Components

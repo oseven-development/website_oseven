@@ -11,7 +11,7 @@ const ContactButton = (props: any) => {
     <StyledButton {...props}>
       <Flex justifyContent={'center'} alignItems={'center'}>
         {type === 'out' ? (
-          <a href={link} style={{width: '100%'}} target="_blank">
+          <a href={link} style={{width: '100%'}}>
             <Box width={1}>{text}</Box>
           </a>
         ) : (
