@@ -1,0 +1,450 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="812" height="385" viewBox="0 0 812 385">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="60" height="60" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Pfad_219" data-name="Pfad 219" d="M492-31h60V-91H492Z" transform="translate(-492 91)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Pfad_148" data-name="Pfad 148" d="M724-144h60v-60H724Z" transform="translate(-724 204)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect width="78" height="75" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <path id="Pfad_5835" data-name="Pfad 5835" d="M167-4121.5h2v6h-2Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <path id="Pfad_5921" data-name="Pfad 5921" d="M55-3775h75v75H55Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.029" y1="0.607" x2="0.029" y2="0.713" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0" stop-color="#bd0816"/>
+      <stop offset="0.1" stop-color="#c40f1c"/>
+      <stop offset="0.2" stop-color="#ca1722"/>
+      <stop offset="0.3" stop-color="#d11e28"/>
+      <stop offset="0.4" stop-color="#d7262e"/>
+      <stop offset="0.5" stop-color="#de2d34"/>
+      <stop offset="0.6" stop-color="#e5343a"/>
+      <stop offset="0.7" stop-color="#eb3c40"/>
+      <stop offset="0.8" stop-color="#f24346"/>
+      <stop offset="0.9" stop-color="#f84b4c"/>
+      <stop offset="1" stop-color="#ff5252"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.02" y1="0.616" x2="0.079" y2="0.605" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bd0816"/>
+      <stop offset="0.1" stop-color="#c40f1c"/>
+      <stop offset="0.2" stop-color="#ca1722"/>
+      <stop offset="0.3" stop-color="#d11e28"/>
+      <stop offset="0.4" stop-color="#d7262e"/>
+      <stop offset="0.5" stop-color="#de2d34"/>
+      <stop offset="0.6" stop-color="#e5343a"/>
+      <stop offset="0.7" stop-color="#eb3c40"/>
+      <stop offset="0.8" stop-color="#f24346"/>
+      <stop offset="0.9" stop-color="#f84b4c"/>
+      <stop offset="1" stop-color="#ff5252"/>
+    </linearGradient>
+    <clipPath id="clip-path-8">
+      <path id="Pfad_5923" data-name="Pfad 5923" d="M103.51-3713.5a1,1,0,0,1-.59-.19,1,1,0,0,1-.42-.81v-46a1,1,0,0,1,.48-.85,1,1,0,0,1,1-.05l13,6.35a1,1,0,0,1,.56.89v35.34a1,1,0,0,1-.69,1l-13,4.32A1.2,1.2,0,0,1,103.51-3713.5Zm1-45.39v43l11-3.65v-34Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <path id="Pfad_5925" data-name="Pfad 5925" d="M81.5-3713.5a1.232,1.232,0,0,1-.32,0l-13-4.32a1,1,0,0,1-.68-1v-35.34a1,1,0,0,1,.56-.89l13-6.35a1,1,0,0,1,1,.05,1,1,0,0,1,.47.85v46a1,1,0,0,1-.42.81A.936.936,0,0,1,81.5-3713.5Zm-12-6,11,3.65v-43l-11,5.37Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-10">
+      <path id="Pfad_5927" data-name="Pfad 5927" d="M102.5-3747.5h-3v-2h3Zm-6,0h-3v-2h3Zm-6,0h-3v-2h3Zm-6,0h-3v-2h3Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <path id="Pfad_5929" data-name="Pfad 5929" d="M102.5-3725.5h-3v-2h3Zm-6,0h-3v-2h3Zm-6,0h-3v-2h3Zm-6,0h-3v-2h3Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-12">
+      <path id="Pfad_5931" data-name="Pfad 5931" d="M88.11-3734.06l-3.76-3.21a1,1,0,0,1-.35-.76,1,1,0,0,1,.35-.76L88.1-3742l1.3,1.52L86.54-3738l2.86,2.45Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-13">
+      <path id="Pfad_5933" data-name="Pfad 5933" d="M96.9-3734.06l-1.3-1.52,2.86-2.42-2.87-2.44,1.3-1.56,3.76,3.2a1,1,0,0,1,.35.76,1,1,0,0,1-.35.76Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-14">
+      <path id="Pfad_5935" data-name="Pfad 5935" d="M89.559-3731.951l3.975-11.757,1.895.641-3.975,11.756Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-15">
+      <rect width="75" height="75" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-16">
+      <path id="Pfad_6140" data-name="Pfad 6140" d="M242-3446h75v75H242Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-3" x1="0.132" y1="0.641" x2="0.132" y2="0.748" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0" stop-color="#4d27a8"/>
+      <stop offset="0.1" stop-color="#552db1"/>
+      <stop offset="0.2" stop-color="#5e34b9"/>
+      <stop offset="0.3" stop-color="#663ac2"/>
+      <stop offset="0.4" stop-color="#6f40cb"/>
+      <stop offset="0.5" stop-color="#7747d3"/>
+      <stop offset="0.6" stop-color="#7f4ddc"/>
+      <stop offset="0.7" stop-color="#8853e5"/>
+      <stop offset="0.8" stop-color="#9059ee"/>
+      <stop offset="0.9" stop-color="#9960f6"/>
+      <stop offset="1" stop-color="#a166ff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.124" y1="0.65" x2="0.182" y2="0.639" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4d27a8"/>
+      <stop offset="0.1" stop-color="#552db1"/>
+      <stop offset="0.2" stop-color="#5e34b9"/>
+      <stop offset="0.3" stop-color="#663ac2"/>
+      <stop offset="0.4" stop-color="#6f40cb"/>
+      <stop offset="0.5" stop-color="#7747d3"/>
+      <stop offset="0.6" stop-color="#7f4ddc"/>
+      <stop offset="0.7" stop-color="#8853e5"/>
+      <stop offset="0.8" stop-color="#9059ee"/>
+      <stop offset="0.9" stop-color="#9960f6"/>
+      <stop offset="1" stop-color="#a166ff"/>
+    </linearGradient>
+    <clipPath id="clip-path-17">
+      <path id="Pfad_6142" data-name="Pfad 6142" d="M269.29-3403.06a13.008,13.008,0,0,0,3.92.74,3.587,3.587,0,0,0,2.41-.68,2.559,2.559,0,0,0,.83-2,2.622,2.622,0,0,0-.78-2.12,4,4,0,0,0-2.56-.66,30.016,30.016,0,0,0-3.2.2V-3409l.39-6.17h7.53v1.67H272l-.27,4.19a11.111,11.111,0,0,1,2-.2,4.931,4.931,0,0,1,3.49,1.17,4.23,4.23,0,0,1,1.25,3.24,4.07,4.07,0,0,1-1.46,3.27,5.76,5.76,0,0,1-3.86,1.25,9.533,9.533,0,0,1-3.94-.83Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-18">
+      <path id="Pfad_6144" data-name="Pfad 6144" d="M285.63-3409.06H286a4.622,4.622,0,0,1,3.28,1.06,3.83,3.83,0,0,1,1.2,3,4,4,0,0,1-1.48,3.21,6,6,0,0,1-3.91,1.21,9.507,9.507,0,0,1-3.83-.83v-1.65a12.4,12.4,0,0,0,3.83.74,3.688,3.688,0,0,0,2.42-.7,2.441,2.441,0,0,0,.84-2q0-2.49-3.15-2.49a18.06,18.06,0,0,0-2,.1v-1.36l4.33-4.73h-6.05v-1.69h8.4v1.63Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-19">
+      <path id="Pfad_6146" data-name="Pfad 6146" d="M279.5-3389.5a1,1,0,0,1-.5-.14,33.164,33.164,0,0,0-10.48-4c-2.11-.38-9-2-9-7,0-2.26.87-3.76,2-5.66a15.659,15.659,0,0,0,2.71-8.21,14.58,14.58,0,0,0-2.38-7.93,1,1,0,0,1,.07-1.17l1.6-2a1,1,0,0,1,1.27-.24,13.685,13.685,0,0,0,6.75,1.85,12.331,12.331,0,0,0,7.38-2.32,1,1,0,0,1,1.16,0,12.331,12.331,0,0,0,7.38,2.32,13.69,13.69,0,0,0,6.77-1.86,1,1,0,0,1,1.27.24l1.6,2a1,1,0,0,1,.07,1.17,14.559,14.559,0,0,0-2.38,7.93c0,3.55,1.44,6,2.7,8.21,1.11,1.9,2,3.4,2,5.66,0,5-6.88,6.65-9,7a33.164,33.164,0,0,0-10.48,4A1,1,0,0,1,279.5-3389.5ZM263.9-3423a16.438,16.438,0,0,1,2.31,8.38,17.139,17.139,0,0,1-3,9.21c-1,1.77-1.7,2.94-1.7,4.66,0,3.56,6.11,4.84,7.34,5.06a34.891,34.891,0,0,1,10.63,4,34.89,34.89,0,0,1,10.63-4c1.23-.22,7.34-1.5,7.34-5.06,0-1.72-.68-2.89-1.7-4.66-1.33-2.28-3-5.12-3-9.21a16.438,16.438,0,0,1,2.35-8.38l-.63-.78a15.435,15.435,0,0,1-7,1.72,14.425,14.425,0,0,1-8-2.3,14.425,14.425,0,0,1-8,2.3,15.435,15.435,0,0,1-7-1.72Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-20">
+      <path id="Pfad_6148" data-name="Pfad 6148" d="M279.5-3383.5a1,1,0,0,1-.63-.22,30,30,0,0,0-11.25-5c-8.22-1.48-13.13-6-13.13-12a15.292,15.292,0,0,1,2.65-8.19c1.09-1.87,2-3.49,2-5.68a10.77,10.77,0,0,0-3.64-7.63,1,1,0,0,1-.4-.709,1,1,0,0,1,.26-.771c0-.07,5.87-7.11,7.2-8.94a1,1,0,0,1,.78-.42,1,1,0,0,1,.82.32,10.339,10.339,0,0,0,7.35,3.66c2.79,0,5-1.24,7.13-4a1.082,1.082,0,0,1,.83-.389,1.082,1.082,0,0,1,.83.389c2.14,2.8,4.34,4,7.13,4a10.339,10.339,0,0,0,7.35-3.66,1,1,0,0,1,.82-.32,1,1,0,0,1,.78.42c1.33,1.83,7.15,8.87,7.2,8.94a1,1,0,0,1,.24.77,1.09,1.09,0,0,1-.38.71,10.77,10.77,0,0,0-3.64,7.63c0,2.19.94,3.81,2,5.68a15.292,15.292,0,0,1,2.65,8.19c0,6-4.91,10.52-13.13,12a29.7,29.7,0,0,0-11.24,5A1,1,0,0,1,279.5-3383.5Zm-21.89-39.61a12.51,12.51,0,0,1,3.64,8.53c0,2.75-1.17,4.77-2.3,6.72-1.22,2.11-2.38,4.09-2.38,7.15,0,7.32,8.74,9.46,11.42,9.94a31.343,31.343,0,0,1,11.51,4.94,31.35,31.35,0,0,1,11.5-4.94c2.68-.48,11.42-2.62,11.42-9.94,0-3.06-1.16-5-2.38-7.15-1.13-2-2.3-4-2.3-6.72a12.51,12.51,0,0,1,3.64-8.53c-1.31-1.59-4.34-5.28-5.93-7.33a11.921,11.921,0,0,1-8,3.46,10.159,10.159,0,0,1-8-3.86,10.159,10.159,0,0,1-8,3.86,11.92,11.92,0,0,1-8-3.46C262-3428.39,258.92-3424.7,257.61-3423.11Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-22">
+      <path id="Pfad_7348" data-name="Pfad 7348" d="M603-276h75v75H603Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-5" x1="0.332" y1="0.972" x2="0.332" y2="1.078" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0" stop-color="#1b660f"/>
+      <stop offset="0.1" stop-color="#236d14"/>
+      <stop offset="0.2" stop-color="#2b7418"/>
+      <stop offset="0.3" stop-color="#337c1d"/>
+      <stop offset="0.4" stop-color="#3b8322"/>
+      <stop offset="0.5" stop-color="#448a27"/>
+      <stop offset="0.6" stop-color="#4c912b"/>
+      <stop offset="0.7" stop-color="#549830"/>
+      <stop offset="0.8" stop-color="#5ca035"/>
+      <stop offset="0.9" stop-color="#64a739"/>
+      <stop offset="1" stop-color="#6cae3e"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.324" y1="0.981" x2="0.382" y2="0.97" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b660f"/>
+      <stop offset="0.1" stop-color="#236d14"/>
+      <stop offset="0.2" stop-color="#2b7418"/>
+      <stop offset="0.3" stop-color="#337c1d"/>
+      <stop offset="0.4" stop-color="#3b8322"/>
+      <stop offset="0.5" stop-color="#448a27"/>
+      <stop offset="0.6" stop-color="#4c912b"/>
+      <stop offset="0.7" stop-color="#549830"/>
+      <stop offset="0.8" stop-color="#5ca035"/>
+      <stop offset="0.9" stop-color="#64a739"/>
+      <stop offset="1" stop-color="#6cae3e"/>
+    </linearGradient>
+    <clipPath id="clip-path-23">
+      <path id="Pfad_7350" data-name="Pfad 7350" d="M664.43-235.94c-.29-1.57-2.07-2.68-3.29-3.47-.39-.25-1.46-.65-1.55-1a2.361,2.361,0,0,1,.1-.74l1-7.19c.29-2.11.57-4.22.86-6.33.26-1.94-.67-3.24-2.25-4.33-3.22-2.23-7.42-3.13-11.21-3.75a55.85,55.85,0,0,0-14.38-.47,40,40,0,0,0-12.53,3c-2.14,1-4.94,2.56-4.59,5.29,1,8.12,2.18,16.22,3.27,24.33l1.5,11.13a4.13,4.13,0,0,0,2.46,3.33c3.1,1.68,6.94,2.16,10.4,2.48a51.5,51.5,0,0,0,13.78-.61c2.88-.53,8.24-1.4,8.7-5,.57-4.46,1.2-8.92,1.8-13.37l.22-1.36C660.35-233.61,665-232.78,664.43-235.94ZM639.05-261.5c6,0,12.87.68,18.25,3.64.83.46,2.76,1.49,2.18,2.71s-2.38,1.83-3.48,2.27a30.88,30.88,0,0,1-4.83,1.35,62.288,62.288,0,0,1-21.66.45,26.8,26.8,0,0,1-9.32-2.73c-.72-.41-1.91-1.15-1.58-2.13a3,3,0,0,1,1.18-1.26,20.839,20.839,0,0,1,7.2-2.91A50.349,50.349,0,0,1,639.05-261.5Zm15.68,42.15c-.15,1.17-2.08,1.75-3,2.08a29.6,29.6,0,0,1-5.88,1.32,50.718,50.718,0,0,1-13.37,0,22.24,22.24,0,0,1-8-2.17,2,2,0,0,1-1.2-1.73c-1-7.93-2.14-15.86-3.21-23.79l-1.16-8.6a23.262,23.262,0,0,0,7.3,2.56,59.618,59.618,0,0,0,8.31,1.09,64.8,64.8,0,0,0,16.39-.91,24.269,24.269,0,0,0,8.21-2.74L657-236.54a120.424,120.424,0,0,1-14.82-6,4.273,4.273,0,0,1-.61-.29c-.27-.2-.2-.1-.33-.41a3.318,3.318,0,0,0-.84-1.47,2.25,2.25,0,0,0-2.717-.073,2.25,2.25,0,0,0-.8,2.6,2.25,2.25,0,0,0,2.282,1.477,4.12,4.12,0,0,0,1-.3c.39-.12.39-.1.8.09a126.717,126.717,0,0,0,15,6.16c.77.25.76,0,.76.64a11.488,11.488,0,0,1-.19,1.45l-.64,4.77ZM639.3-243c0,.27-.38.24-.48.07S639.3-243.38,639.3-243Zm19.7,7,.3-2.21c1,.57,2.7,1.43,3.15,2.57C661.47-235.24,659.92-235.77,659-236Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-25">
+      <path id="Pfad_1513" data-name="Pfad 1513" d="M871-9456h75v75H871Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-7" x1="0.481" y1="0.014" x2="0.481" y2="0.121" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0" stop-color="#c8511b"/>
+      <stop offset="0.1" stop-color="#cd5818"/>
+      <stop offset="0.2" stop-color="#d35f16"/>
+      <stop offset="0.3" stop-color="#d86713"/>
+      <stop offset="0.4" stop-color="#de6e10"/>
+      <stop offset="0.5" stop-color="#e3750e"/>
+      <stop offset="0.6" stop-color="#e97c0b"/>
+      <stop offset="0.7" stop-color="#ee8308"/>
+      <stop offset="0.8" stop-color="#f48b05"/>
+      <stop offset="0.9" stop-color="#f99203"/>
+      <stop offset="1" stop-color="#f90"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-8" x1="0.472" y1="0.024" x2="0.531" y2="0.013" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c8511b"/>
+      <stop offset="0.1" stop-color="#cd5818"/>
+      <stop offset="0.2" stop-color="#d35f16"/>
+      <stop offset="0.3" stop-color="#d86713"/>
+      <stop offset="0.4" stop-color="#de6e10"/>
+      <stop offset="0.5" stop-color="#e3750e"/>
+      <stop offset="0.6" stop-color="#e97c0b"/>
+      <stop offset="0.7" stop-color="#ee8308"/>
+      <stop offset="0.8" stop-color="#f48b05"/>
+      <stop offset="0.9" stop-color="#f99203"/>
+      <stop offset="1" stop-color="#f90"/>
+    </linearGradient>
+    <clipPath id="clip-path-26">
+      <path id="Pfad_1515" data-name="Pfad 1515" d="M931.5-9393.5H919.18a1,1,0,0,1-.9-.57l-17.42-36.43h-7.37a1,1,0,0,1-1-1v-11a1,1,0,0,1,1-1h15.4a1,1,0,0,1,.9.57l17.34,36.43h4.37a1,1,0,0,1,1,1v11A1,1,0,0,1,931.5-9393.5Zm-11.69-2H930.5v-9h-4a1,1,0,0,1-.9-.57l-17.34-36.43H894.5v9h7a1,1,0,0,1,.9.57Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-27">
+      <path id="Pfad_1517" data-name="Pfad 1517" d="M898.48-9393.5h-13a1,1,0,0,1-.85-.47,1,1,0,0,1-.05-1l13.6-28.41a1,1,0,0,1,.9-.57,1,1,0,0,1,.9.561l6.51,13.39a1,1,0,0,1,0,.87l-7.1,15A1,1,0,0,1,898.48-9393.5Zm-11.4-2h10.77l6.63-14-5.39-11.15Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-33">
+      <path id="Pfad_3055" data-name="Pfad 3055" d="M203-8240h75v75H203Z" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-11" x1="0.111" y1="0.141" x2="0.111" y2="0.248" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="0" stop-color="#2e27ad"/>
+      <stop offset="0.1" stop-color="#3230b5"/>
+      <stop offset="0.2" stop-color="#3539bd"/>
+      <stop offset="0.3" stop-color="#3941c6"/>
+      <stop offset="0.4" stop-color="#3c4ace"/>
+      <stop offset="0.5" stop-color="#4053d6"/>
+      <stop offset="0.6" stop-color="#445cde"/>
+      <stop offset="0.7" stop-color="#4765e6"/>
+      <stop offset="0.8" stop-color="#4b6def"/>
+      <stop offset="0.9" stop-color="#4e76f7"/>
+      <stop offset="1" stop-color="#527fff"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-12" x1="0.102" y1="0.151" x2="0.161" y2="0.14" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2e27ad"/>
+      <stop offset="0.1" stop-color="#3230b5"/>
+      <stop offset="0.2" stop-color="#3539bd"/>
+      <stop offset="0.3" stop-color="#3941c6"/>
+      <stop offset="0.4" stop-color="#3c4ace"/>
+      <stop offset="0.5" stop-color="#4053d6"/>
+      <stop offset="0.6" stop-color="#445cde"/>
+      <stop offset="0.7" stop-color="#4765e6"/>
+      <stop offset="0.8" stop-color="#4b6def"/>
+      <stop offset="0.9" stop-color="#4e76f7"/>
+      <stop offset="1" stop-color="#527fff"/>
+    </linearGradient>
+    <clipPath id="clip-path-34">
+      <path id="Pfad_3057" data-name="Pfad 3057" d="M253.25-8199.52l-6.61,6.6a16.248,16.248,0,0,0,3.42-1.39,2.578,2.578,0,0,1,1.19,1.8c0,1.83-3.88,3.82-9.64,4.63a42.417,42.417,0,0,1-5.36.38h-1c-8.08-.19-14-2.74-14-5a2.578,2.578,0,0,1,1.19-1.8c3.14,1.75,8.23,2.79,13.81,2.79h.11l.56-2h-.67c-5.5,0-10.6-1.09-13.31-2.811-1.08-.71-1.68-1.479-1.69-2.149v-4.63c3.06,2.34,9.16,3.56,15,3.56.79,0,1.58,0,2.35-.07l.57-2c-1,.07-1.93.1-2.92.1-8.58,0-15-2.63-15-5a2.578,2.578,0,0,1,1.19-1.8c2.76,1.55,7,2.52,11.81,2.739l.05-2c-4.73-.229-9-1.25-11.36-2.76-1.07-.689-1.67-1.47-1.69-2.15v-4.619c3.06,2.34,9.16,3.56,15,3.56h.22l1.06-2h-1.28c-8.58,0-15-2.63-15-5s6.42-5,15-5a36.063,36.063,0,0,1,8.58,1h5.49c-3-1.83-8.18-3-14.07-3-8.24,0-17,2.44-17,7v8.05a4.06,4.06,0,0,0,1.51,2.95,4.07,4.07,0,0,0-1.51,3v8a4.061,4.061,0,0,0,1.51,3,4.07,4.07,0,0,0-1.51,3v8a1.246,1.246,0,0,0,0,.21c.27,4.39,8.87,6.75,17,6.75s16.73-2.36,17-6.77a.754.754,0,0,0,0-.21v-8a4,4,0,0,0-1.51-3,4.061,4.061,0,0,0,1.51-3Zm-2,15c0,2.36-6.42,5-15,5s-15-2.61-15-5v-4.6c3.06,2.32,9.16,3.54,15,3.54s11.94-1.22,15-3.54Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-35">
+      <path id="Pfad_3059" data-name="Pfad 3059" d="M224.25-8211.23a1.25,1.25,0,0,0,1.25-1.25,1.251,1.251,0,0,0-1.25-1.25,1.251,1.251,0,0,0-1.25,1.25A1.25,1.25,0,0,0,224.25-8211.23Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-36">
+      <path id="Pfad_3061" data-name="Pfad 3061" d="M224.25-8197.23a1.25,1.25,0,0,0,1.25-1.25,1.251,1.251,0,0,0-1.25-1.25,1.251,1.251,0,0,0-1.25,1.25A1.25,1.25,0,0,0,224.25-8197.23Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-37">
+      <path id="Pfad_3063" data-name="Pfad 3063" d="M224.25-8183.23a1.25,1.25,0,0,0,1.25-1.25,1.25,1.25,0,0,0-1.25-1.25,1.25,1.25,0,0,0-1.25,1.25A1.25,1.25,0,0,0,224.25-8183.23Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-38">
+      <path id="Pfad_3065" data-name="Pfad 3065" d="M238.75-8188.52a1,1,0,0,1-.5-.14,1,1,0,0,1-.46-1.15l5.62-18.709h-5.66a1,1,0,0,1-.87-.485,1,1,0,0,1-.02-1l6-12a1,1,0,0,1,.89-.55h13a1,1,0,0,1,.845.392,1,1,0,0,1,.155.918l-2.56,7.69h5.61a1,1,0,0,1,.916.607,1,1,0,0,1-.2,1.082l-22,23A1,1,0,0,1,238.75-8188.52Zm.62-22h5.38a1,1,0,0,1,.8.4,1,1,0,0,1,.16.88l-4.81,16,17.51-18.3h-4.66a1,1,0,0,1-.85-.395,1,1,0,0,1-.15-.926l2.56-7.68h-11Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Gruppe_5727" data-name="Gruppe 5727" transform="translate(-38 -159)">
+    <g id="Resource_-_General_-_User" data-name="Resource - General - User" transform="translate(41 210)" clip-path="url(#clip-path)">
+      <g id="Resource_-_General_-_User-2" data-name="Resource - General - User" clip-path="url(#clip-path-2)">
+        <path id="Pfad_217" data-name="Pfad 217" d="M548.31-43.135h-54a1.2,1.2,0,0,1-1.2-1.2v-3.6a27.276,27.276,0,0,1,20.832-26.52,1.272,1.272,0,0,1,.864.108,13.548,13.548,0,0,0,12.984,0,1.2,1.2,0,0,1,.852-.108A27.276,27.276,0,0,1,549.51-47.923v3.6A1.2,1.2,0,0,1,548.31-43.135Zm-52.8-2.4h51.6v-2.4A24.852,24.852,0,0,0,528.51-72a16.212,16.212,0,0,1-7.2,1.716A15.852,15.852,0,0,1,514.11-72a24.864,24.864,0,0,0-18.6,24.072Z" transform="translate(-491.31 101.263)" fill="#222e3e"/>
+        <path id="Pfad_218" data-name="Pfad 218" d="M516.067-60.807a14.616,14.616,0,0,1-7.08-1.8,14.556,14.556,0,0,1-5.582-19.814A14.556,14.556,0,0,1,523.219-88a14.556,14.556,0,0,1,7.44,12.7,14.4,14.4,0,0,1-7.584,12.7h0A14.856,14.856,0,0,1,516.067-60.807Zm0-26.628a12.1,12.1,0,0,0-12.33,11.858,12.1,12.1,0,0,0,6.33,10.87,12.4,12.4,0,0,0,11.82,0,12.1,12.1,0,0,0,4.864-16.4A12.1,12.1,0,0,0,516.067-87.435Z" transform="translate(-486.067 91.707)" fill="#222e3e"/>
+      </g>
+    </g>
+    <g id="Resource_-_General_-_Mobile_Client" data-name="Resource - General - Mobile Client" transform="translate(113 210)" clip-path="url(#clip-path)">
+      <g id="Resource_-_General_-_Mobile_client-2" data-name="Resource - General - Mobile client" clip-path="url(#clip-path-4)">
+        <path id="Pfad_143" data-name="Pfad 143" d="M756.747-146.49H738.891c-3.6,0-5.8-1.836-5.8-4.8v-45.744a5.832,5.832,0,0,1,5.8-5.856h17.856a5.832,5.832,0,0,1,5.8,5.856v4.344h-2.4v-4.344a3.432,3.432,0,0,0-3.4-3.456H738.891a3.432,3.432,0,0,0-3.4,3.456v45.756c0,1.584,1.2,2.4,3.4,2.4h17.856c2.256,0,3.4-.8,3.4-2.4v-2.82h2.4v2.82C762.483-148.29,760.263-146.49,756.747-146.49Z" transform="translate(-718.347 204.69)" fill="#222e3e"/>
+        <path id="Pfad_144" data-name="Pfad 144" d="M741.457-197.715h6.756v-2.4h-6.756Z" transform="translate(-713.149 206.415)" fill="#222e3e"/>
+        <path id="Pfad_145" data-name="Pfad 145" d="M739.473-196.516a2.04,2.04,0,0,1-2.064-2.016,2.04,2.04,0,0,1,2.016-2.064,2.04,2.04,0,0,1,2.064,2.016c0,.008,0,.016,0,.024a2.028,2.028,0,0,1-2.016,2.04Zm0-2.4a.36.36,0,0,0-.322.394.36.36,0,0,0,.394.322.36.36,0,0,0,.324-.356.372.372,0,0,0-.383-.361Z" transform="translate(-715.665 206.116)" fill="#222e3e"/>
+        <path id="Pfad_146" data-name="Pfad 146" d="M762.027-162.384h-2.4V-194.94h-25.8v-2.4h27a1.2,1.2,0,0,1,1.2,1.2Z" transform="translate(-717.891 208.14)" fill="#222e3e"/>
+        <path id="Pfad_147" data-name="Pfad 147" d="M760.827-169.219h-27v-2.4h25.8v-5.556h2.4v6.756A1.2,1.2,0,0,1,760.827-169.219Z" transform="translate(-717.891 220.675)" fill="#222e3e"/>
+      </g>
+    </g>
+    <g id="Arrow_-_Size_4" data-name="Arrow - Size 4" transform="translate(168 240)">
+      <path id="Pfad_93" data-name="Pfad 93" d="M.5-6H114.941v1H.5ZM111.269-9.376,115.7-5.5l-4.43,3.876a.5.5,0,0,1-.706-.047.5.5,0,0,1,.047-.706l4-3.5v.753l-4-3.5a.5.5,0,0,1-.047-.706A.5.5,0,0,1,111.269-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Arrow_-_Size_4-2" data-name="Arrow - Size 4" transform="translate(388.59 410.192)">
+      <path id="Pfad_93-2" data-name="Pfad 93" d="M.5-6H108.189v1H.5ZM104.734-9.376,108.9-5.5l-4.169,3.876a.451.451,0,0,1-.664-.047.522.522,0,0,1,.044-.706l3.764-3.5v.753l-3.764-3.5a.522.522,0,0,1-.044-.706A.451.451,0,0,1,104.734-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Arrow_-_Size_4-3" data-name="Arrow - Size 4" transform="translate(388.59 240.192)">
+      <path id="Pfad_93-3" data-name="Pfad 93" d="M.5-6H108.189v1H.5ZM104.734-9.376,108.9-5.5l-4.169,3.876a.451.451,0,0,1-.664-.047.522.522,0,0,1,.044-.706l3.764-3.5v.753l-3.764-3.5a.522.522,0,0,1-.044-.706A.451.451,0,0,1,104.734-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Arrow_-_Size_4-4" data-name="Arrow - Size 4" transform="translate(599.59 236.192)">
+      <path id="Pfad_93-4" data-name="Pfad 93" d="M.5-6H108.189v1H.5ZM104.734-9.376,108.9-5.5l-4.169,3.876a.451.451,0,0,1-.664-.047.522.522,0,0,1,.044-.706l3.764-3.5v.753l-3.764-3.5a.522.522,0,0,1-.044-.706A.451.451,0,0,1,104.734-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Arrow_-_Size_4-5" data-name="Arrow - Size 4" transform="translate(752.792 290.592) rotate(90)">
+      <path id="Pfad_93-5" data-name="Pfad 93" d="M.5-6H69.246v1H.5ZM67.04-9.376,69.7-5.5,67.04-1.624c-.125.182-.315.161-.424-.047a.751.751,0,0,1,.028-.706l2.4-3.5v.753l-2.4-3.5a.751.751,0,0,1-.028-.706C66.725-9.537,66.915-9.558,67.04-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Arrow_-_Size_4-6" data-name="Arrow - Size 4" transform="translate(703.993 418.192) rotate(180)">
+      <path id="Pfad_93-6" data-name="Pfad 93" d="M.5-6H108.189v1H.5ZM104.734-9.376,108.9-5.5l-4.169,3.876a.451.451,0,0,1-.664-.047.522.522,0,0,1,.044-.706l3.764-3.5v.753l-3.764-3.5a.522.522,0,0,1-.044-.706A.451.451,0,0,1,104.734-9.376Z" transform="translate(-0.5 9.5)" fill="#0f151c"/>
+    </g>
+    <g id="Product_-_Mobile_-_API_Gateway" data-name="Product - Mobile - API Gateway" transform="translate(295 203)" clip-path="url(#clip-path-5)">
+      <g id="Gruppe_3342" data-name="Gruppe 3342" transform="translate(-91 4165)" clip-path="url(#clip-path-6)">
+        <path id="Pfad_5834" data-name="Pfad 5834" d="M162-4110.5h12v-16H162Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3412" data-name="Gruppe 3412" transform="translate(-55 3775)" clip-path="url(#clip-path-7)">
+        <g id="Gruppe_3410" data-name="Gruppe 3410" opacity="0">
+          <g id="Gruppe_3409" data-name="Gruppe 3409" transform="translate(55 -3775)">
+            <path id="Pfad_5919" data-name="Pfad 5919" d="M-52-5819H1754V3772H-52Z" fill="url(#linear-gradient)"/>
+          </g>
+        </g>
+        <g id="Gruppe_3411" data-name="Gruppe 3411" transform="translate(55 -3775)">
+          <path id="Pfad_5920" data-name="Pfad 5920" d="M-52-5819H1754V3772H-52Z" fill="url(#linear-gradient-2)"/>
+        </g>
+      </g>
+      <g id="Gruppe_3413" data-name="Gruppe 3413" transform="translate(-55 3775)" clip-path="url(#clip-path-8)">
+        <path id="Pfad_5922" data-name="Pfad 5922" d="M97.5-3708.488h25.041v-58.022H97.5Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3414" data-name="Gruppe 3414" transform="translate(-55 3775)" clip-path="url(#clip-path-9)">
+        <path id="Pfad_5924" data-name="Pfad 5924" d="M62.5-3708.489H87.53v-58.021H62.5Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3415" data-name="Gruppe 3415" transform="translate(-55 3775)" clip-path="url(#clip-path-10)">
+        <path id="Pfad_5926" data-name="Pfad 5926" d="M76.5-3742.5h31v-12h-31Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3416" data-name="Gruppe 3416" transform="translate(-55 3775)" clip-path="url(#clip-path-11)">
+        <path id="Pfad_5928" data-name="Pfad 5928" d="M76.5-3720.5h31v-12h-31Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3417" data-name="Gruppe 3417" transform="translate(-55 3775)" clip-path="url(#clip-path-12)">
+        <path id="Pfad_5930" data-name="Pfad 5930" d="M79-3729.06H94.4V-3747H79Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3418" data-name="Gruppe 3418" transform="translate(-55 3775)" clip-path="url(#clip-path-13)">
+        <path id="Pfad_5932" data-name="Pfad 5932" d="M90.59-3729.06H106V-3747H90.59Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3419" data-name="Gruppe 3419" transform="translate(-55 3775)" clip-path="url(#clip-path-14)">
+        <path id="Pfad_5934" data-name="Pfad 5934" d="M83.221-3728.816l7.178-21.23,11.368,3.844-7.178,21.229Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Product_-_Network_Content_Delivery_-_Route_53" data-name="Product - Network &amp; Content Delivery - Route 53" transform="translate(297 377)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_3546" data-name="Gruppe 3546" transform="translate(-242 3446)" clip-path="url(#clip-path-16)">
+        <g id="Gruppe_3544" data-name="Gruppe 3544" opacity="0">
+          <g id="Gruppe_3543" data-name="Gruppe 3543" transform="translate(242 -3446)">
+            <path id="Pfad_6138" data-name="Pfad 6138" d="M-239-6148H1567V3443H-239Z" fill="url(#linear-gradient-3)"/>
+          </g>
+        </g>
+        <g id="Gruppe_3545" data-name="Gruppe 3545" transform="translate(242 -3446)">
+          <path id="Pfad_6139" data-name="Pfad 6139" d="M-239-6148H1567V3443H-239Z" fill="url(#linear-gradient-4)"/>
+        </g>
+      </g>
+      <g id="Gruppe_3547" data-name="Gruppe 3547" transform="translate(-242 3446)" clip-path="url(#clip-path-17)">
+        <path id="Pfad_6141" data-name="Pfad 6141" d="M264.21-3395.574h19.266v-24.6H264.21Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3548" data-name="Gruppe 3548" transform="translate(-242 3446)" clip-path="url(#clip-path-18)">
+        <path id="Pfad_6143" data-name="Pfad 6143" d="M276.26-3395.573h19.226v-24.617H276.26Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3549" data-name="Gruppe 3549" transform="translate(-242 3446)" clip-path="url(#clip-path-19)">
+        <path id="Pfad_6145" data-name="Pfad 6145" d="M254.52-3384.5h49.97v-47.005H254.52Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_3550" data-name="Gruppe 3550" transform="translate(-242 3446)" clip-path="url(#clip-path-20)">
+        <path id="Pfad_6147" data-name="Pfad 6147" d="M249.49-3378.5h59.96v-59.969H249.49Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Product_-_Storage_-_S3" data-name="Product - Storage - S3" transform="translate(509 377)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_4268" data-name="Gruppe 4268" transform="translate(-603 276)" clip-path="url(#clip-path-22)">
+        <g id="Gruppe_4266" data-name="Gruppe 4266" opacity="0">
+          <g id="Gruppe_4265" data-name="Gruppe 4265" transform="translate(603 -276)">
+            <path id="Pfad_7346" data-name="Pfad 7346" d="M-600-9318H1206V273H-600Z" fill="url(#linear-gradient-5)"/>
+          </g>
+        </g>
+        <g id="Gruppe_4267" data-name="Gruppe 4267" transform="translate(603 -276)">
+          <path id="Pfad_7347" data-name="Pfad 7347" d="M-600-9318H1206V273H-600Z" fill="url(#linear-gradient-6)"/>
+        </g>
+      </g>
+      <g id="Gruppe_4269" data-name="Gruppe 4269" transform="translate(-603 276)" clip-path="url(#clip-path-23)">
+        <path id="Pfad_7349" data-name="Pfad 7349" d="M611.56-208.451h57.918V-268.48H611.56Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Product_-_Compute_-_Lambda" data-name="Product - Compute - Lambda" transform="translate(711 377)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_900" data-name="Gruppe 900" transform="translate(-871 9456)" clip-path="url(#clip-path-25)">
+        <g id="Gruppe_898" data-name="Gruppe 898" opacity="0">
+          <g id="Gruppe_897" data-name="Gruppe 897" transform="translate(871 -9456)">
+            <path id="Pfad_1511" data-name="Pfad 1511" d="M-868-138H938V9453H-868Z" fill="url(#linear-gradient-7)"/>
+          </g>
+        </g>
+        <g id="Gruppe_899" data-name="Gruppe 899" transform="translate(871 -9456)">
+          <path id="Pfad_1512" data-name="Pfad 1512" d="M-868-138H938V9453H-868Z" fill="url(#linear-gradient-8)"/>
+        </g>
+      </g>
+      <g id="Gruppe_901" data-name="Gruppe 901" transform="translate(-871 9456)" clip-path="url(#clip-path-26)">
+        <path id="Pfad_1514" data-name="Pfad 1514" d="M887.49-9388.5H937.5v-60H887.49Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_902" data-name="Gruppe 902" transform="translate(-871 9456)" clip-path="url(#clip-path-27)">
+        <path id="Pfad_1516" data-name="Pfad 1516" d="M879.47-9388.5h32.12v-40.45H879.47Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Product_-_Compute_-_Lambda-2" data-name="Product - Compute - Lambda" transform="translate(509 203)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_900-2" data-name="Gruppe 900" transform="translate(-871 9456)" clip-path="url(#clip-path-25)">
+        <g id="Gruppe_898-2" data-name="Gruppe 898" opacity="0">
+          <g id="Gruppe_897-2" data-name="Gruppe 897" transform="translate(871 -9456)">
+            <path id="Pfad_1511-2" data-name="Pfad 1511" d="M-868-138H938V9453H-868Z" fill="url(#linear-gradient-7)"/>
+          </g>
+        </g>
+        <g id="Gruppe_899-2" data-name="Gruppe 899" transform="translate(871 -9456)">
+          <path id="Pfad_1512-2" data-name="Pfad 1512" d="M-868-138H938V9453H-868Z" fill="url(#linear-gradient-8)"/>
+        </g>
+      </g>
+      <g id="Gruppe_901-2" data-name="Gruppe 901" transform="translate(-871 9456)" clip-path="url(#clip-path-26)">
+        <path id="Pfad_1514-2" data-name="Pfad 1514" d="M887.49-9388.5H937.5v-60H887.49Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_902-2" data-name="Gruppe 902" transform="translate(-871 9456)" clip-path="url(#clip-path-27)">
+        <path id="Pfad_1516-2" data-name="Pfad 1516" d="M879.47-9388.5h32.12v-40.45H879.47Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Product_-_Database_-_DynamoDB" data-name="Product - Database - DynamoDB" transform="translate(711 203)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_1710" data-name="Gruppe 1710" transform="translate(-203 8240)" clip-path="url(#clip-path-33)">
+        <g id="Gruppe_1708" data-name="Gruppe 1708" opacity="0">
+          <g id="Gruppe_1707" data-name="Gruppe 1707" transform="translate(203 -8240)">
+            <path id="Pfad_3053" data-name="Pfad 3053" d="M-200-1354H1606V8237H-200Z" fill="url(#linear-gradient-11)"/>
+          </g>
+        </g>
+        <g id="Gruppe_1709" data-name="Gruppe 1709" transform="translate(203 -8240)">
+          <path id="Pfad_3054" data-name="Pfad 3054" d="M-200-1354H1606V8237H-200Z" fill="url(#linear-gradient-12)"/>
+        </g>
+      </g>
+      <g id="Gruppe_1711" data-name="Gruppe 1711" transform="translate(-203 8240)" clip-path="url(#clip-path-34)">
+        <path id="Pfad_3056" data-name="Pfad 3056" d="M214.246-8172.58h44.012v-59.96H214.246Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_1712" data-name="Gruppe 1712" transform="translate(-203 8240)" clip-path="url(#clip-path-35)">
+        <path id="Pfad_3058" data-name="Pfad 3058" d="M218-8206.23h12.5v-12.5H218Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_1713" data-name="Gruppe 1713" transform="translate(-203 8240)" clip-path="url(#clip-path-36)">
+        <path id="Pfad_3060" data-name="Pfad 3060" d="M218-8192.23h12.5v-12.5H218Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_1714" data-name="Gruppe 1714" transform="translate(-203 8240)" clip-path="url(#clip-path-37)">
+        <path id="Pfad_3062" data-name="Pfad 3062" d="M218-8178.23h12.5v-12.5H218Z" fill="#fff"/>
+      </g>
+      <g id="Gruppe_1715" data-name="Gruppe 1715" transform="translate(-203 8240)" clip-path="url(#clip-path-38)">
+        <path id="Pfad_3064" data-name="Pfad 3064" d="M231.737-8183.52H266.8v-44.032H231.737Z" fill="#fff"/>
+      </g>
+    </g>
+    <text id="Vote_Using_App" data-name="Vote Using
+ App" transform="translate(226 216)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-33.838" y="0">Vote Using</tspan><tspan x="-14.784" y="16" xml:space="preserve"> App</tspan></text>
+    <text id="User_Using_Mobile_" data-name="User Using 
+Mobile
+" transform="translate(75 180)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-36.554" y="0">User Using </tspan><tspan x="-21.133" y="16">Mobile</tspan><tspan x="0" y="32"></tspan></text>
+    <text id="Route_Request_To_Lambda_Function" data-name="Route Request To
+ Lambda Function" transform="translate(442 216)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-55.881" y="0">Route Request To</tspan><tspan x="-56.805" y="16" xml:space="preserve"> Lambda Function</tspan></text>
+    <text id="Extract_Vote_Write_Record" data-name="Extract Vote 
+Write Record" transform="translate(651 216)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-39.928" y="0">Extract Vote </tspan><tspan x="-40.838" y="16">Write Record</tspan></text>
+    <text id="Triggers" transform="translate(793 338)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-24.885" y="0">Triggers</tspan></text>
+    <text id="Tallies_Vote_Generates_Static_HTML" data-name="Tallies Vote 
+Generates Static 
+HTML" transform="translate(651 373)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-36.687" y="0">Tallies Vote </tspan><tspan x="-54.187" y="16">Generates Static </tspan><tspan x="-19.061" y="32">HTML</tspan></text>
+    <text id="Serves_Content_From_Bucket" data-name="Serves Content 
+From Bucket" transform="translate(437 380)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-50.302" y="0">Serves Content </tspan><tspan x="-40.201" y="16">From Bucket</tspan></text>
+    <text id="API_Gateway" data-name="API 
+Gateway" transform="translate(334 172)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-12.831" y="0">API </tspan><tspan x="-27.601" y="16">Gateway</tspan></text>
+    <text id="Lambda" transform="translate(547 180)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-25.683" y="0">Lambda</tspan></text>
+    <text id="Lambda-2" data-name="Lambda" transform="translate(824 412)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-25.683" y="0">Lambda</tspan></text>
+    <text id="DynamoDb" transform="translate(749 180)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-35.147" y="0">DynamoDb</tspan></text>
+    <text id="S3_Bucket" data-name="S3 Bucket" transform="translate(552 357)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-32.417" y="0">S3 Bucket</tspan></text>
+    <text id="Route_53" data-name="Route 53" transform="translate(335 357)" fill="#ed8109" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-28.399" y="0">Route 53</tspan></text>
+    <text id="Visits_The_Results_Page" data-name="Visits The
+Results Page" transform="translate(214 381)" fill="#141b22" font-size="14" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-30.079" y="0">Visits The</tspan><tspan x="-41.223" y="16">Results Page</tspan></text>
+    <g id="Arrow-_Down_-_Right" data-name="Arrow- Down - Right" transform="translate(143 278)">
+      <path id="Pfad_93-7" data-name="Pfad 93" d="M114.941-6v0Zm-3.672-3.376L115.7-5.5l-4.43,3.876a.5.5,0,0,1-.706-.047.5.5,0,0,1,.047-.706l4-3.5v.753l-4-3.5a.5.5,0,0,1-.047-.706A.5.5,0,0,1,111.269-9.376Z" transform="translate(24.5 153.391)" fill="#0f151c"/>
+      <path id="Pfad_9881" data-name="Pfad 9881" d="M296.375,2500.78v147.764H435.217" transform="translate(-295.875 -2500.78)" fill="none" stroke="#0f151c" stroke-width="1"/>
+    </g>
+    <g id="Product_-_Storage_-_S3-2" data-name="Product - Storage - S3" transform="translate(298 469)" clip-path="url(#clip-path-15)">
+      <g id="Gruppe_4268-2" data-name="Gruppe 4268" transform="translate(-603 276)" clip-path="url(#clip-path-22)">
+        <g id="Gruppe_4266-2" data-name="Gruppe 4266" opacity="0">
+          <g id="Gruppe_4265-2" data-name="Gruppe 4265" transform="translate(603 -276)">
+            <path id="Pfad_7346-2" data-name="Pfad 7346" d="M-600-9318H1206V273H-600Z" fill="url(#linear-gradient-5)"/>
+          </g>
+        </g>
+        <g id="Gruppe_4267-2" data-name="Gruppe 4267" transform="translate(603 -276)">
+          <path id="Pfad_7347-2" data-name="Pfad 7347" d="M-600-9318H1206V273H-600Z" fill="url(#linear-gradient-6)"/>
+        </g>
+      </g>
+      <g id="Gruppe_4269-2" data-name="Gruppe 4269" transform="translate(-603 276)" clip-path="url(#clip-path-23)">
+        <path id="Pfad_7349-2" data-name="Pfad 7349" d="M611.56-208.451h57.918V-268.48H611.56Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

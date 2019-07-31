@@ -23,6 +23,7 @@ interface IContainer {
   transparent?: boolean
   pt?: number | string
   id?: string
+  p?: string
 }
 const Container = (props: IContainer) => {
   const {
@@ -39,12 +40,13 @@ const Container = (props: IContainer) => {
     height,
     pt,
     style,
+    p,
   } = props
   const {windowWidth} = useWindowSize()
   const marginDesktop = '0px 0px 0px 0px'
   const marginMobile = '0px 0px 0px 0px'
   const margin = [marginMobile, marginDesktop]
-  const padding = ['0px 10px 0px 10px', '40px 15px 40px 15px']
+  const padding = p ? ['0px 10px 0px 10px', p] : ['0px 10px 0px 10px', '40px 15px 40px 15px']
   const _height = windowWidth > 768 ? (height ? height[1] : 'auto') : height ? height[0] : 'auto'
   const ContainerStyle = {
     maxWidth: fullscreen ? '100%' : '1200px',

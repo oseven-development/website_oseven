@@ -40,6 +40,7 @@ interface IContent {
   textAlign?: 'center'
   imageDirection?: 'row' | 'column'
   divider?: boolean
+  textVariant?: string
 }
 
 const Content = (props: IContent) => {
@@ -58,6 +59,7 @@ const Content = (props: IContent) => {
     titleAlign,
     subtitleAlign,
     textAlign,
+    textVariant,
   } = props
   const {windowWidth} = useWindowSize()
 
@@ -91,7 +93,7 @@ const Content = (props: IContent) => {
           <React.Fragment>
             <Flex
               flexDirection={imageDirection ? imageDirection : 'column'}
-              justifyContent={'space-evenly'}
+              justifyContent={windowWidth > 768 ? 'space-between' : 'space-evenly'}
               alignItems={'center'}
               flexWrap={'wrap'}
               style={{width: '100%', height: '100%'}}>
@@ -122,7 +124,7 @@ const Content = (props: IContent) => {
       {text ? (
         <React.Fragment>
           <Typography
-            variant="p"
+            variant={textVariant ? textVariant : 'p'}
             color={textColor ? textColor : 'default'}
             style={{padding: textPadding && windowWidth > 768 ? textPadding : 0}}
             textAlign={textAlign}>

@@ -12,6 +12,7 @@ import Parallax from './image/parallax'
 import Navigation from './navigation'
 import Footer from './uniqueComponents/footer'
 import ContactButton from './uniqueComponents/ContactButton'
+import List from './uniqueComponents/List'
 import Project from './uniqueComponents/Project'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
@@ -31,4 +32,5 @@ export {
   Footer,
   ContactButton,
   Project,
+  List,
 }

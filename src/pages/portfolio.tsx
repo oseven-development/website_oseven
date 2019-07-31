@@ -2,7 +2,9 @@
 
 import React from 'react'
 import {graphql, Link} from 'gatsby'
+// content
 import SiteContent from '../assets/content/portfolio.json'
+// illustrations
 import PortfolioSvg from '../assets/images/illustrations/portfolio.svg'
 import Entwicklung from '../assets/images/illustrations/entwicklung.svg'
 import Consultant from '../assets/images/illustrations/consultant.svg'
@@ -10,15 +12,20 @@ import Workshop from '../assets/images/illustrations/workshop.svg'
 import AI from '../assets/images/illustrations/ai.svg'
 import Blocks from '../assets/images/illustrations/blocks.svg'
 import Scale from '../assets/images/illustrations/scale.svg'
+import Pros from '../assets/images/illustrations/pros.svg'
+// partners
 import GCP from '../assets/images/partner/gcp.svg'
 import AWS from '../assets/images/partner/aws.svg'
 import Azure from '../assets/images/partner/azure.svg'
 import Firebase from '../assets/images/partner/firebase.svg'
+// tools
 import py from '../assets/images/tools/pytorch.svg'
 import tf from '../assets/images/tools/tf.svg'
 import k8 from '../assets/images/tools/k8.svg'
+// architecture
+import serverless from '../assets/images/architecture/serverless-architektur.svg'
 // Components
-import {Seo, Container, Content, SvgImage, Parallax, ContactButton} from '../components'
+import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List} from '../components'
 import {Flex} from 'rebass'
 // Bilder Backgrounds
 const lang = 'de'
@@ -91,8 +98,25 @@ export default props => (
         }}
       />
     </Container>
+    <Container ratio={12}>
+      <Content text={SiteContent.sw[lang].text[0]} />
+    </Container>
     <Container>
-      <Content text={SiteContent.sw[lang].text} />
+      <Content
+        text={'Architektur einer Serverless Anwendung bei AWS.'}
+        image={{
+          src: <SvgImage dWidth={750} src={serverless} />,
+          type: 'svg',
+        }}
+      />
+      <Content
+        text={
+          <React.Fragment>
+            {SiteContent.sw[lang].text[1]} <br />
+            {SiteContent.sw[lang].text[2]}
+          </React.Fragment>
+        }
+      />
     </Container>
 
     {/* //! Key Partners */}
@@ -124,8 +148,18 @@ export default props => (
     </Container>
     {/* //! pro Software Entwicklung */}
     <Container>
-      <Content subtitleAlign={'center'} subtitle={SiteContent.pro[lang].subtitle} />
+      <Content subtitle={SiteContent.pro[lang].subtitle} text={SiteContent.pro[lang].text} />
     </Container>
+    <Container ratio={12}>
+      <Content
+        image={{
+          src: <SvgImage dWidth={250} src={Pros} />,
+          type: 'svg',
+        }}
+      />
+      <Content textVariant="nichts" text={<List items={SiteContent.pro[lang].arguments} />} />
+    </Container>
+    {/* { // ! Parllax } */}
     <Container fullscreen>
       <Parallax src={props.data.domore.childImageSharp.fluid} />
     </Container>

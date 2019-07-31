@@ -31,7 +31,7 @@ const StyledButton = styled.div`
   margin: 15px 0px;
   text-align: center;
   border: ${(props: any) => (props.border ? `2px solid ${theme.colors[props.textColor]}` : 'none')};
-  border-radius: ${(props: any) => (props.border ? '20px' : 'none')};
+  border-radius: ${(props: any) => (props.border ? '30px' : 'none')};
   width: ${(props: any) => (props.width ? props.width : '100%')};
   background: ${(props: any) => (props.bg ? theme.colors[props.bg] : 'transparent')};
   transition: 0.4s;
