@@ -39,6 +39,7 @@ export default props => (
             />
           </React.Fragment>
         }
+        textVariant={'div'}
       />
 
       <Content

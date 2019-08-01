@@ -40,7 +40,8 @@ interface IContent {
   textAlign?: 'center'
   imageDirection?: 'row' | 'column'
   divider?: boolean
-  textVariant?: string
+  textVariant?: 'h1' | 'h2' | 'h3' | 'title' | 'p' | 'div'
+  column?: boolean
 }
 
 const Content = (props: IContent) => {
@@ -60,9 +61,9 @@ const Content = (props: IContent) => {
     subtitleAlign,
     textAlign,
     textVariant,
+    column,
   } = props
   const {windowWidth} = useWindowSize()
-
   return (
     <React.Fragment>
       {title || subtitle ? (
@@ -98,7 +99,7 @@ const Content = (props: IContent) => {
               flexWrap={'wrap'}
               style={{width: '100%', height: '100%'}}>
               {image.map((e: any) => (
-                <Box key={e.alt} p={e.padding}>
+                <Box key={Math.random()} p={e.padding}>
                   {e.type === 'svg' ? (
                     <div style={{padding: e.padding ? e.padding : 0, textAlign: 'center'}}>{e.src}</div>
                   ) : (
@@ -127,11 +128,12 @@ const Content = (props: IContent) => {
             variant={textVariant ? textVariant : 'p'}
             color={textColor ? textColor : 'default'}
             style={{padding: textPadding && windowWidth > 768 ? textPadding : 0}}
-            textAlign={textAlign}>
+            textAlign={textAlign}
+            column={column}>
             {Array.isArray(text)
               ? text.map((para: any) => {
                   return (
-                    <React.Fragment>
+                    <React.Fragment key={para}>
                       {para} <br />
                     </React.Fragment>
                   )

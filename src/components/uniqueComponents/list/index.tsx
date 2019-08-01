@@ -16,7 +16,6 @@ interface IListItem {
 
 const List = (props: IList) => {
   const {items} = props
-  console.log(items)
   return (
     <React.Fragment>
       <ul>
@@ -24,9 +23,9 @@ const List = (props: IList) => {
           <StyledLi key={item.text}>
             <Flex justifyContent={'flex-start'} alignItems={'center'}>
               {item.icon ? (
-                <Box px={'8px'}>
+                <Box px={'8px'} style={{flexShrink: 0.5}}>
                   {/* <SvgImage src={item.icon} /> */}
-                  <SvgImage src={Check} dWidth={20} />
+                  <SvgImage src={Check} dWidth={20} mWidth={20} />
                 </Box>
               ) : null}
               <Box>{item.text}</Box>

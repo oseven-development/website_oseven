@@ -84,6 +84,7 @@ export default props => {
         <Container transparent>
           <Content
             title={SiteContent.contact[lang].title}
+            textVariant={'div'}
             text={
               <React.Fragment>
                 {SiteContent.contact[lang].text}

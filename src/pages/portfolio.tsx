@@ -46,10 +46,18 @@ export default props => (
           <React.Fragment>
             {SiteContent.header[lang].text}
             {SiteContent.header[lang].nav.map((link: any) => (
-              <ContactButton text={link.label} link={`#${link.href}`} textColor={'primary'} type={'out'} border />
+              <ContactButton
+                key={Math.random()}
+                text={link.label}
+                link={`#${link.href}`}
+                textColor={'primary'}
+                type={'out'}
+                border
+              />
             ))}
           </React.Fragment>
         }
+        textVariant={'div'}
       />
 
       <Content
@@ -90,7 +98,7 @@ export default props => (
     </Container>
     {/* //! Software Entwicklung */}
     <Container id="sw">
-      <Content title={SiteContent.sw[lang].title} />
+      <Content column title={SiteContent.sw[lang].title} />
       <Content
         image={{
           src: <SvgImage dWidth={250} src={Entwicklung} />,
@@ -103,9 +111,10 @@ export default props => (
     </Container>
     <Container>
       <Content
+        textAlign={'center'}
         text={'Architektur einer Serverless Anwendung bei AWS.'}
         image={{
-          src: <SvgImage dWidth={750} src={serverless} />,
+          src: <SvgImage dWidth={750} mWidth={300} src={serverless} />,
           type: 'svg',
         }}
       />
@@ -157,7 +166,7 @@ export default props => (
           type: 'svg',
         }}
       />
-      <Content textVariant="nichts" text={<List items={SiteContent.pro[lang].arguments} />} />
+      <Content textVariant={'div'} text={<List items={SiteContent.pro[lang].arguments} />} />
     </Container>
     {/* { // ! Parllax } */}
     <Container fullscreen>

@@ -104,7 +104,8 @@ const Container = (props: IContainer) => {
             <Box
               p={fullscreen ? 0 : padding}
               m={fullscreen ? 0 : margin}
-              width={flexDirection === 'column' ? 1 : [1, 1 / children.length]}>
+              width={flexDirection === 'column' ? 1 : [1, 1 / children.length]}
+              key={Math.random()}>
               {child}
             </Box>
           ))
