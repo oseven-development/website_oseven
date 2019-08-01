@@ -23,7 +23,7 @@ const List = (props: IList) => {
           <StyledLi key={item.text}>
             <Flex justifyContent={'flex-start'} alignItems={'center'}>
               {item.icon ? (
-                <Box px={'8px'} style={{flexShrink: 0.5}}>
+                <Box px={'8px'} style={{flexShrink: 0}}>
                   {/* <SvgImage src={item.icon} /> */}
                   <SvgImage src={Check} dWidth={20} mWidth={20} />
                 </Box>

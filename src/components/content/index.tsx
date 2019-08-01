@@ -37,7 +37,7 @@ interface IContent {
   text?: string | JSX.Element | any[]
   textColor?: TColor
   textPadding?: number | string
-  textAlign?: 'center'
+  textAlign?: 'center' | 'left'
   imageDirection?: 'row' | 'column'
   divider?: boolean
   textVariant?: 'h1' | 'h2' | 'h3' | 'title' | 'p' | 'div'

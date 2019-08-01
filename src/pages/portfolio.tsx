@@ -13,6 +13,7 @@ import AI from '../assets/images/illustrations/ai.svg'
 import Blocks from '../assets/images/illustrations/blocks.svg'
 import Scale from '../assets/images/illustrations/scale.svg'
 import Pros from '../assets/images/illustrations/pros.svg'
+import Pros2 from '../assets/images/illustrations/pros2.svg'
 // partners
 import GCP from '../assets/images/partner/gcp.svg'
 import AWS from '../assets/images/partner/aws.svg'
@@ -24,6 +25,7 @@ import tf from '../assets/images/tools/tf.svg'
 import k8 from '../assets/images/tools/k8.svg'
 // architecture
 import serverless from '../assets/images/architecture/serverless-architektur.svg'
+import Model from '../assets/images/architecture/model.svg'
 // Components
 import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List} from '../components'
 import {Flex} from 'rebass'
@@ -98,7 +100,7 @@ export default props => (
     </Container>
     {/* //! Software Entwicklung */}
     <Container id="sw">
-      <Content column title={SiteContent.sw[lang].title} />
+      <Content title={SiteContent.sw[lang].title} />
       <Content
         image={{
           src: <SvgImage dWidth={250} src={Entwicklung} />,
@@ -107,7 +109,15 @@ export default props => (
       />
     </Container>
     <Container ratio={12}>
-      <Content text={SiteContent.sw[lang].text[0]} />
+      <Content
+        column
+        text={
+          <React.Fragment>
+            {SiteContent.sw[lang].text[0]}
+            <br /> {SiteContent.sw[lang].text[3]}
+          </React.Fragment>
+        }
+      />
     </Container>
     <Container>
       <Content
@@ -166,11 +176,11 @@ export default props => (
           type: 'svg',
         }}
       />
-      <Content textVariant={'div'} text={<List items={SiteContent.pro[lang].arguments} />} />
+      <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.pro[lang].arguments} />} />
     </Container>
     {/* { // ! Parllax } */}
     <Container fullscreen>
-      <Parallax src={props.data.domore.childImageSharp.fluid} />
+      <Parallax src={props.data.punch.childImageSharp.fluid} />
     </Container>
     {/* //! ML & AI */}
     <Container id="ml">
@@ -183,7 +193,18 @@ export default props => (
       />
     </Container>
     <Container>
-      <Content text={SiteContent.ml[lang].text} />
+      <Content column text={SiteContent.ml[lang].text} />
+    </Container>
+    <Container alignItems={'flex-start'}>
+      <Content
+        textAlign={'center'}
+        text={'Machine learning lifecycle by Google'}
+        image={{
+          src: <SvgImage dWidth={750} mWidth={300} src={Model} />,
+          type: 'svg',
+        }}
+      />
+      <Content text={SiteContent.ml[lang].text2} />
     </Container>
     {/* //! Tools */}
     <Container fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
@@ -208,42 +229,48 @@ export default props => (
         />
       </Container>
     </Container>
-    {/* //! pro ML  */}
-    <Container>
-      <Content subtitleAlign={'center'} subtitle={SiteContent.mlpro[lang].subtitle} />
-    </Container>
-    {/* //! Parllax 2  */}
-    <Container fullscreen>
-      <Parallax src={props.data.domore.childImageSharp.fluid} />
-    </Container>
-    {/* //! Beratung 2  */}
-    <Container id="bw">
-      <Content title={SiteContent.consulting[lang].title} />
-    </Container>
 
-    <Container>
-      <Content text={SiteContent.consulting[lang].text} />
-      <Content
-        image={{
-          src: <SvgImage dWidth={250} src={Consultant} />,
-          type: 'svg',
-        }}
-      />
-    </Container>
-    {/* //! Workshop 2  */}
+    {/* //! Beratung 2  */}
     <Container fullscreen bg={'secondary'} flexDirection={'column'}>
+      <Container transparent id="bw">
+        <Content titleColor={'inherit'} title={SiteContent.consulting[lang].title} />
+      </Container>
+
       <Container transparent>
-        <Content titleColor={'inherit'} title={SiteContent.workshops[lang].title} />
+        <Content textColor={'inherit'} text={SiteContent.consulting[lang].text} />
         <Content
           image={{
-            src: <SvgImage dWidth={250} src={Workshop} />,
+            src: <SvgImage dWidth={250} src={Consultant} />,
             type: 'svg',
           }}
         />
       </Container>
-      <Container transparent>
-        <Content textColor={'inherit'} text={SiteContent.workshops[lang].subtitle} />
-      </Container>
+    </Container>
+    {/* //! Parllax 2  */}
+    <Container fullscreen>
+      <Parallax src={props.data.projects.childImageSharp.fluid} />
+    </Container>
+    {/* //! Workshop 2  */}
+    <Container>
+      <Content title={SiteContent.workshops[lang].title} />
+      <Content
+        image={{
+          src: <SvgImage dWidth={250} src={Workshop} />,
+          type: 'svg',
+        }}
+      />
+    </Container>
+    <Container transparent>
+      <Content text={SiteContent.workshops[lang].text} />
+    </Container>
+    <Container ratio={12} transparent>
+      <Content
+        image={{
+          src: <SvgImage dWidth={650} src={Pros2} />,
+          type: 'svg',
+        }}
+      />
+      <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.workshops[lang].arguments} />} />
     </Container>
   </React.Fragment>
 )
@@ -252,6 +279,20 @@ export default props => (
 export const indexQuery = graphql`
   query {
     domore: file(relativePath: {eq: "parallax/domore.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    punch: file(relativePath: {eq: "parallax/punch.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    projects: file(relativePath: {eq: "parallax/projects.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid

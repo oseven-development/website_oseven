@@ -69,12 +69,12 @@ export default createGlobalStyle`
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('20px', '50px')}};
-    h3{  
+  h3{  
     margin: 10px 0px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('16px', '28px')}};
-  p{
+  p, .p{
       font-size: ${buildString('14px', '22px')};
       line-height: 1.6em;
       font-family: "Roboto", sans-serif;

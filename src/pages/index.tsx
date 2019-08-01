@@ -77,7 +77,7 @@ export default props => {
       </Container>
       <Container fullscreen bg={'secondary'}>
         <Container transparent>
-          <Content textColor="inherit" text={SiteContent.team[lang].text} />
+          <Content textColor="inherit" column text={SiteContent.team[lang].text} />
         </Container>
       </Container>
       <Container fullscreen>

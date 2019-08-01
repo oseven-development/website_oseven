@@ -32,7 +32,9 @@ const Typography = (props: ITypography) => {
       ) : variant === 'p' ? (
         <p style={style}>{children}</p>
       ) : (
-        <div style={style}>{children}</div>
+        <div className={'p'} style={style}>
+          {children}
+        </div>
       )}
     </StyledTypograhpy>
   )
@@ -43,11 +45,11 @@ const StyledTypograhpy = styled.div`
   color: ${({color}) => (color ? theme.colors[color] : theme.colors.textColor)};
   margin: ${({margin}: any) => (margin ? margin : '5px 0px 10px 0px')};
   text-align: ${({textAlign}: any) => (textAlign ? textAlign : 'left')};
-  p {
+  p,.p {
     text-align: ${({textAlign}: any) => (textAlign ? textAlign : 'justify')};
     column-count:${({column}: any) => (column ? 2 : 1)}; ;
-
   }
+
 `
 
 export default Typography

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="964" height="587" viewBox="0 0 964 587">
+  <g id="Gruppe_1" data-name="Gruppe 1" transform="translate(-22 -31)">
+    <rect id="Rechteck_1" data-name="Rechteck 1" width="957" height="60" transform="translate(29 31)" fill="#d87373"/>
+    <rect id="Rechteck_2" data-name="Rechteck 2" width="259" height="60" transform="translate(29 113)" fill="#9ca7fd"/>
+    <rect id="Rechteck_3" data-name="Rechteck 3" width="259" height="60" transform="translate(29 195)" fill="#9ca7fd"/>
+    <rect id="Rechteck_4" data-name="Rechteck 4" width="259" height="60" transform="translate(29 277)" fill="#9ca7fd"/>
+    <rect id="Rechteck_5" data-name="Rechteck 5" width="259" height="60" rx="25" transform="translate(364 195)" fill="#ffd1a3"/>
+    <rect id="Rechteck_6" data-name="Rechteck 6" width="259" height="60" rx="25" transform="translate(360 277)" fill="#ffd1a3"/>
+    <rect id="Rechteck_7" data-name="Rechteck 7" width="259" height="60" rx="25" transform="translate(727 195)" fill="#ffd1a3"/>
+    <rect id="Rechteck_8" data-name="Rechteck 8" width="259" height="60" rx="25" transform="translate(727 277)" fill="#ffd1a3"/>
+    <rect id="Rechteck_9" data-name="Rechteck 9" width="259" height="60" transform="translate(225 388)" fill="#9ca7fd"/>
+    <rect id="Rechteck_10" data-name="Rechteck 10" width="259" height="60" transform="translate(225 470)" fill="#9ca7fd"/>
+    <rect id="Rechteck_11" data-name="Rechteck 11" width="957" height="60" transform="translate(22 558)" fill="#d87373"/>
+    <text id="Planung" transform="translate(457 72)" font-size="28" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Planung</tspan></text>
+    <text id="Datensammlung" transform="translate(93 150)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Datensammlung</tspan></text>
+    <text id="Daten_Analyse" data-name="Daten Analyse" transform="translate(101 232)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Daten Analyse</tspan></text>
+    <text id="Transformation" transform="translate(97 314)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Transformation</tspan></text>
+    <text id="Model" transform="translate(469 233)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Model</tspan></text>
+    <text id="Feature_Entwicklung" data-name="Feature Entwicklung" transform="translate(419 314)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Feature Entwicklung</tspan></text>
+    <text id="Model-Bereitstellung" transform="translate(774 232)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Model-Bereitstellung</tspan></text>
+    <text id="Kontinuierlich_Verbesserung" data-name="Kontinuierlich Verbesserung" transform="translate(745 314)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Kontinuierlich Verbesserung</tspan></text>
+    <text id="Daten_Management" data-name="Daten Management" transform="translate(276 425)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Daten Management</tspan></text>
+    <text id="Daten-Bereitstellung" transform="translate(274 507)" font-size="18" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Daten-Bereitstellung</tspan></text>
+    <text id="Qualitätssicherung" transform="translate(383 598)" font-size="28" font-family="Roboto-Regular, Roboto"><tspan x="0" y="0">Qualitätssicherung</tspan></text>
+    <g id="surface126457" transform="translate(126 393)">
+      <path id="Pfad_1" data-name="Pfad 1" d="M53.743,35.63a3.263,3.263,0,0,0-4.615,4.615l12.34,12.34H17.054a6.531,6.531,0,0,1-6.527-6.527V5.264A3.264,3.264,0,0,0,4,5.264V46.058A13.071,13.071,0,0,0,17.054,59.112H61.545L49.128,71.528a3.263,3.263,0,1,0,4.615,4.615L74,55.886Zm0,0"/>
+    </g>
+    <g id="surface126530" transform="translate(643 242.07)">
+      <path id="Pfad_2" data-name="Pfad 2" d="M33.437,4.93l-4.15,4.15L41.932,21.726H3V27.26H41.932L29.286,39.906l4.15,4.15L53,24.493Zm0,0" transform="translate(0 0)"/>
+    </g>
+    <g id="surface126457-2" data-name="surface126457" transform="translate(498.45 457.55) rotate(-90)">
+      <path id="Pfad_1-2" data-name="Pfad 1" d="M53.743,35.63a3.263,3.263,0,0,0-4.615,4.615l12.34,12.34H17.054a6.531,6.531,0,0,1-6.527-6.527V5.264A3.264,3.264,0,0,0,4,5.264V46.058A13.071,13.071,0,0,0,17.054,59.112H61.545L49.128,71.528a3.263,3.263,0,1,0,4.615,4.615L74,55.886Zm0,0"/>
+    </g>
+  </g>
+</svg>
