@@ -102,6 +102,7 @@ const StyledFullScreenNav = styled.nav`
     display: block;
     text-transform: uppercase;
     color: ${({theme}: any) => theme.colors.default};
+    font-size: 24px;
   }
   [aria-current]:not([aria-current='false']) {
     font-weight: bold;
