@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import {SvgImage} from '../..'
 import {Flex, Box} from 'rebass'
 import Check from '../../../assets/images/icons/listIcons/tick.svg'
+import theme from '../../../assets/theme'
 interface IList {
   items: IListItem[]
 }
@@ -42,7 +43,7 @@ export const StyledLi = styled.li`
   list-style-type: none;
   margin: 10px;
   padding: 16px;
-  background: ${props => props.theme.colors.third};
+  background: ${theme.colors.third};
   border: 1px solid #7f83885f;
   border-radius: 30px;
 `

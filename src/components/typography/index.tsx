@@ -16,7 +16,6 @@ interface ITypography {
 
 const Typography = (props: ITypography) => {
   const {variant, children, margin, style} = props
-  console.log(props.column)
   return (
     <StyledTypograhpy {...props}>
       {variant === 'title' ? (
