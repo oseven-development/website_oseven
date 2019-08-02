@@ -16,7 +16,14 @@ import {StyledNav} from '../../navigation'
 import {useWindowSize} from '../../../assets/hooks/windowWidth'
 
 const Footer = (props: any) => {
-  const {links, logo} = props
+  const {logo} = props
+  const links = [
+    ...props.links,
+    {
+      to: '/impressum',
+      label: 'Impressum',
+    },
+  ]
   const {windowWidth} = useWindowSize()
   return (
     <footer>
