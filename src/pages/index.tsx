@@ -39,18 +39,6 @@ export default props => {
         />
       </Container>
 
-      {/* <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
-          <Container transparent height={[250, 700]} pt={'10px'}>
-            <Content />
-            <Content
-              maxTitle
-              titleColor="inherit"
-              subtitleColor="inherit"
-              title={SiteContent.header[lang].title}
-              subtitle={SiteContent.header[lang].subtitle}
-            />
-          </Container>
-        </BackgroundImage> */}
       <Container ratio={12}>
         <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
         <Content textPadding={'20px 20px'} text={SiteContent.uberuns[lang].text} />
@@ -78,7 +66,7 @@ export default props => {
         />
       </Container>
       <Container fullscreen>
-        <Parallax src={props.data.parallax.childImageSharp.fluid} />
+        <Parallax src={props.data.parallax.childImageSharp.fluid} alt={'man in coffee'} />
       </Container>
       <Container fullscreen bg={'secondary'}>
         <Container transparent>

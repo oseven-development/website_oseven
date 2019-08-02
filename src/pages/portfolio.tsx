@@ -96,7 +96,7 @@ export default props => (
     </Container>
     {/* //! Parallax 1 */}
     <Container fullscreen>
-      <Parallax src={props.data.domore.childImageSharp.fluid} />
+      <Parallax src={props.data.domore.childImageSharp.fluid} alt={'do more'} />
     </Container>
     {/* //! Software Entwicklung */}
     <Container id="sw">
@@ -180,7 +180,7 @@ export default props => (
     </Container>
     {/* { // ! Parllax } */}
     <Container fullscreen>
-      <Parallax src={props.data.punch.childImageSharp.fluid} />
+      <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
     </Container>
     {/* //! ML & AI */}
     <Container id="ml">
@@ -248,7 +248,7 @@ export default props => (
     </Container>
     {/* //! Parllax 2  */}
     <Container fullscreen>
-      <Parallax src={props.data.projects.childImageSharp.fluid} />
+      <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
     </Container>
     {/* //! Workshop 2  */}
     <Container>
