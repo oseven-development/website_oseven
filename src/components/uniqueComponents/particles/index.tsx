@@ -23,7 +23,7 @@ const _Particles = (props: IParticles) => {
         params={{
           particles: {
             number: {
-              value: windowWidth > 786 ? 35 : 5,
+              value: windowWidth > 786 ? 40 : 5,
             },
             size: {
               value: 3,
