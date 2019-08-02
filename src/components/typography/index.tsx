@@ -48,6 +48,10 @@ const StyledTypograhpy = styled.div`
     text-align: ${({textAlign}: any) => (textAlign ? textAlign : 'justify')};
     column-count:${({column}: any) => (column ? 2 : 1)}; ;
   }
+  @media (max-width: 768px) {
+    p,.p {
+    column-count: 1 ;
+  }  }
 
 `
 
