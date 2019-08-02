@@ -3,6 +3,7 @@
 // react and gatsby
 import React from 'react'
 import {graphql} from 'gatsby'
+
 import team from '../assets/images/illustrations/team.svg'
 import contact from '../assets/images/illustrations/contact.svg'
 import business from '../assets/images/illustrations/business.svg'
@@ -11,7 +12,7 @@ import professor from '../assets/images/illustrations/professor.svg'
 import arrow from '../assets/images/icons/arrow.svg'
 import SiteContent from '../assets/content/uberuns.json'
 // Components
-import {Seo, Container, ContactButton, Content, Parallax, BackgroundImage, SvgImage} from '../components'
+import {Seo, Container, ContactButton, Content, Parallax, Particles, SvgImage} from '../components'
 import theme from '../assets/theme'
 
 // Bilder Backgrounds
@@ -21,8 +22,23 @@ export default props => {
   return (
     <React.Fragment>
       <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
-      <Container fullscreen>
-        <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
+      <Container fullscreen bg={'secondary'}>
+        <Particles
+          title={SiteContent.header[lang].title}
+          text={SiteContent.header[lang].text}
+          action={
+            <ContactButton
+              text={SiteContent.header[lang].action}
+              link={'/portofolio'}
+              textColor={'primary'}
+              width={'50%'}
+              border
+            />
+          }
+        />
+      </Container>
+
+      {/* <BackgroundImage Tag="section" fluid={props.data.background.childImageSharp.fluid} backgroundColor={`#040e18`}>
           <Container transparent height={[250, 700]} pt={'10px'}>
             <Content />
             <Content
@@ -33,8 +49,7 @@ export default props => {
               subtitle={SiteContent.header[lang].subtitle}
             />
           </Container>
-        </BackgroundImage>
-      </Container>
+        </BackgroundImage> */}
       <Container ratio={12}>
         <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
         <Content textPadding={'20px 20px'} text={SiteContent.uberuns[lang].text} />
