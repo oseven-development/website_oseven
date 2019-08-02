@@ -29,9 +29,9 @@ export default props => {
           action={
             <ContactButton
               text={SiteContent.header[lang].action}
-              link={'/portofolio'}
+              link={'/portfolio'}
               textColor={'primary'}
-              width={'50%'}
+              width={'300px'}
               border
             />
           }

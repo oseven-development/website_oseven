@@ -21,7 +21,7 @@ const _Particles = (props: IParticles) => {
         params={{
           particles: {
             number: {
-              value: windowWidth > 786 ? 35 : 10,
+              value: windowWidth > 786 ? 35 : 5,
             },
             size: {
               value: 3,
@@ -39,7 +39,7 @@ const _Particles = (props: IParticles) => {
       />
       <StyledDiv
         style={{
-          transform: windowWidth > 768 ? 'translateX(50vw)' : 'translateX(10px)',
+          transform: windowWidth > 768 ? 'translateX(50vw)' : '0',
           top: windowWidth > 768 ? '45%' : '0',
         }}>
         {title ? (
@@ -68,5 +68,6 @@ const _Particles = (props: IParticles) => {
 
 const StyledDiv = styled.div`
   position: absolute;
+  margin: 0px 10px;
 `
 export default _Particles
