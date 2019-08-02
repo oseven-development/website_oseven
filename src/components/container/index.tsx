@@ -63,7 +63,7 @@ const Container = (props: IContainer) => {
       alignItems={alignItems ? alignItems : 'center'}
       alignContent={alignContent ? alignContent : 'center'}
       justifyContent={justifyContent ? justifyContent : 'center'}
-      pt={pt ? pt : 0}
+      p={pt ? pt : 0}
       bg={bg ? theme.colors[bg] : transparent ? 'transparent' : theme.colors.background}
       style={ContainerStyle}>
       {Array.isArray(children) ? (

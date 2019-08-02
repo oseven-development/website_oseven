@@ -10,14 +10,16 @@ interface IParticles extends IParticlesParams {
   title?: string
   text?: string
   action?: JSX.Element
+  height: string[]
 }
 
 const _Particles = (props: IParticles) => {
   const {windowWidth} = useWindowSize()
-  const {title, text, action} = props
+  const {title, text, action, height} = props
   return (
     <div style={{position: 'relative'}}>
       <Particles
+        height={windowWidth > 768 ? height[1] : height[0]}
         params={{
           particles: {
             number: {
@@ -39,7 +41,7 @@ const _Particles = (props: IParticles) => {
       />
       <StyledDiv
         style={{
-          transform: windowWidth > 768 ? 'translateX(50vw)' : '0',
+          transform: windowWidth > 768 ? 'translateX(45vw)' : '0',
           top: windowWidth > 768 ? '45%' : '0',
         }}>
         {title ? (

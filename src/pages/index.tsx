@@ -26,6 +26,7 @@ export default props => {
         <Particles
           title={SiteContent.header[lang].title}
           text={SiteContent.header[lang].text}
+          height={['220px', '850px']}
           action={
             <ContactButton
               text={SiteContent.header[lang].action}
