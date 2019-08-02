@@ -21,7 +21,7 @@ export default props => {
   const lang = 'de'
   return (
     <React.Fragment>
-      <Seo title="Home" description="Startseite von Oseven" keywords="Cool Fancy Beste Seite Webdeveloper" />
+      <Seo title="Über Uns" description="Startseite von Oseven" keywords="oseven Cloud Start-Up Kontakt" />
       <Container fullscreen bg={'secondary'}>
         <Particles
           title={SiteContent.header[lang].title}

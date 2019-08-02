@@ -14,7 +14,7 @@ const lang = 'de'
 export default props => {
   return (
     <React.Fragment>
-      <Seo title="Kontakt" description="Kontaktadressen" keywords="Email E-mail Telefon Adresse Kontakt Contact" />
+      <Seo title="Referenzen" description="Refrenzen" keywords="Kunden Talos Caligraf Referenzen" />
       <Container transparent>
         <Content
           title={SiteContent.header[lang].title}

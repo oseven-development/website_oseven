@@ -75,7 +75,7 @@ export default createGlobalStyle`
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('16px', '28px')}};
   p, .p{
-      font-size: ${buildString('14px', '22px')};
+      font-size: ${buildString('16px', '22px')};
       line-height: 1.6em;
       font-family: "Roboto", sans-serif;
       text-align: justify;
