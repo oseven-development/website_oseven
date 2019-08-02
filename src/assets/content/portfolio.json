@@ -15,9 +15,9 @@
   },
   "cn": {
     "de": {
-      "title": "Was sind Cloud-Native Applikationen",
+      "title": "Was sind Cloud-Native Anwendungen",
       "text": [
-        "Cloudnative Anwendungen sind eine Ansammlung kleiner, unabhängiger und lose gekoppelter Services. Sie sind darauf ausgelegt, anerkannte Geschäftswerte bereitzustellen, darunter die Fähigkeit zur schnellen Integration von Benutzer-Feedback für kontinuierliche Verbesserungen.",
+        "Cloud-Native Anwendungen sind eine Ansammlung kleiner, unabhängiger und lose gekoppelter Services. Sie sind darauf ausgelegt, anerkannte Geschäftswerte bereitzustellen, darunter die Fähigkeit zur schnellen Integration von Benutzer-Feedback für kontinuierliche Verbesserungen.",
         "Kurz gesagt, haben wir es hier mit einer Methode zur Beschleunigung der Entwicklung neuer bzw. Optimierung bestehender Anwendungen sowie deren Verknüpfung zu tun. Ziel ist die Bereitstellung maßgeschneiderter, auf die Geschwindigkeit des geschäftlichen Wandels ausgerichteter Anwendungen."
       ]
     },
@@ -35,7 +35,7 @@
       "title": "Software-Entwicklung",
       "text": [
         "Die Cloud-Native Softwareentwicklung löst sich vom traditionellen Modell der Erstellung monolithischer Softwareanwendungen und konzentriert sich stattdessen auf die Entwicklung von Anwendungen, die Cloud-Umgebungen nutzen. Diese Anwendungen werden unabhängig von der zugrunde liegenden Architektur erstellt und sind so konzipiert, dass sie von einer Cloud-basierten Architektur profitieren. In jeder Cloud-Anwendung befinden sich vier zugrundeliegende Säulen: Mikroservices, Container, dynamische Orchestrierung und kontinuierliche Lieferung.",
-        "Wir bei oseven setzen auf Best Practices von bereits etablierten Sytemen, wie das Well-Architected-Framework von aws und halten uns an die gängigen Cloud Native Design Principles, so ermöglichen wir es Ihnen, der Konkurrenz immer einen Schritt voraus zu sein.",
+        "Wir bei oseven setzen auf Best Practices von bereits etablierten Sytemen, wie das Well-Architected-Framework von AWS und halten uns an die gängigen Cloud Native Design Principles, so ermöglichen wir es Ihnen, der Konkurrenz immer einen Schritt voraus zu sein.",
         " Um immer das beste Ergebnis zu erreichen, sind wir nicht auf einen Cloud-Anbieter fixiert, sondern versuchen den besten Anbieter für genau Ihren Use-Case auszuwählen. Die Leistungen der verschieden anbieter unterscheiden sich dabei stark. Wir suchen gemeinsam Ihnen den richtigen Anbieter aus um Ihr Projekt erfolgreich umzusetzen.",
         "Es gab noch nie einen besseren Zeitpunkt, um das volle Potenzial der Cloud auszuschöpfen, indem Sie Ihre Anwendungen als Cloud-Native reorganisieren oder neu aufbauen."
       ]

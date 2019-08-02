@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.o-seven.de',
-        sitemap: 'https://www.o-seven.de/sitemap.xml',
+        host: 'https://www.oseven.de',
+        sitemap: 'https://www.oseven.de/sitemap.xml',
         policy: [{userAgent: '*', allow: '/'}],
       },
     },
