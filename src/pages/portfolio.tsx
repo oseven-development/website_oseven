@@ -73,7 +73,7 @@ export default props => (
     <Container inbox fullscreen bg={'secondary'}>
       <Container transparent flexDirection={'column'}>
         <Content subtitleColor={'inherit'} subtitle={SiteContent.cn[lang].title} />
-        <Container inbox transparent flexDirection={'row'}>
+        <Container inbox transparent flexDirection={'row'} textColumn>
           <Content
             textColor={'inherit'}
             image={{
@@ -108,18 +108,19 @@ export default props => (
         }}
       />
     </Container>
-    <Container ratio={12}>
+    <Container inbox>
       <Content
         column
         text={
           <React.Fragment>
             {SiteContent.sw[lang].text[0]}
-            <br /> {SiteContent.sw[lang].text[3]}
+            <br /> <br />
+            {SiteContent.sw[lang].text[3]}
           </React.Fragment>
         }
       />
     </Container>
-    <Container>
+    <Container textColumn>
       <Content
         textAlign={'center'}
         text={
@@ -136,7 +137,7 @@ export default props => (
       <Content
         text={
           <React.Fragment>
-            {SiteContent.sw[lang].text[1]} <br />
+            {SiteContent.sw[lang].text[1]} <br /> <br />
             {SiteContent.sw[lang].text[2]}
           </React.Fragment>
         }
@@ -172,7 +173,10 @@ export default props => (
     </Container>
     {/* //! pro Software Entwicklung */}
     <Container>
-      <Content subtitle={SiteContent.pro[lang].subtitle} text={SiteContent.pro[lang].text} />
+      <Content subtitle={SiteContent.pro[lang].subtitle} />
+    </Container>
+    <Container inbox>
+      <Content column text={SiteContent.pro[lang].text} />
     </Container>
     <Container ratio={12}>
       <Content
@@ -197,10 +201,10 @@ export default props => (
         }}
       />
     </Container>
-    <Container>
+    <Container inbox>
       <Content column text={SiteContent.ml[lang].text} />
     </Container>
-    <Container alignItems={'flex-start'}>
+    <Container textColumn alignItems={'flex-start'}>
       <Content
         textAlign={'center'}
         text={
@@ -270,7 +274,7 @@ export default props => (
       />
     </Container>
     <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} transparent>
-      <Content text={SiteContent.workshops[lang].text} />
+      <Content column text={SiteContent.workshops[lang].text} />
     </Container>
     <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} ratio={12} transparent>
       <Content

@@ -22,6 +22,9 @@ const StyledHeader = styled.header`
   box-shadow: 0 0 5px black;
   transition: 0s all;
   opacity: 0.95;
+  @media (max-width: 768px) {
+    height: 50px;
+  }
 `
 // const Header = (props: IHeader) => {
 //   const {navigation, logo, transparent} = props

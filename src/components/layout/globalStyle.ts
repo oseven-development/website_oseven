@@ -58,24 +58,24 @@ export default createGlobalStyle`
   h1{
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
-    font-size: ${buildString('36px', '60px')};
+    font-size: ${buildString('36px', '50px')};
     margin: 15px 0px;
     }
   .title {
-    font-size:${buildString('42px', '70px')};
+    font-size:${buildString('42px', '60px')};
   }
   h2{  
     margin: 10px 0px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
-    font-size: ${buildString('20px', '50px')}};
+    font-size: ${buildString('20px', '40px')}};
   h3{  
     margin: 10px 0px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('16px', '28px')}};
   p, .p{
-      font-size: ${buildString('16px', '22px')};
+      font-size: 1.1em;
       line-height: 1.6em;
       font-family: "Roboto", sans-serif;
       text-align: justify;

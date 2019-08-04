@@ -15,7 +15,7 @@ interface ITypography {
 }
 
 const Typography = (props: ITypography) => {
-  const {variant, children, margin, style} = props
+  const {variant, children, margin, style, column} = props
   return (
     <StyledTypograhpy {...props}>
       {variant === 'title' ? (
@@ -46,7 +46,9 @@ const StyledTypograhpy = styled.div`
   text-align: ${({textAlign}: any) => (textAlign ? textAlign : 'left')};
   p,.p {
     text-align: ${({textAlign}: any) => (textAlign ? textAlign : 'justify')};
-    column-count:${({column}: any) => (column ? 2 : 1)}; ;
+    column-count:${({column}: any) => (column ? 2 : 1)};
+    column-gap: 120px;
+
   }
   @media (max-width: 768px) {
     p,.p {
