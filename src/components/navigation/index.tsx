@@ -27,25 +27,29 @@ const Navigation = (props: INavigation) => {
           </NavigationButton>
           {menu ? (
             <StyledFullScreenNav>
-              {links.map((link: any) => (
-                <li
-                  key={link.to}
-                  onClick={() => {
-                    setMenu(!menu)
-                  }}>
-                  <Link to={link.to}>{link.label}</Link>
-                </li>
-              ))}
+              <ul>
+                {links.map((link: any) => (
+                  <li
+                    key={link.to}
+                    onClick={() => {
+                      setMenu(!menu)
+                    }}>
+                    <Link to={link.to}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </StyledFullScreenNav>
           ) : null}
         </React.Fragment>
       ) : (
         <StyledNav>
-          {links.map((link: any) => (
-            <li key={link.to}>
-              <Link to={link.to}>{link.label}</Link>
-            </li>
-          ))}
+          <ul>
+            {links.map((link: any) => (
+              <li key={link.to}>
+                <Link to={link.to}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
         </StyledNav>
       )}
     </React.Fragment>
@@ -91,6 +95,9 @@ const StyledFullScreenNav = styled.nav`
   height:calc(100vh - 60px);
   width:100vw;
   background:${props => props.theme.colors.background};
+  ul{
+    margin-top:-30px;
+  }
   li {
     margin:auto;
     list-style-type: none;
