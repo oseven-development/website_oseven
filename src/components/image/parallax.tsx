@@ -12,14 +12,14 @@ const _Parallax: FunctionComponent<any> = ({children, ...props}) => {
   return (
     <React.Fragment>
       {windowWidth > 768 ? (
-        <Parallax strength={500} style={{height: windowWidth > 768 ? (props.height ? props.height : 300) : 150}}>
+        <Parallax strength={500} style={{height: windowWidth > 768 ? (props.height ? props.height : 450) : 150}}>
           <Background className="custom-bg">
             <Img fluid={props.src} alt={props.alt} />
             <div style={{width: '100vw'}} />
           </Background>
         </Parallax>
       ) : (
-        <Img fluid={props.src} alt={props.alt} style={{height: 150}} />
+        <Img fluid={props.src} alt={props.alt} style={{height: 250}} />
       )}
     </React.Fragment>
   )

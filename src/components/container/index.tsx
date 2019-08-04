@@ -21,9 +21,10 @@ interface IContainer {
   bg?: TColor
   height?: number[] | string[]
   transparent?: boolean
-  pt?: number | string
+  pt?: number | string | number[] | string[]
   id?: string
   p?: string
+  inbox?: true
 }
 const Container = (props: IContainer) => {
   const {
@@ -41,16 +42,16 @@ const Container = (props: IContainer) => {
     pt,
     style,
     p,
+    inbox,
   } = props
   const {windowWidth} = useWindowSize()
   const marginDesktop = '0px 0px 0px 0px'
-  const marginMobile = '0px 0px 0px 0px'
+  const marginMobile = '10px 0px 10px 0px'
   const margin = [marginMobile, marginDesktop]
-  const padding = p ? ['0px 10px 0px 10px', p] : ['0px 10px 0px 10px', '40px 15px 40px 15px']
+  const padding = p ? ['0px 10px 0px 10px', p] : ['0px 20px 0px 20px', '40px 15px 40px 15px']
   const _height = windowWidth > 768 ? (height ? height[1] : 'auto') : height ? height[0] : 'auto'
   const ContainerStyle = {
     maxWidth: fullscreen ? '100%' : '1200px',
-    margin: 'auto',
     height: _height,
     ...style,
   }
@@ -63,7 +64,7 @@ const Container = (props: IContainer) => {
       alignItems={alignItems ? alignItems : 'center'}
       alignContent={alignContent ? alignContent : 'center'}
       justifyContent={justifyContent ? justifyContent : 'center'}
-      p={pt ? pt : 0}
+      p={pt ? pt : inbox ? ['0px 0px', '0px 0px'] : ['20px 0px', '40px 0px']}
       bg={bg ? theme.colors[bg] : transparent ? 'transparent' : theme.colors.background}
       style={ContainerStyle}>
       {Array.isArray(children) ? (
@@ -71,14 +72,14 @@ const Container = (props: IContainer) => {
           ratio === 21 ? (
             <React.Fragment>
               <Box
-                p={fullscreen ? 0 : padding}
-                m={fullscreen ? 0 : margin}
+                p={fullscreen || inbox ? 0 : padding}
+                m={fullscreen || inbox ? 0 : margin}
                 width={flexDirection === 'column' ? 1 : [1, 2 / 3]}>
                 {children[0]}
               </Box>
               <Box
-                p={fullscreen ? 0 : padding}
-                m={fullscreen ? 0 : margin}
+                p={fullscreen || inbox ? 0 : padding}
+                m={fullscreen || inbox ? 0 : margin}
                 width={flexDirection === 'column' ? 1 : [1, 1 / 3]}>
                 {children[1]}
               </Box>
@@ -86,14 +87,14 @@ const Container = (props: IContainer) => {
           ) : (
             <React.Fragment>
               <Box
-                p={fullscreen ? 0 : padding}
-                m={fullscreen ? 0 : margin}
+                p={fullscreen || inbox ? 0 : padding}
+                m={fullscreen || inbox ? 0 : margin}
                 width={flexDirection === 'column' ? 1 : [1, 1 / 3]}>
                 {children[0]}
               </Box>
               <Box
-                p={fullscreen ? 0 : padding}
-                m={fullscreen ? 0 : margin}
+                p={fullscreen || inbox ? 0 : padding}
+                m={fullscreen || inbox ? 0 : margin}
                 width={flexDirection === 'column' ? 1 : [1, 2 / 3]}>
                 {children[1]}
               </Box>
@@ -102,8 +103,8 @@ const Container = (props: IContainer) => {
         ) : (
           children.map((child: any) => (
             <Box
-              p={fullscreen ? 0 : padding}
-              m={fullscreen ? 0 : margin}
+              p={fullscreen || inbox ? 0 : padding}
+              m={fullscreen || inbox ? 0 : margin}
               width={flexDirection === 'column' ? 1 : [1, 1 / children.length]}
               key={Math.random()}>
               {child}
@@ -111,7 +112,7 @@ const Container = (props: IContainer) => {
           ))
         )
       ) : (
-        <Box p={fullscreen ? 0 : padding} m={fullscreen ? 0 : margin} width={1}>
+        <Box p={fullscreen || inbox ? 0 : padding} m={fullscreen || inbox ? 0 : margin} width={1}>
           {children}
         </Box>
       )}

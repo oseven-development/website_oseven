@@ -78,15 +78,19 @@ const Footer = (props: any) => {
             </Flex>
           </Box>
           <Box style={{textAlign: windowWidth > 768 ? 'left' : 'center'}}>
-            <SvgImage src={logo} dWidth={300} />
+            <Link to="/">
+              <SvgImage src={logo} dWidth={300} />
+            </Link>
           </Box>
           <Box style={{textAlign: 'center'}}>
             <StyledNav>
-              {links.map((link: any) => (
-                <li key={link.to}>
-                  <Link to={link.to}>{link.label}</Link>
-                </li>
-              ))}
+              <ul>
+                {links.map((link: any) => (
+                  <li key={link.to}>
+                    <Link to={link.to}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
             </StyledNav>
           </Box>
         </Container>

@@ -40,7 +40,7 @@ export default props => (
       keywords="Cloud Cloudnative Serverless Software Development Aws Gcp Azure Workshops"
     />
     {/* //! Header */}
-    <Container transparent>
+    <Container pt={'0px'} transparent>
       <Content
         title={SiteContent.header[lang].title}
         subtitle={SiteContent.header[lang].subtitle}
@@ -70,10 +70,10 @@ export default props => (
       />
     </Container>
     {/* //! Was ist CN */}
-    <Container fullscreen bg={'secondary'}>
+    <Container inbox fullscreen bg={'secondary'}>
       <Container transparent flexDirection={'column'}>
         <Content subtitleColor={'inherit'} subtitle={SiteContent.cn[lang].title} />
-        <Container transparent flexDirection={'row'}>
+        <Container inbox transparent flexDirection={'row'}>
           <Content
             textColor={'inherit'}
             image={{
@@ -95,7 +95,7 @@ export default props => (
       </Container>
     </Container>
     {/* //! Parallax 1 */}
-    <Container fullscreen>
+    <Container inbox fullscreen>
       <Parallax src={props.data.domore.childImageSharp.fluid} alt={'do more'} />
     </Container>
     {/* //! Software Entwicklung */}
@@ -122,7 +122,12 @@ export default props => (
     <Container>
       <Content
         textAlign={'center'}
-        text={'Architektur einer Serverless Anwendung bei AWS.'}
+        text={
+          <React.Fragment>
+            <i>Architektur einer Serverless Anwendung bei AWS</i>
+          </React.Fragment>
+        }
+        textColor={'secondary'}
         image={{
           src: <SvgImage dWidth={750} mWidth={300} src={serverless} />,
           type: 'svg',
@@ -139,7 +144,7 @@ export default props => (
     </Container>
 
     {/* //! Key Partners */}
-    <Container fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
+    <Container inbox fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
       <Container transparent flexDirection={'column'}>
         <Content subtitle={SiteContent.partners[lang].title} />
         <Content
@@ -179,7 +184,7 @@ export default props => (
       <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.pro[lang].arguments} />} />
     </Container>
     {/* { // ! Parllax } */}
-    <Container fullscreen>
+    <Container inbox fullscreen>
       <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
     </Container>
     {/* //! ML & AI */}
@@ -198,7 +203,11 @@ export default props => (
     <Container alignItems={'flex-start'}>
       <Content
         textAlign={'center'}
-        text={'Machine learning lifecycle by Google'}
+        text={
+          <React.Fragment>
+            <i>Machine learning lifecycle by Google</i>
+          </React.Fragment>
+        }
         image={{
           src: <SvgImage dWidth={750} mWidth={300} src={Model} />,
           type: 'svg',
@@ -207,7 +216,7 @@ export default props => (
       <Content text={SiteContent.ml[lang].text2} />
     </Container>
     {/* //! Tools */}
-    <Container fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
+    <Container inbox fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
       <Container transparent flexDirection={'column'}>
         <Content subtitle={SiteContent.tools[lang].title} />
         <Content
@@ -229,14 +238,17 @@ export default props => (
         />
       </Container>
     </Container>
-
+    {/* //! Parllax 2  */}
+    <Container inbox fullscreen>
+      <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
+    </Container>
     {/* //! Beratung 2  */}
-    <Container fullscreen bg={'secondary'} flexDirection={'column'}>
-      <Container transparent id="bw">
+    <Container inbox fullscreen bg={'secondary'} flexDirection={'column'}>
+      <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']} transparent id="bw">
         <Content titleColor={'inherit'} title={SiteContent.consulting[lang].title} />
       </Container>
 
-      <Container transparent>
+      <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} transparent>
         <Content textColor={'inherit'} text={SiteContent.consulting[lang].text} />
         <Content
           image={{
@@ -246,12 +258,9 @@ export default props => (
         />
       </Container>
     </Container>
-    {/* //! Parllax 2  */}
-    <Container fullscreen>
-      <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
-    </Container>
+
     {/* //! Workshop 2  */}
-    <Container>
+    <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
       <Content title={SiteContent.workshops[lang].title} />
       <Content
         image={{
@@ -260,10 +269,10 @@ export default props => (
         }}
       />
     </Container>
-    <Container transparent>
+    <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} transparent>
       <Content text={SiteContent.workshops[lang].text} />
     </Container>
-    <Container ratio={12} transparent>
+    <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} ratio={12} transparent>
       <Content
         image={{
           src: <SvgImage dWidth={650} src={Pros2} />,

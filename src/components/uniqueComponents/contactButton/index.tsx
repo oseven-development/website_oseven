@@ -28,7 +28,7 @@ const ContactButton = (props: any) => {
 export default ContactButton
 
 const StyledButton = styled.div`
-  margin: 15px 0px;
+  margin: 15px auto;
   text-align: center;
   border: ${(props: any) => (props.border ? `2px solid ${theme.colors[props.textColor]}` : 'none')};
   border-radius: ${(props: any) => (props.border ? '30px' : 'none')};

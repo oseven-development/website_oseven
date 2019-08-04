@@ -31,7 +31,7 @@ export default class Layout extends React.Component {
           <React.Fragment>
             <Header logo={Logo} navigation={<Navigation links={navItems} />} />
             <main style={{background: theme.colors.background}}>{children}</main>
-            <Footer links={navItems} logo={LogoFooter} />´{' '}
+            <Footer links={navItems} logo={LogoFooter} />
           </React.Fragment>
         </ThemeProvider>
       </React.Fragment>

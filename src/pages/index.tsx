@@ -69,7 +69,7 @@ export default props => {
         <Parallax src={props.data.parallax.childImageSharp.fluid} alt={'man in coffee'} />
       </Container>
       <Container fullscreen bg={'secondary'}>
-        <Container transparent>
+        <Container transparent pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
           <Content maxTitle title={SiteContent.team[lang].title} titleColor="inherit" />
           <Content
             image={{
@@ -79,7 +79,7 @@ export default props => {
           />
         </Container>
       </Container>
-      <Container fullscreen bg={'secondary'}>
+      <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} fullscreen bg={'secondary'}>
         <Container transparent>
           <Content textColor="inherit" column text={SiteContent.team[lang].text} />
         </Container>
@@ -96,7 +96,7 @@ export default props => {
                   text={'kontaktiere uns hier'}
                   link={'/kontakt'}
                   textColor={'primary'}
-                  width={'50%'}
+                  width={'320px'}
                   border
                 />
               </React.Fragment>

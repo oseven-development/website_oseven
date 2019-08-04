@@ -84,4 +84,7 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+  ul {
+    margin:0;
+  }
   `

@@ -58,7 +58,7 @@ export default () => (
     </Container>
 
     <Container>
-      <Content title={'Datenschutzerklärung'} />
+      <Content title={'Datenschutz-erklärung'} />
     </Container>
     <Container>
       <Content
