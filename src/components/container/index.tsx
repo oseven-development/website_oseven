@@ -105,7 +105,6 @@ const Container = (props: IContainer) => {
           )
         ) : (
           children.map((child: any) => {
-            console.log(children.indexOf(child))
             let textPadding = undefined
             if (textColumn) {
               switch (children.indexOf(child)) {
