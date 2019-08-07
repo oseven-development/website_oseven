@@ -3,10 +3,10 @@
     "de": {
       "title": "Your Digital Home",
       "text": [
-        "Wir sind ein auf Cloud-Entwicklung & Beratung spezialiertes Start Up,",
-        "mit Fokus Machine Learning & AI."
+        "Wir sind ein auf Cloud-Entwicklung & Beratung spezialisiertes Start Up,",
+        "mit Fokus Entwicklung von Machine Learning & AI Anwendungen."
       ],
-      "action": "Hier geht es zum Portfolio"
+      "action": "Erfahre mehr was wir machen"
     },
     "en": {}
   },
@@ -14,7 +14,14 @@
     "de": {
       "title": "Was Wir tun",
       "text": [
-        " Wir bei Oseven glauben, dass Sie in Ihre Prozesse, Infrastruktur und Architektur investieren müssen, um auf modernen, sich schnell verändernden Märkten wettbewerbsfähig bleiben zu können. Um diese Anpassung zu unterstützen, entwickeln wir Cloudnative Software, welche sich auf ihre Bedürfnisse anpasst, flexibel vergrößert und verkleinert ist. Sie müssen keine unnötige Serveradminstration durchführen und können sich voll und ganz auf ihre Kernkompetenzen konzentrieren. Unser Ziel ist die Fähigkeit, hochwertige Apps mit noch größerer Agilität zu liefern."
+        "Wir bei oseven glauben, dass Sie - um auf den sich schnell verändernden modernen Märkten wettbewerbsfähig zu bleiben - in Ihre digitalen Prozesse die Infrastruktur und deren Architektur investieren müssen.",
+        "",
+        "Deswegen entwickeln wir Cloud-Native Software, die so flexibel und agil wie Ihr Unternehmen wächst und sich genau auf Ihre individuellen Bedürfnisse anpasst.",
+        "Unser Ziel? Ganz einfach!",
+        "Sie konzentrieren sich voll und ganz auf das was sie am besten können: Ihre Kernkompetenzen!",
+        "Um alles andere kümmern wir uns und geben Ihnen die bestmögliche Unterstützung zu Ihrer digitalen Zukunft.",
+        "",
+        "Gemeinsamen gehen wir mit Ihnen den Weg in die Welt der Cloud-Anwendungen."
       ]
     },
     "en": {}
@@ -23,9 +30,11 @@
     "de": {
       "title": "Wer sind wir",
       "text": [
-        "Wir sind ein Team aus zwei Wirtschaftsinformatikern und einem Account Manager. Wir haben erkannt, dass viele Unternehmen mit Ihrer Internen IT-Infrastruktur an grenzen stoßen und Chancen nicht wahrnehmen können. Dieses Problem möchten wir Lösen und mit Ihnen gemeinsam neue Möglichkeiten eröffnen.",
+        "Wir sind ein motiviertes Team aus drei Personen - zwei Wirtschaftsinformatiker und ein Account Manager.",
         "",
-        "Dazu haben wir uns von Amazon Web Services Zertifizieren lassen."
+        "Wir haben erkannt, dass immer mehr Unternehmen mit Ihrer internen IT-Infrastruktur an Grenzen stoßen und dadurch sich eröffnende Chancen und Möglichkeiten nicht wahrnehmen können.",
+        "",
+        "Wir haben uns von Amazon Web Services zertifizieren lassen um Ihnen die leistungsfähigsten und modernsten Cloud-Anwendungen zu bieten."
       ]
     },
     "en": {}
@@ -33,7 +42,7 @@
   "contact": {
     "de": {
       "title": "Sprich uns an!",
-      "text": "Du möchtest mit uns Arbeiten, oder Interessierst dich für unsere Lösungen oder unsere Arbeitsweisen, dann sprich uns an."
+      "text": "Du möchtest mehr von uns wissen - wie wir Arbeiten, unsere Lösungen oder einfach ein persönliches Gespräch?"
     },
     "en": {}
   }

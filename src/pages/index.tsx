@@ -9,7 +9,6 @@ import contact from '../assets/images/illustrations/contact.svg'
 import business from '../assets/images/illustrations/business.svg'
 import developer from '../assets/images/illustrations/developer.svg'
 import professor from '../assets/images/illustrations/professor.svg'
-import arrow from '../assets/images/icons/arrow.svg'
 import SiteContent from '../assets/content/uberuns.json'
 // Components
 import {Seo, Container, ContactButton, Content, Parallax, Particles, SvgImage} from '../components'
@@ -39,19 +38,16 @@ export default props => {
         />
       </Container>
 
-      <Container ratio={12}>
+      <Container>
         <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
-        <Content textPadding={'20px 20px'} text={SiteContent.uberuns[lang].text} />
+      </Container>
+      <Container inbox flexDirection={'column'}>
+        <Content column text={SiteContent.uberuns[lang].text} />
       </Container>
       <Container>
         <Content
           imageDirection={'row'}
           image={[
-            {
-              src: <SvgImage dWidth={250} mWidth={80} src={business} />,
-              type: 'svg',
-              padding: '5px',
-            },
             {
               src: <SvgImage dWidth={250} mWidth={80} src={developer} />,
               type: 'svg',
@@ -62,28 +58,35 @@ export default props => {
               type: 'svg',
               padding: '5px',
             },
+            {
+              src: <SvgImage dWidth={250} mWidth={80} src={business} />,
+              type: 'svg',
+              padding: '5px',
+            },
           ]}
         />
       </Container>
-      <Container fullscreen>
+
+      <Container inbox fullscreen>
         <Parallax src={props.data.parallax.childImageSharp.fluid} alt={'man in coffee'} />
       </Container>
-      <Container fullscreen bg={'secondary'}>
-        <Container transparent pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
-          <Content maxTitle title={SiteContent.team[lang].title} titleColor="inherit" />
-          <Content
-            image={{
-              src: <SvgImage dWidth={950} src={team} />,
-              type: 'svg',
-            }}
-          />
-        </Container>
-      </Container>
-      <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} fullscreen bg={'secondary'}>
+      <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
         <Container transparent>
-          <Content textColor="inherit" column text={SiteContent.team[lang].text} />
+          <Container transparent flexDirection={'column'}>
+            <Content maxTitle title={SiteContent.team[lang].title} titleColor="inherit" />
+            <Content
+              image={{
+                src: <SvgImage dWidth={450} src={team} />,
+                type: 'svg',
+              }}
+            />
+          </Container>
+          <Container transparent>
+            <Content textColor="inherit" text={SiteContent.team[lang].text} />
+          </Container>
         </Container>
       </Container>
+
       <Container fullscreen>
         <Container transparent>
           <Content

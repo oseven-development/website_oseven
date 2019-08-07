@@ -56,7 +56,7 @@ export default props => {
           />
         </Container>
       </Container>
-      <Container fullscreen>
+      <Container inbox fullscreen>
         <Parallax src={props.data.parallax.childImageSharp.fluid} />
       </Container>
       <Container>
