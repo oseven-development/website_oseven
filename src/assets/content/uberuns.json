@@ -1,27 +1,23 @@
 {
   "header": {
     "de": {
-      "title": "Your Digital Home",
+      "title": ["Wir sind Spezialisten für", "Künstliche Intelligenz", "(KI) und Cloud-Entwicklung"],
       "text": [
-        "Wir sind ein auf Cloud-Entwicklung & Beratung spezialisiertes Start Up,",
-        "mit Fokus Entwicklung von Machine Learning & AI Anwendungen."
-      ],
-      "action": "Erfahre mehr was wir machen"
+        "Unser Unternehmen setzt den Fokus dabei auf die Entwicklung von Cloud Applikationen,",
+        "Machine Learning und Artificial Intelligence Lösungen."
+      ]
     },
     "en": {}
   },
   "uberuns": {
     "de": {
-      "title": "Was Wir tun",
+      "title": "Was wir tun",
       "text": [
-        "Wir bei oseven glauben, dass Sie - um auf den sich schnell verändernden modernen Märkten wettbewerbsfähig zu bleiben - in Ihre digitalen Prozesse die Infrastruktur und deren Architektur investieren müssen.",
+        "Um auf moderne sich schnell verändernde Märkte wettbewerbsfähig zu bleiben, müssen Sie in Ihre digitalen Prozesse, die Infrastruktur und deren Architektur Investieren. Wir können Sie dabei bestmöglich unterstützen und mit Ihnen gemeinsam Lösungen für die Fragen von morgen zu finden.",
         "",
-        "Deswegen entwickeln wir Cloud-Native Software, die so flexibel und agil wie Ihr Unternehmen wächst und sich genau auf Ihre individuellen Bedürfnisse anpasst.",
-        "Unser Ziel? Ganz einfach!",
-        "Sie konzentrieren sich voll und ganz auf das was sie am besten können: Ihre Kernkompetenzen!",
-        "Um alles andere kümmern wir uns und geben Ihnen die bestmögliche Unterstützung zu Ihrer digitalen Zukunft.",
+        "Daher entwickeln wir native Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich auf Ihre individuellen Bedürfnissen fokussieren.",
         "",
-        "Gemeinsamen gehen wir mit Ihnen den Weg in die Welt der Cloud-Anwendungen."
+        "KI"
       ]
     },
     "en": {}
@@ -34,7 +30,7 @@
         "",
         "Wir haben erkannt, dass immer mehr Unternehmen mit Ihrer internen IT-Infrastruktur an Grenzen stoßen und dadurch sich eröffnende Chancen und Möglichkeiten nicht wahrnehmen können.",
         "",
-        "Wir haben uns von Amazon Web Services zertifizieren lassen um Ihnen die leistungsfähigsten und modernsten Cloud-Anwendungen zu bieten."
+        "Wir haben uns von Amazon Web Services zertifizieren lassen, um Ihnen die leistungsfähigsten und modernsten Cloud-Anwendungen zu bieten."
       ]
     },
     "en": {}

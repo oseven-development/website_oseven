@@ -1,10 +1,12 @@
 /** @format */
 
 import React from 'react'
-import {Container, SvgImage, Typography} from '../..'
+import {Container, SvgImage, Content, ContactButton, Typography} from '../..'
 import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
 import styled from 'styled-components'
+import SiteContent from '../../../assets/content/uberuns.json'
+import contact from '../../../assets/images/illustrations/contact.svg'
 
 import facebook from '../../../assets/images/icons/facebook.svg'
 import google from '../../../assets/images/icons/google.svg'
@@ -13,10 +15,13 @@ import xing from '../../../assets/images/icons/xing.svg'
 import phone from '../../../assets/images/icons/phone.svg'
 import mail from '../../../assets/images/icons/mail.svg'
 import {StyledNav} from '../../navigation'
+
 import {useWindowSize} from '../../../assets/hooks/windowWidth'
+const lang = 'de'
 
 const Footer = (props: any) => {
   const {logo} = props
+  console.log(SiteContent)
   const links = [
     ...props.links,
     {
@@ -32,6 +37,32 @@ const Footer = (props: any) => {
         flexDirection={'column'}
         bg={'third'}
         style={{width: '100%', borderTop: '1px solid #7F83885F'}}>
+        <Container transparent fullscreen>
+          <Container inbox transparent>
+            <Content
+              title={SiteContent.contact[lang].title}
+              textVariant={'div'}
+              text={
+                <React.Fragment>
+                  {SiteContent.contact[lang].text}
+                  <ContactButton
+                    text={'kontaktiere uns hier'}
+                    link={'/kontakt'}
+                    textColor={'primary'}
+                    width={'320px'}
+                    border
+                  />
+                </React.Fragment>
+              }
+            />
+            <Content
+              image={{
+                src: <SvgImage dWidth={450} src={contact} />,
+                type: 'svg',
+              }}
+            />
+          </Container>
+        </Container>
         <Container
           transparent
           style={{padding: windowWidth > 768 ? '60px 0px 20px 0px' : '20px 0px 10px 0px'}}

@@ -29,6 +29,7 @@ import Model from '../assets/images/architecture/model.svg'
 // Components
 import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List} from '../components'
 import {Flex} from 'rebass'
+import SubNavigation from '../components/uniqueComponents/subNavigation'
 // Bilder Backgrounds
 const lang = 'de'
 
@@ -40,27 +41,14 @@ export default props => (
       keywords="Cloud Cloudnative Serverless Software Development Aws Gcp Azure Workshops"
     />
     {/* //! Header */}
-    <Container pt={'0px'} transparent>
-      <Content
-        title={SiteContent.header[lang].title}
-        subtitle={SiteContent.header[lang].subtitle}
-        text={
-          <React.Fragment>
-            {SiteContent.header[lang].text}
-            {SiteContent.header[lang].nav.map((link: any) => (
-              <ContactButton
-                key={Math.random()}
-                text={link.label}
-                link={`#${link.href}`}
-                textColor={'primary'}
-                type={'out'}
-                border
-              />
-            ))}
-          </React.Fragment>
-        }
-        textVariant={'div'}
-      />
+    <Container p={'0px'}>
+      <Content title={SiteContent.header[lang].title} />
+    </Container>
+    <Container pt={'0px'} transparent alignItems={'stretch'}>
+      <Container inbox flexDirection={'column'} justifyContent={'space-between'} height={['100%', '100%']}>
+        <Content text={SiteContent.header[lang].text} />
+        <Content text={<SubNavigation links={SiteContent.header[lang].nav} />} />
+      </Container>
 
       <Content
         image={{
@@ -69,7 +57,20 @@ export default props => (
         }}
       />
     </Container>
-    {/* //! Was ist CN */}
+    {/* Software Entwicklung */}
+    <Container fullscreen bg={'secondary'} id="sw">
+      <Container transparent flexDirection={'row'} textColumn>
+        <Content titleColor={'inherit'} title={SiteContent.sw[lang].title} />
+        <Content
+          image={{
+            src: <SvgImage dWidth={250} src={Entwicklung} />,
+            type: 'svg',
+          }}
+        />
+      </Container>
+    </Container>
+
+    {/* //! Was ist CN
     <Container inbox fullscreen bg={'secondary'}>
       <Container transparent flexDirection={'column'}>
         <Content subtitleColor={'inherit'} subtitle={SiteContent.cn[lang].title} />
@@ -93,34 +94,15 @@ export default props => (
           />
         </Container>
       </Container>
-    </Container>
+    </Container> */}
     {/* //! Parallax 1 */}
-    <Container inbox fullscreen>
+    {/* <Container inbox fullscreen>
       <Parallax src={props.data.domore.childImageSharp.fluid} alt={'do more'} />
-    </Container>
+    </Container> */}
     {/* //! Software Entwicklung */}
-    <Container id="sw">
-      <Content title={SiteContent.sw[lang].title} />
-      <Content
-        image={{
-          src: <SvgImage dWidth={250} src={Entwicklung} />,
-          type: 'svg',
-        }}
-      />
-    </Container>
-    <Container inbox>
-      <Content
-        column
-        text={
-          <React.Fragment>
-            {SiteContent.sw[lang].text[0]}
-            <br /> <br />
-            {SiteContent.sw[lang].text[3]}
-          </React.Fragment>
-        }
-      />
-    </Container>
-    <Container textColumn>
+
+    <Container>
+      <Content textColumn subtitle={SiteContent.sw[lang].subtitle} text={SiteContent.sw[lang].text} />
       <Content
         textAlign={'center'}
         text={
@@ -133,14 +115,6 @@ export default props => (
           src: <SvgImage dWidth={750} mWidth={300} src={serverless} />,
           type: 'svg',
         }}
-      />
-      <Content
-        text={
-          <React.Fragment>
-            {SiteContent.sw[lang].text[1]} <br /> <br />
-            {SiteContent.sw[lang].text[2]}
-          </React.Fragment>
-        }
       />
     </Container>
 
@@ -172,39 +146,42 @@ export default props => (
       </Container>
     </Container>
     {/* //! pro Software Entwicklung */}
-    <Container>
+    <Container pt={'0px'}>
       <Content subtitle={SiteContent.pro[lang].subtitle} />
     </Container>
-    <Container inbox>
-      <Content column text={SiteContent.pro[lang].text} />
-    </Container>
-    <Container ratio={12}>
-      <Content
-        image={{
-          src: <SvgImage dWidth={250} src={Pros} />,
-          type: 'svg',
-        }}
-      />
+    <Container pt={'0px'} alignItems={'flex-start'}>
+      <Container inbox flexDirection={'column'}>
+        <Content text={SiteContent.pro[lang].text} />
+
+        <Content
+          image={{
+            src: <SvgImage dWidth={300} src={Pros} />,
+            type: 'svg',
+          }}
+        />
+      </Container>
       <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.pro[lang].arguments} />} />
     </Container>
+
     {/* { // ! Parllax } */}
     <Container inbox fullscreen>
       <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
     </Container>
     {/* //! ML & AI */}
-    <Container id="ml">
-      <Content title={SiteContent.ml[lang].title} />
-      <Content
-        image={{
-          src: <SvgImage dWidth={250} src={AI} />,
-          type: 'svg',
-        }}
-      />
+    <Container fullscreen bg={'secondary'} id="ml">
+      <Container transparent flexDirection={'row'} textColumn>
+        <Content titleColor={'inherit'} title={SiteContent.ml[lang].title} />
+        <Content
+          image={{
+            src: <SvgImage dWidth={250} src={AI} />,
+            type: 'svg',
+          }}
+        />
+      </Container>
     </Container>
-    <Container inbox>
-      <Content column text={SiteContent.ml[lang].text} />
-    </Container>
-    <Container textColumn alignItems={'flex-start'}>
+
+    <Container>
+      <Content subtitle={SiteContent.ml[lang].subtitle} text={SiteContent.ml[lang].text} />
       <Content
         textAlign={'center'}
         text={
@@ -217,8 +194,8 @@ export default props => (
           type: 'svg',
         }}
       />
-      <Content text={SiteContent.ml[lang].text2} />
     </Container>
+
     {/* //! Tools */}
     <Container inbox fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
       <Container transparent flexDirection={'column'}>
@@ -264,7 +241,8 @@ export default props => (
     </Container>
 
     {/* //! Workshop 2  */}
-    <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
+
+    <Container pt={'0px'}>
       <Content title={SiteContent.workshops[lang].title} />
       <Content
         image={{
@@ -273,18 +251,29 @@ export default props => (
         }}
       />
     </Container>
-    <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} transparent>
-      <Content column text={SiteContent.workshops[lang].text} />
+    <Container pt={'0px'} alignItems={'flex-start'}>
+      <Container inbox flexDirection={'column'}>
+        <Content text={SiteContent.workshops[lang].text} />
+
+        <Content
+          image={{
+            src: <SvgImage dWidth={300} src={Pros2} />,
+            type: 'svg',
+          }}
+        />
+      </Container>
+      <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.workshops[lang].arguments} />} />
     </Container>
-    <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} ratio={12} transparent>
+
+    {/* <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
+      <Content title={SiteContent.workshops[lang].title} />
       <Content
         image={{
-          src: <SvgImage dWidth={650} src={Pros2} />,
+          src: <SvgImage dWidth={250} src={Workshop} />,
           type: 'svg',
         }}
       />
-      <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.workshops[lang].arguments} />} />
-    </Container>
+    </Container> */}
   </React.Fragment>
 )
 // props.data.clock.childImageSharp.fluid

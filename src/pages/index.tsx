@@ -26,15 +26,6 @@ export default props => {
           title={SiteContent.header[lang].title}
           text={SiteContent.header[lang].text}
           height={['220px', '850px']}
-          action={
-            <ContactButton
-              text={SiteContent.header[lang].action}
-              link={'/portfolio'}
-              textColor={'primary'}
-              width={'300px'}
-              border
-            />
-          }
         />
       </Container>
 

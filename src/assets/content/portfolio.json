@@ -1,13 +1,13 @@
 {
   "header": {
     "de": {
-      "title": "Cloud-Native Software-Entwicklung, Beratung & Workshops",
+      "title": "Cloud-Entwicklung, Machine Learning & KI, Beratung & Workshops",
       "text": [
-        "Bei uns dreht sich alles rund um Cloud-Software. Wir beraten Sie für den Aufbau einer optimalen Cloud-Infrastruktur. Entwickeln skalierbare und flexible Cloud-Native Applikationen, die sich an Ihre Bedingungen anpassen und mit Ihnen wachsen."
+        "Von Entwicklung über Infrastruktur bis hin zur Integration von Künstlicher Intelligenz in den Applikationen. Wir entwickeln mit Ihnen Ihre Cloud."
       ],
       "nav": [
         {"label": "Software-Entwicklung", "href": "sw"},
-        {"label": "Machine Learning & AI", "href": "ml"},
+        {"label": "KI & Machine Learning", "href": "ml"},
         {"label": "Beratung & Workshops", "href": "bw"}
       ]
     },
@@ -33,10 +33,13 @@
   "sw": {
     "de": {
       "title": "Software-Entwicklung",
+      "subtitle": "Worin unterscheidet sich die Cloud-Softwareentwicklung",
       "text": [
-        "Die Cloud-Native Softwareentwicklung löst sich vom traditionellen Modell der Erstellung monolithischer Softwareanwendungen und konzentriert sich stattdessen auf die Entwicklung von Anwendungen, die Cloud-Umgebungen nutzen. Diese Anwendungen werden unabhängig von der zugrunde liegenden Architektur erstellt und sind so konzipiert, dass sie von einer Cloud-basierten Architektur profitieren. In jeder Cloud-Anwendung befinden sich vier zugrundeliegende Säulen: Mikroservices, Container, dynamische Orchestrierung und kontinuierliche Lieferung.",
+        "Die Cloud-Softwareentwicklung löst sich vom traditionellen Modell der Erstellung monolithischer Softwareanwendungen und konzentriert sich stattdessen auf die Entwicklung von Anwendungen, die Cloud-Umgebungen nutzen. Diese Anwendungen werden unabhängig von der zugrunde liegenden Architektur erstellt und sind so konzipiert, dass sie von einer Cloud-basierten Architektur profitieren. In jeder Cloud-Anwendung befinden sich vier zugrundeliegende Säulen: Mikroservices, Container, dynamische Orchestrierung und kontinuierliche Lieferung.",
+        "",
         "Wir bei oseven setzen auf Best Practices von bereits etablierten Sytemen, wie das Well-Architected-Framework von AWS und halten uns an die gängigen Cloud Native Design Principles, so ermöglichen wir es Ihnen, der Konkurrenz immer einen Schritt voraus zu sein.",
-        " Um immer das beste Ergebnis zu erreichen, sind wir nicht auf einen Cloud-Anbieter fixiert, sondern versuchen den besten Anbieter für genau Ihren Use-Case auszuwählen. Die Leistungen der verschieden anbieter unterscheiden sich dabei stark. Wir suchen gemeinsam Ihnen den richtigen Anbieter aus um Ihr Projekt erfolgreich umzusetzen.",
+        "",
+        "Um immer das beste Ergebnis zu erreichen, sind wir nicht auf einen Cloud-Anbieter fixiert, sondern versuchen den besten Anbieter für genau Ihren Use-Case auszuwählen. Die Leistungen der verschieden anbieter unterscheiden sich dabei stark. Wir suchen gemeinsam Ihnen den richtigen Anbieter aus um Ihr Projekt erfolgreich umzusetzen.",
         "Es gab noch nie einen besseren Zeitpunkt, um das volle Potenzial der Cloud auszuschöpfen, indem Sie Ihre Anwendungen als Cloud-Native reorganisieren oder neu aufbauen."
       ]
     },
@@ -44,7 +47,7 @@
   },
   "pro": {
     "de": {
-      "subtitle": "Gründe für die Entwicklung Cloud-native Applikationen",
+      "subtitle": "Gründe für die Entwicklung Cloud-Applikationen",
       "text": [
         "Weltweit haben bereits mehr als 65% der Unternehmen damit begonnen, ihre Anwendungsstrategie und Roadmap auf Cloud-Plattformen aufzubauen. Es wird erwartet, dass bis 2021 der Prozentsatz bei 95% liegt. Cloud-Plattformen, wie AWS definieren die Art und Weise, wie Unternehmen ihre Geschäftsfall  neu skalieren. Hier sind einige der Hauptgründe, warum die Entwicklung von cloud-nativen Anwendungen von Vorteil ist."
       ],
@@ -66,14 +69,17 @@
   },
   "ml": {
     "de": {
-      "title": "Machine Learning & AI in der Cloud",
+      "title": "Machine Learning & KI in der Cloud",
+      "subtitle": "Einführung in Machine Learning",
+
       "text": [
         "Machine Learning ist eine Anwendung der künstlichen Intelligenz (KI), die den Systemen die Möglichkeit bietet, automatisch aus der Erfahrung und Daten zu lernen und sich zu verbessern, ohne explizit programmiert zu sein.",
+        "",
         "Wir setzen spezialisierte Machine Learning-Systeme ein, um langwierige Arbeitsabläufe zu automatisieren, erforschen Daten maßstabsgetreu und schaffen dadurch neue Wege der Zusammenarbeit für Sie und Ihre Kunden.",
-        "Machine Learning ist der Weg in die Zukunft und eine Gelegenheit, die Kraft der Künstlichen Intelligenz für Sie und Ihr Unternehmen zu nutzen."
-      ],
-      "text2": [
+        "Machine Learning ist der Weg in die Zukunft und eine Gelegenheit, die Kraft der Künstlichen Intelligenz für Sie und Ihr Unternehmen zu nutzen.",
+
         "Bei der Entwicklung von Machine Learning Models setzen wir auf einen von Google entwickelten Development Cycle",
+        "",
         "Der Einsatz des maschinellen Lernens ist nicht nur eine Frage des richtigen Algorithmus und trainieren eines Modells. Es muss gründlich darüber nachgedacht werden, wie diese ML-Modelle in Ihre bestehenden Systeme und Prozesse passen.",
         "Wir bei oseven setzen nicht nur auf etablierte KI-Lösungen von Cloudanbieter, wie AWS und Google sondern auch auf Open Source Tools, wie zum Beispiel Tensorflow, umso die bestmögliche Lösung zu entwickeln."
       ]
@@ -83,7 +89,7 @@
 
   "tools": {
     "de": {
-      "title": "Weitere Tools"
+      "title": "Unsere Machine Learning Frameworks"
     },
     "en": {}
   },

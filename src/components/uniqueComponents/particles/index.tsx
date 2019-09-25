@@ -7,7 +7,7 @@ import {useWindowSize} from '../../../assets/hooks/windowWidth'
 import Typography from '../../typography'
 
 interface IParticles extends IParticlesParams {
-  title?: string
+  title?: string | string []
   text?: string
   action?: JSX.Element
   height: string[]
@@ -46,7 +46,12 @@ const _Particles = (props: IParticles) => {
         }}>
         {title ? (
           <Typography variant="h1" color={'inherit'}>
-            {title}
+            {title.map((text) => {
+              return  <React.Fragment key={text}>
+              {text} <br />
+            </React.Fragment>
+            }
+            )}
           </Typography>
         ) : null}
         {text ? (
@@ -70,6 +75,6 @@ const _Particles = (props: IParticles) => {
 
 const StyledDiv = styled.div`
   position: absolute;
-  margin: 0px 10px;
+  padding: 0px 20px;
 `
 export default _Particles
