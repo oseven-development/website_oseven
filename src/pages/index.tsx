@@ -25,7 +25,7 @@ export default props => {
         <Particles
           title={SiteContent.header[lang].title}
           text={SiteContent.header[lang].text}
-          height={['220px', '850px']}
+          height={['220px', '600px']}
         />
       </Container>
 

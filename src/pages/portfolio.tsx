@@ -146,18 +146,16 @@ export default props => (
       </Container>
     </Container>
     {/* //! pro Software Entwicklung */}
-    <Container pt={'0px'}>
-      <Content subtitle={SiteContent.pro[lang].subtitle} />
-    </Container>
+
     <Container pt={'0px'} alignItems={'flex-start'}>
       <Container inbox flexDirection={'column'}>
-        <Content text={SiteContent.pro[lang].text} />
-
         <Content
+          subtitle={SiteContent.pro[lang].subtitle}
           image={{
-            src: <SvgImage dWidth={300} src={Pros} />,
+            src: <SvgImage dWidth={250} src={Pros} />,
             type: 'svg',
           }}
+          text={SiteContent.pro[lang].text}
         />
       </Container>
       <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.pro[lang].arguments} />} />
@@ -227,10 +225,6 @@ export default props => (
     <Container inbox fullscreen bg={'secondary'} flexDirection={'column'}>
       <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']} transparent id="bw">
         <Content titleColor={'inherit'} title={SiteContent.consulting[lang].title} />
-      </Container>
-
-      <Container pt={['0px 0px 20px 0px', '0px 0px 40px 0px']} transparent>
-        <Content textColor={'inherit'} text={SiteContent.consulting[lang].text} />
         <Content
           image={{
             src: <SvgImage dWidth={250} src={Consultant} />,
@@ -240,29 +234,58 @@ export default props => (
       </Container>
     </Container>
 
-    {/* //! Workshop 2  */}
-
-    <Container pt={'0px'}>
-      <Content title={SiteContent.workshops[lang].title} />
-      <Content
-        image={{
-          src: <SvgImage dWidth={250} src={Workshop} />,
-          type: 'svg',
-        }}
-      />
-    </Container>
     <Container pt={'0px'} alignItems={'flex-start'}>
       <Container inbox flexDirection={'column'}>
-        <Content text={SiteContent.workshops[lang].text} />
-
         <Content
+          subtitle={SiteContent.consulting[lang].subtitle}
           image={{
-            src: <SvgImage dWidth={300} src={Pros2} />,
+            src: <SvgImage dWidth={250} src={Workshop} />,
             type: 'svg',
           }}
+          text={SiteContent.consulting[lang].text}
         />
       </Container>
+      <Content textVariant={'div'} textAlign={'left'} />
+    </Container>
+
+    {/* soft skills */}
+    <Container inbox fullscreen bg={'third'} style={{border: '1px solid #7F83885F'}}>
+      <Container transparent flexDirection={'column'}>
+        <Content subtitle={SiteContent.tools[lang].title} />
+        <Content
+          imageDirection={'row'}
+          image={[
+            {
+              src: <SvgImage dWidth={250} mWidth={150} src={py} />,
+              type: 'svg',
+            },
+            {
+              src: <SvgImage dWidth={250} mWidth={150} src={tf} />,
+              type: 'svg',
+            },
+            {
+              src: <SvgImage dWidth={250} mWidth={150} src={k8} />,
+              type: 'svg',
+            },
+          ]}
+        />
+      </Container>
+    </Container>
+
+    {/* //! Workshop 2  */}
+
+    <Container pt={'0px'} alignItems={'flex-start'}>
       <Content textVariant={'div'} textAlign={'left'} text={<List items={SiteContent.workshops[lang].arguments} />} />
+      <Container inbox flexDirection={'column'}>
+        <Content
+          subtitle={SiteContent.workshops[lang].title}
+          image={{
+            src: <SvgImage dWidth={250} src={Pros2} />,
+            type: 'svg',
+          }}
+          text={SiteContent.workshops[lang].text}
+        />
+      </Container>
     </Container>
 
     {/* <Container pt={['20px 0px 0px 0px', '40px 0px 0px 0px']}>
