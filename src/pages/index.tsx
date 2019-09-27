@@ -30,11 +30,17 @@ export default props => {
       </Container>
 
       <Container>
-        <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
+        <Content title={SiteContent.uberuns[lang].title} text={SiteContent.uberuns[lang].text} titleColor="primary" />
+        <Content
+          imageDirection={'row'}
+          image={{
+            src: <SvgImage dWidth={250} mWidth={80} src={professor} />,
+            type: 'svg',
+            padding: '5px',
+          }}
+        />
       </Container>
-      <Container inbox flexDirection={'column'}>
-        <Content column text={SiteContent.uberuns[lang].text} />
-      </Container>
+
       <Container>
         <Content
           imageDirection={'row'}
@@ -58,9 +64,6 @@ export default props => {
         />
       </Container>
 
-      <Container inbox fullscreen>
-        <Parallax src={props.data.parallax.childImageSharp.fluid} alt={'man in coffee'} />
-      </Container>
       <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
         <Container transparent>
           <Container transparent flexDirection={'column'}>
@@ -75,33 +78,6 @@ export default props => {
           <Container transparent>
             <Content textColor="inherit" text={SiteContent.team[lang].text} />
           </Container>
-        </Container>
-      </Container>
-
-      <Container fullscreen>
-        <Container transparent>
-          <Content
-            title={SiteContent.contact[lang].title}
-            textVariant={'div'}
-            text={
-              <React.Fragment>
-                {SiteContent.contact[lang].text}
-                <ContactButton
-                  text={'kontaktiere uns hier'}
-                  link={'/kontakt'}
-                  textColor={'primary'}
-                  width={'320px'}
-                  border
-                />
-              </React.Fragment>
-            }
-          />
-          <Content
-            image={{
-              src: <SvgImage dWidth={450} src={contact} />,
-              type: 'svg',
-            }}
-          />
         </Container>
       </Container>
     </React.Fragment>
