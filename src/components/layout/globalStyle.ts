@@ -67,7 +67,7 @@ export default createGlobalStyle`
   h1{
     font-weight: 200;
     font-family: "Montserrat", sans-serif;
-    font-size: ${buildString('46px', '60px')};
+    font-size: ${buildString('26px', '60px')};
     margin: 15px 0px;
     }
   .title {

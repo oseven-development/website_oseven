@@ -10,7 +10,7 @@ import {useWindowSize} from '../../assets/hooks/windowWidth'
 // * Am unteren der Seite sind alle möglichen Beispiele
 
 interface IContent {
-  title?: string
+  title?: string | JSX.Element
   titleColor?: TColor
   titleAlign?: 'center'
   subtitleColor?: TColor

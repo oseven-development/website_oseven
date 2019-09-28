@@ -27,7 +27,7 @@ import k8 from '../assets/images/tools/k8.svg'
 import serverless from '../assets/images/architecture/serverless-architektur.svg'
 import Model from '../assets/images/architecture/model.svg'
 // Components
-import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List} from '../components'
+import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List, Typography} from '../components'
 import {Flex} from 'rebass'
 import SubNavigation from '../components/uniqueComponents/subNavigation'
 // Bilder Backgrounds
@@ -42,20 +42,24 @@ export default props => (
     />
     {/* //! Header */}
     <Container p={'0px'}>
-      <Content title={SiteContent.header[lang].title} />
+      <Content
+        title={
+          <React.Fragment>
+            {SiteContent.header[lang].title[0]} <br />
+            {SiteContent.header[lang].title[1]} <br />
+            {SiteContent.header[lang].title[2]} <br />
+          </React.Fragment>
+        }
+        text={SiteContent.header[lang].text}
+      />
     </Container>
-    <Container pt={'0px'} transparent alignItems={'stretch'}>
+    <Container inbox pt={'0px'} transparent alignItems={'stretch'}>
       <Container inbox flexDirection={'column'} justifyContent={'space-between'} height={['100%', '100%']}>
-        <Content text={SiteContent.header[lang].text} />
+        <Content />
         <Content text={<SubNavigation links={SiteContent.header[lang].nav} />} />
       </Container>
 
-      <Content
-        image={{
-          src: <SvgImage dWidth={450} src={PortfolioSvg} />,
-          type: 'svg',
-        }}
-      />
+      <Content />
     </Container>
     {/* Software Entwicklung */}
     <Container fullscreen bg={'secondary'} id="sw">

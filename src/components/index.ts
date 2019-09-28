@@ -15,6 +15,7 @@ import ContactButton from './uniqueComponents/ContactButton'
 import List from './uniqueComponents/List'
 import Particles from './uniqueComponents/particles'
 import Project from './uniqueComponents/Project'
+import SkillCard from './uniqueComponents/cards'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -35,4 +36,5 @@ export {
   Project,
   Particles,
   List,
+  SkillCard,
 }
