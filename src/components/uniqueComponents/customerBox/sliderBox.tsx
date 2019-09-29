@@ -38,7 +38,7 @@ export default (props: IProps) => {
       <div style={{position: 'relative'}}>
         <div style={{maxHeight: '400px', overflow: 'hidden', height: '400px'}}>
           <Img
-            style={{margin: '0 auto'}}
+            style={{margin: 'auto'}}
             fluid={node.childImageSharp.fluid}
             key={node.id}
             alt={node.name.replace(/-/g, ' ').substring(2)}
