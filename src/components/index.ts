@@ -17,6 +17,7 @@ import Particles from './uniqueComponents/particles'
 import Project from './uniqueComponents/Project'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
+import CustomerBox from './uniqueComponents/customerBox/customerBox'
 
 export {
   Layout,
@@ -35,4 +36,5 @@ export {
   Project,
   Particles,
   List,
+  CustomerBox,
 }
