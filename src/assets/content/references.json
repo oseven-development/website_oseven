@@ -13,7 +13,21 @@
   "customer": {
     "de": {
       "title": "Unsere Kunden",
-      "text": ""
+      "text": " Erfahren Sie mehr über unsere neuesten Engagements, die Innovationen für Unternehmen und Behörden vorantreiben.",
+      "customers": [
+        {
+          "title": "Soarce UG",
+          "description": ["Security Fix"],
+          "contactStack": [{"provider": "xing", "linkTo": "https://www.xing.com"}],
+          "techStack": ["Python 3", "Django", "MySQL", "AWS"]
+        },
+        {
+          "title": "Wagner Bau Service",
+          "description": ["CMS Platform für Bauprojekte und Karriere"],
+          "contactStack": [{"provider": "xing", "linkTo": "https://www.xing.com"}],
+          "techStack": ["Python 3", "Django", "MySQL", "AWS"]
+        }
+      ]
     },
     "en": {}
   },
