@@ -132,19 +132,19 @@ export default props => (
           imageDirection={'row'}
           image={[
             {
-              src: <SvgImage dWidth={300} mWidth={200} src={GCP} />,
+              src: <SvgImage dWidth={300} mWidth={200} src={GCP} p={'15px 0px'} />,
               type: 'svg',
             },
             {
-              src: <SvgImage dWidth={90} mWidth={50} src={AWS} />,
+              src: <SvgImage dWidth={90} mWidth={50} src={AWS} p={'15px 0px'} />,
               type: 'svg',
             },
             {
-              src: <SvgImage dWidth={180} mWidth={120} src={Azure} />,
+              src: <SvgImage dWidth={180} mWidth={120} src={Azure} p={'15px 0px'} />,
               type: 'svg',
             },
             {
-              src: <SvgImage dWidth={180} mWidth={120} src={Firebase} />,
+              src: <SvgImage dWidth={180} mWidth={120} src={Firebase} p={'15px 0px'} />,
               type: 'svg',
             },
           ]}
@@ -210,15 +210,15 @@ export default props => (
           imageDirection={'row'}
           image={[
             {
-              src: <SvgImage dWidth={250} mWidth={150} src={py} />,
+              src: <SvgImage dWidth={250} mWidth={150} src={py} p={'15px 0px'} />,
               type: 'svg',
             },
             {
-              src: <SvgImage dWidth={250} mWidth={150} src={tf} />,
+              src: <SvgImage dWidth={250} mWidth={150} src={tf} p={'15px 0px'} />,
               type: 'svg',
             },
             {
-              src: <SvgImage dWidth={250} mWidth={150} src={k8} />,
+              src: <SvgImage dWidth={250} mWidth={150} src={k8} p={'15px 0px'} />,
               type: 'svg',
             },
           ]}

@@ -7,7 +7,7 @@ import ContactSvg from '../assets/images/illustrations/references.svg'
 
 import {Flex, Box} from 'rebass'
 // Components
-import {Seo, Container, SvgImage, Content, Parallax, Project, CustomerBox} from '../components'
+import {Seo, Container, SvgImage, Content, Parallax, Project, CustomerBox, Typography} from '../components'
 
 // Bilder Backgrounds
 const lang = 'de'
@@ -34,45 +34,24 @@ export default props => {
       <div style={{maxWidth: '1200px', margin: 'auto'}}>
         <Flex p={['0 20px', '0']}>
           <Box width={[1, 0.5]} pr={[0, 3]}>
-            <h1>{SiteContent.customer[lang].title}</h1>
-            <h3>
-              Erfahren Sie mehr über unsere neuesten Engagements, die Innovationen für Unternehmen und Behörden
-              vorantreiben.
-            </h3>
+            <Typography variant="h1">{SiteContent.customer[lang].title}</Typography>
+            <Typography variant="h3">{SiteContent.customer[lang].text}</Typography>
           </Box>
         </Flex>
       </div>
 
       {/* Put Container here */}
       <div style={{maxWidth: '1200px', margin: 'auto'}}>
-        <CustomerBox
-          title="Wagner Bau Service"
-          description={[
-            'Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet  clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, onsetetur sadipscing elitr, sed diam … more',
-            'asd',
-          ]}
-          contactStack={[
-            {provider: 'twitter', linkTo: 'https://www.xing.com'},
-            {provider: 'twitter', linkTo: 'https://www.xing.com'},
-            {provider: 'twitter', linkTo: 'https://www.xing.com'},
-            {provider: 'twitter', linkTo: 'https://www.xing.com'},
-            {provider: 'twitter', linkTo: 'https://www.xing.com'},
-            {provider: 'web', linkTo: 'https://www.homepage.com'},
-          ]}
-          techStack={['react', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3']}
-          imageStack={[]}
-        />
-
-        <CustomerBox
-          title="Wagner Bau Service"
-          description={[
-            'Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet  clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, onsetetur sadipscing elitr, sed diam … more',
-            'asd',
-          ]}
-          contactStack={[{provider: 'xing', linkTo: 'https://www.xing.com'}]}
-          techStack={['react', 'python3']}
-          imageStack={[]}
-        />
+        {SiteContent.customer[lang].customers &&
+          SiteContent.customer[lang].customers.map((ref: any) => (
+            <CustomerBox
+              title={ref.title}
+              description={ref.description}
+              contactStack={ref.contactStack}
+              techStack={ref.techStack}
+              imageStack={[]}
+            />
+          ))}
       </div>
 
       <Container fullscreen bg={'secondary'}>
