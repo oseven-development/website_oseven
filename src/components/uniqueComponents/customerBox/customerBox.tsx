@@ -16,6 +16,7 @@ interface IProps{
     imageStack: IImageBox[]
 }
 interface IimageStack{
+    title: String
     provider: 'web' | 'twitter' | 'instagram' 
     linkTo: String
 }
@@ -38,7 +39,13 @@ const {title, description,contactStack, techStack, imageStack} = props
             {/* Render ContactStack */}
             <h3>Zur Homepage</h3>
             <div>
-                {contactStack.map(content=><StyledContactItem><a href={String(content.linkTo)}><SocialMediaItem provider={content.provider}/><span>{content.provider}</span></a></StyledContactItem>)}
+                {contactStack.map(content=>(
+                    <StyledContactItem>
+                        <a href={String(content.linkTo)}>
+                            <SocialMediaItem provider={content.provider}/><span>{content.title}</span>
+                        </a>
+                    </StyledContactItem>
+                ))}
             </div>
             {/* Render TechStack */}
             <h3>Technolgoien</h3>
