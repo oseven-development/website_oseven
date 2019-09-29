@@ -50,6 +50,7 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "@types/rebass": "^4.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",

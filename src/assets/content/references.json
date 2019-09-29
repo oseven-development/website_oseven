@@ -18,7 +18,11 @@
         {
           "title": "Soarce UG",
           "description": ["Security Fix"],
-          "contactStack": [{"provider": "xing", "linkTo": "https://www.xing.com"}],
+          "contactStack": [
+            {"title": "Zum Xing Profil", "provider": "xing", "linkTo": "https://www.xing.com"},
+            {"title": "Zur Homepage", "provider": "web", "linkTo": "https://www.xing.com"},
+            {"title": "Zum Xing Profil", "provider": "xing", "linkTo": "https://www.xing.com"}
+          ],
           "techStack": ["Python 3", "Django", "MySQL", "AWS"]
         },
         {
