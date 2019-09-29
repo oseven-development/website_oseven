@@ -51,8 +51,15 @@ export default props => {
             'Lorem ipsum dolor sit amet, consetetur adipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet  clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, onsetetur sadipscing elitr, sed diam … more',
             'asd',
           ]}
-          contactStack={[{provider: 'xing', linkTo: 'https://www.xing.com'}]}
-          techStack={['react', 'python3']}
+          contactStack={[
+            {provider: 'twitter', linkTo: 'https://www.xing.com'},
+            {provider: 'twitter', linkTo: 'https://www.xing.com'},
+            {provider: 'twitter', linkTo: 'https://www.xing.com'},
+            {provider: 'twitter', linkTo: 'https://www.xing.com'},
+            {provider: 'twitter', linkTo: 'https://www.xing.com'},
+            {provider: 'web', linkTo: 'https://www.homepage.com'},
+          ]}
+          techStack={['react', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3', 'python3']}
           imageStack={[]}
         />
 

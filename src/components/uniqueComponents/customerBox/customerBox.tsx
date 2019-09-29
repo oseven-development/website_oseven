@@ -1,8 +1,12 @@
 /** @format */
 import React from 'react'
-import {Flex, Box} from 'rebass'
+import {Flex, Box, Image} from 'rebass'
 import ContentBox from './contentBox'
 import styled from 'styled-components'
+
+import twitter from '../../../assets/images/socialMedia/twitter.svg'
+import homepage from '../../../assets/images/socialMedia/homepage.svg'
+import instagram from '../../../assets/images/socialMedia/instagram.svg'
 
 interface IProps{
     title: String
@@ -12,10 +16,9 @@ interface IProps{
     imageStack: IImageBox[]
 }
 interface IimageStack{
-    provider: 'web' | 'xing' | 'facebook' | 'instagram'
+    provider: 'web' | 'twitter' | 'instagram' 
     linkTo: String
 }
-
 interface IImageBox{
     img: any
     figureTag: String
@@ -34,31 +37,95 @@ const {title, description,contactStack, techStack, imageStack} = props
             {description.map(content=><p>{content}</p>)}
             {/* Render ContactStack */}
             <h3>Zur Homepage</h3>
-            {contactStack.map(content=><a href={String(content.linkTo)}><p>{content.provider}</p></a>)}
+            <div>
+                {contactStack.map(content=><StyledContactItem><a href={String(content.linkTo)}><SocialMediaItem provider={content.provider}/><span>{content.provider}</span></a></StyledContactItem>)}
+            </div>
             {/* Render TechStack */}
             <h3>Technolgoien</h3>
-            {techStack.map(content=><p>{content}</p>)}
+            <div>
+                {techStack.map(content=><StyledTechItem>{content}</StyledTechItem>)}
+            </div>
         </Box>
         </Flex>
       </StyledConsumerBox>
   )
 }
 
-// @media { 768}
+// Render korrektes SVG für den Kontakt
+interface ISocialMediaItemProps{
+    provider: 'web' | 'twitter' | 'instagram' 
+}
+const SocialMediaItem = (props:ISocialMediaItemProps) => {
+    let icon
+    switch (props.provider) {
+        case 'web':
+            icon = homepage
+            break;
+         case 'twitter':
+            icon = twitter
+            break;
+         case 'instagram':
+            icon = instagram
+            break;
+        default:
+            icon = twitter
+            break;
+    }
+    return <Image width={30} src={icon} />
+}
+
+// Stylings für die Consumer Box
 const StyledConsumerBox = styled.div`
-  :after{
+    h2 {
+        color: ${props => props.theme.colors.primary};
+    }
+  :not(:last-child):after{
     content: '';
     display: block;
     width: 100%;
-    margin-top: 75px;
     height: 2px;
     box-shadow: 0 3px 6px #999;
     background-color: #999;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    @media screen and (${props => props.theme.device.laptop}) {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    }
   }
-  margin-bottom: 75px;
-:last-child:after
-{ 
-    display:none
+`
 
-}
+// Styling für ein Contact-Item
+const StyledContactItem = styled.div`
+    display: inline-block;
+    margin-bottom: 10px;
+    :not(:first-child){
+        margin-left: 40px;
+        
+    }
+    :not(:first-child):before{
+        content: '';
+        background: #777;
+        width: 1px;
+        height: 24px;
+        left: -20px;
+        display: inline-block;
+        position: relative;
+    }
+    span {
+        margin-left: 8px;
+        position: relative;
+        top: -8px;
+    }
+`
+
+// Styling Techbubbels
+const StyledTechItem = styled.span`
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: white;
+    background: ${props => props.theme.colors.secondary};
+    display: inline-block;
+    margin-bottom: 10px;
 `
