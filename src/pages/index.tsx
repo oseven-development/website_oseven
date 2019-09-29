@@ -11,8 +11,9 @@ import developer from '../assets/images/illustrations/developer.svg'
 import professor from '../assets/images/illustrations/professor.svg'
 import SiteContent from '../assets/content/uberuns.json'
 // Components
-import {Seo, Container, ContactButton, Content, Parallax, Particles, SvgImage} from '../components'
+import {Seo, Container, ContactButton, Content, Parallax, Particles, SvgImage, SkillCard} from '../components'
 import theme from '../assets/theme'
+import Img from 'gatsby-image'
 
 // Bilder Backgrounds
 
@@ -25,42 +26,43 @@ export default props => {
         <Particles
           title={SiteContent.header[lang].title}
           text={SiteContent.header[lang].text}
-          height={['220px', '850px']}
+          height={['220px', '600px']}
         />
       </Container>
 
       <Container>
-        <Content title={SiteContent.uberuns[lang].title} titleColor="primary" />
-      </Container>
-      <Container inbox flexDirection={'column'}>
-        <Content column text={SiteContent.uberuns[lang].text} />
-      </Container>
-      <Container>
+        <Content title={SiteContent.uberuns[lang].title} text={SiteContent.uberuns[lang].text} titleColor="primary" />
         <Content
           imageDirection={'row'}
-          image={[
-            {
-              src: <SvgImage dWidth={250} mWidth={80} src={developer} />,
-              type: 'svg',
-              padding: '5px',
-            },
-            {
-              src: <SvgImage dWidth={250} mWidth={80} src={professor} />,
-              type: 'svg',
-              padding: '5px',
-            },
-            {
-              src: <SvgImage dWidth={250} mWidth={80} src={business} />,
-              type: 'svg',
-              padding: '5px',
-            },
-          ]}
+          image={{
+            src: <SvgImage dWidth={250} mWidth={80} src={professor} />,
+            type: 'svg',
+            padding: '5px',
+          }}
         />
       </Container>
 
-      <Container inbox fullscreen>
-        <Parallax src={props.data.parallax.childImageSharp.fluid} alt={'man in coffee'} />
+      <Container pt={'0px 0px 60px 0px '}>
+        <SkillCard
+          image={<Img fluid={props.data.sw.childImageSharp.fluid} alt={'consulting'} style={{height: 250}} />}
+          title={SiteContent.uberuns[lang].skills[0].title}
+          text={SiteContent.uberuns[lang].skills[0].text}
+          link={SiteContent.uberuns[lang].skills[0].link}
+        />
+        <SkillCard
+          image={<Img fluid={props.data.ml.childImageSharp.fluid} alt={'sw'} style={{height: 250}} />}
+          title={SiteContent.uberuns[lang].skills[1].title}
+          text={SiteContent.uberuns[lang].skills[1].text}
+          link={SiteContent.uberuns[lang].skills[1].link}
+        />
+        <SkillCard
+          image={<Img fluid={props.data.consulting.childImageSharp.fluid} alt={'ml'} style={{height: 250}} />}
+          title={SiteContent.uberuns[lang].skills[2].title}
+          text={SiteContent.uberuns[lang].skills[2].text}
+          link={SiteContent.uberuns[lang].skills[2].link}
+        />
       </Container>
+
       <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
         <Container transparent>
           <Container transparent flexDirection={'column'}>
@@ -77,33 +79,6 @@ export default props => {
           </Container>
         </Container>
       </Container>
-
-      <Container fullscreen>
-        <Container transparent>
-          <Content
-            title={SiteContent.contact[lang].title}
-            textVariant={'div'}
-            text={
-              <React.Fragment>
-                {SiteContent.contact[lang].text}
-                <ContactButton
-                  text={'kontaktiere uns hier'}
-                  link={'/kontakt'}
-                  textColor={'primary'}
-                  width={'320px'}
-                  border
-                />
-              </React.Fragment>
-            }
-          />
-          <Content
-            image={{
-              src: <SvgImage dWidth={450} src={contact} />,
-              type: 'svg',
-            }}
-          />
-        </Container>
-      </Container>
     </React.Fragment>
   )
 }
@@ -118,6 +93,27 @@ export const indexQuery = graphql`
       }
     }
     background: file(relativePath: {eq: "test/test4.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    consulting: file(relativePath: {eq: "skills/consulting.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sw: file(relativePath: {eq: "skills/sw.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    ml: file(relativePath: {eq: "skills/ml.jpg"}) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

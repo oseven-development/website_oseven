@@ -9,12 +9,14 @@ import Header from './header'
 import Image from './image'
 import SvgImage from './image/ImageSvg'
 import Parallax from './image/parallax'
+import BoxShadowBox from './image/boxer'
 import Navigation from './navigation'
 import Footer from './uniqueComponents/footer'
 import ContactButton from './uniqueComponents/ContactButton'
 import List from './uniqueComponents/List'
 import Particles from './uniqueComponents/particles'
 import Project from './uniqueComponents/Project'
+import SkillCard from './uniqueComponents/cards'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
 import CustomerBox from './uniqueComponents/customerBox/customerBox'
@@ -24,6 +26,7 @@ export {
   Container,
   Seo,
   Typography,
+  BoxShadowBox,
   Navigation,
   Header,
   Image,
@@ -36,5 +39,8 @@ export {
   Project,
   Particles,
   List,
+ 
   CustomerBox,
+  SkillCard,
+
 }

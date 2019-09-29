@@ -43,7 +43,7 @@ export const StyledLi = styled.li`
   list-style-type: none;
   margin: 10px;
   padding: 16px;
-  background: ${theme.colors.third};
-  border: 1px solid #7f83885f;
-  border-radius: 30px;
+  /* background: ${theme.colors.third}; */
+  border-bottom: 1px solid #7f83885f;
+  /* border-radius: 30px; */
 `

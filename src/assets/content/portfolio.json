@@ -1,9 +1,10 @@
 {
   "header": {
     "de": {
-      "title": "Cloud-Entwicklung, Machine Learning & KI, Beratung & Workshops",
+      "title": ["Cloud-Entwicklung", "Machine Learning & KI", "Beratung & Workshops"],
       "text": [
-        "Von Entwicklung über Infrastruktur bis hin zur Integration von Künstlicher Intelligenz in den Applikationen. Wir entwickeln mit Ihnen Ihre Cloud."
+        "Von Entwicklung über Infrastruktur bis hin zur Integration von Künstlicher",
+        "Intelligenz in den Applikationen. Wir entwickeln mit Ihnen Ihre Cloud."
       ],
       "nav": [
         {"label": "Software-Entwicklung", "href": "sw"},
@@ -95,7 +96,8 @@
   },
   "consulting": {
     "de": {
-      "title": "Strategische Cloud Beratung",
+      "title": "Beratung & Workshops",
+      "subtitle": "Strategische Cloud Beratung",
       "text": [
         "Mit ihnen gemeinsam wollen wir herausfinden auf welchem Stand Ihre IT ist und wo sie gerne sein will?",
         "Dabei unterstützen wir sie bei dem Umzug in die Cloud und können Ihnen dazu die anfallenden Fragen beantworten.",
