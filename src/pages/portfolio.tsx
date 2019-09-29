@@ -27,7 +27,7 @@ import k8 from '../assets/images/tools/k8.svg'
 import serverless from '../assets/images/architecture/serverless-architektur.svg'
 import Model from '../assets/images/architecture/model.svg'
 // Components
-import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List, Typography} from '../components'
+import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List, Typography, BoxShadowBox} from '../components'
 import {Flex} from 'rebass'
 import SubNavigation from '../components/uniqueComponents/subNavigation'
 // Bilder Backgrounds
@@ -106,20 +106,22 @@ export default props => (
     {/* //! Software Entwicklung */}
 
     <Container>
-      <Content textColumn subtitle={SiteContent.sw[lang].subtitle} text={SiteContent.sw[lang].text} />
-      <Content
-        textAlign={'center'}
-        text={
-          <React.Fragment>
-            <i>Architektur einer Serverless Anwendung bei AWS</i>
-          </React.Fragment>
-        }
-        textColor={'secondary'}
-        image={{
-          src: <SvgImage dWidth={750} mWidth={300} src={serverless} />,
-          type: 'svg',
-        }}
-      />
+      <Content subtitle={SiteContent.sw[lang].subtitle} text={SiteContent.sw[lang].text} />
+      <BoxShadowBox>
+        <Content
+          textAlign={'center'}
+          text={
+            <React.Fragment>
+              <i>Architektur einer Serverless Anwendung bei AWS</i>
+            </React.Fragment>
+          }
+          textColor={'secondary'}
+          image={{
+            src: <SvgImage dWidth={750} mWidth={300} src={serverless} />,
+            type: 'svg',
+          }}
+        />
+      </BoxShadowBox>
     </Container>
 
     {/* //! Key Partners */}
@@ -184,18 +186,20 @@ export default props => (
 
     <Container>
       <Content subtitle={SiteContent.ml[lang].subtitle} text={SiteContent.ml[lang].text} />
-      <Content
-        textAlign={'center'}
-        text={
-          <React.Fragment>
-            <i>Machine learning lifecycle by Google</i>
-          </React.Fragment>
-        }
-        image={{
-          src: <SvgImage dWidth={750} mWidth={300} src={Model} />,
-          type: 'svg',
-        }}
-      />
+      <BoxShadowBox>
+        <Content
+          textAlign={'center'}
+          text={
+            <React.Fragment>
+              <i>Machine learning lifecycle by Google</i>
+            </React.Fragment>
+          }
+          image={{
+            src: <SvgImage dWidth={750} mWidth={300} src={Model} />,
+            type: 'svg',
+          }}
+        />
+      </BoxShadowBox>
     </Container>
 
     {/* //! Tools */}
