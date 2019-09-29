@@ -47,18 +47,20 @@ export default props => {
       </Container>
 
       {/* Customer Boxen */}
-      <div style={{maxWidth: '1200px', margin: 'auto'}}>
-        {SiteContent.customer[lang].customers &&
-          SiteContent.customer[lang].customers.map((ref: any) => (
-            <CustomerBox
-              title={ref.title}
-              description={ref.description}
-              contactStack={ref.contactStack}
-              techStack={ref.techStack}
-              imageStack={[]}
-            />
-          ))}
-      </div>
+      <Container fullscreen>
+        <div style={{maxWidth: '1200px', margin: 'auto'}}>
+          {SiteContent.customer[lang].customers &&
+            SiteContent.customer[lang].customers.map((ref: any) => (
+              <CustomerBox
+                title={ref.title}
+                description={ref.description}
+                contactStack={ref.contactStack}
+                techStack={ref.techStack}
+                imageStack={[]}
+              />
+            ))}
+        </div>
+      </Container>
 
       {/* Parallax */}
       <Container inbox fullscreen>
