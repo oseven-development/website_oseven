@@ -139,3 +139,17 @@ const Container = (props: IContainer) => {
   )
 }
 export default Container
+
+export const ContainerBox = (props: {children: JSX.Element | JSX.Element[]}) => {
+  const {children} = props
+  return <StyledContainerBox>{children}</StyledContainerBox>
+}
+
+const StyledContainerBox = styled.div`
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 20px;
+  @media screen and (${props => props.theme.device.laptop}) {
+    padding: 0;
+  }
+`

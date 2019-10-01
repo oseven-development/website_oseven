@@ -11,7 +11,18 @@ import developer from '../assets/images/illustrations/developer.svg'
 import professor from '../assets/images/illustrations/professor.svg'
 import SiteContent from '../assets/content/uberuns.json'
 // Components
-import {Seo, Container, ContactButton, Content, Parallax, Particles, SvgImage, SkillCard} from '../components'
+import {
+  Seo,
+  Container,
+  ContactButton,
+  Content,
+  Parallax,
+  Particles,
+  SvgImage,
+  SkillCard,
+  ContainerBox,
+  PortraitBox,
+} from '../components'
 import theme from '../assets/theme'
 import Img from 'gatsby-image'
 
@@ -42,6 +53,7 @@ export default props => {
         />
       </Container>
 
+      {/* Skill Cards */}
       <Container pt={'0px 0px 60px 0px '}>
         <SkillCard
           image={<Img fluid={props.data.sw.childImageSharp.fluid} alt={'consulting'} style={{height: 250}} />}
@@ -62,6 +74,13 @@ export default props => {
           link={SiteContent.uberuns[lang].skills[2].link}
         />
       </Container>
+
+      {/* Wer sind wir */}
+      <ContainerBox>
+        <h1>{SiteContent.team[lang].title}</h1>
+        <p>{SiteContent.team[lang].text}</p>
+        <PortraitBox />
+      </ContainerBox>
 
       <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
         <Container transparent>
