@@ -5,11 +5,13 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 
-interface IProps {}
+interface IProps {
+  folder: String
+}
 
 export default (props: IProps) => {
-  const {} = props
   const [index, setIndex] = useState(0)
+
   const {allFile} = useStaticQuery(
     graphql`
       query {
@@ -29,6 +31,7 @@ export default (props: IProps) => {
       }
     `,
   )
+
   const length = allFile.edges.length - 1
   const handleNext = () => (index === length ? setIndex(0) : setIndex(index + 1))
   const handlePrevious = () => (index === 0 ? setIndex(length) : setIndex(index - 1))
@@ -97,6 +100,52 @@ const StyledButton = styled.button`
     }
     :after {
       transform: translate(20px, -7px) rotate(45deg);
+    }
+  }
+`
+
+export const indexQuery = graphql`
+  query {
+    slides: allFile(sort: {fields: name, order: DESC}, filter: {relativeDirectory: {eq: "slides"}}) {
+      edges {
+        node {
+          id
+          name
+          childImageSharp {
+            fluid(maxHeight: 500) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+    background: file(relativePath: {eq: "test/test4.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    consulting: file(relativePath: {eq: "skills/consulting.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sw: file(relativePath: {eq: "skills/sw.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    ml: file(relativePath: {eq: "skills/ml.jpg"}) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
     }
   }
 `
