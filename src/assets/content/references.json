@@ -39,18 +39,24 @@
     "de": {
       "title": "Unsere aktuellen Projekte",
       "text": "Erfahren Sie mehr über unsere neuesten Engagements, die Innovationen für Behörden und Unternehmen vorantreiben.",
-      "array": [
+      "projects": [
         {
           "title": "Caligraf",
           "subtitle": "Recognition App",
-          "text": "Eine multidevice App zur Erkennung von Handschrift und Audios mit direkter convertieren und share",
-          "url": "https://caligraf.oseven.de"
+          "description": [
+            "Eine multidevice App zur Erkennung von Handschrift und Audios mit direkter convertieren und share"
+          ],
+          "contactStack": [{"title": "Zur Homepage", "provider": "web", "linkTo": "https://caligraf.oseven.de"}],
+          "techStack": ["GCP", "React", "Firebase", "Cloud-Functions"]
         },
         {
           "title": "Talos",
           "subtitle": "Markt Intelligence Report",
-          "text": "Eine multidevice App zur Erstellung von Markt Intelligence Reports mit Hilfe von künstlicher Intelligence und Natural Language Processing",
-          "url": "https://talosinsights.com"
+          "description": [
+            "Eine multidevice App zur Erstellung von Markt Intelligence Reports mit Hilfe von künstlicher Intelligence und Natural Language Processing"
+          ],
+          "contactStack": [{"title": "Zur Homepage", "provider": "web", "linkTo": "ttps://talosinsights.com"}],
+          "techStack": ["AWS", "ML", "NLP", "React"]
         }
       ]
     },
