@@ -31,42 +31,6 @@ export default props => {
         />
       </Container>
 
-      {/* Unser Kunden */}
-      {/* Kundenüberchrift */}
-      <Container fullscreen bg={'secondary'}>
-        <div style={{maxWidth: '1200px', margin: 'auto'}}>
-          <Flex p={['0 20px', '0']}>
-            <Box width={[1, 0.5]} pr={[0, 3]}>
-              <Typography variant="h1" color={'inherit'}>
-                {SiteContent.customer[lang].title}
-              </Typography>
-              <Typography color={'inherit'}>{SiteContent.customer[lang].text}</Typography>
-            </Box>
-          </Flex>
-        </div>
-      </Container>
-
-      {/* Customer Boxen */}
-      <Container fullscreen>
-        <div style={{maxWidth: '1200px', margin: 'auto'}}>
-          {SiteContent.customer[lang].customers &&
-            SiteContent.customer[lang].customers.map((ref: any) => (
-              <CustomerBox
-                title={ref.title}
-                description={ref.description}
-                contactStack={ref.contactStack}
-                techStack={ref.techStack}
-                imageStack={[]}
-              />
-            ))}
-        </div>
-      </Container>
-
-      {/* Parallax */}
-      <Container inbox fullscreen>
-        <Parallax src={props.data.parallax.childImageSharp.fluid} />
-      </Container>
-
       {/* Unser Projekte */}
       {/* Projekteüberschrift */}
       <Container fullscreen bg={'secondary'}>
@@ -83,9 +47,56 @@ export default props => {
       </Container>
       {/* Projekte */}
       <Container>
-        {SiteContent.project[lang].array.map((project: any) => (
-          <Project title={project.title} text={project.text} url={project.url} />
-        ))}
+        <div style={{maxWidth: '1200px', margin: '2em auto'}}>
+          {SiteContent.project[lang].projects.map((project: any) => (
+            // <Project title={project.title} text={project.text} url={project.url} />
+            <CustomerBox
+              title={project.title}
+              subtitle={project.subtitle}
+              description={project.description}
+              contactStack={project.contactStack}
+              techStack={project.techStack}
+              imageStack={[]}
+            />
+          ))}
+        </div>
+      </Container>
+
+      {/* Parallax */}
+      <Container inbox fullscreen>
+        <Parallax src={props.data.parallax.childImageSharp.fluid} />
+      </Container>
+
+      {/* Unser Kunden */}
+      {/* Kundenüberchrift */}
+      <Container fullscreen bg={'secondary'}>
+        <div style={{maxWidth: '1200px', margin: '2em auto'}}>
+          <Flex p={['0 20px', '0']}>
+            <Box width={[1, 0.5]} pr={[0, 3]}>
+              <Typography variant="h1" color={'inherit'}>
+                {SiteContent.customer[lang].title}
+              </Typography>
+              <Typography color={'inherit'}>{SiteContent.customer[lang].text}</Typography>
+            </Box>
+          </Flex>
+        </div>
+      </Container>
+
+      {/* Customer Boxen */}
+      <Container fullscreen>
+        <div style={{maxWidth: '1200px', margin: '2em auto'}}>
+          {SiteContent.customer[lang].customers &&
+            SiteContent.customer[lang].customers.map((ref: any) => (
+              <CustomerBox
+                title={ref.title}
+                subtitle={ref.subtitle}
+                description={ref.description}
+                contactStack={ref.contactStack}
+                techStack={ref.techStack}
+                imageStack={[]}
+              />
+            ))}
+        </div>
       </Container>
     </React.Fragment>
   )

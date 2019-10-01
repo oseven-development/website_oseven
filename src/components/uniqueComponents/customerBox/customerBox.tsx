@@ -10,6 +10,7 @@ import instagram from '../../../assets/images/socialMedia/instagram.svg'
 
 interface IProps {
   title: String
+  subtitle?: String
   description: String[]
   contactStack: IimageStack[]
   techStack: String[]
@@ -26,7 +27,7 @@ interface IImageBox {
 }
 
 export default (props: IProps) => {
-  const {title, description, contactStack, techStack, imageStack} = props
+  const {title, subtitle, description, contactStack, techStack, imageStack} = props
   return (
     <StyledConsumerBox>
       <Flex flexWrap="wrap" p={['0 20px', '0']}>
@@ -35,6 +36,7 @@ export default (props: IProps) => {
         </Box>
         <Box width={[1, 0.5]} pl={[0, 3]}>
           <h2>{title}</h2>
+          {subtitle ? <h3>{subtitle}</h3> : null}
           {description.map(content => (
             <p>{content}</p>
           ))}

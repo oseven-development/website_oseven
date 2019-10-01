@@ -5,9 +5,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 
-interface IProps {
-  folder: String
-}
+interface IProps {}
 
 export default (props: IProps) => {
   const [index, setIndex] = useState(0)
@@ -60,16 +58,17 @@ const StyledButton = styled.button`
   border: none;
   width: 50px;
   height: 100%;
-  transition: all 0.2s;
+  transition: background 0.2s;
   cursor: pointer;
-  opacity: 0.4;
-  background: linear-gradient(to right, rgba(70, 70, 70, 1) 80%, rgba(70, 70, 70, 0) 100%);
+  /* opacity: 0.3; */
+  background: rgba(235, 235, 235, 0.2);
+  /* background-image: linear-gradient(to right, rgba(235, 235, 235, 0.2) 80%, rgba(235, 235, 235, 0) 100%); */
   :hover {
-    opacity: 0.6;
+    background: rgba(235, 235, 235, 0.4);
+    /* opacity: 0.5; */
   }
   :last-child {
     right: 0;
-    background: linear-gradient(to left, rgba(70, 70, 70, 1) 80%, rgba(70, 70, 70, 0) 100%);
   }
   :focus {
     outline: 0;
@@ -79,7 +78,7 @@ const StyledButton = styled.button`
     content: '';
     height: 1px;
     width: 20px;
-    background: white;
+    background: black;
     display: block;
     opacity: 1;
     position: absolute;
