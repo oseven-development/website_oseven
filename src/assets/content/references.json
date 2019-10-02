@@ -19,17 +19,35 @@
           "title": "Soarce UG",
           "description": ["Security Fix"],
           "contactStack": [
-            {"title": "Zum Xing Profil", "provider": "xing", "linkTo": "https://www.xing.com"},
-            {"title": "Zur Homepage", "provider": "web", "linkTo": "https://www.xing.com"},
-            {"title": "Zum Xing Profil", "provider": "xing", "linkTo": "https://www.xing.com"}
+            {"title": "Zu Facebook", "provider": "facebook", "linkTo": "https://www.xing.com"},
+            {"title": "Zur Homepage", "provider": "homepage", "linkTo": "https://www.xing.com"},
+            {"title": "Zum instagram", "provider": "instagram", "linkTo": "https://www.xing.com"},
+            {"title": "Zum twitter", "provider": "twitter", "linkTo": "https://www.xing.com"},
+            {"title": "Zur whatsapp", "provider": "whatsapp", "linkTo": "https://www.xing.com"},
+            {"title": "Zum www", "provider": "www", "linkTo": "https://www.xing.com"},
+            {"title": "Zum youtube", "provider": "youtube", "linkTo": "https://www.xing.com"},
+            {"title": "Zum Xing", "provider": "xing", "linkTo": "https://www.xing.com"}
           ],
-          "techStack": ["Python 3", "Django", "MySQL", "AWS"]
+          "techStack": ["Python 3", "Django", "MySQL", "AWS"],
+          "imageFolder": "soarce"
         },
         {
           "title": "Wagner Bau Service",
           "description": ["CMS Platform für Bauprojekte und Karriere"],
-          "contactStack": [{"provider": "xing", "linkTo": "https://www.xing.com"}],
-          "techStack": ["Python 3", "Django", "MySQL", "AWS"]
+          "contactStack": [
+            {
+              "title": "Zu Facebook",
+              "provider": "facebook",
+              "linkTo": "https://de-de.facebook.com/wagnerbauservice.de/?ref=page_internal"
+            },
+            {
+              "title": "Zur Homepage",
+              "provider": "www",
+              "linkTo": "https://www.wagnerbauservice.de"
+            }
+          ],
+          "techStack": ["Python 3", "Django", "Postgres", "Ngnix"],
+          "imageFolder": "wagnerbauservice"
         }
       ]
     },
@@ -46,8 +64,9 @@
           "description": [
             "Eine multidevice App zur Erkennung von Handschrift und Audios mit direkter convertieren und share"
           ],
-          "contactStack": [{"title": "Zur Homepage", "provider": "web", "linkTo": "https://caligraf.oseven.de"}],
-          "techStack": ["GCP", "React", "Firebase", "Cloud-Functions"]
+          "contactStack": [{"title": "Zur Homepage", "provider": "www", "linkTo": "https://caligraf.oseven.de"}],
+          "techStack": ["GCP", "React", "Firebase", "Cloud-Functions"],
+          "imageFolder": "caligraf"
         },
         {
           "title": "Talos",
@@ -55,8 +74,9 @@
           "description": [
             "Eine multidevice App zur Erstellung von Markt Intelligence Reports mit Hilfe von künstlicher Intelligence und Natural Language Processing"
           ],
-          "contactStack": [{"title": "Zur Homepage", "provider": "web", "linkTo": "ttps://talosinsights.com"}],
-          "techStack": ["AWS", "ML", "NLP", "React"]
+          "contactStack": [{"title": "Zur Homepage", "provider": "www", "linkTo": "ttps://talosinsights.com"}],
+          "techStack": ["AWS", "ML", "NLP", "React"],
+          "imageFolder": "talos"
         }
       ]
     },

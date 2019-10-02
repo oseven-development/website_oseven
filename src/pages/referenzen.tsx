@@ -34,7 +34,7 @@ export default props => {
       {/* Unser Projekte */}
       {/* Projekteüberschrift */}
       <Container fullscreen bg={'secondary'}>
-        <div style={{maxWidth: '1200px', margin: 'auto'}}>
+        <div style={{maxWidth: '1200px', margin: '2em auto'}}>
           <Flex p={['0 20px', '0']}>
             <Box width={[1, 0.5]} pr={[0, 3]}>
               <Typography variant="h1" color={'inherit'}>
@@ -49,15 +49,7 @@ export default props => {
       <Container>
         <div style={{maxWidth: '1200px', margin: '2em auto'}}>
           {SiteContent.project[lang].projects.map((project: any) => (
-            // <Project title={project.title} text={project.text} url={project.url} />
-            <CustomerBox
-              title={project.title}
-              subtitle={project.subtitle}
-              description={project.description}
-              contactStack={project.contactStack}
-              techStack={project.techStack}
-              imageStack={[]}
-            />
+            <CustomerBox key={Math.random()} {...project} />
           ))}
         </div>
       </Container>
@@ -83,19 +75,11 @@ export default props => {
       </Container>
 
       {/* Customer Boxen */}
-      <Container fullscreen>
+      <Container>
         <div style={{maxWidth: '1200px', margin: '2em auto'}}>
-          {SiteContent.customer[lang].customers &&
-            SiteContent.customer[lang].customers.map((ref: any) => (
-              <CustomerBox
-                title={ref.title}
-                subtitle={ref.subtitle}
-                description={ref.description}
-                contactStack={ref.contactStack}
-                techStack={ref.techStack}
-                imageStack={[]}
-              />
-            ))}
+          {SiteContent.customer[lang].customers.map((customer: any) => (
+            <CustomerBox key={Math.random()} {...customer} />
+          ))}
         </div>
       </Container>
     </React.Fragment>

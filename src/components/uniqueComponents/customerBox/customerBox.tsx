@@ -4,9 +4,8 @@ import {Flex, Box, Image} from 'rebass'
 import SliderBox from './sliderBox'
 import styled from 'styled-components'
 
-import twitter from '../../../assets/images/socialMedia/twitter.svg'
-import homepage from '../../../assets/images/socialMedia/homepage.svg'
-import instagram from '../../../assets/images/socialMedia/instagram.svg'
+import TitleLogoHeadline from './titleLogoHeadline'
+import SocialMediaItem from './socialMediaIcons'
 
 interface IProps {
   title: String
@@ -14,37 +13,32 @@ interface IProps {
   description: String[]
   contactStack: IimageStack[]
   techStack: String[]
-  imageStack: IImageBox[]
+  imageFolder: string
 }
 interface IimageStack {
   title: String
-  provider: 'web' | 'twitter' | 'instagram'
+  provider: 'facebook' | 'homepage' | 'instagram' | 'twitter' | 'whatsapp' | 'www' | 'youtube'
   linkTo: String
-}
-interface IImageBox {
-  img: any
-  figureTag: String
 }
 
 export default (props: IProps) => {
-  const {title, subtitle, description, contactStack, techStack, imageStack} = props
+  const {title, subtitle, description, contactStack, techStack, imageFolder} = props
   return (
     <StyledConsumerBox>
       <Flex flexWrap="wrap" p={['0 20px', '0']}>
         <Box width={[1, 0.5]} pr={[0, 3]}>
-          <SliderBox />
+          <SliderBox folder={imageFolder} />
         </Box>
         <Box width={[1, 0.5]} pl={[0, 3]}>
-          <h2>{title}</h2>
-          {subtitle ? <h3>{subtitle}</h3> : null}
+          <TitleLogoHeadline {...{title, subtitle, imageFolder}} />
           {description.map(content => (
-            <p>{content}</p>
+            <p key={Math.random()}>{content}</p>
           ))}
           {/* Render ContactStack */}
           <h3>Zur Homepage</h3>
           <div>
             {contactStack.map(content => (
-              <StyledContactItem>
+              <StyledContactItem key={Math.random()}>
                 <a href={String(content.linkTo)}>
                   <SocialMediaItem provider={content.provider} />
                   <span>{content.title}</span>
@@ -56,7 +50,7 @@ export default (props: IProps) => {
           <h3>Technolgoien</h3>
           <div>
             {techStack.map(content => (
-              <StyledTechItem>{content}</StyledTechItem>
+              <StyledTechItem key={Math.random()}>{content}</StyledTechItem>
             ))}
           </div>
         </Box>
@@ -66,27 +60,6 @@ export default (props: IProps) => {
 }
 
 // Render korrektes SVG für den Kontakt
-interface ISocialMediaItemProps {
-  provider: 'web' | 'twitter' | 'instagram'
-}
-const SocialMediaItem = (props: ISocialMediaItemProps) => {
-  let icon
-  switch (props.provider) {
-    case 'web':
-      icon = homepage
-      break
-    case 'twitter':
-      icon = twitter
-      break
-    case 'instagram':
-      icon = instagram
-      break
-    default:
-      icon = twitter
-      break
-  }
-  return <Image width={30} src={icon} />
-}
 
 // Stylings für die Consumer Box
 const StyledConsumerBox = styled.div`
@@ -137,8 +110,9 @@ const StyledTechItem = styled.span`
   padding: 6px 12px;
   border-radius: 20px;
   margin-right: 10px;
-  color: white;
-  background: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.third};
+  box-shadow: 0 0 5px -2px black;
   display: inline-block;
   margin-bottom: 10px;
 `

@@ -21,7 +21,6 @@ const lang = 'de'
 
 const Footer = (props: any) => {
   const {logo} = props
-  console.log(SiteContent)
   const links = [
     ...props.links,
     {

@@ -2,147 +2,102 @@
 import React, {useState} from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
+import {StyledButton, StyledShadowBoxInner, StyledShadowBoxWrapper} from './style'
 import {Flex, Box} from 'rebass'
 
-interface IProps {}
+interface IProps {
+  folder: string
+}
 
 export default (props: IProps) => {
+  const {folder} = props
   const [index, setIndex] = useState(0)
-
-  const {allFile} = useStaticQuery(
+  const items = useStaticQuery(
     graphql`
       query {
-        allFile(sort: {fields: name, order: DESC}, filter: {relativeDirectory: {eq: "slides"}}) {
-          edges {
-            node {
-              id
-              name
-              childImageSharp {
-                fluid(maxHeight: 500) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-          }
+        # Customers
+        heikehaensel: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "heikehaensel"}}
+        ) {
+          ...image
+        }
+        wagnerbauservice: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "wagnerbauservice"}}
+        ) {
+          ...image
+        }
+        soarce: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "soarce"}}
+        ) {
+          ...image
+        }
+        priofol: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "priofol"}}
+        ) {
+          ...image
+        }
+        # Projects
+        caligraf: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "talos"}}
+        ) {
+          ...image
+        }
+        talos: allFile(
+          sort: {fields: name, order: DESC}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "talos"}}
+        ) {
+          ...image
         }
       }
     `,
   )
 
-  const length = allFile.edges.length - 1
   const handleNext = () => (index === length ? setIndex(0) : setIndex(index + 1))
   const handlePrevious = () => (index === 0 ? setIndex(length) : setIndex(index - 1))
-  const {node} = allFile.edges[index]
+  const length = items[folder].edges.length !== 0 ? items[folder].edges.length - 1 : undefined
+  const node = items[folder].edges.length !== 0 ? items[folder].edges[index] : undefined
+
   return (
-    <div style={{boxShadow: '0 0 15px #565656', height: '400px', padding: '20px'}}>
+    <StyledShadowBoxWrapper>
       <div style={{position: 'relative'}}>
-        <div style={{maxHeight: '400px', overflow: 'hidden', height: '400px'}}>
-          <Img
-            style={{margin: 'auto'}}
-            fluid={node.childImageSharp.fluid}
-            key={node.id}
-            alt={node.name.replace(/-/g, ' ').substring(2)}
-          />
-        </div>
-        <StyledButton onClick={() => handlePrevious()} />
-        <StyledButton onClick={() => handleNext()} />
+        <StyledShadowBoxInner>
+          <Flex alignItems={'center'} height={'100%'}>
+            <Box width={1}>
+              {items[folder] ? (
+                <Img
+                  style={{margin: 'auto'}}
+                  fluid={node.node.childImageSharp.fluid}
+                  key={node.node.id}
+                  alt={node.node.name.replace(/-/g, ' ').substring(2)}
+                />
+              ) : (
+                <div>no images</div>
+              )}
+            </Box>
+          </Flex>
+        </StyledShadowBoxInner>
+        <StyledButton onClick={handlePrevious} />
+        <StyledButton onClick={handleNext} />
       </div>
-    </div>
+    </StyledShadowBoxWrapper>
   )
 }
 
-const StyledButton = styled.button`
-  position: absolute;
-  top: 0;
-  border: none;
-  width: 50px;
-  height: 100%;
-  transition: background 0.2s;
-  cursor: pointer;
-  /* opacity: 0.3; */
-  background: rgba(235, 235, 235, 0.2);
-  /* background-image: linear-gradient(to right, rgba(235, 235, 235, 0.2) 80%, rgba(235, 235, 235, 0) 100%); */
-  :hover {
-    background: rgba(235, 235, 235, 0.4);
-    /* opacity: 0.5; */
-  }
-  :last-child {
-    right: 0;
-  }
-  :focus {
-    outline: 0;
-  }
-  :before,
-  :after {
-    content: '';
-    height: 1px;
-    width: 20px;
-    background: black;
-    display: block;
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-  }
-  :before {
-    transform: translate(10px, 7px) rotate(45deg);
-  }
-  :after {
-    transform: translate(10px, -7px) rotate(-45deg);
-  }
-  :last-child {
-    :before,
-    :after {
-    }
-    :before {
-      transform: translate(20px, 7px) rotate(-45deg);
-    }
-    :after {
-      transform: translate(20px, -7px) rotate(45deg);
-    }
-  }
-`
-
-export const indexQuery = graphql`
-  query {
-    slides: allFile(sort: {fields: name, order: DESC}, filter: {relativeDirectory: {eq: "slides"}}) {
-      edges {
-        node {
-          id
-          name
-          childImageSharp {
-            fluid(maxHeight: 500) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
+export const fragment = graphql`
+  fragment image on FileConnection {
+    edges {
+      node {
+        id
+        name
+        childImageSharp {
+          fluid(maxHeight: 400) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
-        }
-      }
-    }
-    background: file(relativePath: {eq: "test/test4.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    consulting: file(relativePath: {eq: "skills/consulting.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    sw: file(relativePath: {eq: "skills/sw.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    ml: file(relativePath: {eq: "skills/ml.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
