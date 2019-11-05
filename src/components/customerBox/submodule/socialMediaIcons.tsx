@@ -1,16 +1,7 @@
 /** @format */
 import React from 'react'
 import {Image} from 'rebass'
-import {
-  facebook,
-  homepage,
-  instagram,
-  twitter,
-  whatsapp,
-  www,
-  youtube,
-  xing,
-} from '../../../../assets/images/socialMedia'
+import {facebook, homepage, instagram, twitter, whatsapp, www, youtube, xing} from '../../../assets/images/socialMedia'
 
 interface ISocialMediaItemProps {
   provider: 'facebook' | 'homepage' | 'instagram' | 'twitter' | 'whatsapp' | 'www' | 'youtube' | 'xing'

@@ -4,7 +4,7 @@ import {Flex, Box, Image} from 'rebass'
 import SliderBox from './sliderBox'
 import styled from 'styled-components'
 
-import {IContant as IProps} from '../../../assets/content/references'
+import {IContant as IProps} from '../../assets/content/references'
 
 import HeadlineStack from './submodule/headlineStack'
 import ContactStack from './submodule/contactStack'

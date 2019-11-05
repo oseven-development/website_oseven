@@ -19,7 +19,7 @@ import Project from './uniqueComponents/Project'
 import SkillCard from './uniqueComponents/cards'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
-import CustomerBox from './uniqueComponents/customerBox/customerBox'
+import CustomerBox from './customerBox/customerBox'
 
 export {
   Layout,
@@ -39,8 +39,6 @@ export {
   Project,
   Particles,
   List,
- 
-  CustomerBox,
   SkillCard,
-
+  CustomerBox,
 }

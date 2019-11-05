@@ -35,25 +35,28 @@ export default ({title, subtitle, imageFolder, description}: IProps) => {
     }
   `)
   return (
-    <Flex flex="flexWrap">
-      <Box flex="1 1 auto">
-        <h2>{title && title.de ? title.de : null}</h2>
-        {subtitle && subtitle.de ? <h3>{subtitle.de}</h3> : null}
-      </Box>
-      <Box>
-        {customer[imageFolder] ? (
-          <Img
-            style={{margin: 'auto'}}
-            fixed={customer[imageFolder].childImageSharp.fixed}
-            key={'node.node.id'}
-            alt={'node.node.name.replace(/-/g,)'}
-          />
-        ) : null}
-      </Box>
+    <>
+      <Flex flex="flexWrap">
+        <Box flex="1 1 auto">
+          <h2>{title && title.de ? title.de : null}</h2>
+          {subtitle && subtitle.de ? <h3>{subtitle.de}</h3> : null}
+        </Box>
+        <Box>
+          {customer[imageFolder] ? (
+            <Img
+              style={{margin: 'auto'}}
+              fixed={customer[imageFolder].childImageSharp.fixed}
+              key={'node.node.id'}
+              alt={'node.node.name.replace(/-/g,)'}
+            />
+          ) : null}
+        </Box>
+      </Flex>
+
       {description.de.map((content, i) => (
         <p key={i}>{content}</p>
       ))}
-    </Flex>
+    </>
   )
 }
 
