@@ -6,11 +6,10 @@ import {StyledButton, StyledShadowBoxInner, StyledShadowBoxWrapper} from './styl
 import {Flex, Box} from 'rebass'
 
 interface IProps {
-  folder: string
+  imageFolder: string
 }
 
-export default (props: IProps) => {
-  const {folder} = props
+export default ({imageFolder}: IProps) => {
   const [index, setIndex] = useState(0)
   const items = useStaticQuery(
     graphql`
@@ -43,7 +42,7 @@ export default (props: IProps) => {
         # Projects
         caligraf: allFile(
           sort: {fields: name, order: DESC}
-          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "talos"}}
+          filter: {sourceInstanceName: {eq: "customerSlides"}, relativeDirectory: {eq: "caligraf"}}
         ) {
           ...image
         }
@@ -59,8 +58,8 @@ export default (props: IProps) => {
 
   const handleNext = () => (index === length ? setIndex(0) : setIndex(index + 1))
   const handlePrevious = () => (index === 0 ? setIndex(length) : setIndex(index - 1))
-  const length = items[folder].edges.length !== 0 ? items[folder].edges.length - 1 : undefined
-  const node = items[folder].edges.length !== 0 ? items[folder].edges[index] : undefined
+  const length = items[imageFolder].edges.length !== 0 ? items[imageFolder].edges.length - 1 : undefined
+  const node = items[imageFolder].edges.length !== 0 ? items[imageFolder].edges[index] : undefined
 
   return (
     <StyledShadowBoxWrapper>
@@ -68,7 +67,7 @@ export default (props: IProps) => {
         <StyledShadowBoxInner>
           <Flex alignItems={'center'} height={'100%'}>
             <Box width={1}>
-              {items[folder] ? (
+              {items[imageFolder] && node ? (
                 <Img
                   style={{margin: 'auto'}}
                   fluid={node.node.childImageSharp.fluid}
@@ -76,7 +75,7 @@ export default (props: IProps) => {
                   alt={node.node.name.replace(/-/g, ' ').substring(2)}
                 />
               ) : (
-                <div>no images</div>
+                <p style={{textAlign: 'center'}}>no images</p>
               )}
             </Box>
           </Flex>

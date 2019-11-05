@@ -4,22 +4,11 @@ import {Flex, Box, Image} from 'rebass'
 import SliderBox from './sliderBox'
 import styled from 'styled-components'
 
-import TitleLogoHeadline from './titleLogoHeadline'
-import SocialMediaItem from './socialMediaIcons'
+import {IContant as IProps} from '../../../assets/content/references'
 
-interface IProps {
-  title: String
-  subtitle?: String
-  description: String[]
-  contactStack: IimageStack[]
-  techStack: String[]
-  imageFolder: string
-}
-interface IimageStack {
-  title: String
-  provider: 'facebook' | 'homepage' | 'instagram' | 'twitter' | 'whatsapp' | 'www' | 'youtube'
-  linkTo: String
-}
+import HeadlineStack from './submodule/headlineStack'
+import ContactStack from './submodule/contactStack'
+import TechStack from './submodule/techStack'
 
 export default (props: IProps) => {
   const {title, subtitle, description, contactStack, techStack, imageFolder} = props
@@ -27,32 +16,18 @@ export default (props: IProps) => {
     <StyledConsumerBox>
       <Flex flexWrap="wrap" p={['0 20px', '0']}>
         <Box width={[1, 0.5]} pr={[0, 3]}>
-          <SliderBox folder={imageFolder} />
+          <SliderBox {...{imageFolder}} />
         </Box>
+
         <Box width={[1, 0.5]} pl={[0, 3]}>
-          <TitleLogoHeadline {...{title, subtitle, imageFolder}} />
-          {description.map(content => (
-            <p key={Math.random()}>{content}</p>
-          ))}
+          {/* Render Headline */}
+          <HeadlineStack {...{title, subtitle, imageFolder, description}} />
+
           {/* Render ContactStack */}
-          <h3>Zur Homepage</h3>
-          <div>
-            {contactStack.map(content => (
-              <StyledContactItem key={Math.random()}>
-                <a href={String(content.linkTo)}>
-                  <SocialMediaItem provider={content.provider} />
-                  <span>{content.title}</span>
-                </a>
-              </StyledContactItem>
-            ))}
-          </div>
+          <ContactStack {...{contactStack}} />
+
           {/* Render TechStack */}
-          <h3>Technolgoien</h3>
-          <div>
-            {techStack.map(content => (
-              <StyledTechItem key={Math.random()}>{content}</StyledTechItem>
-            ))}
-          </div>
+          <TechStack {...{techStack}} />
         </Box>
       </Flex>
     </StyledConsumerBox>
@@ -80,39 +55,4 @@ const StyledConsumerBox = styled.div`
       margin-bottom: 75px;
     }
   }
-`
-
-// Styling für ein Contact-Item
-const StyledContactItem = styled.div`
-  display: inline-block;
-  margin-bottom: 10px;
-  :not(:first-child) {
-    margin-left: 40px;
-  }
-  :not(:first-child):before {
-    content: '';
-    background: #777;
-    width: 1px;
-    height: 24px;
-    left: -20px;
-    display: inline-block;
-    position: relative;
-  }
-  span {
-    margin-left: 8px;
-    position: relative;
-    top: -8px;
-  }
-`
-
-// Styling Techbubbels
-const StyledTechItem = styled.span`
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin-right: 10px;
-  color: ${props => props.theme.colors.secondary};
-  background: ${props => props.theme.colors.third};
-  box-shadow: 0 0 5px -2px black;
-  display: inline-block;
-  margin-bottom: 10px;
 `
