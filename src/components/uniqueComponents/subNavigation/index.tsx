@@ -6,30 +6,34 @@ import styled from 'styled-components'
 import theme from '../../../assets/theme/index'
 import {useWindowSize} from '../../../assets/hooks/windowWidth'
 
-const SubNavigation = ({links}: any) => {
+interface IProps {
+  nav: {label: string; href: string}[]
+}
+
+const SubNavigation = ({nav}: IProps) => {
   const {windowWidth} = useWindowSize()
-  console.log(windowWidth)
   return (
-    <React.Fragment>
-      {links.map((link: any) => (
+    <ul style={{marginTop: '4em'}}>
+      {nav.map(link => (
         <li style={{listStyle: 'none', float: windowWidth > 768 ? 'left' : null}}>
-          <StyledSubNav key={Math.random()} href={`#${link.href}`}>
+          <StyledSubNav key={link.label} href={`#${link.href}`}>
             {link.label}
           </StyledSubNav>
         </li>
       ))}
-    </React.Fragment>
+    </ul>
   )
 }
 export default SubNavigation
 
 const StyledSubNav = styled.a`
-  transition: 0.4s;
-  color: ${(props: any) => theme.colors.primary};
-  padding: 0px 10px 10px 0px;
+  transition: 0.2s;
+  color: ${() => theme.colors.secondary};
+  padding: 30px 10px 10px 0px;
+  text-decoration: underline;
 
   &:hover {
-    color: ${(props: any) => theme.colors.secondary};
+    color: ${() => theme.colors.primary};
   }
   @media (max-width: 768px) {
     width: 100%;

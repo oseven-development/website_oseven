@@ -28,10 +28,16 @@ import serverless from '../assets/images/architecture/serverless-architektur.svg
 import Model from '../assets/images/architecture/model.svg'
 // Components
 import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List, Typography, BoxShadowBox} from '../components'
-import {Flex} from 'rebass'
+
+import HeaderWithSubNavigation from '../components/header/headerWithSubNavigation'
+
 import SubNavigation from '../components/uniqueComponents/subNavigation'
 // Bilder Backgrounds
 const lang = 'de'
+
+const title = SiteContent.header[lang].title
+const subtitle = SiteContent.header[lang].text
+const nav = SiteContent.header[lang].nav
 
 export default props => (
   <React.Fragment>
@@ -40,27 +46,10 @@ export default props => (
       description="Portfolioübersicht"
       keywords="Cloud Cloudnative Serverless Software Development Aws Gcp Azure Workshops"
     />
-    {/* //! Header */}
-    <Container p={'0px'}>
-      <Content
-        title={
-          <React.Fragment>
-            {SiteContent.header[lang].title[0]} <br />
-            {SiteContent.header[lang].title[1]} <br />
-            {SiteContent.header[lang].title[2]} <br />
-          </React.Fragment>
-        }
-        text={SiteContent.header[lang].text}
-      />
-    </Container>
-    <Container inbox pt={'0px'} transparent alignItems={'stretch'}>
-      <Container inbox flexDirection={'column'} justifyContent={'space-between'} height={['100%', '100%']}>
-        <Content />
-        <Content text={<SubNavigation links={SiteContent.header[lang].nav} />} />
-      </Container>
 
-      <Content />
-    </Container>
+    {/* //! Header */}
+    <HeaderWithSubNavigation {...{title, subtitle, nav}} />
+
     {/* Software Entwicklung */}
     <Container fullscreen bg={'secondary'} id="sw">
       <Container transparent flexDirection={'row'} textColumn>

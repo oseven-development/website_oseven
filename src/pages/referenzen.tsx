@@ -8,14 +8,22 @@ import ContactSvg from '../assets/images/illustrations/references.svg'
 import {Flex, Box} from 'rebass'
 // Components
 import {Seo, Container, SvgImage, Content, Parallax, Project, CustomerBox, Typography} from '../components'
-
+import HeaderWithSubNavigation from '../components/header/headerWithSubNavigation'
 // Bilder Backgrounds
 const lang = 'de'
+
+const title = SiteContent.header[lang].title
+const subtitle = SiteContent.header[lang].text
+const nav = SiteContent.header[lang].nav
 
 export default props => {
   return (
     <React.Fragment>
       <Seo title="Referenzen" description="Refrenzen" keywords="Kunden Talos Caligraf Referenzen" />
+
+      {/* //! Header */}
+      <HeaderWithSubNavigation {...{title, subtitle, nav}} />
+
       <Container transparent>
         <Content
           title={SiteContent.header[lang].title}
