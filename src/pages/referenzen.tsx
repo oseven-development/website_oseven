@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {graphql} from 'gatsby'
-import SiteContent from '../assets/content/references.json'
+import SiteContent from '../assets/content/references'
 import ContactSvg from '../assets/images/illustrations/references.svg'
 
 import {Flex, Box} from 'rebass'
@@ -26,9 +26,9 @@ export default props => {
 
       <Container transparent>
         <Content
-          title={SiteContent.header[lang].title}
-          subtitle={SiteContent.header[lang].subtitle}
-          text={SiteContent.header[lang].text}
+          title={SiteContent.header.title[lang]}
+          // subtitle={SiteContent.header[lang].subtitle}
+          text={SiteContent.header.text[lang]}
         />
 
         <Content
@@ -42,13 +42,13 @@ export default props => {
       {/* Unser Projekte */}
       {/* Projekteüberschrift */}
       <Container fullscreen bg={'secondary'}>
-        <div style={{maxWidth: '1200px', margin: 'auto'}}>
+        <div style={{maxWidth: '1200px', margin: '2em auto'}}>
           <Flex p={['0 20px', '0']}>
-            <Box width={[1, 0.5]} pr={[0, 3]}>
+            <Box width={[1, 0.5]} p={[0, 3]}>
               <Typography variant="h1" color={'inherit'}>
-                {SiteContent.project[lang].title}
+                {SiteContent.project.title[lang]}
               </Typography>
-              <Typography color={'inherit'}>{SiteContent.project[lang].text}</Typography>
+              <Typography color={'inherit'}>{SiteContent.project.text[lang]}</Typography>
             </Box>
           </Flex>
         </div>
@@ -56,16 +56,8 @@ export default props => {
       {/* Projekte */}
       <Container>
         <div style={{maxWidth: '1200px', margin: '2em auto'}}>
-          {SiteContent.project[lang].projects.map((project: any) => (
-            // <Project title={project.title} text={project.text} url={project.url} />
-            <CustomerBox
-              title={project.title}
-              subtitle={project.subtitle}
-              description={project.description}
-              contactStack={project.contactStack}
-              techStack={project.techStack}
-              imageStack={[]}
-            />
+          {SiteContent.project.content.map(project => (
+            <CustomerBox key={project.title[lang]} {...project} />
           ))}
         </div>
       </Container>
@@ -80,30 +72,22 @@ export default props => {
       <Container fullscreen bg={'secondary'}>
         <div style={{maxWidth: '1200px', margin: '2em auto'}}>
           <Flex p={['0 20px', '0']}>
-            <Box width={[1, 0.5]} pr={[0, 3]}>
+            <Box width={[1, 0.5]} p={[0, 3]}>
               <Typography variant="h1" color={'inherit'}>
-                {SiteContent.customer[lang].title}
+                {SiteContent.customer.title[lang]}
               </Typography>
-              <Typography color={'inherit'}>{SiteContent.customer[lang].text}</Typography>
+              <Typography color={'inherit'}>{SiteContent.customer.text[lang]}</Typography>
             </Box>
           </Flex>
         </div>
       </Container>
 
       {/* Customer Boxen */}
-      <Container fullscreen>
+      <Container>
         <div style={{maxWidth: '1200px', margin: '2em auto'}}>
-          {SiteContent.customer[lang].customers &&
-            SiteContent.customer[lang].customers.map((ref: any) => (
-              <CustomerBox
-                title={ref.title}
-                subtitle={ref.subtitle}
-                description={ref.description}
-                contactStack={ref.contactStack}
-                techStack={ref.techStack}
-                imageStack={[]}
-              />
-            ))}
+          {SiteContent.customer.content.map(customer => (
+            <CustomerBox key={customer.title[lang]} {...customer} />
+          ))}
         </div>
       </Container>
     </React.Fragment>
@@ -116,34 +100,6 @@ export const indexQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    heike: file(relativePath: {eq: "references/heikehänsel.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    paul: file(relativePath: {eq: "references/paulschaefer.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    priofol: file(relativePath: {eq: "references/priofol.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    wagner: file(relativePath: {eq: "references/wagner.png"}) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

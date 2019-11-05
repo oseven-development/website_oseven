@@ -90,8 +90,13 @@ export default createGlobalStyle`
       text-align: justify;
       /* font-weight: 100; */
     }
-  a {
+  a, a>span {
     text-decoration: none;
+    color: ${theme.colors.secondary}
+  }
+  a:hover>span {
+    text-decoration: underline;
+    color: ${theme.colors.secondary}
   }
   ul {
     margin:0;

@@ -1,7 +1,7 @@
 /** @format */
 
 // BoxLayoutType
-import Container, {ContainerBox} from './container'
+import Container from './container'
 import Content from './content'
 import {Layout} from './Layout'
 import Typography from './typography'
@@ -19,12 +19,11 @@ import Project from './uniqueComponents/Project'
 import SkillCard from './uniqueComponents/cards'
 import {Seo} from './uniqueComponents/seo'
 import BackgroundImage from 'gatsby-background-image'
-import CustomerBox from './uniqueComponents/customerBox/customerBox'
-import PortraitBox from './uniqueComponents/portraits/portraitBox'
+import CustomerBox from './customerBox/customerBox'
+
 export {
   Layout,
   Container,
-  ContainerBox,
   Seo,
   Typography,
   BoxShadowBox,
@@ -40,7 +39,6 @@ export {
   Project,
   Particles,
   List,
-  CustomerBox,
   SkillCard,
-  PortraitBox,
+  CustomerBox,
 }
