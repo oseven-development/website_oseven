@@ -26,12 +26,12 @@ import {TypographyRenderHelper} from './typography/typographyRenderHelper'
 // Containers
 
 // uniqueComponents
-import Footer from './uniqueComponents/footer'
+import Footer from './uniqueComponents/footer/footer'
 import ContactButton from './uniqueComponents/ContactButton'
 import List from './uniqueComponents/List'
 import Particles from './uniqueComponents/particles'
 import Project from './uniqueComponents/Project'
-import SkillCard from './uniqueComponents/cards'
+
 import {Seo} from './uniqueComponents/seo'
 import SubNavigation from './uniqueComponents/subNavigation/index'
 
@@ -43,6 +43,7 @@ import HeaderWithSubNavigation from './header/headerWithSubNavigation'
 // Boxes Higher Components
 import CustomerBox from './customerBox/customerBox'
 import PortraitBox from './portraitBox/portraitBox'
+import SkillCardBox from './skillCardBox/SkillCard'
 
 export {
   // BoxLayoutType
@@ -68,7 +69,6 @@ export {
   Project,
   Particles,
   List,
-  SkillCard,
   SubNavigation,
   // headers
   HeaderNavigation,
@@ -77,4 +77,5 @@ export {
   // Boxes Higher Components
   CustomerBox,
   PortraitBox,
+  SkillCardBox,
 }

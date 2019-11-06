@@ -29,7 +29,9 @@ const Typography = (props: ITypography) => {
       ) : variant === 'h3' ? (
         <h3 style={style}>{children}</h3>
       ) : variant === 'p' ? (
-        <p style={style}>{children}</p>
+        <p style={style} key={Math.random()}>
+          {children}
+        </p>
       ) : (
         <div className={'p'} style={style}>
           {children}

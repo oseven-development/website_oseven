@@ -2,8 +2,9 @@
 
 import React from 'react'
 import {Flex, Box} from 'rebass'
-import {Typography} from '../..'
+import {Typography, ContainerBox} from '..'
 import {Link} from 'gatsby'
+import Img from 'gatsby-image'
 interface ISkillCard {
   image?: any
   title: string
@@ -14,8 +15,33 @@ interface ISkillCard {
   }
 }
 
+interface IProps {
+  content?: {
+    image: any
+    title: string
+    text: string
+    link: {
+      label: string
+      to: string
+    }
+  }[]
+}
+
+const SkillCardBox = (props: IProps) => (
+  <ContainerBox>
+    <Flex flexWrap="wrap">
+      {props.content.map(({title, text, link, image}) => (
+        <Box key={title} width={[1, 1 / props.content.length]} px={[0, '1em']} py={['1em', 0]}>
+          <SkillCard {...{title, text, image, link}}></SkillCard>
+        </Box>
+      ))}
+    </Flex>
+  </ContainerBox>
+)
+
 const SkillCard = (props: ISkillCard) => {
   const {image, title, text, link} = props
+
   return (
     <React.Fragment>
       <Flex
@@ -24,7 +50,9 @@ const SkillCard = (props: ISkillCard) => {
         justifyContent={'center'}
         alignItems={'center'}
         pb={['20px', '40px']}>
-        <Box width={1}>{image}</Box>
+        <Box width={1}>
+          <Img fluid={image} alt={title} style={{height: 250}} />
+        </Box>
         <Box>
           <Typography variant="h3">{title}</Typography>
         </Box>
@@ -38,4 +66,4 @@ const SkillCard = (props: ISkillCard) => {
     </React.Fragment>
   )
 }
-export default SkillCard
+export default SkillCardBox

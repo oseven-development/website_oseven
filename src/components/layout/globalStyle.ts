@@ -94,11 +94,15 @@ export default createGlobalStyle`
     text-decoration: none;
     color: ${theme.colors.secondary}
   }
+  a:hover {
+    color: ${theme.colors.primary}
+  }
   a:hover>span {
     text-decoration: underline;
     color: ${theme.colors.secondary}
   }
   ul {
     margin:0;
+    list-style: none
   }
   `

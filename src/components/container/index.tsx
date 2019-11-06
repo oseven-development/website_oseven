@@ -140,14 +140,23 @@ const Container = (props: IContainer) => {
 }
 export default Container
 
-export const ContainerBox = (props: {children: JSX.Element | JSX.Element[] | string}) => {
-  const {children} = props
-  return <StyledContainerBox>{children}</StyledContainerBox>
+interface IProps {
+  children: JSX.Element | JSX.Element[] | string
+  noSpace?: boolean
+}
+
+export const ContainerBox = (props: IProps) => {
+  const {children, noSpace} = props
+  return <StyledContainerBox noSpace={noSpace}>{children}</StyledContainerBox>
+}
+
+interface IStyledProps {
+  noSpace?: boolean
 }
 
 const StyledContainerBox = styled.div`
   max-width: 1200px;
-  margin: 2em auto;
+  margin: ${({noSpace}: IStyledProps) => (!noSpace ? '2em auto' : '0em auto')};
   padding: 20px;
   @media screen and (${props => props.theme.device.laptop}) {
     margin: 0em auto;

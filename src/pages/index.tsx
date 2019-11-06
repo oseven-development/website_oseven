@@ -4,32 +4,36 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
-import team from '../assets/images/illustrations/team.svg'
-import contact from '../assets/images/illustrations/contact.svg'
-import business from '../assets/images/illustrations/business.svg'
-import developer from '../assets/images/illustrations/developer.svg'
-import professor from '../assets/images/illustrations/professor.svg'
-import SiteContent from '../assets/content/uberuns.json'
+import {team, professor} from '../assets'
+import SiteContent from '../assets/content/uberuns'
 // Components
-import {
-  Seo,
-  Container,
-  ContactButton,
-  Content,
-  Parallax,
-  Particles,
-  SvgImage,
-  SkillCard,
-  ContainerBox,
-  PortraitBox,
-} from '../components'
-import theme from '../assets/theme'
-import Img from 'gatsby-image'
+import {Seo, Container, Content, Particles, SvgImage, SkillCardBox, ContainerBox, PortraitBox} from '../components'
 
 // Bilder Backgrounds
 
 export default props => {
   const lang = 'de'
+  const content = [
+    {
+      image: props.data.sw.childImageSharp.fluid,
+      title: SiteContent.uberuns.skills[0].title[lang],
+      text: SiteContent.uberuns.skills[0].text[lang],
+      link: {to: SiteContent.uberuns.skills[0].link.to, label: SiteContent.uberuns.skills[0].link.label[lang]},
+    },
+    {
+      image: props.data.ml.childImageSharp.fluid,
+      title: SiteContent.uberuns.skills[1].title[lang],
+      text: SiteContent.uberuns.skills[1].text[lang],
+      link: {to: SiteContent.uberuns.skills[1].link.to, label: SiteContent.uberuns.skills[1].link.label[lang]},
+    },
+    {
+      image: props.data.consulting.childImageSharp.fluid,
+      title: SiteContent.uberuns.skills[2].title[lang],
+      text: SiteContent.uberuns.skills[2].text[lang],
+      link: {to: SiteContent.uberuns.skills[2].link.to, label: SiteContent.uberuns.skills[2].link.label[lang]},
+    },
+  ]
+
   return (
     <React.Fragment>
       <Seo title="Über Uns" description="Startseite von Oseven" keywords="oseven Cloud Start-Up Kontakt" />
@@ -54,33 +58,14 @@ export default props => {
       </Container>
 
       {/* Skill Cards */}
-      <Container pt={'0px 0px 60px 0px '}>
-        <SkillCard
-          image={<Img fluid={props.data.sw.childImageSharp.fluid} alt={'consulting'} style={{height: 250}} />}
-          title={SiteContent.uberuns[lang].skills[0].title}
-          text={SiteContent.uberuns[lang].skills[0].text}
-          link={SiteContent.uberuns[lang].skills[0].link}
-        />
-        <SkillCard
-          image={<Img fluid={props.data.ml.childImageSharp.fluid} alt={'sw'} style={{height: 250}} />}
-          title={SiteContent.uberuns[lang].skills[1].title}
-          text={SiteContent.uberuns[lang].skills[1].text}
-          link={SiteContent.uberuns[lang].skills[1].link}
-        />
-        <SkillCard
-          image={<Img fluid={props.data.consulting.childImageSharp.fluid} alt={'ml'} style={{height: 250}} />}
-          title={SiteContent.uberuns[lang].skills[2].title}
-          text={SiteContent.uberuns[lang].skills[2].text}
-          link={SiteContent.uberuns[lang].skills[2].link}
-        />
-      </Container>
+      <SkillCardBox {...{content}} />
 
       {/* Wer sind wir */}
       <ContainerBox>
         <h1>{SiteContent.team[lang].title}</h1>
         <p>{SiteContent.team[lang].text}</p>
-        <PortraitBox />
       </ContainerBox>
+      <PortraitBox />
 
       <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
         <Container transparent>
@@ -105,39 +90,19 @@ export default props => {
 export const indexQuery = graphql`
   query {
     parallax: file(relativePath: {eq: "parallax/manimcoffe.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...imagePre
     }
     background: file(relativePath: {eq: "test/test4.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+      ...imagePre
     }
     consulting: file(relativePath: {eq: "skills/consulting.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+      ...imagePre
     }
     sw: file(relativePath: {eq: "skills/sw.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+      ...imagePre
     }
     ml: file(relativePath: {eq: "skills/ml.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+      ...imagePre
     }
   }
 `
