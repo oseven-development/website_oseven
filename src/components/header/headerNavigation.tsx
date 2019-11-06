@@ -4,17 +4,17 @@ import React from 'react'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {Link} from 'gatsby'
-import theme from '../../assets/theme'
 import {SvgImage} from '..'
 
 interface IHeader {
   navigation: JSX.Element
   logo: any
   transparent?: boolean
+  theme?: any
 }
 const StyledHeader = styled.header`
   height: 65px;
-  background: ${({theme, transparent}: any) => (transparent === true ? 'transparent' : theme.colors.background)};
+  background: ${({theme, transparent}: IHeader) => (transparent === true ? 'transparent' : theme.colors.background)};
   position: sticky;
   top: 0;
   left: 0;
@@ -29,7 +29,7 @@ const StyledHeader = styled.header`
 // const Header = (props: IHeader) => {
 //   const {navigation, logo, transparent} = props
 // return (
-export default (props: any) => (
+export default (props: IHeader) => (
   <React.Fragment>
     <StyledHeader {...props}>
       <Flex justifyContent={'space-between'} style={{height: '100%'}}>

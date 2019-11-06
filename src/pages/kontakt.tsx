@@ -1,72 +1,27 @@
 /** @format */
 
 import React from 'react'
-import {graphql} from 'gatsby'
-import SiteContent from '../assets/content/contact.json'
-import ContactSvg from '../assets/images/illustrations/contactSite.svg'
+
+// Load Content
+import SiteContent from '../assets/content/contact'
 
 // Components
-import {Seo, Container, SvgImage, Content, ContactButton, Typography} from '../components'
+import {Seo, HeaderWithButtonGroup} from '../components'
 
-// Bilder Backgrounds
+// Images, Background and Graphics
+import ContactSvg from '../assets/images/illustrations/contactSite.svg'
+
 const lang = 'de'
+const title = SiteContent.kontakt.title[lang]
+const subtitle = SiteContent.kontakt.text[lang]
+const SVG = ContactSvg
+const buttonGroup = SiteContent.kontakt.contact[lang]
 
-export default props => (
+export default () => (
   <React.Fragment>
     <Seo title="Kontakt" description="Kontaktadressen" keywords="Email E-mail Telefon Adresse Kontakt Contact" />
-    <Container transparent>
-      <Content
-        title={SiteContent.kontakt[lang].title}
-        subtitle={SiteContent.kontakt[lang].subtitle}
-        text={
-          <React.Fragment>
-            {SiteContent.kontakt[lang].text.map((text: string) => (
-              <Typography>{text}</Typography>
-            ))}
-            <ContactButton
-              text={SiteContent.kontakt[lang].email}
-              link={`mailto:${SiteContent.kontakt[lang].email}`}
-              textColor={'primary'}
-              type={'out'}
-              border
-            />
-            <ContactButton
-              text={SiteContent.kontakt[lang].phone}
-              link={`tel:${SiteContent.kontakt[lang].phone}`}
-              textColor={'primary'}
-              type={'out'}
-              border
-            />
-          </React.Fragment>
-        }
-        textVariant={'div'}
-      />
 
-      <Content
-        image={{
-          src: <SvgImage dWidth={450} src={ContactSvg} />,
-          type: 'svg',
-        }}
-      />
-    </Container>
+    {/* //! Header */}
+    <HeaderWithButtonGroup {...{title, subtitle, SVG, buttonGroup}} />
   </React.Fragment>
 )
-
-export const indexQuery = graphql`
-  query {
-    process: file(relativePath: {eq: "process.jpg"}) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    background: file(relativePath: {eq: "process.jpg"}) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`

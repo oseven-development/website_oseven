@@ -2,7 +2,7 @@
 
 // React and Libarys
 import React from 'react'
-import {graphql} from 'gatsby'
+
 import {ThemeProvider} from 'styled-components'
 import GlobalStyle from './globalStyle'
 
@@ -11,40 +11,23 @@ import theme from '../../assets/theme'
 // import {darkTheme as theme} from '../../assets/theme'
 // Containers
 
-import navItems from '../../routes/routes'
-import {Navigation, Header, Footer} from '..'
+// Routen
+import links from '../../routes/routes'
 
-import Logo from '../../assets/images/logo.svg'
+import {Navigation, HeaderNavigation, Footer} from '..'
+
+import logo from '../../assets/images/logo.svg'
 import LogoFooter from '../../assets/images/logo-footer.svg'
 
-export default class Layout extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-
-  render() {
-    const {children} = this.props
-    return (
+export default props => (
+  <React.Fragment>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>
       <React.Fragment>
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>
-          <React.Fragment>
-            <Header logo={Logo} navigation={<Navigation links={navItems} />} />
-            <main style={{background: theme.colors.background}}>{children}</main>
-            <Footer links={navItems} logo={LogoFooter} />
-          </React.Fragment>
-        </ThemeProvider>
+        <HeaderNavigation {...{logo}} navigation={<Navigation {...{links}} />} />
+        <main style={{background: theme.colors.background}}>{props.children}</main>
+        <Footer {...{links}} logo={LogoFooter} />
       </React.Fragment>
-    )
-  }
-}
-
-// export const fluidImage = graphql`
-//   fragment fluidImage on File {
-//     childImageSharp {
-//       fluid(maxWidth: 1000) {
-//         ...GatsbyImageSharpFluid
-//       }
-//     }
-//   }
-// `
+    </ThemeProvider>
+  </React.Fragment>
+)

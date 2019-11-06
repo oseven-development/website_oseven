@@ -8,21 +8,22 @@ export interface RootObject {
 
 interface Header {
   title: {
-    de: string
-    en?: string
+    de: string | string[]
+    en?: string | string[]
   }
   text: {
     de: string[]
     en?: string[]
   }
+  nav: {label: string; href: string}[]
 }
 
 interface Body {
   title: {
-    de: string
+    de: string | string[]
   }
   text: {
-    de: string
+    de: string | string[]
   }
   content: IContant[]
 }
@@ -41,17 +42,20 @@ export interface IContant {
 const customer: RootObject = {
   header: {
     title: {
-      de: 'Unsere Referenzen & aktuelle Projekte',
+      de: ['Unsere Referenzen & ', 'aktuelle Projekte'],
       en: '',
     },
     text: {
       de: [
         'Wir befinden uns noch in unsere Gründungsphase...',
         '',
-        '... daher können wir Ihnen noch nicht all zu viele Referenzen zeigen. Doch lassen Sie sich davon nicht abschrecken wir können Ihnen trotzdem einige unsere Ideen und Umsetzungen nahe bringen.',
+        '... daher können wir Ihnen noch nicht all zu viele Referenzen zeigen.',
+        'Doch lassen Sie sich davon nicht abschrecken wir können Ihnen trotzdem',
+        'einige unsere Ideen und Umsetzungen nahe bringen.',
       ],
       en: [],
     },
+    nav: [{label: 'Aktuelle Projekte', href: 'currenProjects'}, {label: 'Unsere Kunden', href: 'currentCustomer'}],
   },
 
   customer: {

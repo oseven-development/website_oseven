@@ -26,10 +26,10 @@ const theme: ITheme = {
   },
   breakpoints: ['481px', '769px', '1601px', '2001px'],
   device: {
-    mobile: `min-width: 481px`,
-    laptop: `min-width: 769px`,
-    desktop: `min-width: 1601px`,
-    desktopL: `min-width: 2001px`,
+    mobile: `max-width: 481px`,
+    laptop: `max-width: 769px`,
+    desktop: `max-width: 1601px`,
+    desktopL: `max-width: 2001px`,
   },
 }
 

@@ -27,7 +27,7 @@ import k8 from '../assets/images/tools/k8.svg'
 import serverless from '../assets/images/architecture/serverless-architektur.svg'
 import Model from '../assets/images/architecture/model.svg'
 // Components
-import {Seo, Container, Content, SvgImage, Parallax, ContactButton, List, Typography, BoxShadowBox} from '../components'
+import {Seo, Container, Content, SvgImage, Parallax, List, BoxShadowBox} from '../components'
 
 import HeaderWithSubNavigation from '../components/header/headerWithSubNavigation'
 
@@ -38,6 +38,7 @@ const lang = 'de'
 const title = SiteContent.header[lang].title
 const subtitle = SiteContent.header[lang].text
 const nav = SiteContent.header[lang].nav
+const SVG = Entwicklung
 
 export default props => (
   <React.Fragment>
@@ -48,7 +49,7 @@ export default props => (
     />
 
     {/* //! Header */}
-    <HeaderWithSubNavigation {...{title, subtitle, nav}} />
+    <HeaderWithSubNavigation {...{title, subtitle, nav, SVG}} />
 
     {/* Software Entwicklung */}
     <Container fullscreen bg={'secondary'} id="sw">

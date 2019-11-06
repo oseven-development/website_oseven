@@ -3,7 +3,6 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import theme from '../../../assets/theme/index'
 import {useWindowSize} from '../../../assets/hooks/windowWidth'
 
 interface IProps {
@@ -13,29 +12,42 @@ interface IProps {
 const SubNavigation = ({nav}: IProps) => {
   const {windowWidth} = useWindowSize()
   return (
-    <ul style={{marginTop: '4em'}}>
+    <StyledSubNavx>
       {nav.map(link => (
-        <li style={{listStyle: 'none', float: windowWidth > 768 ? 'left' : null}}>
-          <StyledSubNav key={link.label} href={`#${link.href}`}>
+        <li>
+          <a key={link.label} href={`#${link.href}`}>
             {link.label}
-          </StyledSubNav>
+          </a>
         </li>
       ))}
-    </ul>
+    </StyledSubNavx>
   )
 }
 export default SubNavigation
 
-const StyledSubNav = styled.a`
-  transition: 0.2s;
-  color: ${() => theme.colors.secondary};
-  padding: 30px 10px 10px 0px;
-  text-decoration: underline;
-
-  &:hover {
-    color: ${() => theme.colors.primary};
+const StyledSubNavx = styled.ul`
+  margin-top: 4em;
+  @media (${({theme}) => theme.device.laptop}) {
+    margin-top: 0em;
   }
-  @media (max-width: 768px) {
-    width: 100%;
+  li {
+    list-style: none;
+    float: left;
+    @media (${({theme}) => theme.device.laptop}) {
+      float: none;
+    }
+    a {
+      transition: 0.2s;
+      color: ${({theme}) => theme.colors.secondary};
+      padding: 0 10px 0 0;
+      text-decoration: underline;
+
+      &:hover {
+        color: ${({theme}) => theme.colors.primary};
+      }
+      @media (${({theme}) => theme.device.laptop}) {
+        width: 100%;
+      }
+    }
   }
 `

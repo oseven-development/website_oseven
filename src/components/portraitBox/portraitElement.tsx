@@ -39,11 +39,11 @@ const PortraitElement = props => {
 export default PortraitElement
 
 const StyledPortrait = styled.div`
-  height: 100px;
-  width: 100px;
-  @media screen and (${props => props.theme.device.laptop}) {
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
+  @media screen and (${props => props.theme.device.mobile}) {
+    height: 100px;
+    width: 100px;
   }
   border-radius: 100%;
   background: red;

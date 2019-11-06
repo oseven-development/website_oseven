@@ -4,18 +4,30 @@ import {Flex, Box} from 'rebass'
 import {Link} from 'gatsby'
 import {Image} from 'rebass'
 import styled from 'styled-components'
-import theme from '../../../assets/theme/index'
-const ContactButton = (props: any) => {
-  const {text, link, icon, type} = props
+
+interface IProps {
+  text: string
+  link: string
+  icon?: any
+  extern?: boolean
+  textColor?: string
+  border?: boolean
+  width?: string
+  theme?: any
+  bg?: string
+}
+
+const ContactButton = (props: IProps) => {
+  const {text, link, icon, extern} = props
   return (
     <StyledButton {...props}>
       <Flex justifyContent={'center'} alignItems={'center'}>
-        {type === 'out' ? (
-          <a href={link} style={{width: '100%'}}>
+        {extern ? (
+          <a href={link}>
             <Box width={1}>{text}</Box>
           </a>
         ) : (
-          <Link to={link} style={{width: '100%'}}>
+          <Link to={link}>
             <Box width={1}>{text}</Box>
           </Link>
         )}
@@ -30,20 +42,21 @@ export default ContactButton
 const StyledButton = styled.div`
   margin: 15px auto;
   text-align: center;
-  border: ${(props: any) => (props.border ? `2px solid ${theme.colors[props.textColor]}` : 'none')};
-  border-radius: ${(props: any) => (props.border ? '30px' : 'none')};
-  width: ${(props: any) => (props.width ? props.width : '100%')};
-  background: ${(props: any) => (props.bg ? theme.colors[props.bg] : 'transparent')};
+  max-width: 300px;
+  border: ${({border, theme, textColor}: IProps) => (border ? `2px solid ${theme.colors[textColor]}` : 'none')};
+  border-radius: ${({border}: IProps) => (border ? '30px' : 'none')};
+  width: ${({width}: IProps) => (width ? width : '100%')};
+  background: ${({bg, theme}: IProps) => (bg ? theme.colors[bg] : 'transparent')};
   transition: 0.4s;
   div > a {
     padding: 10px 20px;
-    color: ${(props: any) => (props.textColor ? theme.colors[props.textColor] : theme.colors.default)};
+    color: ${({textColor, theme}: IProps) => (textColor ? theme.colors[textColor] : theme.colors.default)};
   }
   div > a:hover {
     padding: 10px 20px;
-    color: ${(props: any) => (props.bg ? theme.colors[props.bg] : theme.colors.inherit)};
+    color: ${({bg, theme}: IProps) => (bg ? theme.colors[bg] : theme.colors.inherit)};
   }
   &:hover {
-    background: ${(props: any) => (props.textColor ? theme.colors[props.textColor] : theme.colors.default)};
+    background: ${({textColor, theme}: IProps) => (textColor ? theme.colors[textColor] : theme.colors.default)};
   }
 `

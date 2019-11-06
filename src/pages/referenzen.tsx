@@ -12,9 +12,10 @@ import HeaderWithSubNavigation from '../components/header/headerWithSubNavigatio
 // Bilder Backgrounds
 const lang = 'de'
 
-const title = SiteContent.header[lang].title
-const subtitle = SiteContent.header[lang].text
-const nav = SiteContent.header[lang].nav
+const title = SiteContent.header.title[lang]
+const subtitle = SiteContent.header.text[lang]
+const nav = SiteContent.header.nav
+const SVG = ContactSvg
 
 export default props => {
   return (
@@ -22,9 +23,9 @@ export default props => {
       <Seo title="Referenzen" description="Refrenzen" keywords="Kunden Talos Caligraf Referenzen" />
 
       {/* //! Header */}
-      <HeaderWithSubNavigation {...{title, subtitle, nav}} />
+      <HeaderWithSubNavigation {...{title, subtitle, nav, SVG}} />
 
-      <Container transparent>
+      {/* <Container transparent>
         <Content
           title={SiteContent.header.title[lang]}
           // subtitle={SiteContent.header[lang].subtitle}
@@ -37,7 +38,7 @@ export default props => {
             type: 'svg',
           }}
         />
-      </Container>
+      </Container> */}
 
       {/* Unser Projekte */}
       {/* Projekteüberschrift */}

@@ -149,7 +149,7 @@ const StyledContainerBox = styled.div`
   max-width: 1200px;
   margin: 2em auto;
   padding: 20px;
-  /* @media screen and (${props => props.theme.device.laptop}) {
-    padding: 0;
-  } */
+  @media screen and (${props => props.theme.device.laptop}) {
+    margin: 0em auto;
+  }
 `
