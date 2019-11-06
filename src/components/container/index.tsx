@@ -141,7 +141,7 @@ const Container = (props: IContainer) => {
 export default Container
 
 interface IProps {
-  children: JSX.Element | JSX.Element[] | string
+  children?: JSX.Element | JSX.Element[] | string | null
   noSpace?: boolean
 }
 

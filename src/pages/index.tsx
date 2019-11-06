@@ -7,7 +7,17 @@ import {graphql} from 'gatsby'
 import {team, professor} from '../assets'
 import SiteContent from '../assets/content/uberuns'
 // Components
-import {Seo, Container, Content, Particles, SvgImage, SkillCardBox, ContainerBox, PortraitBox} from '../components'
+import {
+  Seo,
+  Container,
+  Content,
+  Particles,
+  SvgImage,
+  SkillCardBox,
+  ContainerBox,
+  PortraitBox,
+  ContentDivider,
+} from '../components'
 
 // Bilder Backgrounds
 
@@ -45,44 +55,22 @@ export default props => {
         />
       </Container>
 
-      <Container>
-        <Content title={SiteContent.uberuns[lang].title} text={SiteContent.uberuns[lang].text} titleColor="primary" />
-        <Content
-          imageDirection={'row'}
-          image={{
-            src: <SvgImage dWidth={250} mWidth={80} src={professor} />,
-            type: 'svg',
-            padding: '5px',
-          }}
-        />
-      </Container>
+      {/* Was machen wir */}
+      <ContentDivider text={SiteContent.uberuns[lang].text} title={SiteContent.uberuns[lang].title} image={professor} />
 
       {/* Skill Cards */}
       <SkillCardBox {...{content}} />
 
       {/* Wer sind wir */}
-      <ContainerBox>
-        <h1>{SiteContent.team[lang].title}</h1>
-        <p>{SiteContent.team[lang].text}</p>
-      </ContainerBox>
-      <PortraitBox />
+      <ContentDivider
+        color={'secondary'}
+        text={SiteContent.team[lang].text}
+        title={SiteContent.team[lang].title}
+        image={team}
+      />
 
-      <Container inbox fullscreen bg={'secondary'} flexDirection={'row'}>
-        <Container transparent>
-          <Container transparent flexDirection={'column'}>
-            <Content maxTitle title={SiteContent.team[lang].title} titleColor="inherit" />
-            <Content
-              image={{
-                src: <SvgImage dWidth={450} src={team} />,
-                type: 'svg',
-              }}
-            />
-          </Container>
-          <Container transparent>
-            <Content textColor="inherit" text={SiteContent.team[lang].text} />
-          </Container>
-        </Container>
-      </Container>
+      {/* Portrait Boxen */}
+      <PortraitBox />
     </React.Fragment>
   )
 }

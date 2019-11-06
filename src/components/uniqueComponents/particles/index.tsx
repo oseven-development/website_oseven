@@ -8,7 +8,7 @@ import Typography from '../../typography'
 
 interface IParticles extends IParticlesParams {
   title?: string | string[]
-  text?: string
+  text?: string | string[]
   action?: JSX.Element
   height: string[]
 }

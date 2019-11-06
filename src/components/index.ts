@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image'
 // ContainerBox von Max
 import Container, {ContainerBox} from './container'
 import Content from './content'
+import {ContentDivider} from './content/contentDivider'
 import {Layout} from './Layout'
 
 // Schriften
@@ -51,6 +52,7 @@ export {
   Layout,
   Container,
   Content,
+  ContentDivider,
   // Navigation
   Navigation,
   // Images
