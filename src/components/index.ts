@@ -37,7 +37,7 @@ import ShadowBox from './uniqueComponents/shadowBox'
 import ContactButton from './uniqueComponents/button/contactButton'
 // uC => images
 import Image from './uniqueComponents/image/image'
-import SvgImage from './uniqueComponents/image/SvgImage'
+import SvgImage from './uniqueComponents/image/svgImage'
 import Parallax from './uniqueComponents/image/parallax'
 // typography
 import Typography from './uniqueComponents/typography'
