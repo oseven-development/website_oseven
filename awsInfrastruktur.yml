@@ -15,58 +15,58 @@ Resources:
         - Key: app
           Value: homepage
 
-  # CloudFrontDistribution:
-  #   Type: AWS::CloudFront::Distribution
-  #   Properties:
-  #     Tags:
-  #       - Key: customer
-  #         Value: oseven
-  #       - Key: app
-  #         Value: homepage
-  #     DistributionConfig:
-  #       Aliases:
-  #         - oseven.de
-  #       DefaultCacheBehavior:
-  #         AllowedMethods:
-  #           - GET
-  #           - HEAD
-  #           - OPTIONS
-  #         Compress: true
-  #         ForwardedValues:
-  #           Cookies:
-  #             Forward: none
-  #           QueryString: false
-  #         TargetOriginId: myS3Origin
-  #         ViewerProtocolPolicy: redirect-to-https
-  #       DefaultRootObject: index.html
-  #       Enabled: false
-  #       HttpVersion: http2
-  #       IPV6Enabled: true
-  #       Origins:
-  #         - DomainName: !GetAtt s3Bucket.DomainName
-  #           Id: myS3Origin # WELCHE ID?
-  #           OriginPath: /prod
-  #           S3OriginConfig:
-  #             OriginAccessIdentity:
-  #               !Join [
-  #                 "",
-  #                 [
-  #                   "origin-access-identity/cloudfront/",
-  #                   !Ref OriginAccessIdentity,
-  #                 ],
-  #               ]
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      Tags:
+        - Key: customer
+          Value: oseven
+        - Key: app
+          Value: homepage
+      DistributionConfig:
+        Aliases:
+          - oseven.de
+        DefaultCacheBehavior:
+          AllowedMethods:
+            - GET
+            - HEAD
+            - OPTIONS
+          Compress: true
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: false
+          TargetOriginId: myS3Origin
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: index.html
+        Enabled: false
+        HttpVersion: http2
+        IPV6Enabled: true
+        Origins:
+          - DomainName: !GetAtt s3Bucket.DomainName
+            Id: myS3Origin # WELCHE ID?
+            OriginPath: /prod
+            S3OriginConfig:
+              OriginAccessIdentity:
+                !Join [
+                  "",
+                  [
+                    "origin-access-identity/cloudfront/",
+                    !Ref OriginAccessIdentity,
+                  ],
+                ]
 
-  #       PriceClass: PriceClass_100
-  #       ViewerCertificate:
-  #         AcmCertificateArn: arn:aws:acm:us-east-1:403039540759:certificate/38d411c0-7e0b-4476-a3a8-118bc84a4a20
-  #         MinimumProtocolVersion: TLSv1.1_2016
-  #         SslSupportMethod: sni-only
+        PriceClass: PriceClass_100
+        ViewerCertificate:
+          AcmCertificateArn: arn:aws:acm:us-east-1:403039540759:certificate/38d411c0-7e0b-4476-a3a8-118bc84a4a20
+          MinimumProtocolVersion: TLSv1.1_2016
+          SslSupportMethod: sni-only
 
-  # OriginAccessIdentity:
-  #   Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
-  #   Properties:
-  #     CloudFrontOriginAccessIdentityConfig:
-  #       Comment: access-identity-oseven.de.s3.amazonaws.com
+  OriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: access-identity-oseven.de.s3.amazonaws.com
 
   # Recordsets:
   #   Type: AWS::Route53::RecordSetGroup
@@ -112,3 +112,5 @@ Resources:
         FilterGroups:
           - - Type: EVENT
               Pattern: PUSH
+            - Type: HEAD_REF
+              Pattern: ^refs/heads/awsprod$
