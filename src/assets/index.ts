@@ -37,6 +37,8 @@ import SVGconsultant from './images/illustrations/consultant.svg'
 import SVGworkshop from './images/illustrations/workshop.svg'
 import SVGpros from './images/illustrations/pros.svg'
 import SVGpros2 from './images/illustrations/pros2.svg'
+import SVGportfolio from './images/illustrations/portfolio.svg'
+import SVGreferences from './images/illustrations/references.svg'
 
 // partners
 import SVGgcp from './images/partner/gcp.svg'
@@ -83,6 +85,8 @@ export {
   SVGteam,
   SVGprofessor,
   SVGentwicklung,
+  SVGportfolio,
+  SVGreferences,
   SVGcontact,
   SVGpros,
   SVGworkshop,

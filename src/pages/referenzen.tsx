@@ -3,7 +3,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import {references as SiteContent} from '../assets'
-import {SVGcontact} from '../assets/'
+import {SVGreferences} from '../assets/'
 
 // Components
 import {Seo, Parallax} from '../components'
@@ -18,7 +18,7 @@ const lang = 'de'
 const title = SiteContent.header.title[lang]
 const subtitle = SiteContent.header.text[lang]
 const nav = SiteContent.header.nav
-const SVG = SVGcontact
+const SVG = SVGreferences
 
 export default props => {
   return (

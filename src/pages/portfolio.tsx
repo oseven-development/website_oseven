@@ -6,7 +6,7 @@ import {graphql} from 'gatsby'
 import {portfolio as SiteContent} from '../assets/'
 
 // illustrations
-import {SVGentwicklung} from '../assets'
+import {SVGportfolio} from '../assets'
 
 // Components
 import {Seo, Parallax, HeaderWithSubNavigation} from '../components'
@@ -21,7 +21,7 @@ const lang = 'de'
 const title = SiteContent.header[lang].title
 const subtitle = SiteContent.header[lang].text
 const nav = SiteContent.header[lang].nav
-const SVG = SVGentwicklung
+const SVG = SVGportfolio
 
 export default props => (
   <React.Fragment>
