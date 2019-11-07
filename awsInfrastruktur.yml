@@ -89,6 +89,7 @@ Resources:
         Path: public
         Type: S3
         Packaging: NONE
+        EncryptionDisabled: true
       Environment:
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/standard:1.0
@@ -99,6 +100,7 @@ Resources:
         Type: GITHUB
         Location: https://github.com/oseven-development/website_oseven.git
       SourceVersion: awsprod
+      QueuedTimeoutInMinutes: 15
       Tags:
         - Key: customer
           Value: oseven
