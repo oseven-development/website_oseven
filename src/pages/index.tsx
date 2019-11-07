@@ -4,7 +4,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 
-import {team, professor} from '../assets'
+import {SVGteam, SVGprofessor} from '../assets'
 import SiteContent from '../assets/content/uberuns'
 // Components
 import {
@@ -56,7 +56,11 @@ export default props => {
       </Container>
 
       {/* Was machen wir */}
-      <ContentDivider text={SiteContent.uberuns[lang].text} title={SiteContent.uberuns[lang].title} image={professor} />
+      <ContentDivider
+        text={SiteContent.uberuns[lang].text}
+        title={SiteContent.uberuns[lang].title}
+        image={SVGprofessor}
+      />
 
       {/* Skill Cards */}
       <SkillCardBox {...{content}} />
@@ -66,7 +70,7 @@ export default props => {
         color={'secondary'}
         text={SiteContent.team[lang].text}
         title={SiteContent.team[lang].title}
-        image={team}
+        image={SVGteam}
       />
 
       {/* Portrait Boxen */}

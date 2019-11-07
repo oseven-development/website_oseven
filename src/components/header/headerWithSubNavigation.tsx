@@ -17,7 +17,7 @@ export default ({title, subtitle, nav, SVG}: IProps) => (
     <Flex flexWrap="wrap" alignItems={'center'} justifyContent="space-between">
       <Box width={[1, 4 / 6]} my={[30, 0]}>
         <TypographyRenderHelper content={title} variant={'h1'} />
-        <TypographyRenderHelper content={subtitle} variant={'p'} />
+        <TypographyRenderHelper content={subtitle} variant={'pbr'} />
 
         <SubNavigation {...{nav}} />
       </Box>

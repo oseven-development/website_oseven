@@ -3,11 +3,11 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import SiteContent from '../assets/content/references'
-import ContactSvg from '../assets/images/illustrations/references.svg'
+import {SVGcontact} from '../assets/'
 
 import {Flex, Box} from 'rebass'
 // Components
-import {Seo, Container, SvgImage, Content, Parallax, Project, CustomerBox, Typography} from '../components'
+import {Seo, Container, Parallax, CustomerBox, Typography} from '../components'
 import HeaderWithSubNavigation from '../components/header/headerWithSubNavigation'
 // Bilder Backgrounds
 const lang = 'de'
@@ -15,7 +15,7 @@ const lang = 'de'
 const title = SiteContent.header.title[lang]
 const subtitle = SiteContent.header.text[lang]
 const nav = SiteContent.header.nav
-const SVG = ContactSvg
+const SVG = SVGcontact
 
 export default props => {
   return (
@@ -24,21 +24,6 @@ export default props => {
 
       {/* //! Header */}
       <HeaderWithSubNavigation {...{title, subtitle, nav, SVG}} />
-
-      {/* <Container transparent>
-        <Content
-          title={SiteContent.header.title[lang]}
-          // subtitle={SiteContent.header[lang].subtitle}
-          text={SiteContent.header.text[lang]}
-        />
-
-        <Content
-          image={{
-            src: <SvgImage dWidth={450} src={ContactSvg} />,
-            type: 'svg',
-          }}
-        />
-      </Container> */}
 
       {/* Unser Projekte */}
       {/* Projekteüberschrift */}

@@ -9,12 +9,12 @@ import SiteContent from '../assets/content/contact'
 import {Seo, HeaderWithButtonGroup} from '../components'
 
 // Images, Background and Graphics
-import ContactSvg from '../assets/images/illustrations/contactSite.svg'
+import {SVGcontact} from '../assets'
 
 const lang = 'de'
 const title = SiteContent.kontakt.title[lang]
 const subtitle = SiteContent.kontakt.text[lang]
-const SVG = ContactSvg
+const SVG = SVGcontact
 const buttonGroup = SiteContent.kontakt.contact[lang]
 
 export default () => (

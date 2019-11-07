@@ -16,7 +16,7 @@ import links from '../../routes/routes'
 
 import {Navigation, HeaderNavigation, Footer} from '..'
 
-import {LogoOseven as logo, LogoOsevenFooter} from '../../assets/'
+import {SVGLogoOseven as logo, SVGLogoOsevenFooter} from '../../assets/'
 
 export default props => (
   <React.Fragment>
@@ -25,7 +25,7 @@ export default props => (
       <React.Fragment>
         <HeaderNavigation {...{logo}} navigation={<Navigation {...{links}} />} />
         <main style={{background: theme.colors.background}}>{props.children}</main>
-        <Footer {...{links}} logo={LogoOsevenFooter} />
+        <Footer {...{links}} logo={SVGLogoOsevenFooter} />
       </React.Fragment>
     </ThemeProvider>
   </React.Fragment>

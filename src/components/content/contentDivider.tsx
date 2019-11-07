@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {ContainerBox, TypographyRenderHelper, SvgImage} from '../'
 interface IProps {
@@ -10,6 +10,7 @@ interface IProps {
   children?: any
   color?: 'primary' | 'secondary'
   image: any
+  theme?: any
 }
 
 export const ContentDivider = (props: IProps) => {
@@ -17,9 +18,9 @@ export const ContentDivider = (props: IProps) => {
   return (
     <StyledContentDivider {...props}>
       <ContainerBox>
-        <Flex alignItems="center" flexWrap="wrap">
+        <Flex alignItems="center" flexWrap="wrap" py={['1em', '2em']}>
           <Box width={[1, 3 / 6]} pr={[0, '2em']}>
-            <h1>{title}</h1>
+            <TypographyRenderHelper variant={'h1'} content={title} />
             <TypographyRenderHelper variant={'p'} content={text} />
           </Box>
 
@@ -39,9 +40,12 @@ interface IStyledProps extends IProps {
 }
 
 const StyledContentDivider = styled.div`
-  background: ${({color, theme}: IStyledProps) => theme.colors[color]};
+  background: ${({color, theme}: IStyledProps) => (color ? theme.colors[color] : 'white')};
   h1 {
     color: ${({theme}: IStyledProps) => theme.colors.primary};
+    @media screen and (${props => props.theme.device.laptop}) {
+      text-align: center;
+    }
   }
   p  {
     color: ${({color, theme}: IStyledProps) => (color === 'secondary' ? 'white' : '#333')};

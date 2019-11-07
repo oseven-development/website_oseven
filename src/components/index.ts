@@ -1,83 +1,82 @@
 /** @format */
 import BackgroundImage from 'gatsby-background-image'
 
-// BoxLayoutType
-// Container und Content ist von Philipp
-// ContainerBox von Max
-import Container, {ContainerBox} from './container'
+// container
+// import Container, {ContainerBox} from './container/containerBox'
+import {ContainerBox} from './container/containerBox'
+
+// content
 import Content from './content'
 import {ContentDivider} from './content/contentDivider'
-import {Layout} from './Layout'
+import {ContentImgGallery} from './content/contentImgGallery'
+import {DoubleContentBox} from './content/contentBox'
 
-// Schriften
-import Typography from './typography'
+// content => preAssemble
+import CustomerBox from './content/contentCustomerCard/customerCard'
+import PortraitBox from './content/contentPortrait/Portrait'
+import SkillCardBox from './content//contentSkillCard/SkillCard'
 
-// Images
-import Image from './image'
-import SvgImage from './image/ImageSvg'
-import Parallax from './image/parallax'
-import BoxShadowBox from './image/boxer'
-
-// Navigation
-import Navigation from './navigation'
-
-// Typography
-import {TypographyRenderHelper} from './typography/typographyRenderHelper'
-
-// Containers
-
-// uniqueComponents
-import Footer from './uniqueComponents/footer/footer'
-import ContactButton from './uniqueComponents/ContactButton'
-import List from './uniqueComponents/List'
-import Particles from './uniqueComponents/particles'
-import Project from './uniqueComponents/Project'
-
-import {Seo} from './uniqueComponents/seo'
-import SubNavigation from './uniqueComponents/subNavigation/index'
-
-// headers
+// header
 import HeaderNavigation from './header/headerNavigation'
 import HeaderWithButtonGroup from './header/headerWithButtonGroup'
 import HeaderWithSubNavigation from './header/headerWithSubNavigation'
 
-// Boxes Higher Components
-import CustomerBox from './customerBox/customerBox'
-import PortraitBox from './portraitBox/portraitBox'
-import SkillCardBox from './skillCardBox/SkillCard'
+// layout
+import {Layout} from './Layout'
+import Navigation from './Layout/navigation'
+import Footer from './Layout/footer/footer'
+import SubNavigation from './Layout/navigation/subNavigation'
+
+// uniqueComponents
+import List from './uniqueComponents/list'
+import Particles from './uniqueComponents/particles'
+import Seo from './uniqueComponents/seo'
+import BoxShadowBox from './uniqueComponents/shadowBox'
+// uC => button
+import ContactButton from './uniqueComponents/button/contactButton'
+// uC => images
+import Image from './uniqueComponents/image/image'
+import SvgImage from './uniqueComponents/image/SvgImage'
+import Parallax from './uniqueComponents/image/parallax'
+// typography
+import Typography from './uniqueComponents/typography'
+import {TypographyRenderHelper} from './uniqueComponents/typography/typographyRenderHelper'
 
 export {
+  BackgroundImage,
   // BoxLayoutType
   ContainerBox,
-  Layout,
-  Container,
+  // content
   Content,
   ContentDivider,
-  // Navigation
-  Navigation,
-  // Images
-  BoxShadowBox,
-  Image,
-  Parallax,
-  BackgroundImage,
-  SvgImage,
-  // Typography
-  TypographyRenderHelper,
-  Typography,
-  // uniqueComponents
-  Seo,
-  Footer,
-  ContactButton,
-  Project,
-  Particles,
-  List,
-  SubNavigation,
-  // headers
-  HeaderNavigation,
-  HeaderWithButtonGroup,
-  HeaderWithSubNavigation,
-  // Boxes Higher Components
+  ContentImgGallery,
+  DoubleContentBox,
+  //content => preAssemble
   CustomerBox,
   PortraitBox,
   SkillCardBox,
+  // header
+  HeaderNavigation,
+  HeaderWithButtonGroup,
+  HeaderWithSubNavigation,
+  // layout
+  Layout,
+  Navigation,
+  Footer,
+  SubNavigation,
+  // uniqueComponents
+  Seo,
+  Particles,
+  List,
+  BoxShadowBox,
+  // uniqueComponents => buttons
+
+  ContactButton,
+  // uniqueComponents => images
+  Image,
+  Parallax,
+  SvgImage,
+  // // uniqueComponents => typography
+  TypographyRenderHelper,
+  Typography,
 }

@@ -16,6 +16,7 @@ export default {
       title: 'Was wir tun',
       text: [
         'Um auf moderne sich schnell verändernde Märkte wettbewerbsfähig zu bleiben, müssen Sie in Ihre digitalen Prozesse, die Infrastruktur und deren Architektur Investieren. Wir können Sie dabei bestmöglich unterstützen und mit Ihnen gemeinsam Lösungen für die Fragen von morgen zu finden.',
+        'Daher entwickeln wir native Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich auf Ihre individuellen Bedürfnissen fokussieren.',
       ],
     },
 

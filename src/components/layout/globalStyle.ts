@@ -105,4 +105,16 @@ export default createGlobalStyle`
     margin:0;
     list-style: none
   }
+  i{
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 2em 0 0 0;
+    color: #444;
+  }
+
+
+
+
   `
