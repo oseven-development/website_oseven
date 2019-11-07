@@ -90,6 +90,7 @@ Resources:
         Type: S3
         Packaging: NONE
         EncryptionDisabled: true
+        Name: "/"
       Environment:
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/standard:1.0
