@@ -86,7 +86,7 @@ Resources:
     Properties:
       Artifacts:
         Location: !Ref s3Bucket
-        Path: prod
+        Path: public
         Type: S3
         Packaging: NONE
       Environment:
