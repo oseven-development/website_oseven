@@ -35,7 +35,7 @@ export default (props: IHeader) => (
       <Flex justifyContent={'space-between'} style={{height: '100%'}}>
         <Box mx={'15px'} alignSelf={'center'}>
           <Link to="/" style={{fontFamily: 'none'}}>
-            <SvgImage src={props.logo} dWidth={175} />
+            <SvgImage src={props.logo} dWidth={175} alt="oseven-logo" />
           </Link>
         </Box>
         <Box mx={'50px'} alignSelf={'center'}>

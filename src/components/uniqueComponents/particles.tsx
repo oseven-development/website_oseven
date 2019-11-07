@@ -4,7 +4,7 @@ import React from 'react'
 import Particles, {IParticlesParams} from 'react-particles-js'
 import styled from 'styled-components'
 import {useWindowSize} from '../../assets/hooks/windowWidth'
-import Typography from '../../typography'
+import Typography from './typography'
 
 interface IParticles extends IParticlesParams {
   title?: string | string[]

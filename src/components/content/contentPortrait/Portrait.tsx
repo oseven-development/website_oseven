@@ -2,11 +2,11 @@
 import React from 'react'
 import {Flex, Box} from 'rebass'
 import PortraitElement from './portraitElement'
-import {ContainerBox} from '../../'
+import {ContainerWrapper} from '../../'
 
 const PortraitBox = (props: {}) => {
   return (
-    <ContainerBox>
+    <ContainerWrapper>
       <Flex flexWrap="wrap">
         {[
           {name: 'Max', title: 'Software Engineer & Cloud Architekt', img: 'asd'},
@@ -18,7 +18,7 @@ const PortraitBox = (props: {}) => {
           </Box>
         ))}
       </Flex>
-    </ContainerBox>
+    </ContainerWrapper>
   )
 }
 export default PortraitBox

@@ -3,7 +3,7 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 import {Flex, Box} from 'rebass'
-import {ContainerBox, TypographyRenderHelper, SvgImage} from '../'
+import {ContainerWrapper, TypographyRenderHelper, SvgImage} from '../'
 interface IProps {
   title: string | string[]
   text?: string | string[]
@@ -14,17 +14,17 @@ export const ContentImgGallery = (props: IProps) => {
   const {title, text, image} = props
   return (
     <StyledContentDivider>
-      <ContainerBox>
+      <ContainerWrapper>
         <TypographyRenderHelper variant={'h2'} content={title} />
         {text ? <TypographyRenderHelper variant={'p'} content={text} /> : null}
         <Flex alignItems="center" flexWrap="wrap" justifyContent={'space-between'} py={['1em', '2em']}>
           {image.map(({SVG, dWidth, mWidth}) => (
-            <Box  px={['1em']}>
+            <Box px={['1em']}>
               <SvgImage key={Math.random()} dWidth={dWidth} mWidth={mWidth} src={SVG} p={'15px 0px'} />
             </Box>
           ))}
         </Flex>
-      </ContainerBox>
+      </ContainerWrapper>
     </StyledContentDivider>
   )
 }

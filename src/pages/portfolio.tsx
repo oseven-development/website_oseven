@@ -3,15 +3,15 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 // content
-import SiteContent from '../assets/content/portfolio'
+import {portfolio as SiteContent} from '../assets/'
 
 // illustrations
 import {SVGentwicklung} from '../assets'
 
 // Components
-import {Seo, Container, Parallax} from '../components'
+import {Seo, Parallax, HeaderWithSubNavigation} from '../components'
 
-import HeaderWithSubNavigation from '../components/header/headerWithSubNavigation'
+// Content
 import {SoftwareEngineering} from '../pageContent/portfolioContent/softwareEngineering'
 import {MachineLearning} from '../pageContent/portfolioContent/machineLearning'
 import {ConsultingAndWorkshops} from '../pageContent/portfolioContent/consultingAndWorkshops'
@@ -33,32 +33,21 @@ export default props => (
 
     {/* //----------- Header -----------// */}
     <HeaderWithSubNavigation {...{title, subtitle, nav, SVG}} />
-    {/* //----------- Header -----------// */}
 
     {/* //----------- Software Entwicklung -----------// */}
     <SoftwareEngineering />
-    {/* //----------- Software Entwicklung -----------// */}
 
     {/* //----------- Parllax -----------// */}
-    <Container inbox fullscreen>
-      <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
-    </Container>
-    {/* //----------- Parllax -----------// */}
+    <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
 
     {/* //----------- MachineLearning -----------// */}
     <MachineLearning />
-    {/* //----------- MachineLearning -----------// */}
 
     {/* //----------- Parllax -----------// */}
-    <Container inbox fullscreen>
-      <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
-    </Container>
-    {/* //----------- Parllax -----------// */}
+    <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
 
     {/* //----------- Consulting -----------// */}
-
     <ConsultingAndWorkshops />
-    {/* //----------- Consulting -----------// */}
   </React.Fragment>
 )
 // props.data.clock.childImageSharp.fluid

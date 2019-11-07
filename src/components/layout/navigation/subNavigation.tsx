@@ -3,7 +3,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import {useWindowSize} from '../../assets/hooks/windowWidth'
+import {useWindowSize} from '../../../assets/hooks/windowWidth'
 
 interface IProps {
   nav: {label: string; href: string}[]

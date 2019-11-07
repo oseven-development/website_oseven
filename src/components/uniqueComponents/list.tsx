@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {SvgImage} from '..'
 import {Flex, Box} from 'rebass'
-import Check from '../../../assets/images/icons/listIcons/tick.svg'
+import {SVGCheck} from '../../assets'
 import theme from '../../assets/theme'
 interface IList {
   items: IListItem[]
@@ -26,7 +26,7 @@ const List = (props: IList) => {
               {item.icon ? (
                 <Box px={'8px'} style={{flexShrink: 0}}>
                   {/* <SvgImage src={item.icon} /> */}
-                  <SvgImage src={Check} dWidth={20} mWidth={20} />
+                  <SvgImage src={SVGCheck} dWidth={20} mWidth={20} />
                 </Box>
               ) : null}
               <Box>{item.text}</Box>

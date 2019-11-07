@@ -3,40 +3,43 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
 import {Flex, Box} from 'rebass'
-import {ContainerBox, TypographyRenderHelper, SvgImage} from '../'
+import {ContainerWrapper, TypographyRenderHelper, SvgImage} from '../'
 interface IProps {
-  title: string
+  title: string | string[]
   text?: string | string[]
   children?: any
   color?: 'primary' | 'secondary'
-  image: any
+  image?: any
   theme?: any
 }
 
 export const ContentDivider = (props: IProps) => {
-  const {title, text, image} = props
+  const {title, text, image, color} = props
   return (
-    <StyledContentDivider {...props}>
-      <ContainerBox>
+    <StyledContentDivider {...{color}}>
+      <ContainerWrapper noSpace>
         <Flex alignItems="center" flexWrap="wrap" py={['1em', '2em']}>
           <Box width={[1, 3 / 6]} pr={[0, '2em']}>
             <TypographyRenderHelper variant={'h1'} content={title} />
             <TypographyRenderHelper variant={'p'} content={text} />
           </Box>
 
-          <Box width={[1, 3 / 6]} pl={[0, '2em']}>
-            <Positioning pos={'flex-end'}>
-              <SvgImage dWidth={250} mWidth={80} src={image} />
-            </Positioning>
-          </Box>
+          {image ? (
+            <Box width={[1, 3 / 6]} pl={[0, '2em']}>
+              <Positioning pos={'flex-end'}>
+                <SvgImage dWidth={250} mWidth={80} src={image} />
+              </Positioning>
+            </Box>
+          ) : null}
         </Flex>
-      </ContainerBox>
+      </ContainerWrapper>
     </StyledContentDivider>
   )
 }
 
-interface IStyledProps extends IProps {
+interface IStyledProps {
   theme?: any
+  color: string
 }
 
 const StyledContentDivider = styled.div`

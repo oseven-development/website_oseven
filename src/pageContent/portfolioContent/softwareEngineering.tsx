@@ -17,35 +17,34 @@ import {
 
 // Components
 import {
-  Container,
-  Content,
   SvgImage,
   List,
-  BoxShadowBox,
+  ShadowBox,
   ContentDivider,
   ContentImgGallery,
   DoubleContentBox,
-  TypographyRenderHelper,
+  TypographyRenderP,
+  JumpAnchor,
 } from '../../components'
 const lang = 'de'
 
 const SoftwareEngineering = () => (
   <>
-    <div id={'sw'} />
+    <JumpAnchor id={'sw'} />
     <ContentDivider color={'secondary'} title={SiteContent.sw.title[lang]} text={''} image={SVGentwicklung} />
 
     <DoubleContentBox
       right={
         <>
           <h2>{SiteContent.sw.subtitle[lang]}</h2>
-          <TypographyRenderHelper variant={'p'} content={SiteContent.sw.text[lang]} />
+          <TypographyRenderP content={SiteContent.sw.text[lang]} />
         </>
       }
       left={
-        <BoxShadowBox>
+        <ShadowBox>
           <SvgImage dWidth={750} mWidth={300} src={SVGserverless} />
           <i>Architektur einer Serverless Anwendung bei AWS</i>
-        </BoxShadowBox>
+        </ShadowBox>
       }
     />
 
@@ -59,13 +58,14 @@ const SoftwareEngineering = () => (
         {SVG: SVGfirebase, dWidth: 180, mWidth: 120},
       ]}
     />
+
     {/* //! pro Software Entwicklung */}
     <DoubleContentBox
       left={
         <>
           <h2>{SiteContent.pro[lang].subtitle}</h2>
           <SvgImage dWidth={250} src={SVGpros} />
-          <TypographyRenderHelper variant={'p'} content={SiteContent.pro[lang].text} />
+          <TypographyRenderP content={SiteContent.pro[lang].text} />
         </>
       }
       right={<List items={SiteContent.pro[lang].arguments} />}

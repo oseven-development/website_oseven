@@ -74,23 +74,18 @@ export default {
     en: {},
   },
   ml: {
-    de: {
-      title: 'Machine Learning & KI in der Cloud',
-      subtitle: 'Einführung in Machine Learning',
-
-      text: [
+    title: {de: 'Machine Learning & KI in der Cloud'},
+    subtitle: {de: 'Einführung in Machine Learning'},
+    text: {
+      de: [
         'Machine Learning ist eine Anwendung der künstlichen Intelligenz (KI), die den Systemen die Möglichkeit bietet, automatisch aus der Erfahrung und Daten zu lernen und sich zu verbessern, ohne explizit programmiert zu sein.',
-        '',
         'Wir setzen spezialisierte Machine Learning-Systeme ein, um langwierige Arbeitsabläufe zu automatisieren, erforschen Daten maßstabsgetreu und schaffen dadurch neue Wege der Zusammenarbeit für Sie und Ihre Kunden.',
         'Machine Learning ist der Weg in die Zukunft und eine Gelegenheit, die Kraft der Künstlichen Intelligenz für Sie und Ihr Unternehmen zu nutzen.',
-
         'Bei der Entwicklung von Machine Learning Models setzen wir auf einen von Google entwickelten Development Cycle',
-        '',
         'Der Einsatz des maschinellen Lernens ist nicht nur eine Frage des richtigen Algorithmus und trainieren eines Modells. Es muss gründlich darüber nachgedacht werden, wie diese ML-Modelle in Ihre bestehenden Systeme und Prozesse passen.',
         'Wir bei oseven setzen nicht nur auf etablierte KI-Lösungen von Cloudanbieter, wie AWS und Google sondern auch auf Open Source Tools, wie zum Beispiel Tensorflow, umso die bestmögliche Lösung zu entwickeln.',
       ],
     },
-    en: {},
   },
 
   tools: {

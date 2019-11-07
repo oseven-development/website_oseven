@@ -1,19 +1,28 @@
 /** @format */
 import React from 'react'
 import {Image} from 'rebass'
-import {facebook, homepage, instagram, twitter, whatsapp, www, youtube, xing} from '../../../assets/images/socialMedia'
+import {
+  SVGfacebookColor,
+  SVGtwitterColor,
+  SVGxingColor,
+  SVGwhatsappColor,
+  SVGwwwColor,
+  SVGyoutubeColor,
+  SVGhomepageColor,
+  SVGinstagramColor,
+} from '../../../../assets'
 
 interface ISocialMediaItemProps {
   provider: 'facebook' | 'homepage' | 'instagram' | 'twitter' | 'whatsapp' | 'www' | 'youtube' | 'xing'
 }
 const icons: Record<string, any> = {
-  facebook: facebook,
-  homepage: homepage,
-  instagram: instagram,
-  twitter: twitter,
-  whatsapp: whatsapp,
-  www: www,
-  youtube: youtube,
-  xing: xing,
+  facebook: SVGfacebookColor,
+  homepage: SVGhomepageColor,
+  instagram: SVGinstagramColor,
+  twitter: SVGtwitterColor,
+  whatsapp: SVGwhatsappColor,
+  www: SVGwwwColor,
+  youtube: SVGyoutubeColor,
+  xing: SVGxingColor,
 }
 export default (props: ISocialMediaItemProps) => <Image width={30} src={icons[props.provider]} />

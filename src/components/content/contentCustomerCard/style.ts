@@ -54,20 +54,21 @@ export const StyledButton = styled.button`
 export const StyledShadowBoxWrapper = styled.div`
   box-shadow: 0 0 15px #565656;
   padding: 20px;
-  height: 250px;
+  height: 100%;
   margin-bottom: 1em;
   @media screen and (${props => props.theme.device.laptop}) {
-    height: 400px;
+    /* height: 400px; */
+    margin-top: 1em;
     margin-bottom: 0;
   }
 `
 
 export const StyledShadowBoxInner = styled.div`
   overflow: hidden;
-  max-height: 250px;
-  height: 250px;
+  max-height: 400px;
+  height: 400px;
   @media screen and (${props => props.theme.device.laptop}) {
-    max-height: 400px;
-    height: 400px;
+    max-height: 200px;
+    height: 200px;
   }
 `

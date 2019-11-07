@@ -3,7 +3,7 @@ import React from 'react'
 
 import {Flex, Box} from 'rebass'
 
-import {SvgImage, ContactButton, TypographyRenderHelper, ContainerBox} from '../../components'
+import {SvgImage, ContactButton, TypographyRenderHelper, ContainerWrapper} from '../../components'
 
 interface IProps {
   title: string | string[]
@@ -13,7 +13,7 @@ interface IProps {
 }
 
 export default ({title, subtitle, buttonGroup, SVG}: IProps) => (
-  <ContainerBox>
+  <ContainerWrapper>
     <Flex flexWrap="wrap" alignItems={'center'} justifyContent="space-between">
       <Box width={[1, 4 / 6]} my={[30, 0]}>
         <TypographyRenderHelper content={title} variant={'h1'} />
@@ -36,5 +36,5 @@ export default ({title, subtitle, buttonGroup, SVG}: IProps) => (
         </div>
       </Box>
     </Flex>
-  </ContainerBox>
+  </ContainerWrapper>
 )

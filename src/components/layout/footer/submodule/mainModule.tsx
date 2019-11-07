@@ -6,7 +6,7 @@ import {Flex, Box, Image} from 'rebass'
 import {Link} from 'gatsby'
 import {SVGphone, SVGmail} from '../../../../assets'
 import {StyledNav} from '../../navigation'
-import {ContainerBox, SvgImage} from '../../../'
+import {ContainerWrapper, SvgImage} from '../../../'
 
 interface IProps {
   logo: any
@@ -17,7 +17,7 @@ interface IProps {
 }
 const MainModule = ({logo, links}: IProps) => {
   return (
-    <ContainerBox>
+    <ContainerWrapper>
       <Flex alignItems="center" flexWrap="wrap">
         <Box width={[1 / 2, 1 / 3]}>
           <Positioning pos={'flex-start'}>
@@ -31,13 +31,13 @@ const MainModule = ({logo, links}: IProps) => {
                 </li>
                 <li className={'contact'}>
                   <a href="mailto:hallo@oseven.de">
-                    <Image width={20} src={SVGmail} style={{marginRight: 10}} />
+                    <Image width={20} src={SVGmail} style={{marginRight: 10}} alt="email-symbol" />
                     hallo@oseven.de
                   </a>
                 </li>
                 <li className={'contact'}>
                   <a href="tel:+491634412159">
-                    <Image width={20} src={SVGphone} style={{marginRight: 10}} />
+                    <Image width={20} src={SVGphone} style={{marginRight: 10}} alt="telefon-symbol" />
                     +49 1634412159
                   </a>
                 </li>
@@ -49,7 +49,7 @@ const MainModule = ({logo, links}: IProps) => {
         <Box width={[1 / 2, 1 / 3]}>
           <Positioning pos={'center'}>
             <Link to="/">
-              <SvgImage src={logo} dWidth={300} />
+              <SvgImage src={logo} dWidth={300} alt="oseven-logo" />
             </Link>
           </Positioning>
         </Box>
@@ -68,7 +68,7 @@ const MainModule = ({logo, links}: IProps) => {
           </Positioning>
         </Box>
       </Flex>
-    </ContainerBox>
+    </ContainerWrapper>
   )
 }
 export {MainModule}

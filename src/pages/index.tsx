@@ -7,17 +7,7 @@ import {graphql} from 'gatsby'
 import {SVGteam, SVGprofessor} from '../assets'
 import SiteContent from '../assets/content/uberuns'
 // Components
-import {
-  Seo,
-  Container,
-  Content,
-  Particles,
-  SvgImage,
-  SkillCardBox,
-  ContainerBox,
-  PortraitBox,
-  ContentDivider,
-} from '../components'
+import {Seo, Particles, SkillCardBox, PortraitBox, ContentDivider} from '../components'
 
 // Bilder Backgrounds
 
@@ -47,13 +37,11 @@ export default props => {
   return (
     <React.Fragment>
       <Seo title="Über Uns" description="Startseite von Oseven" keywords="oseven Cloud Start-Up Kontakt" />
-      <Container fullscreen bg={'secondary'}>
-        <Particles
-          title={SiteContent.header[lang].title}
-          text={SiteContent.header[lang].text}
-          height={['220px', '600px']}
-        />
-      </Container>
+      <Particles
+        title={SiteContent.header[lang].title}
+        text={SiteContent.header[lang].text}
+        height={['220px', '600px']}
+      />
 
       {/* Was machen wir */}
       <ContentDivider

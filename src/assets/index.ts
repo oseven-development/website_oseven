@@ -1,8 +1,5 @@
 /** @format */
 
-
-
-
 import contact from './content/contact'
 import portfolio from './content/portfolio'
 import references from './content/references'
@@ -19,6 +16,16 @@ import SVGtwitter from './images/icons/twitter.svg'
 import SVGxing from './images/icons/xing.svg'
 import SVGphone from './images/icons/phone.svg'
 import SVGmail from './images/icons/mail.svg'
+import SVGCheck from './images/icons/listIcons/tick.svg'
+// icons => Social Media Colored
+import SVGfacebookColor from './images/icons/facebookColor.svg'
+import SVGtwitterColor from './images/icons/twitterColor.svg'
+import SVGxingColor from './images/icons/xingColor.svg'
+import SVGwhatsappColor from './images/icons/whatsappColor.svg'
+import SVGwwwColor from './images/icons/wwwColor.svg'
+import SVGyoutubeColor from './images/icons/youtubeColor.svg'
+import SVGhomepageColor from './images/icons/homepageColor.svg'
+import SVGinstagramColor from './images/icons/instagramColor.svg'
 
 // illustrations
 import SVGai from './images/illustrations/ai.svg'
@@ -62,6 +69,15 @@ export {
   SVGxing,
   SVGphone,
   SVGmail,
+  SVGCheck,
+  SVGfacebookColor,
+  SVGtwitterColor,
+  SVGxingColor,
+  SVGwhatsappColor,
+  SVGwwwColor,
+  SVGyoutubeColor,
+  SVGhomepageColor,
+  SVGinstagramColor,
   //illustrations
   SVGai,
   SVGteam,

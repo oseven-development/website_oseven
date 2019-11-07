@@ -55,7 +55,7 @@ const customer: RootObject = {
       ],
       en: [],
     },
-    nav: [{label: 'Aktuelle Projekte', href: 'currenProjects'}, {label: 'Unsere Kunden', href: 'currentCustomer'}],
+    nav: [{label: 'Aktuelle Projekte', href: 'currentProjects'}, {label: 'Unsere Kunden', href: 'currentCustomer'}],
   },
 
   customer: {

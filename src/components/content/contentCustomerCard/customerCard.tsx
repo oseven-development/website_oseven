@@ -1,8 +1,8 @@
 /** @format */
 import React from 'react'
-import {Flex, Box, Image} from 'rebass'
 import SliderBox from './sliderBox'
 import styled from 'styled-components'
+import {DoubleContentBox} from '../../'
 
 import {IContant as IProps} from '../../../assets/content/references'
 
@@ -14,22 +14,20 @@ export default (props: IProps) => {
   const {title, subtitle, description, contactStack, techStack, imageFolder} = props
   return (
     <StyledConsumerBox>
-      <Flex flexWrap="wrap" p={['0 20px', '0']}>
-        <Box width={[1, 0.5]} pr={[0, 3]}>
-          <SliderBox {...{imageFolder}} />
-        </Box>
+      <DoubleContentBox
+        left={<SliderBox {...{imageFolder}} />}
+        right={
+          <>
+            {/* Render Headline */}
+            <HeadlineStack {...{title, subtitle, imageFolder, description}} />
 
-        <Box width={[1, 0.5]} pl={[0, 3]}>
-          {/* Render Headline */}
-          <HeadlineStack {...{title, subtitle, imageFolder, description}} />
+            {/* Render ContactStack */}
+            <ContactStack {...{contactStack}} />
 
-          {/* Render ContactStack */}
-          <ContactStack {...{contactStack}} />
-
-          {/* Render TechStack */}
-          <TechStack {...{techStack}} />
-        </Box>
-      </Flex>
+            {/* Render TechStack */}
+            <TechStack {...{techStack}} />
+          </>
+        }></DoubleContentBox>
     </StyledConsumerBox>
   )
 }

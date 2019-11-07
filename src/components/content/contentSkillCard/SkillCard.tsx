@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {Flex, Box} from 'rebass'
-import {Typography, ContainerBox} from '../..'
+import {Typography, ContainerWrapper} from '../..'
 import {Link} from 'gatsby'
 import Img from 'gatsby-image'
 interface ISkillCard {
@@ -28,7 +28,7 @@ interface IProps {
 }
 
 const SkillCardBox = (props: IProps) => (
-  <ContainerBox>
+  <ContainerWrapper>
     <Flex flexWrap="wrap">
       {props.content.map(({title, text, link, image}) => (
         <Box key={title} width={[1, 1 / props.content.length]} px={[0, '1em']} py={['1em', 0]}>
@@ -36,7 +36,7 @@ const SkillCardBox = (props: IProps) => (
         </Box>
       ))}
     </Flex>
-  </ContainerBox>
+  </ContainerWrapper>
 )
 
 const SkillCard = (props: ISkillCard) => {

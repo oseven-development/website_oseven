@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
 
-import {ContainerBox, SvgImage, ContactButton} from '../../../'
+import {ContainerWrapper, SvgImage, ContactButton} from '../../../'
 
 interface IProps {
   title: string
@@ -13,7 +13,7 @@ interface IProps {
 }
 const ContactUs = ({title, text, contact}: IProps) => {
   return (
-    <ContainerBox>
+    <ContainerWrapper>
       <Flex alignItems="center" flexWrap="wrap">
         <Box width={[1, 1 / 2]} pr={[0, 5]}>
           <h2>{title}</h2>
@@ -22,11 +22,11 @@ const ContactUs = ({title, text, contact}: IProps) => {
         </Box>
         <Box width={[1, 1 / 2]} pl={[0, 5]}>
           <Positioning pos={'flex-end'}>
-            <SvgImage dWidth={350} src={contact} m={'0'} />
+            <SvgImage dWidth={350} src={contact} m={'0'} alt={'Kontakt-Grafik'} />
           </Positioning>
         </Box>
       </Flex>
-    </ContainerBox>
+    </ContainerWrapper>
   )
 }
 export {ContactUs}

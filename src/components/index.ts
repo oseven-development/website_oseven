@@ -2,14 +2,14 @@
 import BackgroundImage from 'gatsby-background-image'
 
 // container
-// import Container, {ContainerBox} from './container/containerBox'
-import {ContainerBox} from './container/containerBox'
+// import Container, {ContainerWrapper} from './container/ContainerWrapper'
+import {ContainerWrapper} from './container/containerWrapper'
+import {DoubleContentBox} from './container/containerContent'
 
 // content
 import Content from './content'
 import {ContentDivider} from './content/contentDivider'
 import {ContentImgGallery} from './content/contentImgGallery'
-import {DoubleContentBox} from './content/contentBox'
 
 // content => preAssemble
 import CustomerBox from './content/contentCustomerCard/customerCard'
@@ -28,10 +28,11 @@ import Footer from './Layout/footer/footer'
 import SubNavigation from './Layout/navigation/subNavigation'
 
 // uniqueComponents
+import {JumpAnchor} from './uniqueComponents/jumpAnchor'
 import List from './uniqueComponents/list'
 import Particles from './uniqueComponents/particles'
 import Seo from './uniqueComponents/seo'
-import BoxShadowBox from './uniqueComponents/shadowBox'
+import ShadowBox from './uniqueComponents/shadowBox'
 // uC => button
 import ContactButton from './uniqueComponents/button/contactButton'
 // uC => images
@@ -40,17 +41,17 @@ import SvgImage from './uniqueComponents/image/SvgImage'
 import Parallax from './uniqueComponents/image/parallax'
 // typography
 import Typography from './uniqueComponents/typography'
-import {TypographyRenderHelper} from './uniqueComponents/typography/typographyRenderHelper'
+import {TypographyRenderHelper, TypographyRenderP} from './uniqueComponents/typography/typographyRenderHelper'
 
 export {
   BackgroundImage,
-  // BoxLayoutType
-  ContainerBox,
+  // container
+  ContainerWrapper,
+  DoubleContentBox,
   // content
   Content,
   ContentDivider,
   ContentImgGallery,
-  DoubleContentBox,
   //content => preAssemble
   CustomerBox,
   PortraitBox,
@@ -67,8 +68,9 @@ export {
   // uniqueComponents
   Seo,
   Particles,
+  JumpAnchor,
   List,
-  BoxShadowBox,
+  ShadowBox,
   // uniqueComponents => buttons
 
   ContactButton,
@@ -77,6 +79,7 @@ export {
   Parallax,
   SvgImage,
   // // uniqueComponents => typography
-  TypographyRenderHelper,
   Typography,
+  TypographyRenderHelper,
+  TypographyRenderP,
 }

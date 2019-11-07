@@ -7,6 +7,18 @@ interface ITypography {
   content: string | string[]
 }
 
+interface ITypography2 {
+  content: string[]
+}
+
+const TypographyRenderP = ({content}: ITypography2) => (
+  <>
+    {content.map(elm => (
+      <p>{elm}</p>
+    ))}
+  </>
+)
+
 const TypographyRenderHelper = (props: ITypography) => {
   const {variant, content} = props
   return variant === 'h1' ? (
@@ -53,7 +65,7 @@ const TypographyRenderHelper = (props: ITypography) => {
         ))}
       </>
     ) : (
-      <h1>{content}</h1>
+      <p>{content}</p>
     )
   ) : variant === 'pbr' ? (
     Array.isArray(content) ? (
@@ -70,4 +82,4 @@ const TypographyRenderHelper = (props: ITypography) => {
   ) : null
 }
 
-export {TypographyRenderHelper}
+export {TypographyRenderHelper, TypographyRenderP}
