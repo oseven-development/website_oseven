@@ -22,10 +22,10 @@ import HeaderWithButtonGroup from './header/headerWithButtonGroup'
 import HeaderWithSubNavigation from './header/headerWithSubNavigation'
 
 // layout
-import {Layout} from './Layout'
-import Navigation from './Layout/navigation'
-import Footer from './Layout/footer/footer'
-import SubNavigation from './Layout/navigation/subNavigation'
+import {Layout} from './layout'
+import Navigation from './layout/navigation'
+import Footer from './layout/footer/footer'
+import SubNavigation from './layout/navigation/subNavigation'
 
 // uniqueComponents
 import {JumpAnchor} from './uniqueComponents/jumpAnchor'
