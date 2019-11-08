@@ -30,7 +30,7 @@ const ConsultingAndWorkshops = () => (
           <TypographyRenderP content={SiteContent.consulting[lang].text} />
         </>
       }
-      left={<ShadowBox>Some Picture?</ShadowBox>}
+      // left={<ShadowBox>Some Picture?</ShadowBox>}
     />
 
     {/* soft skills */}

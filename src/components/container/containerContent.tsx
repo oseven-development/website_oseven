@@ -5,8 +5,8 @@ import styled, {css} from 'styled-components'
 import {Flex, Box} from 'rebass'
 import {ContainerWrapper, TypographyRenderHelper, SvgImage} from '..'
 interface IProps {
-  right: JSX.Element | JSX.Element[] | string | null
-  left: JSX.Element | JSX.Element[] | string | null
+  right?: JSX.Element | JSX.Element[] | string | null
+  left?: JSX.Element | JSX.Element[] | string | null
 }
 
 export const DoubleContentBox = (props: IProps) => {
