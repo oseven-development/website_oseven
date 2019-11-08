@@ -20,8 +20,12 @@ const theme: ITheme = {
     background: '#fff',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
+  border: {
+    radius: {small: '2px', medium: '5px', big: '10px'},
+  },
+
   shadows: {
-    small: '0 0 4px rgba(0, 0, 0, .125)',
+    small: '0 0 4px rgba(0, 0, 0, .85)',
     large: '0 0 24px rgba(0, 0, 0, .125)',
   },
   breakpoints: ['481px', '769px', '1601px', '2001px'],

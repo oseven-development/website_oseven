@@ -20,4 +20,7 @@ export interface ITheme {
   shadows: any
   breakpoints: string[]
   device: any
+  border: {
+    radius: {small: string; medium: string; big: string}
+  }
 }

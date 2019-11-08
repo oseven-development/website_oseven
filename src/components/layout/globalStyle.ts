@@ -18,6 +18,16 @@ export default createGlobalStyle`
     main {
       background-color: ${theme.colors.background}
     }
+
+    /* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_aZA3gnD_vx3rCs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
     @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -50,15 +60,7 @@ export default createGlobalStyle`
   src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_aZA3gnD_vx3rCs.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+
   body {
     margin: 0;
     font-family: "Roboto", sans-serif;
@@ -70,7 +72,7 @@ export default createGlobalStyle`
     font-size: ${buildString('26px', '60px')};
     margin: 15px 0px;
     }
-  .title {
+  h1.title {
     font-size:${buildString('42px', '60px')};
   }
   h2{  
@@ -78,11 +80,20 @@ export default createGlobalStyle`
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('20px', '40px')}};
+  h2.title{
+    font-size:${buildString('32px', '40px')};
+  }
   h3{  
     margin: 10px 0px;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
     font-size: ${buildString('16px', '28px')}};
+  h4{  
+  margin: 10px 0px;
+  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-size: ${buildString('16px', '28px')};
+  };
   p, .p{
       font-size: 1em;
       line-height: 1.6em;

@@ -41,11 +41,10 @@ export default ({title, subtitle, imageFolder, description}: IProps) => {
           <h2>{title && title.de ? title.de : null}</h2>
           {subtitle && subtitle.de ? <h3>{subtitle.de}</h3> : null}
         </Box>
-        <Box>
+        <Box width={[100, 200]}>
           {customer[imageFolder] ? (
             <Img
-              style={{margin: 'auto'}}
-              fixed={customer[imageFolder].childImageSharp.fixed}
+              fluid={customer[imageFolder].childImageSharp.fluid}
               key={'node.node.id'}
               alt={'node.node.name.replace(/-/g,)'}
             />
@@ -63,8 +62,8 @@ export default ({title, subtitle, imageFolder, description}: IProps) => {
 export const imagePropsCustomer = graphql`
   fragment imagePropsCustomer on File {
     childImageSharp {
-      fixed(height: 80) {
-        ...GatsbyImageSharpFixed_withWebp_tracedSVG
+      fluid(maxWidth: 200, maxHeight: 100) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }

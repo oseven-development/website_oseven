@@ -16,27 +16,28 @@ interface ITypography {
 const Typography = (props: ITypography) => {
   const {variant, children, margin, style, column} = props
   return (
-    <StyledTypograhpy {...props}>
-      {variant === 'title' ? (
-        <h1 className="title" style={style}>
-          {children}
-        </h1>
-      ) : variant === 'h1' ? (
-        <h1 style={style}>{children}</h1>
-      ) : variant === 'h2' ? (
-        <h2 style={style}>{children}</h2>
-      ) : variant === 'h3' ? (
-        <h3 style={style}>{children}</h3>
-      ) : variant === 'p' ? (
-        <p style={style} key={Math.random()}>
-          {children}
-        </p>
-      ) : (
-        <div className={'p'} style={style}>
-          {children}
-        </div>
-      )}
-    </StyledTypograhpy>
+    <div style={{background: 'red'}}>ACHTUNG!!!!!!</div>
+    // <StyledTypograhpy {...props}>
+    //   {variant === 'title' ? (
+    //     <h1 className="title" style={style}>
+    //       {children}
+    //     </h1>
+    //   ) : variant === 'h1' ? (
+    //     <h1 style={style}>{children}</h1>
+    //   ) : variant === 'h2' ? (
+    //     <h2 style={style}>{children}</h2>
+    //   ) : variant === 'h3' ? (
+    //     <h3 style={style}>{children}</h3>
+    //   ) : variant === 'p' ? (
+    //     <p style={style} key={Math.random()}>
+    //       {children}
+    //     </p>
+    //   ) : (
+    //     <div className={'p'} style={style}>
+    //       {children}
+    //     </div>
+    //   )}
+    // </StyledTypograhpy>
   )
 }
 

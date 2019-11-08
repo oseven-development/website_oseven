@@ -20,7 +20,7 @@ export const ContentDivider = (props: IProps) => {
       <ContainerWrapper noSpace>
         <Flex alignItems="center" flexWrap="wrap" py={['1em', '2em']}>
           <Box width={[1, 3 / 6]} pr={[0, '2em']}>
-            <TypographyRenderHelper variant={'h1'} content={title} />
+            <TypographyRenderHelper variant={'h1'} content={title} title />
             <TypographyRenderHelper variant={'p'} content={text} />
           </Box>
 

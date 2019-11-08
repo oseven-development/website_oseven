@@ -38,13 +38,13 @@ export default props => (
     <SoftwareEngineering />
 
     {/* //----------- Parllax -----------// */}
-    <Parallax src={props.data.punch.childImageSharp.fluid} alt={'post its'} />
+    <Parallax src={props.data.mlParallax.childImageSharp.fluid} alt={'post its'} />
 
     {/* //----------- MachineLearning -----------// */}
     <MachineLearning />
 
     {/* //----------- Parllax -----------// */}
-    <Parallax src={props.data.projects.childImageSharp.fluid} alt={'projectplan'} />
+    <Parallax src={props.data.csParallax.childImageSharp.fluid} alt={'projectplan'} />
 
     {/* //----------- Consulting -----------// */}
     <ConsultingAndWorkshops />
@@ -54,10 +54,10 @@ export default props => (
 
 export const indexQuery = graphql`
   query {
-    punch: file(relativePath: {eq: "parallax/punch.jpg"}) {
+    mlParallax: file(relativePath: {eq: "parallax/machineLearningParallax.png"}) {
       ...imagePre
     }
-    projects: file(relativePath: {eq: "parallax/projects.jpg"}) {
+    csParallax: file(relativePath: {eq: "parallax/consultingParallax.png"}) {
       ...imagePre
     }
   }

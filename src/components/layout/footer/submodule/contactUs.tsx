@@ -18,7 +18,7 @@ const ContactUs = ({title, text, contact}: IProps) => {
         <Box width={[1, 1 / 2]} pr={[0, 5]}>
           <h2>{title}</h2>
           <p>{text}</p>
-          <ContactButton text={'kontaktiere uns hier'} link={'/kontakt'} textColor={'primary'} width={'320px'} border />
+          <ContactButton text={'Melden Sie sich!'} link={'/kontakt'} textColor={'primary'} width={'320px'} border />
         </Box>
         <Box width={[1, 1 / 2]} pl={[0, 5]}>
           <Positioning pos={'flex-end'}>

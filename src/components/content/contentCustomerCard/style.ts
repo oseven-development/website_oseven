@@ -52,10 +52,10 @@ export const StyledButton = styled.button`
 `
 
 export const StyledShadowBoxWrapper = styled.div`
-  box-shadow: 0 0 15px #565656;
-  padding: 20px;
-  height: 100%;
-  margin-bottom: 1em;
+  box-shadow: ${({theme}) => theme.shadows.large};
+  padding: 0 20px;
+  /* height: 100%; */
+  /* margin-bottom: 1em; */
   @media screen and (${props => props.theme.device.laptop}) {
     /* height: 400px; */
     margin-top: 1em;

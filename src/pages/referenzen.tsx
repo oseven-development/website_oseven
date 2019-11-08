@@ -27,14 +27,14 @@ export default props => {
       {/* //! Header */}
       <HeaderWithSubNavigation {...{title, subtitle, nav, SVG}} />
       <Projects />
-      <Parallax src={props.data.parallax.childImageSharp.fluid} />
+      <Parallax src={props.data.refParallax.childImageSharp.fluid} />
       <Customer />
     </React.Fragment>
   )
 }
 export const indexQuery = graphql`
   query {
-    parallax: file(relativePath: {eq: "parallax/together.jpg"}) {
+    refParallax: file(relativePath: {eq: "parallax/referencesParallax.png"}) {
       ...imagePre
     }
   }

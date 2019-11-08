@@ -23,7 +23,7 @@ export default {
     skills: [
       {
         title: {de: 'Software-Entwicklung'},
-        text: {de: 'das ist ein test'},
+        text: {de: ['Erfahre hier mehr1']},
         link: {
           label: {de: 'Erfahre hier mehr'},
           to: '/portfolio#sw',
@@ -31,7 +31,7 @@ export default {
       },
       {
         title: {de: 'Künstliche Intelligenz'},
-        text: {de: 'das ist ein test'},
+        text: {de: ['Erfahre hier mehr2']},
         link: {
           label: {de: 'Erfahre hier mehr'},
           to: '/portfolio#ml',
@@ -39,7 +39,7 @@ export default {
       },
       {
         title: {de: 'Beratung & Workshops'},
-        text: {de: 'das ist ein test'},
+        text: {de: ['Erfahre hier mehr3']},
         link: {
           label: {de: 'Erfahre hier mehr'},
           to: '/portfolio#bw',

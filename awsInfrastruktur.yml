@@ -2,7 +2,7 @@
 #aws --profile oseven cloudformation update-stack --stack-name oseven-homepage --template-body file://<(cfn-flip awsInfrastruktur.yml)
 
 AWSTemplateFormatVersion: "2010-09-09"
-Description: API Gatway für die Backend-API für Frontendcalls
+Description: Home Page oseven
 
 Resources:
   s3Bucket:
@@ -45,7 +45,7 @@ Resources:
         Origins:
           - DomainName: !GetAtt s3Bucket.DomainName
             Id: myS3Origin # WELCHE ID?
-            OriginPath: /prod
+            OriginPath: /public
             S3OriginConfig:
               OriginAccessIdentity:
                 !Join [

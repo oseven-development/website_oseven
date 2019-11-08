@@ -10,6 +10,8 @@ import HeadlineStack from './submodule/headlineStack'
 import ContactStack from './submodule/contactStack'
 import TechStack from './submodule/techStack'
 
+import {StyledButton, StyledShadowBoxInner, StyledShadowBoxWrapper} from './style'
+
 export default (props: IProps) => {
   const {title, subtitle, description, contactStack, techStack, imageFolder} = props
   return (
@@ -39,7 +41,15 @@ const StyledConsumerBox = styled.div`
   h2 {
     color: ${props => props.theme.colors.primary};
   }
-  :not(:last-child):after {
+
+  box-shadow: ${({theme}) => theme.shadows.large};
+    :not(:last-child){
+    margin-bottom: 3em;
+    @media screen and (${props => props.theme.device.laptop}) {
+      margin-bottom: 1em;
+    }
+  }
+  /* :not(:last-child):after {
     content: '';
     display: block;
     width: 100%;
@@ -52,5 +62,5 @@ const StyledConsumerBox = styled.div`
       margin-top: 75px;
       margin-bottom: 75px;
     }
-  }
+  } */
 `

@@ -6,7 +6,7 @@ import React from 'react'
 import SiteContent from '../assets/content/contact'
 
 // Components
-import {Seo, HeaderWithButtonGroup} from '../components'
+import {Seo, HeaderWithButtonGroup, ContactMap} from '../components'
 
 // Images, Background and Graphics
 import {SVGcontact} from '../assets'
@@ -23,5 +23,6 @@ export default () => (
 
     {/* //! Header */}
     <HeaderWithButtonGroup {...{title, subtitle, SVG, buttonGroup}} />
+    <ContactMap />
   </React.Fragment>
 )

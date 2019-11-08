@@ -7,7 +7,7 @@ const ShadowBox = ({children}) => <StyledBox>{children}</StyledBox>
 
 export const StyledBox = styled.div`
   padding: 40px;
-  box-shadow: 0 0 15px #565656;
+  box-shadow: ${({theme}) => theme.shadows.large};
 `
 
 export default ShadowBox

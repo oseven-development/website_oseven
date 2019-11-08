@@ -19,8 +19,8 @@ export const ContentImgGallery = (props: IProps) => {
         {text ? <TypographyRenderHelper variant={'p'} content={text} /> : null}
         <Flex alignItems="center" flexWrap="wrap" justifyContent={'space-between'} py={['1em', '2em']}>
           {image.map(({SVG, dWidth, mWidth}) => (
-            <Box px={['1em']}>
-              <SvgImage key={Math.random()} dWidth={dWidth} mWidth={mWidth} src={SVG} p={'15px 0px'} />
+            <Box px={['1em']} key={Math.random()}>
+              <SvgImage dWidth={dWidth} mWidth={mWidth} src={SVG} p={'15px 0px'} />
             </Box>
           ))}
         </Flex>
@@ -34,17 +34,14 @@ interface IStyledProps {
 }
 
 const StyledContentDivider = styled.div`
-    border-top: 1px solid #7F83885F;
-    border-bottom: 1px solid #7F83885F;
+  border-top: 1px solid #7f83885f;
+  border-bottom: 1px solid #7f83885f;
   background: ${({theme}: IStyledProps) => theme.colors.third};
   h1 {
     color: ${({theme}: IStyledProps) => theme.colors.primary};
     @media screen and (${props => props.theme.device.laptop}) {
       text-align: center;
     }
-  }
-  p  {
-    /* color: ${({theme}: IStyledProps) => (color === 'secondary' ? 'white' : '#333')}; */
   }
 `
 

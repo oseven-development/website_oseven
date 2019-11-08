@@ -13,10 +13,10 @@ const PortraitElement = props => {
       Max: file(relativePath: {eq: "portraits/max.png"}) {
         ...FileFragment
       }
-      Philipp: file(relativePath: {eq: "portraits/max.png"}) {
+      Philipp: file(relativePath: {eq: "portraits/Philipp.jpg"}) {
         ...FileFragment
       }
-      Markus: file(relativePath: {eq: "portraits/markus.png"}) {
+      Markus: file(relativePath: {eq: "portraits/Markus.jpg"}) {
         ...FileFragment
       }
     }
@@ -32,7 +32,7 @@ const PortraitElement = props => {
       </Flex>
       <h2 style={{textAlign: 'center'}}>{name}</h2>
       <h4 style={{textAlign: 'center'}}>{title}</h4>
-      <p style={{textAlign: 'center'}}>What i DO!</p>
+      {/* <p style={{textAlign: 'center'}}>What i DO!</p> */}
     </React.Fragment>
   )
 }
@@ -46,7 +46,7 @@ const StyledPortrait = styled.div`
     width: 100px;
   }
   border-radius: 100%;
-  background: red;
+  box-shadow: ${({theme}) => theme.shadows.small};
   overflow: hidden;
 `
 

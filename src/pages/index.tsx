@@ -40,7 +40,7 @@ export default props => {
       <Particles
         title={SiteContent.header[lang].title}
         text={SiteContent.header[lang].text}
-        height={['220px', '600px']}
+        height={['250px', '600px']}
       />
 
       {/* Was machen wir */}
@@ -75,13 +75,13 @@ export const indexQuery = graphql`
     background: file(relativePath: {eq: "test/test4.jpg"}) {
       ...imagePre
     }
-    consulting: file(relativePath: {eq: "skills/consulting.jpg"}) {
+    consulting: file(relativePath: {eq: "skills/consulting.png"}) {
       ...imagePre
     }
-    sw: file(relativePath: {eq: "skills/sw.jpg"}) {
+    sw: file(relativePath: {eq: "skills/sw.png"}) {
       ...imagePre
     }
-    ml: file(relativePath: {eq: "skills/ml.jpg"}) {
+    ml: file(relativePath: {eq: "skills/ml.png"}) {
       ...imagePre
     }
   }

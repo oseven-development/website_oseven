@@ -1,14 +1,15 @@
 /** @format */
 
 import React from 'react'
+import styled from 'styled-components'
 import {Flex, Box} from 'rebass'
-import {Typography, ContainerWrapper} from '../..'
+import {ContainerWrapper, TypographyRenderHelper, TypographyRenderP} from '../..'
 import {Link} from 'gatsby'
 import Img from 'gatsby-image'
 interface ISkillCard {
   image?: any
   title: string
-  text: string
+  text: string[]
   link: {
     label: string
     to: string
@@ -19,7 +20,7 @@ interface IProps {
   content?: {
     image: any
     title: string
-    text: string
+    text: string[]
     link: {
       label: string
       to: string
@@ -44,26 +45,31 @@ const SkillCard = (props: ISkillCard) => {
 
   return (
     <React.Fragment>
-      <Flex
-        flexDirection={'column'}
-        style={{boxShadow: '0 0 15px #565656'}}
-        justifyContent={'center'}
-        alignItems={'center'}
-        pb={['20px', '40px']}>
-        <Box width={1}>
-          <Img fluid={image} alt={title} style={{height: 250}} />
-        </Box>
-        <Box>
-          <Typography variant="h3">{title}</Typography>
-        </Box>
-        <Box>
-          <Typography>{text}</Typography>
-        </Box>
-        <Box>
-          <Link to={link.to}>{link.label} </Link>
-        </Box>
-      </Flex>
+      <ShadowBox>
+        <Flex flexDirection={'column'} justifyContent={'center'} alignItems={'center'} pb={['20px', '40px']}>
+          <Box width={1}>
+            <Img fluid={image} alt={title} style={{height: 250}} />
+          </Box>
+          <Box>
+            <TypographyRenderHelper variant={'h3'} content={title} />
+          </Box>
+          <Box>
+            <TypographyRenderP content={text} />
+          </Box>
+          <Box>
+            <Link to={link.to}>... {link.label}</Link>
+          </Box>
+        </Flex>
+      </ShadowBox>
     </React.Fragment>
   )
 }
 export default SkillCardBox
+
+const ShadowBox = ({children}) => <StyledBox>{children}</StyledBox>
+
+export const StyledBox = styled.div`
+  overflow: hidden;
+  border-radius: ${({theme}) => theme.border.radius.medium};
+  box-shadow: ${({theme}) => theme.shadows.large};
+`

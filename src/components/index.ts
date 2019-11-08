@@ -29,6 +29,7 @@ import SubNavigation from './layout/navigation/subNavigation'
 
 // uniqueComponents
 import {JumpAnchor} from './uniqueComponents/jumpAnchor'
+import {ContactMap} from './uniqueComponents/contactMap'
 import List from './uniqueComponents/list'
 import Particles from './uniqueComponents/particles'
 import Seo from './uniqueComponents/seo'
@@ -68,6 +69,7 @@ export {
   // uniqueComponents
   Seo,
   Particles,
+  ContactMap,
   JumpAnchor,
   List,
   ShadowBox,

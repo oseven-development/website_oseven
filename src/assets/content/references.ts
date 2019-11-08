@@ -69,7 +69,12 @@ const customer: RootObject = {
     content: [
       {
         title: {de: 'Soarce UG'},
-        description: {de: ['Security Fix']},
+        description: {
+          de: [
+            'Wir haben für die Firma Soarce sicherheitsrelevanten Aktualisierung an Ihrer Software vorgenommen und diese in der Software Implementiert.',
+            'Dazugehörten das Entfernen von "session fixation attack" sowie "CSRF".',
+          ],
+        },
         contactStack: [{provider: 'homepage', linkTo: 'https://www.say-promotion.de/'}],
         techStack: ['PHP7', 'Docker', 'javascript', 'jQuery'],
         imageFolder: 'soarce',

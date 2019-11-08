@@ -22,8 +22,15 @@ export default ({title, subtitle, buttonGroup, SVG}: IProps) => (
         {/* Render Button grp */}
         {Array.isArray(buttonGroup) ? (
           <>
-            {buttonGroup.map(elm => (
-              <ContactButton text={elm.display} link={elm.link} textColor={'primary'} extern border />
+            {buttonGroup.map((elm, i) => (
+              <ContactButton
+                key={elm.display + i}
+                text={elm.display}
+                link={elm.link}
+                textColor={'primary'}
+                extern
+                border
+              />
             ))}
           </>
         ) : (
