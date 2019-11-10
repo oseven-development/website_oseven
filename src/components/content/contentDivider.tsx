@@ -26,7 +26,7 @@ export const ContentDivider = (props: IProps) => {
 
           {image ? (
             <Box width={[1, 3 / 6]} pl={[0, '2em']}>
-              <Positioning pos={'flex-end'}>
+              <Positioning>
                 <SvgImage dWidth={250} mWidth={80} src={image} />
               </Positioning>
             </Box>
@@ -56,12 +56,7 @@ const StyledContentDivider = styled.div`
 `
 
 const Positioning = styled.div`
-  justify-content: ${(props: {pos: string}) => props.pos};
   display: flex;
-  @media screen and (${props => props.theme.device.laptop}) {
-    justify-content: flex-start;
-  }
-  li.contact {
-    padding-bottom: 1em;
-  }
+  align-items: flex-end;
+  width: 100%;
 `

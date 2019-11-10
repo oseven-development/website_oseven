@@ -1,3 +1,12 @@
+<!-- @format -->
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+add on images
+rel="noopener"`or`rel="noreferrer"
+
 # awesome-gatsby-starter
 
 👌 A starter for GatsbyJS with a preconfigured MDX, Storybook and ESLint environment.
@@ -18,12 +27,12 @@ While this starter may be somewhat opinionated for what I want out of my Gatsby 
 
 ## Features
 
-* [Gatsby MDX](https://github.com/ChristopherBiscardi/gatsby-mdx) for JSX in Markdown loading, parsing, and rendering of pages
-* [Storybook](https://storybook.js.org/) for isolated component development
-* [styled-components](https://www.styled-components.com/) for CSS-in-JS
-* [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
-* [Prettier](https://prettier.io/) integrated into ESLint
-* A few example components and pages with stories and simple site structure
+- [Gatsby MDX](https://github.com/ChristopherBiscardi/gatsby-mdx) for JSX in Markdown loading, parsing, and rendering of pages
+- [Storybook](https://storybook.js.org/) for isolated component development
+- [styled-components](https://www.styled-components.com/) for CSS-in-JS
+- [ESLint](https://eslint.org/) with [Airbnb's config](https://www.npmjs.com/package/eslint-config-airbnb)
+- [Prettier](https://prettier.io/) integrated into ESLint
+- A few example components and pages with stories and simple site structure
 
 ## Getting started
 

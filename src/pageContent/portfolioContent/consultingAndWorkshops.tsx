@@ -2,15 +2,23 @@
 
 import React from 'react'
 
-import {portfolio as SiteContent, SVGpy, SVGtf, SVGk8, SVGpros2, SVGconsultant, SVGworkshop} from '../../assets'
+import {
+  portfolio as SiteContent,
+  SVGpros2,
+  SVGconsultant,
+  SVGworkshop,
+  SVGclassroom,
+  SVGcollegeGraduation,
+  SVGevent,
+} from '../../assets'
 
 import {
   SvgImage,
   List,
   ContentDivider,
   DoubleContentBox,
+  CenterContent,
   TypographyRenderP,
-  ShadowBox,
   ContentImgGallery,
   JumpAnchor,
 } from '../../components'
@@ -25,8 +33,10 @@ const ConsultingAndWorkshops = () => (
     <DoubleContentBox
       right={
         <>
-          <h2>{SiteContent.consulting[lang].subtitle}</h2>
-          <SvgImage dWidth={250} src={SVGworkshop} />
+          <CenterContent>
+            <h2>{SiteContent.consulting[lang].subtitle}</h2>
+            <SvgImage dWidth={250} src={SVGworkshop} />
+          </CenterContent>
           <TypographyRenderP content={SiteContent.consulting[lang].text} />
         </>
       }
@@ -37,9 +47,9 @@ const ConsultingAndWorkshops = () => (
     <ContentImgGallery
       title={SiteContent.workshops[lang].title}
       image={[
-        {SVG: SVGpy, dWidth: 250, mWidth: 150},
-        {SVG: SVGtf, dWidth: 250, mWidth: 150},
-        {SVG: SVGk8, dWidth: 250, mWidth: 150},
+        {SVG: SVGclassroom, dWidth: 120, mWidth: 60},
+        {SVG: SVGcollegeGraduation, dWidth: 120, mWidth: 60},
+        {SVG: SVGevent, dWidth: 120, mWidth: 60},
       ]}
     />
 
@@ -47,10 +57,12 @@ const ConsultingAndWorkshops = () => (
     <DoubleContentBox
       left={
         <>
-          <h2>{SiteContent.workshops[lang].title}</h2>
-          <div>
+          <CenterContent>
+            <h2>{SiteContent.workshops[lang].title}</h2>
+
             <SvgImage dWidth={250} src={SVGpros2} />
-          </div>
+          </CenterContent>
+
           <TypographyRenderP content={SiteContent.workshops[lang].text} />
         </>
       }

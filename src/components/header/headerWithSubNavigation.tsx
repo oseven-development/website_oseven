@@ -23,7 +23,7 @@ export default ({title, subtitle, nav, SVG}: IProps) => (
       </Box>
       <Box width={[1, 2 / 6]} my={[30, 0]}>
         <div style={{textAlign: 'center'}}>
-          <SvgImage mWidth={1} src={SVG} />
+          <SvgImage mWidth={'200px'} src={SVG} />
         </div>
       </Box>
     </Flex>

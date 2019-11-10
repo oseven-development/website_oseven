@@ -37,11 +37,7 @@ export default props => {
   return (
     <React.Fragment>
       <Seo title="Über Uns" description="Startseite von Oseven" keywords="oseven Cloud Start-Up Kontakt" />
-      <Particles
-        title={SiteContent.header[lang].title}
-        text={SiteContent.header[lang].text}
-        height={['250px', '600px']}
-      />
+      <Particles title={SiteContent.header[lang].title} text={SiteContent.header[lang].text} />
 
       {/* Was machen wir */}
       <ContentDivider

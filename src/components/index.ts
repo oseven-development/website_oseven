@@ -27,6 +27,9 @@ import Navigation from './layout/navigation'
 import Footer from './layout/footer/footer'
 import SubNavigation from './layout/navigation/subNavigation'
 
+// styles
+import {CenterContent} from './styles/centerContent'
+
 // uniqueComponents
 import {JumpAnchor} from './uniqueComponents/jumpAnchor'
 import {ContactMap} from './uniqueComponents/contactMap'
@@ -66,6 +69,8 @@ export {
   Navigation,
   Footer,
   SubNavigation,
+  //styles
+  CenterContent,
   // uniqueComponents
   Seo,
   Particles,

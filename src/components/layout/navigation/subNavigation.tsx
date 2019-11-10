@@ -35,6 +35,7 @@ const StyledSubNavx = styled.ul`
     float: left;
     @media (${({theme}) => theme.device.laptop}) {
       float: none;
+      margin-bottom: 0.5em;
     }
     a {
       transition: 0.2s;

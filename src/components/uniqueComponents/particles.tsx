@@ -4,24 +4,21 @@ import React from 'react'
 import ReactParticles, {IParticlesParams} from 'react-particles-js'
 import styled from 'styled-components'
 import {useWindowSize} from '../../assets/hooks/windowWidth'
-import Typography from './typography'
-
-import {TypographyRenderHelper, TypographyRenderP} from '../'
+import {TypographyRenderHelper} from '../'
 
 interface IParticles extends IParticlesParams {
   title?: string | string[]
   text?: string[]
   action?: JSX.Element
-  height: string[]
 }
 
 const _Particles = (props: IParticles) => {
   const {windowWidth} = useWindowSize()
-  const {title, text, action, height} = props
+  const {title, text, action} = props
   return (
     <StyledDiv>
       <ReactParticles
-        height={windowWidth > 768 ? height[1] : height[0]}
+        height={'100%'}
         params={{
           particles: {
             number: {
@@ -41,14 +38,9 @@ const _Particles = (props: IParticles) => {
           },
         }}
       />
-      <div
-        className="title-box"
-        style={{
-          transform: windowWidth > 768 ? 'translateX(45vw)' : '0',
-          top: windowWidth > 768 ? '25%' : '0',
-        }}>
+      <div className="title-box">
         {title ? <TypographyRenderHelper variant={'h1'} content={title} /> : null}
-        {text ? <TypographyRenderP content={text} /> : null}
+        {text ? <TypographyRenderHelper variant={'pbr'} content={text} /> : null}
         {action ? action : null}
       </div>
     </StyledDiv>
@@ -56,12 +48,22 @@ const _Particles = (props: IParticles) => {
 }
 
 const StyledDiv = styled.div`
-  background: ${({theme}) => theme.colors.secondary};
-  position: relative;
-  color: white;
+  height: 600px;
   .title-box {
     position: absolute;
     padding: 0px 20px;
+    transform: translateX(45vw);
+    top: 25%;
   }
+  @media screen and (${props => props.theme.device.laptop}) {
+    height: 250px;
+    .title-box {
+      transform: translateX(0);
+      top: 0;
+    }
+  }
+  background: ${({theme}) => theme.colors.secondary};
+  position: relative;
+  color: white;
 `
 export default _Particles

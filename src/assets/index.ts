@@ -50,6 +50,11 @@ import SVGfirebase from './images/partner/firebase.svg'
 import SVGpy from './images/tools/pytorch.svg'
 import SVGtf from './images/tools/tf.svg'
 import SVGk8 from './images/tools/k8.svg'
+import SVGscikitLearn from './images/tools/scikitLearn.svg'
+
+import SVGclassroom from './images/tools/classroom.svg'
+import SVGcollegeGraduation from './images/tools/collegeGraduation.svg'
+import SVGevent from './images/tools/event.svg'
 
 // architecture
 import SVGmodel from './images/architecture/model.svg'
@@ -101,6 +106,10 @@ export {
   SVGpy,
   SVGtf,
   SVGk8,
+  SVGscikitLearn,
+  SVGclassroom,
+  SVGcollegeGraduation,
+  SVGevent,
   // architecture
   SVGmodel,
   SVGserverless,

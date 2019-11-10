@@ -15,7 +15,7 @@ interface ISvgImage {
 
 const SvgImage = (props: ISvgImage) => {
   const {mWidth, dWidth, m, p, src, alt} = props
-  const margin = m ? m : 'auto'
+  const margin = m ? m : '0 auto'
   const padding = p ? p : '0px 0px 0px 0px'
   const mobileWidth = mWidth ? mWidth : '150px'
   const desktopWidth = dWidth ? dWidth : 1

@@ -22,7 +22,7 @@ const ContactUs = ({title, text, contact}: IProps) => {
         </Box>
         <Box width={[1, 1 / 2]} pl={[0, 5]}>
           <Positioning pos={'flex-end'}>
-            <SvgImage dWidth={350} src={contact} m={'0'} alt={'Kontakt-Grafik'} />
+            <SvgImage dWidth={350} src={contact} alt={'Kontakt-Grafik'} />
           </Positioning>
         </Box>
       </Flex>
@@ -32,12 +32,7 @@ const ContactUs = ({title, text, contact}: IProps) => {
 export {ContactUs}
 
 const Positioning = styled.div`
-  justify-content: ${(props: {pos: string}) => props.pos};
   display: flex;
-  @media screen and (${props => props.theme.device.laptop}) {
-    justify-content: center;
-  }
-  li.contact {
-    padding-bottom: 1em;
-  }
+  align-items: flex-end;
+  width: 100%;
 `

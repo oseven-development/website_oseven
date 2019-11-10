@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import {portfolio as SiteContent, SVGai, SVGpy, SVGtf, SVGk8, SVGmodel} from '../../assets'
+import {portfolio as SiteContent, SVGai, SVGpy, SVGtf, SVGk8, SVGmodel, SVGscikitLearn} from '../../assets'
 // illustrations
 
 import {
@@ -38,11 +38,12 @@ const MachineLearning = () => (
 
     {/* //! Tools */}
     <ContentImgGallery
-      title={SiteContent.partners.title[lang]}
+      title={SiteContent.ml.title[lang]}
       image={[
         {SVG: SVGpy, dWidth: 250, mWidth: 150},
         {SVG: SVGtf, dWidth: 250, mWidth: 150},
         {SVG: SVGk8, dWidth: 250, mWidth: 150},
+        {SVG: SVGscikitLearn, dWidth: 170, mWidth: 100},
       ]}
     />
   </>

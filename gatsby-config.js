@@ -9,6 +9,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://oseven.de`,
+      },
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-stylus',
     'gatsby-plugin-robots-txt',

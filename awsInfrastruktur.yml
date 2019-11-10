@@ -9,12 +9,34 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
       Tags:
         - Key: customer
           Value: oseven
         - Key: app
           Value: homepage
-
+  s3BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref s3Bucket
+      PolicyDocument:
+        # Version: 2012-10-17
+        # Id: PolicyForCloudFrontPrivateContent
+        Statement:
+          - Action:
+              - "s3:GetObject"
+            Effect: "Allow"
+            Resource: !Join ["", [!GetAtt s3Bucket.Arn, /*]]
+            Principal:
+              AWS:
+                !Join [
+                  " ",
+                  [
+                    arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity,
+                    !Ref OriginAccessIdentity,
+                  ],
+                ]
   CloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -26,6 +48,7 @@ Resources:
       DistributionConfig:
         Aliases:
           - oseven.de
+          - www.oseven.de
         DefaultCacheBehavior:
           AllowedMethods:
             - GET
@@ -39,12 +62,16 @@ Resources:
           TargetOriginId: myS3Origin
           ViewerProtocolPolicy: redirect-to-https
         DefaultRootObject: index.html
-        Enabled: false
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: /index.html
+        Enabled: true
         HttpVersion: http2
         IPV6Enabled: true
         Origins:
           - DomainName: !GetAtt s3Bucket.DomainName
-            Id: myS3Origin # WELCHE ID?
+            Id: myS3Origin
             OriginPath: /public
             S3OriginConfig:
               OriginAccessIdentity:
@@ -68,18 +95,29 @@ Resources:
       CloudFrontOriginAccessIdentityConfig:
         Comment: access-identity-oseven.de.s3.amazonaws.com
 
-  # Recordsets:
-  #   Type: AWS::Route53::RecordSetGroup
-  #   Properties:
-  #     Comment: oseven wegPage
-  #     HostedZoneId: Z3340Y06FZ5TQI
-  #     RecordSets:
-  #       - Name: oseven.de
-  #         Type: A
-  #         TTL: "900"
-  #         AliasTarget:
-  #           DNSName: !GetAtt CloudFrontDistribution.DomainName
-  #           HostedZoneId: Z2FDTNDATAQYW2
+  Recordsets:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      Comment: oseven wegPage
+      HostedZoneId: Z3340Y06FZ5TQI
+      RecordSets:
+        - Name: oseven.de
+          Type: A
+          AliasTarget:
+            DNSName: !GetAtt CloudFrontDistribution.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2
+        - Name: oseven.de
+          Type: AAAA
+          AliasTarget:
+            DNSName: !GetAtt CloudFrontDistribution.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2
+        - Name: www.oseven.de
+          Type: A
+          # ResourceRecords:
+          #   - oseven.de
+          AliasTarget:
+            DNSName: oseven.de.
+            HostedZoneId: Z3340Y06FZ5TQI
 
   CodeBuild:
     Type: AWS::CodeBuild::Project

@@ -25,6 +25,7 @@ import {
   DoubleContentBox,
   TypographyRenderP,
   JumpAnchor,
+  CenterContent,
 } from '../../components'
 const lang = 'de'
 
@@ -63,8 +64,10 @@ const SoftwareEngineering = () => (
     <DoubleContentBox
       left={
         <>
-          <h2>{SiteContent.pro[lang].subtitle}</h2>
-          <SvgImage dWidth={250} src={SVGpros} />
+          <CenterContent>
+            <h2>{SiteContent.pro[lang].subtitle}</h2>
+            <SvgImage dWidth={250} src={SVGpros} />
+          </CenterContent>
           <TypographyRenderP content={SiteContent.pro[lang].text} />
         </>
       }
