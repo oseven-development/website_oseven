@@ -18,6 +18,8 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-stylus',
     'gatsby-plugin-robots-txt',
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
@@ -48,17 +50,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Dies ist der Webauftritt von oseven - Maximilian Hänsel Einzelunternehmen',
+        short_name: 'oseven',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#FF662B',
+        theme_color: '#FF662B',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.svg', // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 }
