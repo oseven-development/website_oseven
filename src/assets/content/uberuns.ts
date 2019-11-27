@@ -5,8 +5,8 @@ export default {
     de: {
       title: ['Wir sind Spezialisten für', 'Künstliche Intelligenz', '(KI) und Cloud-Entwicklung'],
       text: [
-        'Unser Unternehmen setzt den Fokus dabei auf die Entwicklung von Cloud Applikationen,',
-        'Machine Learning und Artificial Intelligence Lösungen.',
+        'Unser Unternehmen setzt den Fokus dabei auf die Entwicklung von Cloud-Applikationen',
+        'und auf Machine Learning basierende Lösungen.',
       ],
     },
     en: {},
@@ -15,33 +15,33 @@ export default {
     de: {
       title: 'Was wir tun',
       text: [
-        'Um auf moderne sich schnell verändernde Märkte wettbewerbsfähig zu bleiben, müssen Sie in Ihre digitalen Prozesse, die Infrastruktur und deren Architektur Investieren. Wir können Sie dabei bestmöglich unterstützen und mit Ihnen gemeinsam Lösungen für die Fragen von morgen zu finden.',
-        'Daher entwickeln wir native Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich auf Ihre individuellen Bedürfnissen fokussieren.',
+        'Um in schnell verändernden Märkten wettbewerbsfähig zu bleiben, müssen Sie in Ihre digitalen Prozesse, die Infrastruktur und deren Architektur investieren. Wir unterstützen Sie dabei bestmöglich und finden gemeinsam mit Ihnen Lösungen für die Fragen von heute und Probleme von Morgen.',
+        'Dazu entwickeln wir native Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich nach Ihren individuellen Bedürfnissen richten.',
       ],
     },
 
     skills: [
       {
         title: {de: 'Software-Entwicklung'},
-        text: {de: ['Erfahre hier mehr1']},
+        text: {de: ['Wir entwickeln für Sie passgenaue Softwarelösungen oder helfen Ihnen Ihre Anwendungen in die Cloud zu migrieren.']},
         link: {
-          label: {de: 'Erfahre hier mehr'},
+          label: {de: 'Mehr erfahren'},
           to: '/portfolio#sw',
         },
       },
       {
         title: {de: 'Künstliche Intelligenz'},
-        text: {de: ['Erfahre hier mehr2']},
+        text: {de: ['Wir unterstützen Sie bei der Nutzung Ihrer Daten, indem wir gemeinsam mit Ihnen KI-Lösungen entwickeln, die Ihnen weiterhelfen.']},
         link: {
-          label: {de: 'Erfahre hier mehr'},
+          label: {de: 'Mehr erfahren'},
           to: '/portfolio#ml',
         },
       },
       {
         title: {de: 'Beratung & Workshops'},
-        text: {de: ['Erfahre hier mehr3']},
+        text: {de: ['Gerne beraten wir Sie bei Ihren Projekten oder teilen unser Wissen in Workshops mit Ihnen.']},
         link: {
-          label: {de: 'Erfahre hier mehr'},
+          label: {de: 'Mehr erfahren'},
           to: '/portfolio#bw',
         },
       },
@@ -49,11 +49,11 @@ export default {
   },
   team: {
     de: {
-      title: 'Wer sind wir',
+      title: 'Wer wir sind',
       text: [
         'Wir sind ein motiviertes Team aus drei Personen - zwei Wirtschaftsinformatiker und ein Account Manager.',
         '',
-        'Wir haben erkannt, dass immer mehr Unternehmen mit Ihrer internen IT-Infrastruktur an Grenzen stoßen und dadurch sich eröffnende Chancen und Möglichkeiten nicht wahrnehmen können.',
+        'Wir haben erkannt, dass immer mehr Unternehmen mit Ihrer internen IT-Infrastruktur an Grenzen stoßen. Dadurch bleiben die Vorteile und Möglichkeiten einer skalierbaren Cloudinfrastruktur in einer Welt, in der Schnelligkeit und Anpassungsfähigkeit den Schlüssel zum Erfolg darstellen, ungenutzt.',
         '',
         'Wir haben uns von Amazon Web Services zertifizieren lassen, um Ihnen die leistungsfähigsten und modernsten Cloud-Anwendungen zu bieten.',
       ],
@@ -62,10 +62,10 @@ export default {
   },
   contact: {
     title: {
-      de: 'Sprich uns an!',
+      de: 'Mehr erfahren',
     },
     text: {
-      de: 'Du möchtest mehr von uns wissen - wie wir Arbeiten, unsere Lösungen oder einfach ein persönliches Gespräch?',
+      de: 'Sie möchten mehr über uns, unsere Arbeit und Lösungen erfahren oder suchen ein persönliches unverbindliches Gespräch?',
     },
   },
 }
