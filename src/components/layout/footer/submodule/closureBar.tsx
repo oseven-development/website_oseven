@@ -45,7 +45,7 @@ export {ClosureBar}
 
 const StyledClosureBar = styled.div`
   border-top: 1px solid #7f83885f;
-  margin-bottom: 2em;
+  padding-bottom: 2em;
   .socialMediaIcons {
     text-align: right;
     @media screen and (${props => props.theme.device.laptop}) {
