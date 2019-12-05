@@ -53,7 +53,7 @@ const SkillCard = (props: ISkillCard) => {
           <Box>
             <TypographyRenderHelper variant={'h3'} content={title} />
           </Box>
-          <Box>
+          <Box style={{padding: '0 1em'}}>
             <TypographyRenderP content={text} />
           </Box>
           <Box>
