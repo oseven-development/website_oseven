@@ -94,12 +94,17 @@ export default createGlobalStyle`
   font-family: "Montserrat", sans-serif;
   font-size: ${buildString('16px', '28px')};
   };
-  p, .p{
+  p, .p, ul, ol{
       font-size: 1em;
       line-height: 1.6em;
       font-family: "Roboto", sans-serif;
       text-align: justify;
       /* font-weight: 100; */
+    };
+
+    #AGBs > ul, #AGBs ol{
+      margin-left: 20px;
+      margin-bottom: 20px;
     }
   a, a>span {
     text-decoration: none;
