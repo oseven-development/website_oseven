@@ -9,7 +9,8 @@
 // You can delete this file if you're not using it
 
 import React from 'react'
-import {Layout} from './src/components'
+import {Layout} from './src/layout'
+import './src/styles/global.scss'
 
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
