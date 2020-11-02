@@ -1,0 +1,35 @@
+/** @format */
+
+@tailwind base;
+
+body {
+  @apply bg-primary;
+  @apply text-white;
+}
+
+h1  {
+  @apply text-6xl;
+}
+h2  {
+  @apply text-xl;
+}
+h3  {
+  @apply text-2xl;
+}
+h4  {
+  @apply text-xl;
+}
+h5  {
+  @apply text-lg;
+}
+h6  {
+  @apply text-sm;
+}
+p {
+  @apply text-lg;
+  @apply font-thin;
+  @apply leading-8;
+}
+
+@tailwind components;
+@tailwind utilities;

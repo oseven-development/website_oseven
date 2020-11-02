@@ -65,5 +65,12 @@ module.exports = {
         icon: 'src/assets/images/favicon.svg', // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'de',
+        useLangKeyLayout: false,
+      },
+    },
   ],
 }

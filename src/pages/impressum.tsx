@@ -3,12 +3,13 @@
 // /** @format */
 
 import React from 'react'
-import {Seo, ContainerWrapper, TypographyRenderHelper} from '../components'
+// import {Seo, ContainerWrapper, TypographyRenderHelper} from '../components'
 // Containers
 
 export default () => (
   <React.Fragment>
-    <Seo title="Impressum" description="Impressum" keywords="Kontakt Email" />
+    Impressum
+    {/* <Seo title="Impressum" description="Impressum" keywords="Kontakt Email" />
     <ContainerWrapper>
       <h1>Impressum</h1>
       <h3>Angaben gemäß § 5 TMG</h3>
@@ -115,6 +116,6 @@ export default () => (
           'Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.',
         ]}
       />
-    </ContainerWrapper>
+    </ContainerWrapper> */}
   </React.Fragment>
 )

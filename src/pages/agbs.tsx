@@ -3,12 +3,13 @@
 // /** @format */
 
 import React from 'react'
-import {Seo, ContainerWrapper, TypographyRenderHelper} from '../components'
+// import {Seo, ContainerWrapper, TypographyRenderHelper} from '../components'
 // Containers
 
 export default () => (
   <React.Fragment>
-    <Seo title="AGBs" description="AGBs" keywords="AGBs Allgemeine geschäftsbedingungen" />
+    AGBs
+    {/* <Seo title="AGBs" description="AGBs" keywords="AGBs Allgemeine geschäftsbedingungen" />
     <ContainerWrapper>
       <div id={'AGBs'}>
         <h1>AGBs</h1>
@@ -296,6 +297,6 @@ export default () => (
           </li>
         </ol>
       </div>
-    </ContainerWrapper>
+    </ContainerWrapper> */}
   </React.Fragment>
 )

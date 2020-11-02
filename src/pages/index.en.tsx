@@ -37,7 +37,7 @@ export default () => {
 
   return (
     <>
-      <HeadTextIntro>Wir sind Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro>
+      <HeadTextIntro>Wir are Englisch Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro>
 
       <section>
         <Img ref={ref} fluid={image.file.childImageSharp.fluid} alt={'name'} className="md:h-128" />
