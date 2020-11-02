@@ -1,7 +1,7 @@
 /** @format */
 import {graphql, useStaticQuery} from 'gatsby'
 import React from 'react'
-import {HeadTextIntro, Profile} from '../components'
+import {HeadTextIntro, Profile, Seo} from '../components'
 
 export default () => {
   const images = useStaticQuery(graphql`
@@ -16,6 +16,7 @@ export default () => {
   `)
   return (
     <>
+      <Seo title="Kontakt oseven" description="Rufen Sie uns an!" keywords="Kontakt Cloud" />
       <HeadTextIntro>Kontakt</HeadTextIntro>
 
       <section className="py-12">

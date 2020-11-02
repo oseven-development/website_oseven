@@ -5,7 +5,7 @@ import React from 'react'
 import {graphql, Link, useStaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
 import {ImageQuery} from '..'
-import {HeadTextIntro} from '../components'
+import {HeadTextIntro, Seo} from '../components'
 // import {SVGteam, SVGprofessor} from '../assets'
 // import SiteContent from '../assets/content/uberuns'
 // Components
@@ -37,6 +37,7 @@ export default () => {
 
   return (
     <>
+      <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
       <HeadTextIntro>Wir sind Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro>
 
       <section>
@@ -65,45 +66,6 @@ export default () => {
           Unsere Arbeit
         </Link>
       </section>
-
-      {/* <Seo title="Über Uns" description="Startseite von Oseven" keywords="oseven Cloud Start-Up Kontakt" /> */}
-      {/* Was machen wir */}
-      {/* <ContentDivider
-        text={SiteContent.uberuns[lang].text}
-        title={SiteContent.uberuns[lang].title}
-        image={SVGprofessor}
-      /> */}
-      {/* Skill Cards */}
-      {/* <SkillCardBox {...{content}} /> */}
-      {/* Wer sind wir */}
-      {/* <ContentDivider
-        color={'secondary'}
-        text={SiteContent.team[lang].text}
-        title={SiteContent.team[lang].title}
-        image={SVGteam}
-      /> */}
-      {/* Portrait Boxen */}
-      {/* <PortraitBox /> */}
     </>
   )
 }
-// props.data.clock.childImageSharp.fluid
-// export const indexQuery = graphql`
-//   query {
-//     parallax: file(relativePath: {eq: "parallax/manimcoffe.jpg"}) {
-//       ...imagePre
-//     }
-//     background: file(relativePath: {eq: "test/test4.jpg"}) {
-//       ...imagePre
-//     }
-//     consulting: file(relativePath: {eq: "skills/consulting.png"}) {
-//       ...imagePre
-//     }
-//     sw: file(relativePath: {eq: "skills/sw.png"}) {
-//       ...imagePre
-//     }
-//     ml: file(relativePath: {eq: "skills/ml.png"}) {
-//       ...imagePre
-//     }
-//   }
-// `
