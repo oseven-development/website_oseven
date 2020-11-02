@@ -15,7 +15,6 @@ module.exports = {
         siteUrl: `https://oseven.de`,
       },
     },
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-stylus',
     'gatsby-plugin-robots-txt',
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -25,6 +24,20 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -36,15 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `customerSlides`,
-        path: `${__dirname}/src/assets/customerSlides`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     {
