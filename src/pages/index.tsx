@@ -20,20 +20,20 @@ export default () => {
     }
   `)
 
-  const callback = function(entries) {
-    entries.forEach(entry => {
-      entry.isIntersecting
-        ? entry.target.classList.add('motion-safe:animate-fadeIn')
-        : entry.target.classList.remove('motion-safe:animate-fadeIn')
-    })
-  }
-  const observer = new IntersectionObserver(callback)
+  // const callback = function(entries) {
+  //   entries.forEach(entry => {
+  //     entry.isIntersecting
+  //       ? entry.target.classList.add('motion-safe:animate-fadeIn')
+  //       : entry.target.classList.remove('motion-safe:animate-fadeIn')
+  //   })
+  // }
+  // const observer = new IntersectionObserver(callback)
   const ref = React.useRef(null)
-  React.useEffect(() => {
-    if (ref !== undefined) {
-      observer.observe(ref.current.imageRef.current)
-    }
-  }, [observer, ref])
+  // React.useEffect(() => {
+  //   if (ref !== undefined) {
+  //     observer.observe(ref.current.imageRef.current)
+  //   }
+  // }, [observer, ref])
 
   return (
     <>
