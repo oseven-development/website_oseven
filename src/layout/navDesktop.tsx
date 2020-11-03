@@ -5,7 +5,7 @@ import React from 'react'
 import Logo from '../assets/logos/logo.svg'
 
 export default () => (
-  <header className="hidden lg:flex bg-primary px-4 md:px-12 py-4 text-white ">
+  <header className="hidden lg:flex bg-primary py-6 text-white max-w-screen-lg mx-auto px-4">
     <Link className="flex-1" to="/">
       <Logo className="w-32 fill-current text-white" />
     </Link>

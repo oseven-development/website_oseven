@@ -52,20 +52,22 @@ export default () => {
           Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich nach Ihren
           individuellen Bedürfnissen richten.
         </p>
-        <Link className="rounded-full bg-white text-black p-6 inline-block" to="UnsereDienstleistungen">
+        <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
           Unsere Dienstleistungen
         </Link>
       </section>
 
-      <section className="py-12 bg-white -mx-4 md:-mx-12 px-4 flex flex-col">
-        <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-          Wir entwickeln für Sie passgenaue Softwarelösungen oder helfen Ihnen Ihre Anwendungen in die Cloud zu
-          migrieren.
-        </h2>
-        <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
-          Unsere Arbeit
-        </Link>
-      </section>
+      <div className="bg-white">
+        <section className=" flex flex-col">
+          <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
+            Wir entwickeln für Sie passgenaue Softwarelösungen oder helfen Ihnen Ihre Anwendungen in die Cloud zu
+            migrieren.
+          </h2>
+          <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
+            Unsere Arbeit
+          </Link>
+        </section>
+      </div>
     </>
   )
 }

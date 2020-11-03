@@ -14,7 +14,8 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
-        '"Brandon Text Web"',
+        '"Montserrat"',
+        // '"Brandon Text Web"',
         '-apple-system',
         'BlinkMacSystemFont',
         "'Segoe UI'",

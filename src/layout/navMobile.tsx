@@ -26,13 +26,14 @@ export default () => {
 
   return (
     <>
-      <header className="lg:hidden bg-primary px-4 md:px-12 py-4 text-white flex">
+      <header className="lg:hidden bg-primary px-8 py-6 text-white flex">
         <Link className="flex-1" to="/" onClick={removeToggle}>
           <Logo className="w-32 fill-current text-white" />
         </Link>
         <div>
           {/* Menu Button */}
           <button
+            aria-label="Menü Icon"
             type="button"
             className="flex items-center h-full text-dark-blue px-3 fill-current text-white  relativ"
             onClick={toggleMobileNavigation}>

@@ -1,35 +1,79 @@
 /** @format */
 
-@tailwind base;
+@import 'tailwindcss/base';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
   @apply bg-primary;
   @apply text-white;
 }
 
-h1  {
+h1 {
   @apply text-6xl;
+  @apply mb-8;
+  @apply mt-4;
 }
-h2  {
+
+h2 {
   @apply text-xl;
+  @apply mb-8;
+  @apply mt-4;
 }
-h3  {
+h3 {
   @apply text-2xl;
+  @apply mb-6;
+  @apply mt-4;
 }
-h4  {
+h4 {
   @apply text-xl;
+  @apply mb-4;
+  @apply mt-4;
 }
-h5  {
+h5 {
   @apply text-lg;
+  @apply mb-2;
 }
-h6  {
+
+h6 {
   @apply text-sm;
+  @apply mb-1;
 }
+
 p {
+  @apply text-lg;
+  @apply font-thin;
+  @apply leading-8;
+  @apply text-justify;
+}
+
+li {
   @apply text-lg;
   @apply font-thin;
   @apply leading-8;
 }
 
-@tailwind components;
-@tailwind utilities;
+section {
+  @apply max-w-screen-lg;
+  @apply mx-auto;
+  @apply px-8;
+  @apply py-12;
+}
+
+section:md {
+  @apply px-12;
+}
+
+.ghost {
+  @apply bg-secondary;
+  @apply text-primary;
+}
+.ghost:hover {
+  @apply text-light-primary;
+}
+
+a:hover {
+  @apply text-light-secondary;
+}
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

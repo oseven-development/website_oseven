@@ -12,9 +12,7 @@ interface Props {
 export default ({to, children, primary = true}: Props) => {
   return (
     <Link
-      className={`rounded-full ${
-        primary ? 'bg-primary text-secondary' : 'bg-secondary text-primary'
-      }  px-6 py-4 inline-block mx-auto`}
+      className={`rounded-full ${primary ? 'bg-primary text-secondary' : 'ghost'}  px-6 py-4 inline-block mx-auto`}
       to={to}>
       {children}
     </Link>

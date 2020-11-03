@@ -15,10 +15,10 @@ export default () => (
     <div className="mx-auto pt-12">
       <ul className="flex">
         <li className="pr-8">
-          <Link to="agbs">Agbs</Link>
+          <Link to="/agbs">Agbs</Link>
         </li>
         <li className="pl-8">
-          <Link to="impresum">Impresum</Link>
+          <Link to="/impressum">Impressum</Link>
         </li>
       </ul>
     </div>
