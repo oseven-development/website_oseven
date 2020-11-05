@@ -37,9 +37,11 @@
     "gatsby-transformer-sharp": "^2.1.9",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.13.1",
+    "ptz-i18n": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-intl": "^5.8.9",
     "tailwindcss": "^1.9.6"
   },
   "devDependencies": {

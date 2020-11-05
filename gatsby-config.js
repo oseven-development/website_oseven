@@ -6,6 +6,24 @@ module.exports = {
     description: 'oseven Website',
     author: 'Philipp Schmid',
     siteUrl: 'https://www.oseven.de',
+    languages: {
+      defaultLangKey: 'de',
+      langs: ['de', 'en'],
+    },
+    navigation: [
+      {
+        to: 'UnsereArbeit',
+        label: {de: 'Unsere Arbeit', en: 'Our Work'},
+      },
+      {
+        to: 'UnsereDienstleistungen',
+        label: {de: 'Unsere Dienstleistungen', en: 'Our Portfolio'},
+      },
+      {
+        to: 'kontakt',
+        label: {de: 'Kontakt', en: 'Contact'},
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -8,7 +8,13 @@ import Logo from '../assets/logos/logo.svg'
 import Close from '../assets/close.svg'
 import Menu from '../assets/menu.svg'
 
-export default () => {
+interface Props {
+  langKey: 'de' | 'en'
+  navigation: any
+  langsMenu: any
+}
+
+export default ({langKey, navigation, langsMenu}: Props) => {
   const [toggle, setToggle] = React.useState(false)
   const width = useWindowWidth()
 
@@ -27,7 +33,7 @@ export default () => {
   return (
     <>
       <header className="lg:hidden bg-primary px-8 py-6 text-white flex">
-        <Link className="flex-1" to="/" onClick={removeToggle}>
+        <Link className="flex-1" to={`/${langKey === 'de' ? '' : langKey + '/'}`} onClick={removeToggle}>
           <Logo className="w-32 fill-current text-white" />
         </Link>
         <div>
@@ -50,14 +56,17 @@ export default () => {
               className={`pt-12 text-right transform transition-transform  transition-all duration-200  
                   ${toggle ? 'translate-y-0' : 'translate-y-8'}`}
               onClick={toggleMobileNavigation}>
+              {navigation.map(item => (
+                <li className="block px-4 py-4 ">
+                  <Link to={`/${langKey === 'de' ? '' : langKey + '/'}${item.to}`}>{item.label[langKey]}</Link>
+                </li>
+              ))}
+
               <li className="block px-4 py-4 ">
-                <Link to="/UnsereArbeit">Unsere Arbeit</Link>
+                <Link to={langsMenu[0].link}>de</Link>
               </li>
-              <li className="block px-4 py-4">
-                <Link to="/UnsereDienstleistungen">Unsere Dienstleistungen</Link>
-              </li>
-              <li className="block px-4 py-4">
-                <Link to="/kontakt">Kontakt</Link>
+              <li className="block px-4 py-4 ">
+                <Link to={langsMenu[1].link}>en</Link>
               </li>
             </ul>
           </nav>
