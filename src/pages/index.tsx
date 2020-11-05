@@ -12,14 +12,13 @@ import {HeadTextIntro, Seo} from '../components'
 // import {Seo, Particles, SkillCardBox, PortraitBox, ContentDivider} from '../components'
 
 export default () => {
-  const image = useStaticQuery<ImageQuery>(graphql`
+  const image = useStaticQuery<{file: ImageQuery}>(graphql`
     query {
       file(relativePath: {eq: "consultingParallax.png"}) {
         ...FileFragment
       }
     }
   `)
-
   // const callback = function(entries) {
   //   entries.forEach(entry => {
   //     entry.isIntersecting
@@ -37,7 +36,12 @@ export default () => {
 
   return (
     <>
-      <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
+      <Seo
+        title="Homepage oseven"
+        description="Wir machen ML und Cloud"
+        keywords="Cloud CC ML"
+        image={image.file.childImageSharp.fluid.src}
+      />
       <HeadTextIntro>Wir sind Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro>
 
       <section>

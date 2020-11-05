@@ -9,7 +9,7 @@ export default () => (
     <h2 className="mx-auto md:w-6/12 text-center text-4xl pb-12">
       Wir würden uns sehr freuen, mit dir zusammenzuarbeiten.
     </h2>
-    <LinkButton to="/kontakt" primary={false}>
+    <LinkButton to="kontakt" primary={false}>
       Kontakt
     </LinkButton>
     <div className="mx-auto pt-12">

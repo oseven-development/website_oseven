@@ -9,16 +9,13 @@ import Footer from './footer'
 import {getCurrentLangKey, getLangs, getUrlForLang} from 'ptz-i18n'
 import {StaticQuery, graphql, Link, useStaticQuery} from 'gatsby'
 import {IntlProvider} from 'react-intl'
+import useLangKey from '../hooks/useLangKey'
 
 export default ({children, location}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          languages {
-            defaultLangKey
-            langs
-          }
           navigation {
             to
             label {
@@ -31,15 +28,9 @@ export default ({children, location}) => {
     }
   `)
 
-  const url = location?.pathname || ''
-  const {langs, defaultLangKey} = data.site.siteMetadata.languages
   const {navigation} = data.site.siteMetadata
-  const langKey = getCurrentLangKey(langs, defaultLangKey, url)
-  const homeLink = `/${langKey}/`.replace(`/${defaultLangKey}/`, '/')
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map(item => ({
-    ...item,
-    link: item.link.replace(`/${defaultLangKey}/`, '/'),
-  }))
+  const {langKey, langsMenu} = useLangKey()
+
   return (
     <React.Fragment>
       <IntlProvider locale={langKey}>
@@ -51,13 +42,3 @@ export default ({children, location}) => {
     </React.Fragment>
   )
 }
-
-// export const indexQuery = graphql`
-//   fragment imagePre on File {
-//     childImageSharp {
-//       fluid(quality: 80, maxWidth: 1920) {
-//         ...GatsbyImageSharpFluid_withWebp
-//       }
-//     }
-//   }
-// `

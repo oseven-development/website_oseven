@@ -13,7 +13,6 @@ interface Props {
 }
 
 export default ({langKey, navigation, langsMenu}: Props) => {
-  console.log(navigation)
   return (
     <header className="hidden lg:flex bg-primary py-6 text-white max-w-screen-lg mx-auto px-4">
       <Link className="" to={`/${langKey === 'de' ? '' : langKey + '/'}`}>
@@ -31,7 +30,7 @@ export default ({langKey, navigation, langsMenu}: Props) => {
       <nav>
         <ul className="text-white flex font-thin">
           {navigation.map(item => (
-            <li className="ml-8 self-center">
+            <li className="ml-8 self-center" key={item.to}>
               <Link to={`/${langKey === 'de' ? '' : langKey + '/'}${item.to}`}>{item.label[langKey]}</Link>
             </li>
           ))}

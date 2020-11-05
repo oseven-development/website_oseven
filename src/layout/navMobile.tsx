@@ -57,7 +57,7 @@ export default ({langKey, navigation, langsMenu}: Props) => {
                   ${toggle ? 'translate-y-0' : 'translate-y-8'}`}
               onClick={toggleMobileNavigation}>
               {navigation.map(item => (
-                <li className="block px-4 py-4 ">
+                <li className="block px-4 py-4" key={item.to}>
                   <Link to={`/${langKey === 'de' ? '' : langKey + '/'}${item.to}`}>{item.label[langKey]}</Link>
                 </li>
               ))}

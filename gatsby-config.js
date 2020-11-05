@@ -3,9 +3,11 @@
 module.exports = {
   siteMetadata: {
     title: 'oseven',
+    titleTemplate: 'test',
     description: 'oseven Website',
     author: 'Philipp Schmid',
     siteUrl: 'https://www.oseven.de',
+    twitterUsername: 'maxhaensel_',
     languages: {
       defaultLangKey: 'de',
       langs: ['de', 'en'],
@@ -77,8 +79,8 @@ module.exports = {
         name: 'Dies ist der Webauftritt von oseven - Maximilian Hänsel Einzelunternehmen',
         short_name: 'oseven',
         start_url: '/',
-        background_color: '#FF662B',
-        theme_color: '#FF662B',
+        background_color: '#000',
+        theme_color: '#333',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.svg', // This path is relative to the root of the site.
       },
