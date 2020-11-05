@@ -10,7 +10,7 @@ import {getCurrentLangKey, getLangs, getUrlForLang} from 'ptz-i18n'
 import {StaticQuery, graphql, Link, useStaticQuery} from 'gatsby'
 import {IntlProvider} from 'react-intl'
 
-export default ({children}) => {
+export default ({children, location}) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -31,7 +31,7 @@ export default ({children}) => {
     }
   `)
 
-  const url = location.pathname
+  const url = location?.pathname || ''
   const {langs, defaultLangKey} = data.site.siteMetadata.languages
   const {navigation} = data.site.siteMetadata
   const langKey = getCurrentLangKey(langs, defaultLangKey, url)
