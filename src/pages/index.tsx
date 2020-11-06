@@ -12,13 +12,27 @@ import {HeadTextIntro, Seo} from '../components'
 // import {Seo, Particles, SkillCardBox, PortraitBox, ContentDivider} from '../components'
 
 export default () => {
-  const image = useStaticQuery<{file: ImageQuery}>(graphql`
+  const image = useStaticQuery<{file: ImageQuery; allFeedPhilschmidBlog: any}>(graphql`
     query {
       file(relativePath: {eq: "consultingParallax.png"}) {
         ...FileFragment
       }
+      allFeedPhilschmidBlog {
+        edges {
+          node {
+            guid
+            creator
+            image
+            pubDate
+            title
+            link
+            content
+          }
+        }
+      }
     }
   `)
+
   // const callback = function(entries) {
   //   entries.forEach(entry => {
   //     entry.isIntersecting
@@ -46,6 +60,19 @@ export default () => {
 
       <section>
         <Img ref={ref} fluid={image.file.childImageSharp.fluid} alt={'name'} className="md:h-128" />
+      </section>
+
+      <section>
+        {image.allFeedPhilschmidBlog.edges.map(({node}) => (
+          <>
+            <div className="block h-8 p-8" style={{height: 80}}>
+              <img src={node.image} loading="lazy" alt="…" width="200" height="200" />
+            </div>
+            <a className="block" href={node.link}>
+              {node.title}
+            </a>
+          </>
+        ))}
       </section>
 
       <section className="py-12">

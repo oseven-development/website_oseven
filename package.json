@@ -34,6 +34,8 @@
     "gatsby-plugin-sitemap": "^2.0.10",
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-source-rss": "^1.0.0",
+    "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-sharp": "^2.1.9",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.13.1",

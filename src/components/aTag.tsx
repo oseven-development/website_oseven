@@ -1,7 +1,12 @@
 /** @format */
 import React from 'react'
-export default ({href, children}) => (
-  <a href={href} rel="noopener nofollow noreferrer">
+interface Props {
+  href: string
+  children: any
+  className?: string
+}
+export default ({href, children, className}: Props) => (
+  <a className={className} href={href} rel="noopener nofollow noreferrer">
     {children}
   </a>
 )

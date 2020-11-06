@@ -56,9 +56,9 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
-    height: {
-      'h-128': '32rem',
-    },
+    // height: {
+    //   'h-128': '32rem',
+    // },
     ripple: theme => ({
       colors: theme('colors'),
     }),

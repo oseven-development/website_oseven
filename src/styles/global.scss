@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-4xl;
   @apply mb-8;
   @apply mt-4;
 }
@@ -75,5 +75,13 @@ section:md {
 a:hover {
   @apply text-light-secondary;
 }
+
+.text-truncate {
+  @apply truncate;
+  -webkit-line-clamp: 3;
+  overflow-wrap: normal;
+  -webkit-box-orient: vertical;
+}
+
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';

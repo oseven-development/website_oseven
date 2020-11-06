@@ -7,6 +7,7 @@ module.exports = {
     description: 'oseven Website',
     author: 'Philipp Schmid',
     siteUrl: 'https://www.oseven.de',
+    image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: 'maxhaensel_',
     languages: {
       defaultLangKey: 'de',
@@ -90,6 +91,37 @@ module.exports = {
       options: {
         langKeyDefault: 'de',
         useLangKeyLayout: false,
+      },
+    },
+    // {
+    //   resolve: 'gatsby-source-rss',
+    //   options: {
+    //     rssURL: 'https://www.philschmid.de/rss.xml',
+    //     customFields: {
+    //       item: ['tags'],
+    //     },
+    //   },
+    // },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://www.nasa.gov/rss/dyn/breaking_news.rss`,
+        name: `NASAblog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        // url: `https://www.nasa.gov/rss/dyn/breaking_news.rss`,
+        url: 'https://www.philschmid.de/rss.xml',
+        name: `PhilschmidBlog`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['image'],
+          },
+        },
       },
     },
   ],
