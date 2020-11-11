@@ -40,7 +40,7 @@ const seo: FunctionComponent<Props> = ({title, description, keywords, article, i
 
   const {buildTime} = site
   const {defaultTitle, defaultDescription, siteUrl, twitterUsername} = site.siteMetadata
-  console.log(file)
+
   const defaultImage = file.childImageSharp.fluid.src
 
   const seo = {

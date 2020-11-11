@@ -72,7 +72,14 @@ section:md {
   @apply text-light-primary;
 }
 
+a  {
+  @apply text-white;
+}
+
 a:hover {
+  @apply ease-in-out;
+  @apply transition;
+  @apply duration-300;
   @apply text-light-secondary;
 }
 
