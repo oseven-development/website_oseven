@@ -19,6 +19,10 @@ module.exports = {
         label: {de: 'Unsere Arbeit', en: 'Our Work'},
       },
       {
+        to: 'news',
+        label: {de: 'News', en: 'News'},
+      },
+      {
         to: 'UnsereDienstleistungen',
         label: {de: 'Unsere Dienstleistungen', en: 'Our Portfolio'},
       },

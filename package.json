@@ -9,7 +9,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "prod": "gatsby serve -p 4000",
     "dev": "gatsby build && gatsby serve -p 4000",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
