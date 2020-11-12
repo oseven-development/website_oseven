@@ -37,7 +37,7 @@ export default ({children, location}) => {
         <NavDesktop {...{langKey, navigation, langsMenu}} />
         <NavMobil {...{langKey, navigation, langsMenu}} />
         <main>{children}</main>
-        <Footer />
+        <Footer {...{langKey}} />
       </IntlProvider>
     </React.Fragment>
   )

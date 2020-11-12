@@ -59,6 +59,9 @@ module.exports = {
     // height: {
     //   'h-128': '32rem',
     // },
+    maxHeight: {
+      '80': '20rem',
+    },
     ripple: theme => ({
       colors: theme('colors'),
     }),

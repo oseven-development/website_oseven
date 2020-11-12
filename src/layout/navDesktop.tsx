@@ -19,11 +19,15 @@ export default ({langKey, navigation, langsMenu}: Props) => {
         <Logo className="w-32 fill-current text-white" />
       </Link>
       <ul className="text-white flex font-thin ml-8">
-        <li className="mr-4 self-center">
-          <Link to={langsMenu[0].link}>de</Link>
+        <li className={`mr-4 self-center ${langKey !== 'de' && 'opacity-50'}`}>
+          <Link to={langsMenu[0].link}>
+            <FlagGerman className="w-6" />
+          </Link>
         </li>
-        <li className="mr-4 self-center">
-          <Link to={langsMenu[1].link}>en</Link>
+        <li className={`mr-4 self-center ${langKey !== 'en' && 'opacity-50'}`}>
+          <Link to={langsMenu[1].link}>
+            <FlagEnglish className="w-6" />
+          </Link>
         </li>
       </ul>
       <div className="flex-1"></div>

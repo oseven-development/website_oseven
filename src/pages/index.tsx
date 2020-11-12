@@ -28,7 +28,9 @@ export default () => {
   //   })
   // }
   // const observer = new IntersectionObserver(callback)
+
   const ref = React.useRef(null)
+
   // React.useEffect(() => {
   //   if (ref !== undefined) {
   //     observer.observe(ref.current.imageRef.current)
@@ -47,7 +49,7 @@ export default () => {
       <HeadTextIntro>IT und Business Model Mentoring für Startups</HeadTextIntro>
 
       <section>
-        <Img ref={ref} fluid={image.file.childImageSharp.fluid} alt={'name'} className="md:h-128" />
+        <Img ref={ref} fluid={image.file.childImageSharp.fluid} alt={'name'} className="max-h-80" />
       </section>
 
       <section className="py-12">
@@ -61,17 +63,18 @@ export default () => {
           überführen, sowie schnelle und effiziente Softwarelösungen umzusetzen - und das kostenfrei!
         </p>
         <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
-          Our services
+          Unsere Dienstleistungen
         </Link>
       </section>
 
       <div className="bg-white">
         <section className=" flex flex-col">
           <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-            We develop customized software solutions for you or help you bring your applications into the cloud migrate.
+            Wir entwickeln für Sie maßgeschneiderte Softwarelösungen oder helfen Ihnen bei der Migration Ihrer
+            Anwendungen in die Cloud.
           </h2>
           <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
-            Our work
+            Unsere Arbeit
           </Link>
         </section>
       </div>

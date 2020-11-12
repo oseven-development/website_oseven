@@ -4,13 +4,19 @@ import {Link} from 'gatsby'
 import React from 'react'
 import {LinkButton} from '../components'
 
-export default () => (
+interface Props {
+  langKey: string
+}
+
+export default ({langKey}: Props) => (
   <footer className="flex flex-col py-12">
     <h2 className="mx-auto md:w-6/12 text-center text-4xl pb-12">
-      Wir würden uns sehr freuen, mit dir zusammenzuarbeiten.
+      {langKey === 'de'
+        ? 'Wir würden uns sehr freuen, mit dir zusammenzuarbeiten.'
+        : 'We would be very happy to work with you.'}
     </h2>
-    <LinkButton to="kontakt" primary={false}>
-      Kontakt
+    <LinkButton to={`/${langKey === 'de' ? '' : langKey + '/'}kontakt`} primary={false}>
+      {langKey === 'de' ? 'Kontakt' : 'Contact'}
     </LinkButton>
     <div className="mx-auto pt-12">
       <ul className="flex">
