@@ -1,8 +1,8 @@
 /** @format */
 import React from 'react'
 
-import LinkedIn from '../assets/linkedin.svg'
-import Twitter from '../assets/twitter.svg'
+import LinkedIn from '../assets/svg/linkedin.svg'
+import Twitter from '../assets/svg/twitter.svg'
 import Img from 'gatsby-image'
 import {A} from '.'
 import {graphql, useStaticQuery} from 'gatsby'
@@ -31,13 +31,13 @@ const Profile = ({images, profile: {name, title}, socialMedia: {linkedIn, twitte
 export default () => {
   const images = useStaticQuery(graphql`
     query {
-      Max: file(relativePath: {eq: "Max.png"}) {
+      Max: file(relativePath: {eq: "Max.jpg"}) {
         ...FileFragment
       }
-      Philipp: file(relativePath: {eq: "PS.png"}) {
+      Philipp: file(relativePath: {eq: "Philipp.png"}) {
         ...FileFragment
       }
-      Lars: file(relativePath: {eq: "PS.png"}) {
+      Lars: file(relativePath: {eq: "Lars.jpg"}) {
         ...FileFragment
       }
     }

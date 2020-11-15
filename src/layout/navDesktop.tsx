@@ -3,8 +3,8 @@
 import {Link} from 'gatsby'
 import React from 'react'
 import Logo from '../assets/logos/oseven-logo.svg'
-import FlagEnglish from '../assets/flagEnglish.svg'
-import FlagGerman from '../assets/flagGerman.svg'
+import FlagEnglish from '../assets/svg/flagEnglish.svg'
+import FlagGerman from '../assets/svg/flagGerman.svg'
 
 interface Props {
   langKey: 'de' | 'en'

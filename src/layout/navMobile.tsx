@@ -5,8 +5,10 @@ import {Link} from 'gatsby'
 
 import {useWindowWidth} from '../hooks'
 import Logo from '../assets/logos/logo.svg'
-import Close from '../assets/close.svg'
-import Menu from '../assets/menu.svg'
+import Close from '../assets/svg/close.svg'
+import Menu from '../assets/svg/menu.svg'
+import FlagEnglish from '../assets/svg/flagEnglish.svg'
+import FlagGerman from '../assets/svg/flagGerman.svg'
 
 interface Props {
   langKey: 'de' | 'en'
@@ -53,7 +55,8 @@ export default ({langKey, navigation, langsMenu}: Props) => {
                     ${toggle ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'}
                     `}>
             <ul
-              className={`pt-12 text-right transform transition-transform  transition-all duration-200  
+              style={{paddingBottom: 62}}
+              className={`flex flex-col h-full pt-12 text-right transform transition-transform  transition-all duration-200  
                   ${toggle ? 'translate-y-0' : 'translate-y-8'}`}
               onClick={toggleMobileNavigation}>
               {navigation.map(item => (
@@ -62,11 +65,17 @@ export default ({langKey, navigation, langsMenu}: Props) => {
                 </li>
               ))}
 
-              <li className="block px-4 py-4 ">
-                <Link to={langsMenu[0].link}>de</Link>
+              <span className="flex-1" />
+
+              <li className={`block px-4 py-4 text-right   ${langKey !== 'de' && 'opacity-50'}`}>
+                <Link to={langsMenu[0].link}>
+                  <FlagGerman className="w-6 inline" />
+                </Link>
               </li>
-              <li className="block px-4 py-4 ">
-                <Link to={langsMenu[1].link}>en</Link>
+              <li className={`block px-4 py-4 ${langKey !== 'en' && 'opacity-50'}`}>
+                <Link to={langsMenu[1].link}>
+                  <FlagEnglish className="w-6 inline" />
+                </Link>
               </li>
             </ul>
           </nav>
