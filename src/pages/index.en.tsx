@@ -23,7 +23,7 @@ export default () => {
   return (
     <>
       <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
-      <HeadTextIntro>IT and Business Model Mentoring for Startups</HeadTextIntro>
+      <HeadTextIntro english>IT and Business Model Mentoring for Startups</HeadTextIntro>
 
       <section>
         <Img fluid={image.file.childImageSharp.fluid} alt={'name'} className="md:h-128" />

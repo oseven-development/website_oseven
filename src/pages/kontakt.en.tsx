@@ -10,7 +10,7 @@ export default () => {
         description="Rufen Sie uns an! Kontaktadressen"
         keywords="Kontakt Cloud Email E-mail Telefon Adresse Kontakt Contact"
       />
-      <HeadTextIntro>Contact!</HeadTextIntro>
+      <HeadTextIntro english>Contact!</HeadTextIntro>
 
       <section>
         <Profile />

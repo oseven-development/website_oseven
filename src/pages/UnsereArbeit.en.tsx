@@ -5,6 +5,6 @@ import {HeadTextIntro} from '../components'
 
 export default () => (
   <>
-    <HeadTextIntro>Our Work!</HeadTextIntro>
+    <HeadTextIntro english>Our Work!</HeadTextIntro>
   </>
 )

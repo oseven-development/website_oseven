@@ -125,7 +125,7 @@ export default () => {
   return (
     <>
       <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
-      <HeadTextIntro>News</HeadTextIntro>
+      <HeadTextIntro english>News</HeadTextIntro>
 
       <section>
         <div className="grid grid-cols-2 gap-16">

@@ -7,7 +7,7 @@ import Challenge from '../assets/svg/challenge.svg'
 export default () => (
   <>
     <>
-      <HeadTextIntro>Driving ideas forward together</HeadTextIntro>
+      <HeadTextIntro english>Driving ideas forward together</HeadTextIntro>
       <section>
         <p>
           To turn an idea into a successful company, it takes a lot of work, critical questioning and a clean, fast
