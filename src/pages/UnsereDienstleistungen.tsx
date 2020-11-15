@@ -9,18 +9,18 @@ export default () => (
     <HeadTextIntro>Gemeinsam Ideen vorantreiben</HeadTextIntro>
     <section>
       <p>
-        Um aus einer Idee ein erfolgreiches Unternehmen zu machen, bedarf es viel Arbeit, kritisches Hinterfragen und
-        eine saubere, schnelle Umsetzung. Startups scheitern dabei vor allem an den letzten beiden Punkten, da häufig
-        Expertise, Erfahrung oder der richtige Ansprechpartner fehlt. Durch unsere langjährige Erfahrung in der
-        Konzeption und Umsetzung von Business Modellen und Softwarelösungen helfen wir euch eure Ideen bestmöglich
-        umzusetzen und ein erfolgreiches Unternehmen zu werden!
+        Eine Idee in ein erfolgreiches Produkt zu überführen, bedarf jeder Menge Arbeit. kritisches Hinterfragen und 
+        einer saubere, schnelle Umsetzung. Startups scheitern dabei vor allem an den letzten beiden 
+        Punkten, gerade wenn Expertise, Erfahrung oder der richtige Ansprechpartner fehlt. Mit unserer langjährigen 
+        Erfahrung in der Konzeption und Umsetzung von Geschäftsmodellen und Softwarelösungen helfen wir dir, deine 
+        Ideen bestmöglich umzusetzen und ein erfolgreiches Produkt zu schaffen!
       </p>
     </section>
 
     <div className="bg-white">
       <section className=" flex flex-col">
         <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-          Dies erreichen wir über verschiedene Formate:
+          Dazu setzen wir auf:
         </h2>
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 justify-items-center text-black">

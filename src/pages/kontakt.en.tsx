@@ -6,9 +6,9 @@ export default () => {
   return (
     <>
       <Seo
-        title="Kontakt oseven"
-        description="Rufen Sie uns an! Kontaktadressen"
-        keywords="Kontakt Cloud Email E-mail Telefon Adresse Kontakt Contact"
+        title="Contact oseven"
+        description="How to reach us! Contact"
+        keywords="Contact Cloud Email E-mail phone address Kontakt Contact"
       />
       <HeadTextIntro>Contact!</HeadTextIntro>
 
