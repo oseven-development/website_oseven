@@ -128,5 +128,41 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: 'https://medium.com/feed/@stefanseegerer',
+        name: `StefanSeegererBlog`,
+        parserOption: {
+          customFields: {
+            item: ['image'],
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: 'https://medium.com/feed/@lars.neusesser',
+        name: `LarsNeusesserBlog`,
+        parserOption: {
+          customFields: {
+            item: ['image'],
+          },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: 'https://medium.com/feed/@stefanblos',
+        name: `StefanBlosBlog`,
+        parserOption: {
+          customFields: {
+            item: ['image'],
+          },
+        },
+      },
+    },
   ],
 }
