@@ -11,6 +11,8 @@
 import React from 'react'
 import {Layout} from './src/layout'
 import './src/styles/global.scss'
+import * as ReactGA from 'react-ga'
+const uuid = require('uuid')
 
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -25,3 +27,26 @@ export const wrapPageElement = ({element, props}) => (
   // including location, data, etc - you don't need to pass it
   <Layout {...props}> {element}</Layout>
 )
+
+const GA_LOCAL_STORAGE_KEY = 'ga:clientId'
+// const state = localStorage.getItem('Privacy');
+if (localStorage) {
+  if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
+    ReactGA.initialize('UA-123154407-1', {
+      gaOptions: {
+        storage: 'none',
+        clientId: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      },
+    })
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  } else {
+    localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuid.v4())
+    ReactGA.initialize('UA-123154407-1', {
+      gaOptions: {
+        storage: 'none',
+        clientId: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      },
+    })
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }
+}
