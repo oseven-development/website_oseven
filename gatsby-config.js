@@ -6,7 +6,7 @@ module.exports = {
     titleTemplate: 'test',
     description: 'oseven Website',
     author: 'Philipp Schmid',
-    siteUrl: 'https://www.oseven.de',
+    siteUrl: 'https://oseven.de',
     image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: 'maxhaensel_',
     languages: {
@@ -66,8 +66,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.oseven.de',
-        sitemap: 'https://www.oseven.de/sitemap.xml',
+        host: 'https://oseven.de',
+        sitemap: 'https://oseven.de/sitemap.xml',
         policy: [{userAgent: '*', allow: '/'}],
       },
     },
