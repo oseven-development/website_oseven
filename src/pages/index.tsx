@@ -59,8 +59,8 @@ export default () => {
           mit Ihnen Lösungen für die Fragen von heute und Probleme von Morgen. Dazu entwickeln wir native
           Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich nach Ihren
           individuellen Bedürfnissen richten. */}
-          Mit unserer Expertise und Erfahrung helfen wir euch eure Geschäftsidee in ein fundiertes Geschäftsmodell zu
-          überführen, sowie schnelle und effiziente Softwarelösungen umzusetzen - und das kostenfrei!
+          Mit unserer Expertise und Erfahrung helfen wir dir, deine Geschäftsidee in ein nachhaltiges Geschäftsmodell zu
+          überführen und schnelle und effiziente Softwarelösungen umzusetzen!
         </p>
         <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
           Unsere Dienstleistungen
@@ -70,7 +70,7 @@ export default () => {
       <div className="bg-white">
         <section className=" flex flex-col">
           <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-            Wir entwickeln für Sie maßgeschneiderte Softwarelösungen oder helfen Ihnen bei der Migration Ihrer
+            Wir entwickeln maßgeschneiderte Softwarelösungen und helfen dir bei der Migration deiner
             Anwendungen in die Cloud.
           </h2>
           <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">

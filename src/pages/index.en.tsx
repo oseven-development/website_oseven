@@ -31,8 +31,8 @@ export default () => {
 
       <section className="py-12">
         <p className="md:w-6/12 mb-8">
-          With our expertise and experience we help you to transform your business idea into a sound business model as
-          well as implementing fast and efficient software solutions - free of charge!
+          We use our expertise and experience to help you transform your business idea into a sound business model
+          and implement fast and efficient software solutions!
         </p>
         <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
           Our services
@@ -42,7 +42,7 @@ export default () => {
       <div className="bg-white">
         <section className=" flex flex-col">
           <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-            We develop customized software solutions for you or help you bring your applications into the cloud migrate.
+            We create customized software solutions for you and support with bringing your applications into the cloud.
           </h2>
           <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
             Our work
