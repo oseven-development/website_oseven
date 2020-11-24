@@ -46,34 +46,29 @@ export default () => {
         image={image.file.childImageSharp.fluid.src}
       />
       {/* <HeadTextIntro>Wir sind Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro> */}
-      <HeadTextIntro>IT und Business Model Mentoring für Startups</HeadTextIntro>
+      <HeadTextIntro><span><span className="font-bold text-secondary">IT</span> und <span className="font-bold text-secondary">Business Model Mentoring</span> für Startups</span></HeadTextIntro>
 
-      <section>
-        <Img ref={ref} fluid={image.file.childImageSharp.fluid} alt={'name'} className="max-h-80" />
-      </section>
-
-      <section className="py-12">
-        <p className="md:w-6/12 mb-8">
-          {/* Um in schnell verändernden Märkten wettbewerbsfähig zu bleiben, müssen Sie in Ihre digitalen Prozesse, die
-          Infrastruktur und deren Architektur investieren. Wir unterstützen Sie dabei bestmöglich und finden gemeinsam
-          mit Ihnen Lösungen für die Fragen von heute und Probleme von Morgen. Dazu entwickeln wir native
-          Cloud-Lösungen, die genauso flexibel und agil wachsen, wie ihr Unternehmen, sich aber zugleich nach Ihren
-          individuellen Bedürfnissen richten. */}
-          Mit unserer Expertise und Erfahrung helfen wir euch eure Geschäftsidee in ein fundiertes Geschäftsmodell zu
-          überführen, sowie schnelle und effiziente Softwarelösungen umzusetzen - und das kostenfrei!
-        </p>
-        <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
-          Unsere Dienstleistungen
-        </Link>
+      <section className="md:flex md:flex-row-reverse p-0 md:py-20 w-full">
+        <Img fluid={image.file.childImageSharp.fluid} alt={'name'} aria-hidden="true" className="md:w-1/2" />
+      
+        <div className="md:mx-6 p-6 md:p-8 md:w-1/2 flex flex-col items-center md:items-start justify-center">
+          <p className="md:w-full mb-8 md:text-2xl">
+            Mit unserer Expertise und Erfahrung helfen wir euch <span className="text-secondary">eure Geschäftsidee</span> in ein <span className="text-secondary">fundiertes Geschäftsmodell</span> zu
+          überführen, sowie <span className="text-secondary">schnelle und effiziente Softwarelösungen</span> umzusetzen - und das kostenfrei!
+          </p>
+          <Link className="rounded-full ghost px-4 py-2 inline-block mb-4 mt-2" to="UnsereDienstleistungen">
+            Unsere Dienstleistungen
+          </Link>
+        </div>
       </section>
 
       <div className="bg-white">
-        <section className=" flex flex-col">
-          <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
+        <section className="flex flex-col md:py-48 space-y-8 md:space-y-24">
+          <p className="text-center text-primary md:w-1/2 mx-auto md:text-2xl">
             Wir entwickeln für Sie maßgeschneiderte Softwarelösungen oder helfen Ihnen bei der Migration Ihrer
             Anwendungen in die Cloud.
-          </h2>
-          <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
+          </p>
+          <Link className="rounded-full bg-primary text-white px-4 py-2 inline-block mx-auto" to="UnsereArbeit">
             Unsere Arbeit
           </Link>
         </section>

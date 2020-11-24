@@ -3,7 +3,7 @@ import React from 'react'
 import PhoneIcon from '../assets/svg/phone.svg'
 import MailIcon from '../assets/svg/mail.svg'
 interface Props {
-  children: string
+  children: JSX.Element | string
   english?: boolean
 }
 export default ({children, english = false}: Props) => (
