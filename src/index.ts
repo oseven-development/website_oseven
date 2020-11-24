@@ -1,5 +1,4 @@
 /** @format */
-// deploy
 export interface ImageQuery {
   childImageSharp: {
     fluid: {
