@@ -22,29 +22,34 @@ export default () => {
 
   return (
     <>
-      <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
-      <HeadTextIntro english>IT and Business Model Mentoring for Startups</HeadTextIntro>
+      <Seo 
+        title="Homepage oseven" 
+        description="Wir machen ML und Cloud" 
+        keywords="Cloud CC ML" 
+        image={image.file.childImageSharp.fluid.src}
+      />
+      <HeadTextIntro english><span><span className="font-bold text-secondary">IT</span> and <span className="font-bold text-secondary">Business Model Mentoring</span> for Startups</span></HeadTextIntro>
 
-      <section>
-        <Img fluid={image.file.childImageSharp.fluid} alt={'name'} className="md:h-128" />
-      </section>
-
-      <section className="py-12">
-        <p className="md:w-6/12 mb-8">
-          We use our expertise and experience to help you transform your business idea into a sound business model
-          and implement fast and efficient software solutions!
-        </p>
-        <Link className="rounded-full ghost p-6 inline-block" to="UnsereDienstleistungen">
-          Our services
-        </Link>
+      <section className="md:flex md:flex-row-reverse p-0 md:py-20 w-full">
+        <Img fluid={image.file.childImageSharp.fluid} alt={'name'} aria-hidden="true" className="md:w-1/2" />
+      
+        <div className="md:mx-6 p-6 md:p-8 md:w-1/2 flex flex-col items-center md:items-start justify-center">
+          <p className="md:w-full mb-8 md:text-2xl">
+          We use our expertise and experience to help you <span className="text-secondary">transform your business idea</span> into a <span className="text-secondary">sound business model</span>
+          and implement <span className="text-secondary">fast and efficient software solutions</span>!
+          </p>
+          <Link className="rounded-full ghost px-4 py-2 inline-block mb-4 mt-2" to="UnsereDienstleistungen">
+            Our services
+          </Link>
+        </div>
       </section>
 
       <div className="bg-white">
-        <section className=" flex flex-col">
-          <h2 className="text-4xl text-center text-primary md:w-6/12 mx-auto mb-8">
-            We create customized software solutions for you and support with bringing your applications into the cloud.
-          </h2>
-          <Link className="rounded-full bg-primary text-white p-6 inline-block mx-auto" to="UnsereArbeit">
+        <section className="flex flex-col md:py-48 space-y-8 md:space-y-24">
+          <p className="text-center text-primary md:w-1/2 mx-auto md:text-2xl">
+          We create customized software solutions for you and support with bringing your applications into the cloud.
+          </p>
+          <Link className="rounded-full bg-primary text-white px-4 py-2 inline-block mx-auto" to="UnsereArbeit">
             Our work
           </Link>
         </section>

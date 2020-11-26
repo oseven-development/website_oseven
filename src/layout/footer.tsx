@@ -10,11 +10,11 @@ interface Props {
 
 export default ({langKey}: Props) => (
   <footer className="flex flex-col py-12">
-    <h2 className="mx-auto md:w-6/12 text-center text-4xl pb-12">
+    <p className="mx-auto md:w-1/2 text-center p-12 md:text-2xl">
       {langKey === 'de'
         ? 'Wir freuen uns, mit dir zusammenzuarbeiten.'
         : 'We&apos;d love to work with you.'}
-    </h2>
+    </p>
     <LinkButton to={`/${langKey === 'de' ? '' : langKey + '/'}kontakt`} primary={false}>
       {langKey === 'de' ? 'Kontakt' : 'Contact'}
     </LinkButton>
