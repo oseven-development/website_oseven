@@ -10,11 +10,10 @@ export default () => (
       <HeadTextIntro english>Driving ideas forward together</HeadTextIntro>
       <section>
         <p>
-          To turn an idea into a successful company, it takes a lot of work, critical questioning and a clean, fast
-          implementation. Startups fail especially at the last two points, because often Expertise, experience or the
-          right contact person is missing. Through our many years of experience in the Conception and implementation of
-          business models and software solutions we help you to realize your ideas in the best possible way and become a
-          successful company!
+          To turn an idea into a successful product, it takes a lot of work, critical questioning, and a clean, fast
+          implementation. Startups mainly fail because of the last two factors as often expertise, experience, or the
+          right contact person is missing. With many years of experience in conception and implementation of
+          business models and software solutions, we help you turn your ideas into reality!
         </p>
       </section>
 

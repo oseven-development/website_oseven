@@ -142,7 +142,7 @@ export default () => {
 
                 <section className="p-6 space-y-2 grid grid-row h-64">
                   <p className="text-sm text-gray-1 text-truncate leading-6 ">
-                    Author: <span className="font-semibold">{node.creator}</span>
+                    Autor: <span className="font-semibold">{node.creator}</span>
                   </p>
 
                   <h2 className="text-lg"> {node.title}</h2>

@@ -17,12 +17,14 @@ const Profile = ({images, profile: {name, title}, socialMedia: {linkedIn, twitte
       <h6 className="text-center">{name}</h6>
       <h4 className="text-center font-thin mt-0">{title}</h4>
       <div className="flex space-x-4 justify-center pt-4">
-        <A href={linkedIn}>
+        {linkedIn && <A href={linkedIn}>
           <LinkedIn className="h-8 w-8" />
         </A>
+        }
+        { twitter &&
         <A href={twitter}>
           <Twitter className="h-8 w-8" />
-        </A>
+        </A> }
       </div>
     </div>
   </div>
@@ -57,10 +59,10 @@ export default () => {
       <Profile
         {...{
           images,
-          profile: {name: 'Lars', title: 'Business-Development'},
+          profile: {name: 'Lars', title: 'Business Development'},
           socialMedia: {
             linkedIn: 'https://www.linkedin.com/in/lars-neusesser/',
-            twitter: 'https://twitter.com/maxhaensel_',
+            twitter: null,
             blog: null,
           },
         }}></Profile>

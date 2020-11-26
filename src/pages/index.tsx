@@ -53,8 +53,8 @@ export default () => {
       
         <div className="md:mx-6 p-6 md:p-8 md:w-1/2 flex flex-col items-center md:items-start justify-center">
           <p className="md:w-full mb-8 md:text-2xl">
-            Mit unserer Expertise und Erfahrung helfen wir euch <span className="text-secondary">eure Geschäftsidee</span> in ein <span className="text-secondary">fundiertes Geschäftsmodell</span> zu
-          überführen, sowie <span className="text-secondary">schnelle und effiziente Softwarelösungen</span> umzusetzen - und das kostenfrei!
+            Mit unserer Expertise und Erfahrung helfen wir dir, <span className="text-secondary">deine Geschäftsidee</span> in ein <span className="text-secondary">nachhaltiges Geschäftsmodell</span> zu
+            überführen und <span className="text-secondary">schnelle und effiziente Softwarelösungen</span> umzusetzen!
           </p>
           <Link className="rounded-full ghost px-4 py-2 inline-block mb-4 mt-2" to="UnsereDienstleistungen">
             Unsere Dienstleistungen
@@ -65,7 +65,7 @@ export default () => {
       <div className="bg-white">
         <section className="flex flex-col md:py-48 space-y-8 md:space-y-24">
           <p className="text-center text-primary md:w-1/2 mx-auto md:text-2xl">
-            Wir entwickeln für Sie maßgeschneiderte Softwarelösungen oder helfen Ihnen bei der Migration Ihrer
+            Wir entwickeln maßgeschneiderte Softwarelösungen und helfen dir bei der Migration deiner
             Anwendungen in die Cloud.
           </p>
           <Link className="rounded-full bg-primary text-white px-4 py-2 inline-block mx-auto" to="UnsereArbeit">
