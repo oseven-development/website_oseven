@@ -97,16 +97,16 @@ export default () => {
 
             <div className="shadow-2xl px-4 py-8">
               <GCPLogo className="h-16 mx-auto" />
-              <h2>So Businesszeugs</h2>
-              <p className="text-base leading-6">Was der Lars so macht?</p>
+              <h2>Business Model</h2>
+              {/* <p className="text-base leading-6">Was der Lars so macht?</p> */}
             </div>
 
             <div className="shadow-2xl px-4 py-8">
               <PytorchLogo className="h-16 mx-auto" />
               <h2>pytorch</h2>
-              <p className="text-base leading-6">
+              {/* <p className="text-base leading-6">
                 Mehrfach zertifiziert in AWS, Microsoft Azure und Google Cloud Platform.
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
