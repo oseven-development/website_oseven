@@ -45,7 +45,7 @@ export default () => {
     }
   `)
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
       <Profile
         {...{
           images,
@@ -56,7 +56,7 @@ export default () => {
             blog: 'https://www.philschmid.de/',
           },
         }}></Profile>
-      <Profile
+      {/* <Profile
         {...{
           images,
           profile: {name: 'Lars', title: 'Business Development'},
@@ -65,7 +65,7 @@ export default () => {
             twitter: null,
             blog: null,
           },
-        }}></Profile>
+        }}></Profile> */}
       <Profile
         {...{
           images,
