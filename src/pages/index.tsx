@@ -48,12 +48,13 @@ export default () => {
         keywords="Cloud CC ML"
         image={image.file.childImageSharp.fluid.src}
       />
-      {/* <HeadTextIntro>Wir sind Spezialisten für Künstliche Intelligenz (KI) und Cloud-Entwicklung</HeadTextIntro> */}
+      {/* <HeadTextIntro>Wir sind Spezialisten für Cloud-Entwicklung und Maschinelles Lernen (ML)</HeadTextIntro> */}
       <HeadTextIntro>
-        <span>
-          <span className="font-bold text-secondary">IT</span> und{' '}
-          <span className="font-bold text-secondary">Business Model Mentoring</span> für Startups
-        </span>
+        <>
+          Wir sind <span className="font-bold text-secondary">Spezialisten</span> für{' '}
+          <span className="font-bold text-secondary">Cloud-Entwicklung </span> und{' '}
+          <span className="font-bold text-secondary">Maschinelles Lernen</span>
+        </>
       </HeadTextIntro>
 
       <section className="md:flex md:flex-row-reverse p-0 md:py-20 w-full">
@@ -117,6 +118,18 @@ export default () => {
           <p className="text-center md:w-1/2 mx-auto md:text-2xl">
             Wir entwickeln maßgeschneiderte Softwarelösungen und helfen dir bei der Migration deiner Anwendungen in die
             Cloud.
+          </p>
+          <Link className="rounded-full ghost px-4 py-2 inline-block mb-4 mt-2 mx-auto" to="UnsereArbeit">
+            Unsere Arbeit
+          </Link>
+        </section>
+      </div>
+
+      <div className="bg-white text-black">
+        <section className="flex flex-col md:py-48 space-y-8 md:space-y-24">
+          <p className="text-center md:w-1/2 mx-auto md:text-2xl">
+            Du wolltest schon immer vom Maschinellen Lernen profitieren und hast Anwendungsfälle die nur drauf warten
+            gelöst zu werden?
           </p>
           <Link className="rounded-full ghost px-4 py-2 inline-block mb-4 mt-2 mx-auto" to="UnsereArbeit">
             Unsere Arbeit
