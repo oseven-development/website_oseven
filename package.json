@@ -35,7 +35,7 @@
     "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-sharp": "^2.1.9",
     "intersection-observer": "^0.7.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "ptz-i18n": "^1.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
