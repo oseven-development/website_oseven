@@ -14,7 +14,7 @@ jobs:
       AWS_CF_DISTRIBUTION_ID: E29RE8FF4D17EO
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}
