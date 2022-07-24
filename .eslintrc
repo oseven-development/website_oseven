@@ -1,8 +1,22 @@
 {
-  "extends": ["react-app", "prettier", "prettier/react"],
-  "plugins": ["prettier", "jsx-a11y", "react", "flowtype", "import"],
+  "extends": [
+    "react-app",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "jsx-a11y",
+    "react",
+    "flowtype",
+    "import"
+  ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true
+      }
+    ]
   },
   "parserOptions": {
     "ecmaVersion": 6,

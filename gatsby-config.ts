@@ -1,6 +1,8 @@
 /** @format */
 
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: 'oseven',
     titleTemplate: 'test',
@@ -16,19 +18,19 @@ module.exports = {
     navigation: [
       {
         to: 'UnsereArbeit',
-        label: {de: 'Unsere Arbeit', en: 'Our Work'},
+        label: { de: 'Unsere Arbeit', en: 'Our Work' },
       },
-      {
-        to: 'news',
-        label: {de: 'News', en: 'News'},
-      },
+      // {
+      //   to: 'news',
+      //   label: {de: 'News', en: 'News'},
+      // },
       {
         to: 'UnsereDienstleistungen',
-        label: {de: 'Unsere Dienstleistungen', en: 'Our Portfolio'},
+        label: { de: 'Unsere Dienstleistungen', en: 'Our Portfolio' },
       },
       {
         to: 'kontakt',
-        label: {de: 'Kontakt', en: 'Contact'},
+        label: { de: 'Kontakt', en: 'Contact' },
       },
     ],
   },
@@ -40,10 +42,9 @@ module.exports = {
         siteUrl: `https://oseven.de`,
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-stylus',
     'gatsby-plugin-robots-txt',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
@@ -68,7 +69,7 @@ module.exports = {
       options: {
         host: 'https://oseven.de',
         sitemap: 'https://oseven.de/sitemap.xml',
-        policy: [{userAgent: '*', allow: '/'}],
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -97,54 +98,56 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: 'https://www.philschmid.de/rss.xml',
-        name: `PhilschmidBlog`,
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        parserOption: {
-          customFields: {
-            item: ['image'],
-          },
-        },
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: 'https://medium.com/feed/@stefanseegerer',
-        name: `StefanSeegererBlog`,
-        parserOption: {
-          customFields: {
-            item: ['image'],
-          },
-        },
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: 'https://medium.com/feed/@lars.neusesser',
-        name: `LarsNeusesserBlog`,
-        parserOption: {
-          customFields: {
-            item: ['image'],
-          },
-        },
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: 'https://medium.com/feed/@stefanblos',
-        name: `StefanBlosBlog`,
-        parserOption: {
-          customFields: {
-            item: ['image'],
-          },
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     url: 'https://www.philschmid.de/rss.xml',
+    //     name: `PhilschmidBlog`,
+    //     // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['image'],
+    //       },
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     url: 'https://medium.com/feed/@stefanseegerer',
+    //     name: `StefanSeegererBlog`,
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['image'],
+    //       },
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     url: 'https://medium.com/feed/@lars.neusesser',
+    //     name: `LarsNeusesserBlog`,
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['image'],
+    //       },
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     url: 'https://medium.com/feed/@stefanblos',
+    //     name: `StefanBlosBlog`,
+    //     parserOption: {
+    //       customFields: {
+    //         item: ['image'],
+    //       },
+    //     },
+    //   },
+    // },
   ],
 }
+
+export default config

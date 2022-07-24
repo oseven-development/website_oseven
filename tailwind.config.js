@@ -60,7 +60,7 @@ module.exports = {
     //   'h-128': '32rem',
     // },
     maxHeight: {
-      '80': '20rem',
+      80: '20rem',
     },
     ripple: theme => ({
       colors: theme('colors'),
@@ -72,7 +72,7 @@ module.exports = {
     },
   },
   plugins: [
-    function({addComponents}) {
+    function ({addComponents}) {
       addComponents({
         '.container': {
           width: '100%',
