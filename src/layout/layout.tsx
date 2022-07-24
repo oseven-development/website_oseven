@@ -6,12 +6,11 @@ import NavDesktop from './navDesktop'
 import NavMobil from './navMobile'
 import Footer from './footer'
 
-import {getCurrentLangKey, getLangs, getUrlForLang} from 'ptz-i18n'
-import {StaticQuery, graphql, Link, useStaticQuery} from 'gatsby'
-import {IntlProvider} from 'react-intl'
+import { graphql, useStaticQuery } from 'gatsby'
+import { IntlProvider } from 'react-intl'
 import useLangKey from '../hooks/useLangKey'
 
-export default ({children, location}) => {
+const Layout = ({ children, location }: any) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -28,17 +27,19 @@ export default ({children, location}) => {
     }
   `)
 
-  const {navigation} = data.site.siteMetadata
-  const {langKey, langsMenu} = useLangKey()
+  const { navigation } = data.site.siteMetadata
+  const { langKey, langsMenu } = useLangKey()
 
   return (
     <React.Fragment>
       <IntlProvider locale={langKey}>
-        <NavDesktop {...{langKey, navigation, langsMenu}} />
-        <NavMobil {...{langKey, navigation, langsMenu}} />
+        <NavDesktop {...{ langKey, navigation, langsMenu }} />
+        <NavMobil {...{ langKey, navigation, langsMenu }} />
         <main>{children}</main>
-        <Footer {...{langKey}} />
+        <Footer {...{ langKey }} />
       </IntlProvider>
     </React.Fragment>
   )
 }
+
+export default Layout

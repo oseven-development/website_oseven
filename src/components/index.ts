@@ -7,4 +7,4 @@ import Seo from './seo/seo'
 import A from './aTag'
 import OfferCard from './offerCard'
 
-export {LinkButton, HeadTextIntro, Profile, Seo, A, OfferCard}
+export { LinkButton, HeadTextIntro, Profile, Seo, A, OfferCard }

@@ -30,103 +30,103 @@ interface Blog {
 const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
 
 export default () => {
-  const [sorted, setSorted] = React.useState<Node[]>([])
-  const {
-    file,
-    allFeedPhilschmidBlog,
-    allFeedStefanSeegererBlog,
-    allFeedLarsNeusesserBlog,
-    allFeedStefanBlosBlog,
-  } = useStaticQuery<{
-    file: ImageQuery
-    allFeedPhilschmidBlog: Blog
-    allFeedStefanSeegererBlog: Blog
-    allFeedLarsNeusesserBlog: Blog
-    allFeedStefanBlosBlog: Blog
-  }>(graphql`
-    query {
-      file(relativePath: {eq: "consultingParallax.png"}) {
-        ...FileFragment
-      }
-      allFeedPhilschmidBlog {
-        edges {
-          node {
-            title
-            creator
-            link
-            guid
-            isoDate
-            pubDate
-            content
-            image
-          }
-        }
-      }
-      allFeedStefanSeegererBlog {
-        edges {
-          node {
-            title
-            creator
-            link
-            guid
-            isoDate
-            pubDate
-            content {
-              encodedSnippet
-            }
-          }
-        }
-      }
-      allFeedLarsNeusesserBlog {
-        edges {
-          node {
-            title
-            creator
-            link
-            guid
-            isoDate
-            pubDate
-            content {
-              encodedSnippet
-            }
-          }
-        }
-      }
-      allFeedStefanBlosBlog {
-        edges {
-          node {
-            title
-            creator
-            link
-            guid
-            isoDate
-            pubDate
-            content {
-              encodedSnippet
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const [sorted, setSorted] = React.useState<Node[]>([])
+  // const {
+  //   file,
+  //   allFeedPhilschmidBlog,
+  //   allFeedStefanSeegererBlog,
+  //   allFeedLarsNeusesserBlog,
+  //   allFeedStefanBlosBlog,
+  // } = useStaticQuery<{
+  //   file: ImageQuery
+  //   allFeedPhilschmidBlog: Blog
+  //   allFeedStefanSeegererBlog: Blog
+  //   allFeedLarsNeusesserBlog: Blog
+  //   allFeedStefanBlosBlog: Blog
+  // }>(graphql`
+  //   query {
+  //     file(relativePath: {eq: "consultingParallax.png"}) {
+  //       ...FileFragment
+  //     }
+  //     allFeedPhilschmidBlog {
+  //       edges {
+  //         node {
+  //           title
+  //           creator
+  //           link
+  //           guid
+  //           isoDate
+  //           pubDate
+  //           content
+  //           image
+  //         }
+  //       }
+  //     }
+  //     allFeedStefanSeegererBlog {
+  //       edges {
+  //         node {
+  //           title
+  //           creator
+  //           link
+  //           guid
+  //           isoDate
+  //           pubDate
+  //           content {
+  //             encodedSnippet
+  //           }
+  //         }
+  //       }
+  //     }
+  //     allFeedLarsNeusesserBlog {
+  //       edges {
+  //         node {
+  //           title
+  //           creator
+  //           link
+  //           guid
+  //           isoDate
+  //           pubDate
+  //           content {
+  //             encodedSnippet
+  //           }
+  //         }
+  //       }
+  //     }
+  //     allFeedStefanBlosBlog {
+  //       edges {
+  //         node {
+  //           title
+  //           creator
+  //           link
+  //           guid
+  //           isoDate
+  //           pubDate
+  //           content {
+  //             encodedSnippet
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  React.useLayoutEffect(() => {
-    const all = [
-      ...allFeedPhilschmidBlog.edges,
-      ...allFeedStefanSeegererBlog.edges,
-      ...allFeedLarsNeusesserBlog.edges,
-      ...allFeedStefanBlosBlog.edges,
-    ]
-    const data = all.sort((cur, next) => (cur.node.isoDate >= next.node.isoDate ? -1 : 0))
-    console.log(data)
-    setSorted(data)
-  }, [setSorted])
+  // React.useLayoutEffect(() => {
+  //   const all = [
+  //     ...allFeedPhilschmidBlog.edges,
+  //     ...allFeedStefanSeegererBlog.edges,
+  //     ...allFeedLarsNeusesserBlog.edges,
+  //     ...allFeedStefanBlosBlog.edges,
+  //   ]
+  //   const data = all.sort((cur, next) => (cur.node.isoDate >= next.node.isoDate ? -1 : 0))
+  //   console.log(data)
+  //   setSorted(data)
+  // }, [setSorted])
 
   return (
     <>
       <Seo title="Homepage oseven" description="Wir machen ML und Cloud" keywords="Cloud CC ML" />
       <HeadTextIntro english>News</HeadTextIntro>
-
+      {/* 
       <section>
         <div className="grid grid-cols-2 gap-16">
           {sorted.map(({node}, index) => (
@@ -160,7 +160,7 @@ export default () => {
             // </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

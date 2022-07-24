@@ -5,20 +5,22 @@ import {A} from '.'
 interface Props {
   title: string
   logo: any
+  logoLink?: string
   content: string[]
   technologie: {href: string; text: string}[]
 }
 
-export default ({title, logo: Logo, content, technologie}: Props) => (
-  <div className="shadow-2xl px-8 py-12">
-    <Logo className="h-16 mx-auto" />
+const OfferCard = ({title, logo: Logo, logoLink, content, technologie}: Props) => (
+  <div id={title} className="shadow-2xl px-8 py-12">
+    <A href={logoLink || `#${title}`}>
+      <Logo className="h-16 mx-auto" />
+    </A>
     <h2>{title}</h2>
     {content.map((ctx, index) => (
       <p key={`${title}-${index}-content`} className="text-base leading-6 mb-2">
         {ctx}
       </p>
     ))}
-
     <h3>Technologien</h3>
     <p className="text-base leading-6">
       {technologie.map(({href, text}, index) => (
@@ -29,3 +31,4 @@ export default ({title, logo: Logo, content, technologie}: Props) => (
     </p>
   </div>
 )
+export default OfferCard

@@ -10,3 +10,21 @@ export interface ImageQuery {
     }
   }
 }
+
+export interface ChildImageSharp {
+  childImageSharp: {
+    gatsbyImageData: {
+      backgroundColor: string
+      height: number
+      images: {
+        fallback: {
+          sizes: string
+          src: string
+          srcSet: string
+        }
+      }
+      layout: 'constrained' | 'fixed'
+      width: number
+    }
+  }
+}

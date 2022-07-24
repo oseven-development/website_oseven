@@ -1,9 +1,9 @@
 /** @format */
 
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
-import {useWindowWidth} from '../hooks'
+import { useWindowWidth } from '../hooks'
 import Logo from '../assets/logos/logo.svg'
 import Close from '../assets/svg/close.svg'
 import Menu from '../assets/svg/menu.svg'
@@ -16,7 +16,7 @@ interface Props {
   langsMenu: any
 }
 
-export default ({langKey, navigation, langsMenu}: Props) => {
+const NavigationMobile = ({ langKey, navigation, langsMenu }: Props) => {
   const [toggle, setToggle] = React.useState(false)
   const width = useWindowWidth()
 
@@ -50,16 +50,16 @@ export default ({langKey, navigation, langsMenu}: Props) => {
 
           {/* Navigation */}
           <nav
-            style={{top: 62}}
+            style={{ top: 62 }}
             className={`fixed z-40 bottom-0 right-0 left-0 w-full h-full bg-primary transition transition-all duration-200  
                     ${toggle ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'}
                     `}>
             <ul
-              style={{paddingBottom: 62}}
+              style={{ paddingBottom: 62 }}
               className={`flex flex-col h-full pt-12 text-right transform transition-transform  transition-all duration-200  
                   ${toggle ? 'translate-y-0' : 'translate-y-8'}`}
               onClick={toggleMobileNavigation}>
-              {navigation.map(item => (
+              {navigation.map((item: any) => (
                 <li className="block px-4 py-4" key={item.to}>
                   <Link to={`/${langKey === 'de' ? '' : langKey + '/'}${item.to}`}>{item.label[langKey]}</Link>
                 </li>
@@ -84,3 +84,5 @@ export default ({langKey, navigation, langsMenu}: Props) => {
     </>
   )
 }
+
+export default NavigationMobile

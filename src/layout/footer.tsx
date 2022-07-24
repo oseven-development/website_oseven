@@ -1,14 +1,14 @@
 /** @format */
 
-import {Link} from 'gatsby'
 import React from 'react'
-import {LinkButton} from '../components'
+import { Link } from 'gatsby'
+import { LinkButton } from '../components'
 
 interface Props {
   langKey: string
 }
 
-export default ({langKey}: Props) => (
+const Footer = ({ langKey }: Props) => (
   <footer className="flex flex-col py-12">
     <p className="mx-auto md:w-1/2 text-center p-12 md:text-2xl">
       {langKey === 'de' ? 'Wir freuen uns, mit dir zusammenzuarbeiten.' : 'We love to work with you.'}
@@ -28,3 +28,5 @@ export default ({langKey}: Props) => (
     </div>
   </footer>
 )
+
+export default Footer

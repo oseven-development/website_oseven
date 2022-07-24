@@ -1,6 +1,6 @@
 /** @format */
 
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 import Logo from '../assets/logos/oseven-logo.svg'
 import FlagEnglish from '../assets/svg/flagEnglish.svg'
@@ -12,7 +12,7 @@ interface Props {
   langsMenu: any
 }
 
-export default ({langKey, navigation, langsMenu}: Props) => {
+const NavigationDesktop = ({ langKey, navigation, langsMenu }: Props) => {
   return (
     <header className="hidden lg:flex bg-primary py-6 text-white max-w-screen-lg mx-auto px-4">
       <Link className="" to={`/${langKey === 'de' ? '' : langKey + '/'}`}>
@@ -33,7 +33,7 @@ export default ({langKey, navigation, langsMenu}: Props) => {
       <div className="flex-1"></div>
       <nav>
         <ul className="text-white flex font-thin">
-          {navigation.map(item => (
+          {navigation.map((item: any) => (
             <li className="ml-8 self-center" key={item.to}>
               <Link to={`/${langKey === 'de' ? '' : langKey + '/'}${item.to}`}>{item.label[langKey]}</Link>
             </li>
@@ -43,3 +43,4 @@ export default ({langKey, navigation, langsMenu}: Props) => {
     </header>
   )
 }
+export default NavigationDesktop

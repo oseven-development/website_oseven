@@ -4,7 +4,7 @@ import React from 'react'
 
 function throttle(fn: React.Dispatch<React.SetStateAction<number>>, wait: number) {
   let x: NodeJS.Timeout
-  return function(Width: number) {
+  return function (Width: number) {
     clearTimeout(x)
     x = setTimeout(() => {
       fn(Width)

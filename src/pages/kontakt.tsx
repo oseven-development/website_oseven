@@ -1,9 +1,9 @@
 /** @format */
 
 import React from 'react'
-import {HeadTextIntro, Profile, Seo} from '../components'
+import { HeadTextIntro, Profile, Seo } from '../components'
 
-export default () => {
+const Contact = () => {
   return (
     <>
       <Seo
@@ -19,3 +19,5 @@ export default () => {
     </>
   )
 }
+
+export default Contact

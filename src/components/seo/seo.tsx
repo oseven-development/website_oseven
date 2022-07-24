@@ -34,8 +34,8 @@ const query = graphql`
   }
 `
 
-const seo: FunctionComponent<Props> = ({title, description, keywords, article, image}) => {
-  const {site, file} = useStaticQuery<{site; file: ImageQuery}>(query)
+const Seo: FunctionComponent<Props> = ({title, description, keywords, article, image}) => {
+  const {site, file} = useStaticQuery<{site: any; file: ImageQuery}>(query)
   const {pathname} = useLocation()
 
   const {buildTime} = site
@@ -82,4 +82,4 @@ const seo: FunctionComponent<Props> = ({title, description, keywords, article, i
     </>
   )
 }
-export default seo
+export default Seo
