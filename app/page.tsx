@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Cloud, Server, Shield, Globe2, Zap, Users } from "lucide-react";
 
 export default function LandingPage() {
