@@ -6,7 +6,7 @@ import Section from "@/components/section";
 import { Heading, Paragraph } from "@/components/typography/Typography";
 import Image from "next/image";
 
-import { Cloud, Server, Shield, Globe2, Zap, Users } from "lucide-react";
+import { Cloud } from "lucide-react";
 import ListWithIcons from "@/components/layout/list-with-icons";
 import SimpleCard from "@/components/layout/simple-card";
 import FAQs, { FAQItem } from "@/components/content/faqs";

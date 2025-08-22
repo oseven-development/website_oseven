@@ -58,7 +58,7 @@ const itemVariants = {
   show: { opacity: 1, x: 0 },
 };
 
-export default function ListWithIcons({}: {}) {
+export default function ListWithIcons() {
   return (
     <motion.ol
       variants={containerVariants}

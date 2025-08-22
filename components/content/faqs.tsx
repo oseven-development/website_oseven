@@ -3,7 +3,7 @@ import { PropsWithChildren, ReactNode } from "react";
 import { Heading, Paragraph } from "../typography/Typography";
 
 // Main container component
-export default function FAQs({ children }: PropsWithChildren<{}>) {
+export default function FAQs({ children }: PropsWithChildren) {
   return (
     <div className="space-y-4">
       <div className="text-center mb-16">

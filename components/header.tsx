@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { maxWidthCenter } from "@/static";
 import { useState } from "react";
-import { Heading } from "./typography/Typography";
 
 const menuItems = [
   {
@@ -144,7 +143,7 @@ export default function Header() {
         <Link
           className="font-medium hover:text-secondary"
           href="/kontakt"
-          onMouseEnter={() => setActiveSubmenu(null)}
+          onMouseEnter={() => setActiveSubmenu("")}
         >
           Kontakt
         </Link>

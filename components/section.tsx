@@ -1,6 +1,6 @@
 import { maxWidthCenter, paddingsGlobal, sectionMargins } from "@/static";
 
-export default ({
+const Section = ({
   children,
   className,
   id,
@@ -18,3 +18,5 @@ export default ({
     </section>
   );
 };
+
+export default Section;
