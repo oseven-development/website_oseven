@@ -18,6 +18,7 @@ export function HeroSection({
   const getChildByDisplayName = (displayName: string) => {
     const child = React.Children.map(children, (child) => {
       // you can access displayName property by child.type.displayName
+      // @ts-expect-error type displayName exist
       if (child?.type.displayName === displayName) return child;
       return null;
     });
