@@ -4,70 +4,9 @@ import Image from "next/image";
 import { maxWidthCenter } from "@/static";
 import { useState } from "react";
 import { ContactRoundIcon } from "lucide-react";
+import navigation from "@/navigation";
 
-const menuItems = [
-  {
-    name: "Services",
-    href: "/services",
-    submenu: [
-      {
-        title: "Audit",
-        links: [
-          { name: "Cloud Audit", href: "/services/audit/cloud-audit" },
-          { name: "Cost-Review", href: "/services/audit/cloud-audit" },
-          { name: "CICD-Review", href: "/services/audit/cloud-audit" },
-          // { name: "Cost-Review", href: "/services/audit/cost-review" },
-          // { name: "CICD-Review", href: "/services/audit/cicd-review" },
-        ],
-      },
-      {
-        title: "Cloud Services",
-        links: [
-          { name: "Cloud Beratung", href: "/" },
-          { name: "DevOps", href: "/" },
-          { name: "Kubernetes", href: "/" },
-          {
-            name: "Cloud Native Entwicklung",
-            href: "/",
-          },
-          // { name: "Cloud Beratung", href: "/services/cloud/cloud-beratung" },
-          // { name: "DevOps", href: "/services/cloud/devops" },
-          // { name: "Kubernetes", href: "/services/cloud/kubernetes" },
-          // {
-          //   name: "Cloud Native Entwicklung",
-          //   href: "/services/cloud-native-entwicklung",
-          // },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Projekte",
-    href: "/projekte",
-  },
-  {
-    name: "Ressourcen",
-    href: "/ressourcen",
-    submenu: [
-      {
-        title: "Ressourcen",
-        links: [
-          { name: "Blog", href: "/blog" },
-          { name: "Case Studies", href: "/case-studies" },
-          { name: "Whitepapers", href: "/whitepapers" },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Jobs",
-    href: "/jobs",
-  },
-  {
-    name: "Über Uns",
-    href: "/about-us",
-  },
-];
+const menuItems = navigation;
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -218,9 +157,9 @@ function MegaMenuBar({
     >
       <div className={`${maxWidthCenter} p-4 grid grid-cols-4`}>
         {items.map((item) => (
-          <div key={item.title} className="space-y-2">
+          <div key={item.name} className="space-y-2">
             <span className="text-gray-500 text-small border-b border-gray-200 mb-2">
-              {item.title}
+              {item.name}
             </span>
             {item.links.map((link) => (
               <Link
@@ -266,11 +205,11 @@ function MenuBarMobile({
                 <span className="text-xl font-bold">{item.name}</span>
                 {item.submenu.map((subItem) => (
                   <div
-                    key={`mega-menu-mobile-${item.name}-${subItem.title}`}
+                    key={`mega-menu-mobile-${item.name}-${subItem.name}`}
                     className="pt-2"
                   >
                     <span className="text-lg border-b border-gray-200">
-                      {subItem.title}
+                      {subItem.name}
                     </span>
 
                     {subItem.links.map((link) => (

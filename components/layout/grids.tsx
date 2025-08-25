@@ -10,11 +10,17 @@ const style = {
 export default function SimpleGrid({
   cols,
   children,
+  className,
 }: {
   cols: 1 | 2 | 3 | 4 | 5 | 6;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
-    <div className={`grid grid-cols-1 ${style[cols]} gap-6`}>{children}</div>
+    <div
+      className={`grid grid-cols-1 ${style[cols]} gap-1 md:gap-6 ${className}`}
+    >
+      {children}
+    </div>
   );
 }

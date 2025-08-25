@@ -10,7 +10,7 @@ export default function YourContact() {
         <Heading level={1}>Dein Kontakt</Heading>
       </div>
       <SimpleGrid cols={2}>
-        <div className="flex justify-end pr-16">
+        <div className="flex justify-center md:justify-end pr-16">
           <Image
             src={"/mh-small.png"}
             alt={"Max Hänsel"}
