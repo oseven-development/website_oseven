@@ -35,7 +35,7 @@ export default function Page() {
               transition={{ duration: 0.3, delay: index * 0.2 }}
             >
               <SimpleGrid cols={3} className="mb-8 pb-4 border-b">
-                <div className="col-span-1 pt-4 md:border-none border-b">
+                <div className="col-span-1 pt-4 ">
                   {new Date(data.duration.start).toLocaleDateString("de-DE", {
                     year: "numeric",
                     month: "long",
@@ -50,7 +50,7 @@ export default function Page() {
                     <span className="text-gray-400">laufend</span>
                   )}
                 </div>
-                <div className="col-span-2 pt-4 md:border-none border-b">
+                <div className="col-span-2 pt-4 ">
                   <Link
                     className="hover:text-secondary"
                     href={`/projekte/${key}`}
