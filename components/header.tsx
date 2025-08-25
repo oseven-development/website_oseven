@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { maxWidthCenter } from "@/static";
 import { useState } from "react";
+import { ContactRoundIcon } from "lucide-react";
 
 const menuItems = [
   {
@@ -49,7 +50,7 @@ const menuItems = [
     href: "/ressourcen",
     submenu: [
       {
-        title: "Audit",
+        title: "Ressourcen",
         links: [
           { name: "Blog", href: "/blog" },
           { name: "Case Studies", href: "/case-studies" },
@@ -69,6 +70,7 @@ const menuItems = [
 ];
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string>("");
 
   const subMenus = menuItems
@@ -140,13 +142,55 @@ export default function Header() {
           )}
         </div>
         <div className="flex-1"></div>
+
         <Link
           className="font-medium hover:text-secondary"
           href="/kontakt"
           onMouseEnter={() => setActiveSubmenu("")}
         >
-          Kontakt
+          <div className="flex items-center gap-2">
+            <ContactRoundIcon />
+            <span className="hidden md:block"> Kontakt</span>
+          </div>
         </Link>
+        <button
+          className="text-white navbarOpen z-50 flex h-10 w-10  flex-col items-center justify-center space-y-[6px] font-bold md:hidden"
+          aria-label="navbarOpen"
+          name="navbarOpen"
+          onClick={() => setMobileMenuOpen((s) => !s)}
+        >
+          {mobileMenuOpen ? (
+            <>
+              <span
+                className={`block h-[2px] w-7 transform bg-white transition-all duration-300 ease-in-out ${
+                  mobileMenuOpen ? "translate-y-[8px] rotate-45" : ""
+                }`}
+              ></span>
+              <span
+                className={`block h-[2px] w-7 bg-white transition-all duration-300 ease-in-out ${
+                  mobileMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`block h-[2px] w-7 transform bg-white transition-all duration-300 ease-in-out ${
+                  mobileMenuOpen ? "-translate-y-[8px] -rotate-45" : ""
+                }`}
+              ></span>
+            </>
+          ) : (
+            <>
+              <span className="block h-[2px] w-7 bg-white transition-all duration-300 ease-in-out"></span>
+              <span className="block h-[2px] w-7 bg-white transition-all duration-300 ease-in-out"></span>
+              <span className="block h-[2px] w-7 bg-white transition-all duration-300 ease-in-out"></span>
+            </>
+          )}
+        </button>
+
+        <MenuBarMobile
+          key={"test"}
+          activeSubmenu={mobileMenuOpen}
+          setActiveSubmenu={setMobileMenuOpen}
+        />
       </nav>
     </header>
   );
@@ -188,6 +232,70 @@ function MegaMenuBar({
                 {link.name}
               </Link>
             ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MenuBarMobile({
+  activeSubmenu,
+  setActiveSubmenu,
+}: {
+  activeSubmenu: boolean;
+  setActiveSubmenu: (b: boolean) => void;
+}) {
+  return (
+    <div
+      onMouseLeave={() => setActiveSubmenu(false)}
+      onClick={() => setActiveSubmenu(false)}
+      id={`mega-menu-mobile`}
+      className={`md:hidden z-20 absolute left-0 top-16 w-full bg-white text-black transition-opacity duration-300 ease-in-out ${
+        activeSubmenu ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div className={`p-4 flex flex-col text-center`}>
+        {menuItems.map((item) => (
+          <div
+            key={`mega-menu-mobile-${item.name}`}
+            className="space-y-2 w-full border-b border-gray-300 py-4"
+          >
+            {item.submenu ? (
+              <div className="flex flex-col space-y-1">
+                <span className="text-xl font-bold">{item.name}</span>
+                {item.submenu.map((subItem) => (
+                  <div
+                    key={`mega-menu-mobile-${item.name}-${subItem.title}`}
+                    className="pt-2"
+                  >
+                    <span className="text-lg border-b border-gray-200">
+                      {subItem.title}
+                    </span>
+
+                    {subItem.links.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="block hover:text-secondary"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <span className="text-xl font-bold">
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block hover:text-secondary"
+                >
+                  {item.name}
+                </Link>
+              </span>
+            )}
           </div>
         ))}
       </div>

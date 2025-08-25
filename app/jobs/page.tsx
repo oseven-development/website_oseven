@@ -6,12 +6,12 @@ import YourContact from "@/components/content/your-contact";
 export default function Page() {
   return (
     <>
-      <HeroSection title={"Über uns"}>
+      <HeroSection title={"Karriere"}>
         <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
-          Erfahren Sie mehr über unser Unternehmen, unsere Geschichte und unser
-          Team. Wir entwickeln mit Leidenschaft innovative Lösungen und
-          engagieren uns für den Erfolg unserer Kunden. Entdecken Sie, was uns
-          antreibt.
+          Werden Sie Teil unseres Teams und gestalten Sie die Zukunft mit uns.
+          Wir suchen talentierte und motivierte Menschen, die unsere
+          Leidenschaft für Technologie und Innovation teilen. Entdecken Sie
+          unsere offenen Stellen.
         </Paragraph>
       </HeroSection>
 
