@@ -1,7 +1,7 @@
 "use client";
 import CallToAction from "../layout/call-to-action-button";
 import SimpleGrid from "../layout/grids";
-import { Heading, Paragraph } from "../typography/Typography";
+import { Heading, Paragraph } from "@/components";
 import Image from "next/image";
 import { motion } from "motion/react";
 

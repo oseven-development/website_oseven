@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function MetaInfoProject({ data }: { data: Project }) {
   return (
-    <div suppressHydrationWarning className="text-white text-right">
+    <div suppressHydrationWarning className="text-white lg:text-right">
       <motion.div
         suppressHydrationWarning
         initial={{ x: 50, opacity: 0, filter: "blur(5px)" }}

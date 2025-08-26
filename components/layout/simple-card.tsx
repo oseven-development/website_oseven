@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from "@/components/typography/Typography";
+import { Heading, Paragraph } from "@/components/";
 import Image from "next/image";
 
 interface SimpleCardProps {

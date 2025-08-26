@@ -1,9 +1,9 @@
 import ImageWith4Elements from "@/components/content/image-with-4-elements";
 import Steps from "@/components/content/steps";
-import { HeroSection } from "@/components/hero-section";
+import { HeroSection, LeftItem } from "@/components/hero-section";
 import SimpleGrid from "@/components/layout/grids";
 import Section from "@/components/section";
-import { Heading, Paragraph } from "@/components/typography/Typography";
+import { Heading, Paragraph } from "@/components/";
 import Image from "next/image";
 
 import { Cloud } from "lucide-react";
@@ -15,12 +15,14 @@ export default function Page() {
   return (
     <>
       <HeroSection title={"Cloud Audit"}>
-        <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
-          Maximale Sicherheit, Transparenz und Effizienz für Ihre
-          Cloud-Infrastruktur. Wir identifizieren Risiken, optimieren Kosten und
-          stellen Compliance sicher – damit Sie sich auf Ihr Kerngeschäft
-          konzentrieren können.
-        </Paragraph>
+        <LeftItem>
+          <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
+            Maximale Sicherheit, Transparenz und Effizienz für Ihre
+            Cloud-Infrastruktur. Wir identifizieren Risiken, optimieren Kosten
+            und stellen Compliance sicher – damit Sie sich auf Ihr Kerngeschäft
+            konzentrieren können.
+          </Paragraph>
+        </LeftItem>
       </HeroSection>
 
       <Section className="bg-gray-100">

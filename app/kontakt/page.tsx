@@ -1,14 +1,16 @@
-import { HeroSection } from "@/components/hero-section";
+import { HeroSection, LeftItem } from "@/components/hero-section";
 import Section from "@/components/section";
-import { Paragraph } from "@/components/typography/Typography";
+import { Paragraph } from "@/components/";
 export default function Page() {
   return (
     <>
       <HeroSection title={"Buchen Sie ein Gespräch"}>
-        <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
-          Wir freuen uns darauf, von Ihnen zu hören und gemeinsam an Ihren
-          Projekten zu arbeiten.
-        </Paragraph>
+        <LeftItem>
+          <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
+            Wir freuen uns darauf, von Ihnen zu hören und gemeinsam an Ihren
+            Projekten zu arbeiten.
+          </Paragraph>
+        </LeftItem>
       </HeroSection>
       <Section className={"bg-gradient-to-b from-white to-gray-300"}>
         {/* <!-- Calendly inline widget begin --> */}

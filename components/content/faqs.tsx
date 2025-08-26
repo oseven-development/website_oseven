@@ -1,6 +1,6 @@
 "use client";
 import { PropsWithChildren, ReactNode } from "react";
-import { Heading, Paragraph } from "../typography/Typography";
+import { Heading, Paragraph } from "@/components";
 
 // Main container component
 export default function FAQs({ children }: PropsWithChildren) {

@@ -13,10 +13,14 @@ function RandomLow() {
   return Math.random() * 0.9 + 0.1;
 }
 
-export default function TechBubbles({ data }: { data: Project }) {
+export default function TechBubbles({
+  technology,
+}: {
+  technology: Project["technology"];
+}) {
   return (
     <div className="flex flex-wrap justify-center gap-3 mt-8">
-      {data.technology.map((tech, index) => (
+      {technology.map((tech, index) => (
         <motion.div
           suppressHydrationWarning
           key={tech}

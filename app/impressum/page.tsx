@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Paragraph } from "../../components/typography/Typography";
+import { Heading, Paragraph } from "@/components/";
 import Section from "@/components/section";
 import { maxWidthCenter } from "@/static";
 

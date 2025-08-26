@@ -1,6 +1,6 @@
 "use client";
 
-import { Heading, Paragraph } from "../typography/Typography";
+import { Heading, Paragraph } from "@/components";
 import Image from "next/image";
 import { motion } from "motion/react";
 

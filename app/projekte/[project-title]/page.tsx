@@ -1,12 +1,12 @@
 import { LeftItem, RightItem, HeroSection } from "@/components/hero-section";
 import Section from "@/components/section";
-import { Heading, Paragraph } from "@/components/typography/Typography";
+import { Heading, Paragraph } from "@/components/";
 import YourContact from "@/components/content/your-contact";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import SimpleGrid from "@/components/layout/grids";
 import type { Metadata } from "next";
 import { projects } from "@/projects";
-
+import {} from "next/navigation";
 import Comp from "./metainfo-header";
 import TechBubbles from "./tech-bubble";
 
@@ -17,9 +17,8 @@ export default async function Page({
 }) {
   const { "project-title": title } = await params;
 
-  if (!(title in projects)) {
-    redirect("/projekte");
-  }
+  if (!(title in projects)) notFound();
+
   const data = projects[title];
   return (
     <>
@@ -76,7 +75,7 @@ export default async function Page({
         <div className="text-center text-white">
           <Heading level={2}>Eingesetzte Technologien</Heading>
         </div>
-        <TechBubbles data={data} />
+        <TechBubbles technology={data.technology} />
       </Section>
 
       <Section className="bg-gray-100">

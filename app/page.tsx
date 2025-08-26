@@ -1,17 +1,19 @@
 import YourContact from "@/components/content/your-contact";
-import { HeroSection } from "@/components/hero-section";
+import { HeroSection, LeftItem } from "@/components/hero-section";
 import Section from "@/components/section";
-import { Paragraph } from "@/components/typography/Typography";
+import { Paragraph } from "@/components/";
 import { Cloud, Server, Shield, Globe2, Zap, Users } from "lucide-react";
 
 export default function Page() {
   return (
     <>
       <HeroSection title={" Dein Partner für Exzellenz in Deiner Cloud."}>
-        <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
-          Effiziente Cloud-Lösungen aus Nürnberg – mit Best Practices statt
-          kompliziertem Customizing.
-        </Paragraph>
+        <LeftItem>
+          <Paragraph size="lg" className="leading-8 text-gray-300 max-w-3xl">
+            Effiziente Cloud-Lösungen aus Nürnberg – mit Best Practices statt
+            kompliziertem Customizing.
+          </Paragraph>
+        </LeftItem>
       </HeroSection>
 
       <OfferSection />

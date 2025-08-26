@@ -1,5 +1,5 @@
 import CallToAction from "../layout/call-to-action-button";
-import { Heading, Paragraph } from "../typography/Typography";
+import { Heading, Paragraph } from "@/components";
 import Image from "next/image";
 
 interface StepProps {
