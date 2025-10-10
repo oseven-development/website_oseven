@@ -1,0 +1,120 @@
+Azure Betriebsleitfaden für den Mittelstand
+Einleitung
+Dieser Leitfaden beschreibt, wie oseven den Betrieb von Microsoft Azure für mittelständische Unternehmen strukturiert, absichert und transparent gestaltet.
+Ziel ist ein stabiler, revisionssicherer Cloud-Betrieb mit klaren Verantwortlichkeiten, geregelten Prozessen und modularen Erweiterungsmöglichkeiten.
+Der Leitfaden richtet sich an Unternehmen, die:
+ihren Azure-Tenant professionell betreiben lassen möchten,
+Governance, Sicherheit und Kostenkontrolle vereinheitlichen wollen,
+oder bestehende Umgebungen durch oseven managen und optimieren lassen möchten.
+Ebene 1 – Strategische Grundlage
+1. Zielbild
+Ein professioneller Azure-Betrieb im Mittelstand basiert auf fünf Säulen:
+Betriebsmodell – klare Zuständigkeiten zwischen Kunde, oseven und Microsoft
+Security – Zero-Trust-Prinzip, Identitäts- und Zugriffskontrolle
+Kostenmanagement – Transparenz, Budgetierung und FinOps-Steuerung
+Prozesse – strukturierte Abläufe für Monitoring, Change und Incident Management
+Governance – technische und organisatorische Leitplanken für Compliance und Wachstum
+Das Ziel ist ein kontrollierter, nachvollziehbarer und sicherer Azure-Betrieb, der sowohl Cloud-als auch On-Prem-Ressourcen integriert und die Grundlage für Digitalisierung und Innovation bildet.
+2. Betriebsmodell
+
+Modell
+Beschreibung
+Managed (Full Control)
+oseven übernimmt den vollständigen Betrieb: Verwaltung, Sicherheit, Monitoring, Kostenkontrolle und Reporting.
+Unmanaged (Governed)
+Der Tenant bleibt beim Kunden; oseven führt Betrieb und Überwachung im Rahmen definierter Zugriffsrechte und Governance-Vorgaben durch.
+
+
+Kernprinzipien des Betriebsmodells:
+Shared Responsibility Model: Microsoft sichert die Cloud-Infrastruktur; Kunde und oseven verantworten die konkrete Nutzung (Identitäten, Daten, Zugriffe).
+Automatisierung & DevOps-Kultur: Provisionierung, Patches und Deployments erfolgen Infrastructure-as-Code-basiert.
+Cloud Center of Excellence: Ein kleines Cloud-Team definiert Regeln, Best Practices und Governance für alle Azure-Workloads.
+Hybrid-Integration: Identitäten (Azure Entra ID / AD Connect) und Netzwerke (VPN, ExpressRoute) binden On-Premises-Systeme ein.
+3. Governance & Sicherheit
+Die beiden Grundprinzipien jedes Betriebsmodells lauten:
+🗄️Kontrollieren Sie Storage
+Einheitliche Storage-Architektur und Lifecycle-Management
+Klassifizierung nach Sensitivität und Region
+Automatisierte Backups, Aufbewahrungsfristen und Wiederherstellungstests
+Schutz vor unbefugtem Zugriff durch rollenbasiertes Berechtigungsmodell (RBAC)
+🔒 Schützen Sie die Cloud
+Aktive Sicherheitsüberwachung über Microsoft Defender for Cloud
+Identity & Access Governance (Entra ID, MFA, Conditional Access)
+Richtlinien für Netzwerkisolation, Private Endpoints und Firewalls
+Regelmäßige Security Reviews und Audit-Protokolle
+Diese beiden Prinzipien bilden das Fundament jeder Azure-Governance-Struktur – sie sind Kernbestandteil des oseven-Betriebsrahmens.
+Ebene 2 – Operativer Betrieb
+4. Rollen & Verantwortlichkeiten
+
+Rolle
+Aufgaben
+Kunde
+Strategische Entscheidungen, Budgetfreigaben, Priorisierung
+oseven Operations Team
+Laufender Betrieb, Monitoring, Backup, Deployments, Security, FinOps
+
+
+Microsoft Support (3rd Level)
+
+
+Hersteller-Support bei Plattform-Vorfällen
+
+5. Betriebs- und Supportprozesse
+5.1 Change-Management
+Änderungen erfolgen ausschließlich dokumentiert und versioniert.
+Infrastructure-as-Code (Bicep, Terraform, GitHub Actions) stellt Nachvollziehbarkeit sicher.
+Änderungen an produktiven Ressourcen werden über Staging Umgebungen getestet und freigegeben.
+
+5.2 Incident-Management & Eskalationsstufen
+oseven Service Desk (1st Level)
+Lead Engineer / Cloud Architect (2nd Level)
+Microsoft Support (3rd Level)
+Alle Tickets werden transparent dokumentiert – inklusive Eskalationszeiten und Kommunikationsverlauf.
+5.3 Monitoring & Betrieb
+24/7-Überwachung produktiver Ressourcen (Azure Monitor, Log Analytics)
+Frühwarnsysteme für Kosten, Performance und Sicherheit
+Monatliche Betriebsberichte inkl. Verfügbarkeit, Auslastung und Optimierungsempfehlungen
+Regelmäßige Backup- und Restore-Tests über Azure Backup und Site Recovery
+5.4 Kostenmanagement (FinOps)
+Monatliches Reporting und Forecast über Azure Cost Management + Billing
+Budgets, Alerts und Tagging-Regeln pro Kostenstelle oder Projekt
+Nutzung von Azure Advisor-Empfehlungen für Right-Sizing und Stilllegung ungenutzter Ressourcen
+Reservierungen / Savings Plans für dauerhafte Workloads
+Azure Hybrid Benefit zur Lizenzkosten-Reduktion
+Automatisierte Shutdown-Prozesse für Nicht-Produktivsysteme
+Etablierung einer kontinuierlichen FinOps-Rolle zur Budgetsteuerung
+
+Ebene 3 – Modularer Aufbau & Weiterentwicklung
+6. Erweiterungsbausteine
+
+Modul
+Beschreibung
+Microsoft 365-Integration
+Einheitliche Identitäten und Rechteverwaltung über Entra ID; Single Sign-On für Cloud und lokale Dienste.
+Managed Kubernetes (AKS)
+Betrieb und Überwachung von Container-Workloads inkl. Patch Management, CI/CD Integration und Auto-Scaling.
+Geo-Backup & Disaster Recovery
+Regionale Redundanz, Notfallpläne und regelmäßige Wiederherstellungstests über Azure Site Recovery.
+App-Management
+Überwachung und Lifecycle-Management individueller Anwendungen, inkl. Health-Checks und Deployment-Automatisierung.
+Compliance & Audit
+Nutzung von Azure Policy und Blueprints zur Abbildung von DSGVO, ISO 27001 oder BSI Grundschutz.
+Hybrid Operations (Arc)
+Einbindung von On-Prem und Multi-Cloud-Ressourcen in Azure Governance und Monitoring.
+
+
+Ebene 4 – Governance & Review
+7. Governance & Operations
+Der Betrieb wird regelmäßig überprüft und weiterentwickelt.
+Ziel ist eine kontinuierliche Verbesserung („Continual Service Improvement“) nach ITIL und Azure Best Practices.
+Review-Inhalte:
+Sicherheitslage (Secure Score, Defender Reports)
+Kostenentwicklung und Einsparpotenziale
+Prozess- und Incident-KPIs
+Offene Risiken und Verbesserungsmaßnahmen
+Anpassung von Policies und Governance-Strukturen
+Fazit & Kontakt
+Ein professionell strukturierter Azure-Betrieb sorgt für Sicherheit, Transparenz und Kostenkontrolle.
+Mit dem oseven-Betriebsleitfaden verfügen mittelständische Unternehmen über ein umsetzbares Rahmenwerk, das sich direkt in bestehende IT-Strukturen integrieren lässt – vom initialen Aufbau bis zur fortlaufenden Optimierung.
+Kontaktieren Sie uns, wenn Sie Ihre Azure-Umgebung nach diesem Leitfaden bewerten oder professionalisieren möchten.
+oseven GmbH – Azure Governance & Operations für den Mittelstand
