@@ -58,7 +58,11 @@ const itemVariants = {
   show: { opacity: 1, x: 0 },
 };
 
-export default function ListWithIcons() {
+export default function ListWithIcons({
+  elements,
+}: {
+  elements?: { h: string; p: string }[];
+}) {
   return (
     <motion.ol
       variants={containerVariants}
@@ -66,7 +70,7 @@ export default function ListWithIcons() {
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {ele.map((item, i) => (
+      {(elements || ele).map((item, i) => (
         <motion.li key={i} variants={itemVariants} className="flex items-start">
           <Image
             src="/file.svg"

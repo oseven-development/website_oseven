@@ -16,13 +16,13 @@ const navigation = [
       {
         name: "Cloud Services",
         links: [
-          { name: "Cloud Beratung", href: "/" },
-          { name: "DevOps", href: "/" },
-          { name: "Kubernetes", href: "/" },
-          {
-            name: "Cloud Native Entwicklung",
-            href: "/",
-          },
+          // { name: "Cloud Beratung", href: "/" },
+          // { name: "DevOps", href: "/" },
+          { name: "Azure Operations", href: "/services/cloud/azure-ops" },
+          // {
+          //   name: "Cloud Native Entwicklung",
+          //   href: "/",
+          // },
           // { name: "Cloud Beratung", href: "/services/cloud/cloud-beratung" },
           // { name: "DevOps", href: "/services/cloud/devops" },
           // { name: "Kubernetes", href: "/services/cloud/kubernetes" },
