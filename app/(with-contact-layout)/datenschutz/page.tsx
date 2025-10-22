@@ -5,7 +5,7 @@ import Section from "@/components/section";
 
 export default function Page() {
   return (
-    <Section className={"bg-gradient-to-b from-white to-gray-300"}>
+    <Section be="dark">
       <div className={`${maxWidthCenter} px-4 md:px-6`}>
         <Heading level={1}>Datenschutzerklärung</Heading>
         <Heading level={2}>Datenschutz</Heading>

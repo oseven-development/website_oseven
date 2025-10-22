@@ -2,6 +2,7 @@
 import { Heading, Paragraph } from "@/components/";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { JSX } from "react/jsx-dev-runtime";
 
 interface SimpleCardProps {
   imageSrc?: string;
@@ -11,6 +12,7 @@ interface SimpleCardProps {
   heading: string;
   paragraph: string;
   style?: "dark" | "light";
+  icon?: JSX.Element;
 }
 
 const itemVariants = {
@@ -25,6 +27,7 @@ export default function SimpleCard({
   paragraph,
   imgWidth,
   imgHeight,
+  icon,
   style = "light",
 }: SimpleCardProps) {
   return (
@@ -35,6 +38,18 @@ export default function SimpleCard({
         style === "dark" ? "border border-secondary" : ""
       }`}
     >
+      {icon && (
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 1 }}
+          className="mb-4"
+          transition={{ type: "tween", duration: 1.5, ease: "easeOut" }}
+        >
+          {icon}
+        </motion.div>
+      )}
       {imageSrc && imageAlt && (
         <motion.div
           variants={itemVariants}

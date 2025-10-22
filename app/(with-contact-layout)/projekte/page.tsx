@@ -2,7 +2,6 @@
 import { HeroSection, LeftItem } from "@/components/hero-section";
 import Section from "@/components/section";
 import { Heading, Paragraph } from "@/components/";
-import YourContact from "@/components/content/your-contact";
 
 import Link from "next/link";
 import SimpleGrid from "@/components/layout/grids";
@@ -86,10 +85,6 @@ export default function Page() {
           Unsere Technologie im Überblick
         </Heading>
         <TechBubbles technology={[...p]} />
-      </Section>
-
-      <Section be="light">
-        <YourContact></YourContact>
       </Section>
     </>
   );

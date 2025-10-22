@@ -10,7 +10,6 @@ import { Cloud } from "lucide-react";
 import ListWithIcons from "@/components/layout/list-with-icons";
 import SimpleCard from "@/components/layout/simple-card";
 import FAQs, { FAQItem } from "@/components/content/faqs";
-import YourContact from "@/components/content/your-contact";
 export default function Page() {
   return (
     <>
@@ -226,10 +225,6 @@ export default function Page() {
             Multi-Cloud-Szenarien.
           </FAQItem>
         </FAQs>
-      </Section>
-
-      <Section be="light">
-        <YourContact />
       </Section>
     </>
   );

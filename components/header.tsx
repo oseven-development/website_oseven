@@ -149,11 +149,11 @@ function MegaMenuBar({
   return (
     <div
       id={`mega-menu-${menuType.toLowerCase()}`}
-      className={`z-20 absolute left-0 top-16 w-full bg-white text-black transition-opacity duration-300 ease-in-out ${
+      className={`z-20 absolute left-0 top-16 w-full bg-white text-black shadow-lg transition-opacity duration-300 ease-in-out ${
         menuType === activeSubmenu
           ? "opacity-100"
           : "opacity-0 pointer-events-none"
-      }`}
+      } `}
     >
       <div className={`${maxWidthCenter} p-4 grid grid-cols-4`}>
         {items.map((item) => (

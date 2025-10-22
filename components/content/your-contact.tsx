@@ -12,16 +12,16 @@ export default function YourContact() {
       <SimpleGrid cols={2}>
         <div className="flex justify-center md:justify-end md:pr-16">
           <Image
-            src={"/mh-small.png"}
-            alt={"Max Hänsel"}
+            src={"/ah-small.png"}
+            alt={"Alexandra"}
             width={160}
             height={160}
-            className="w-60 h-60 rounded-full border-2 border-gray-200 shadow-lg object-cover"
+            className="w-60 h-60 rounded-full border-4 border-gray-200 shadow-lg object-cover"
           />
         </div>
         <div className="text-center md:text-left">
-          <Heading level={2}>Max Hänsel</Heading>
-          <Heading level={3}>Experte für Cloud und Governance</Heading>
+          <Heading level={2}>Alexandra</Heading>
+          <Heading level={3}>Sales-Expertin für Cloud und Governance</Heading>
           <Paragraph>
             Vereinbare jetzt ein kostenloses und unverbindliches Erstgespräch!
           </Paragraph>

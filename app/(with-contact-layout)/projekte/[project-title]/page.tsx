@@ -1,12 +1,10 @@
 import { LeftItem, RightItem, HeroSection } from "@/components/hero-section";
 import Section from "@/components/section";
 import { Heading, Paragraph } from "@/components/";
-import YourContact from "@/components/content/your-contact";
 import { notFound } from "next/navigation";
 import SimpleGrid from "@/components/layout/grids";
 import type { Metadata } from "next";
 import { projects } from "@/projects";
-import {} from "next/navigation";
 import Comp from "./metainfo-header";
 import TechBubbles from "./tech-bubble";
 
@@ -76,10 +74,6 @@ export default async function Page({
           <Heading level={2}>Eingesetzte Technologien</Heading>
         </div>
         <TechBubbles technology={data.technology} />
-      </Section>
-
-      <Section be="light">
-        <YourContact></YourContact>
       </Section>
     </>
   );

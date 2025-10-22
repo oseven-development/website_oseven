@@ -3,13 +3,14 @@ import SimpleCard from "@/components/layout/simple-card";
 import Section from "@/components/section";
 import { Heading, Paragraph } from "@/components";
 import Steps from "@/components/content/steps";
-import { HeroSection, LeftItem } from "@/components/hero-section";
-import YourContact from "@/components/content/your-contact";
+import { HeroSection, LeftItem, RightItem } from "@/components/hero-section";
 import React from "react";
 import Image from "next/image";
 import ListWithIcons from "@/components/layout/list-with-icons";
 import FAQs, { FAQItem } from "@/components/content/faqs";
-import { Metadata } from "next";
+import HubSpotDownloadCard from "@/components/content/hubspot-download-card";
+import buildMetaData from "@/lib/meta-data-builder";
+
 const pillars = [
   {
     headline: "Betriebsmodell",
@@ -66,31 +67,55 @@ const modules = [
     title: "Microsoft 365-Integration",
     description:
       "Einheitliche Identitäten, Single Sign-On und zentrale Rechteverwaltung über Entra ID.",
+    image: {
+      src: "/azure/microsoft-365.png",
+      alt: "Microsoft 365-Integration",
+    },
   },
   {
     title: "Managed Kubernetes (AKS)",
     description:
       "Betrieb von Container-Workloads mit Patch-Management, CI/CD-Integration und Auto-Scaling.",
+    image: {
+      src: "/azure/aks.jpg",
+      alt: "Managed Kubernetes (AKS)",
+    },
   },
   {
     title: "Geo-Backup & Disaster Recovery",
     description:
       "Regionale Redundanz, Notfallpläne und regelmäßige Wiederherstellungstests mit Azure Site Recovery.",
+    image: {
+      src: "/azure/azure-backup.jpg",
+      alt: "Geo-Backup & Disaster Recovery",
+    },
   },
   {
     title: "App-Management",
     description:
       "Lifecycle-Management individueller Anwendungen inklusive Health-Checks und Deployment-Automatisierung.",
+    image: {
+      src: "/azure/app-management.jpg",
+      alt: "App-Management",
+    },
   },
   {
     title: "Compliance & Audit",
     description:
       "Azure Policy und Blueprints zur Abbildung von DSGVO, ISO 27001 oder BSI Grundschutz.",
+    image: {
+      src: "/azure/audit.jpg",
+      alt: "Compliance & Audit",
+    },
   },
   {
     title: "Hybrid Operations (Arc)",
     description:
       "Einbindung von On-Prem- und Multi-Cloud-Ressourcen in Governance und Monitoring.",
+    image: {
+      src: "/azure/arc.jpg",
+      alt: "Hybrid Operations (Arc)",
+    },
   },
 ];
 
@@ -102,7 +127,7 @@ const reviewPoints = [
   { h: "", p: "Anpassung von Policies und Governance-Strukturen" },
 ];
 
-export const metadata: Metadata = {
+export const metadata = buildMetaData({
   title: "Azure Betrieb Analyse",
   description: "Analyse und Optimierung Ihres Azure-Betriebs",
   keywords: [
@@ -116,18 +141,13 @@ export const metadata: Metadata = {
     "Cloud Sicherheit",
     "FinOps",
     "Cloud Monitoring",
-  ].join(", "),
-  openGraph: {
-    title: "Azure Betrieb Analyse",
-    description:
-      "Analyse und Optimierung Ihres Azure-Betriebs durch zertifizierte Experten.",
-    url: "/services/azure/azure-betrieb-analyse",
-    images: "/og-images/azure-betrieb-analyse.jpg",
-    siteName: "azure-betrieb-analyse",
-    locale: "de_DE",
-    type: "website",
+  ],
+  image: {
+    src: "/og-images/azure-betrieb-analyse.jpg",
+    alt: "Azure Betrieb Analyse",
   },
-};
+  url: "/services/azure/azure-betrieb-analyse",
+});
 
 export default function Page() {
   return (
@@ -147,6 +167,16 @@ export default function Page() {
             lassen wollen.
           </Paragraph>
         </LeftItem>
+        <RightItem>
+          <div className="flex flex-col items-center lg:items-end justify-center h-full">
+            <HubSpotDownloadCard
+              title="Azure Betrieb Analyse"
+              description="Laden Sie den Azure Betriebsleitfaden herunter und optimieren Sie Ihren Cloud-Betrieb."
+              cta="https://eu1.hubs.ly/H0p2FY40"
+              imageSrc="/og-images/azure-betrieb-analyse.jpg"
+            />
+          </div>
+        </RightItem>
       </HeroSection>
 
       <Section be="light">
@@ -178,54 +208,66 @@ export default function Page() {
         </div>
         <SimpleGrid cols={2} className="mt-8">
           <SimpleCard
-            imageSrc="/window.svg"
+            imageSrc="/azure/managed-services-icon.png"
             imageAlt="Azure Betriebsmodell"
             heading="Managed (Full Control)"
             paragraph="oseven übernimmt Verwaltung, Sicherheit, Monitoring, Kostenkontrolle und Reporting Ihrer Azure-Umgebung."
           />
           <SimpleCard
-            imageSrc="/globe.svg"
+            imageSrc="/azure/un-managed-services-icon.png"
             imageAlt="Azure Governance"
             heading="Unmanaged (Governed)"
             paragraph="Der Tenant verbleibt beim Kunden; oseven steuert Betrieb und Überwachung im Rahmen definierter Zugriffsrechte."
           />
         </SimpleGrid>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <div className="rounded-lg bg-gray-100 p-6">
+        <SimpleGrid cols={2} className="mt-8">
+          <div>
             <Heading level={3}>Kernprinzipien</Heading>
-            <ul className="mt-4 list-disc space-y-2 pl-5">
-              <li>
-                Shared Responsibility Model zwischen Microsoft, Kunde und
-                oseven.
-              </li>
-              <li>
-                Automatisierung und DevOps-Kultur mit Infrastructure as Code.
-              </li>
-              <li>
-                Cloud Center of Excellence als Regelwerk für Best Practices.
-              </li>
-              <li>Hybrid-Integration von Identitäten und Netzwerken.</li>
-            </ul>
+            <ListWithIcons
+              elements={[
+                {
+                  h: "Shared Responsibility Model",
+                  p: "zwischen Microsoft, Kunde und oseven.",
+                },
+                {
+                  h: "Automatisierung & DevOps",
+                  p: "Kultur mit Infrastructure as Code.",
+                },
+                {
+                  h: "Cloud Center of Excellence",
+                  p: "als Regelwerk für Best Practices.",
+                },
+                {
+                  h: "Hybrid-Integration",
+                  p: "von Identitäten und Netzwerken.",
+                },
+              ]}
+            />
           </div>
-          <div className="rounded-lg bg-gray-100 p-6">
+          <div>
             <Heading level={3}>Governance &amp; Sicherheit</Heading>
-            <ul className="mt-4 list-disc space-y-2 pl-5">
-              <li>
-                Kontrollierter Umgang mit Storage inklusive Backups und RBAC.
-              </li>
-              <li>
-                Aktive Sicherheitsüberwachung mit Microsoft Defender for Cloud.
-              </li>
-              <li>
-                Identity &amp; Access Governance über Entra ID, MFA und
-                Policies.
-              </li>
-              <li>
-                Regelmäßige Reviews, Audit-Protokolle und Netzwerksegmentierung.
-              </li>
-            </ul>
+            <ListWithIcons
+              elements={[
+                {
+                  h: " Identity & Access Management",
+                  p: "Zentrale Verwaltung über Entra ID mit MFA und bedingtem Zugriff.",
+                },
+                {
+                  h: " Netzwerksicherheit",
+                  p: "Segmentierung, NSGs, Firewalls und VPN/ExpressRoute.",
+                },
+                {
+                  h: " Daten- & Anwendungssicherheit",
+                  p: "Verschlüsselung, DLP und Sicherheitsbewertungen.",
+                },
+                {
+                  h: " Überwachung & Reporting",
+                  p: "Kontinuierliche Sicherheitsüberwachung und Compliance-Reports.",
+                },
+              ]}
+            />
           </div>
-        </div>
+        </SimpleGrid>
       </Section>
 
       <Section be="dark">
@@ -286,8 +328,8 @@ export default function Page() {
             <React.Fragment key={module.title}>
               <SimpleCard
                 style="dark"
-                imageSrc="/icons/geheimnisvoll.png"
-                imageAlt="CloudConsult Pro Logo"
+                imageSrc={module.image.src}
+                imageAlt={module.image.alt}
                 heading={module.title}
                 paragraph={module.description}
               />
@@ -401,10 +443,6 @@ export default function Page() {
             Kostenoptimierung.
           </FAQItem>
         </FAQs>
-      </Section>
-
-      <Section be="light">
-        <YourContact />
       </Section>
     </>
   );

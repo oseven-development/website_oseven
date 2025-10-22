@@ -1,16 +1,16 @@
 import { Heading, Paragraph } from "@/components";
-import YourContact from "@/components/content/your-contact";
 import FAQs, { FAQItem } from "@/components/content/faqs";
-import { HeroSection, LeftItem } from "@/components/hero-section";
+import { HeroSection, LeftItem, RightItem } from "@/components/hero-section";
 import ListWithIcons from "@/components/layout/list-with-icons";
 import SimpleCard from "@/components/layout/simple-card";
 import SimpleGrid from "@/components/layout/grids";
 import Section from "@/components/section";
-import { Metadata } from "next";
 import ImageWith4Elements from "@/components/content/image-with-4-elements";
 import Steps from "@/components/content/steps";
+import HubSpotDownloadCard from "@/components/content/hubspot-download-card";
+import buildMetaData from "@/lib/meta-data-builder";
 
-export const metadata: Metadata = {
+export const metadata = buildMetaData({
   title: "Azure Administrator",
   description:
     "Zertifizierte Azure Administratoren von oseven betreiben, sichern und optimieren Ihre Microsoft Azure Umgebung – mit Governance in Enterprise-Qualität, zugeschnitten auf den Mittelstand.",
@@ -25,18 +25,13 @@ export const metadata: Metadata = {
     "Azure Monitoring",
     "Disaster Recovery",
     "Automation",
-  ].join(", "),
-  openGraph: {
-    title: "Azure Administrator",
-    description:
-      "Zertifizierte Azure Administratoren von oseven betreiben, sichern und optimieren Ihre Microsoft Azure Umgebung – mit Governance in Enterprise-Qualität, zugeschnitten auf den Mittelstand.",
-    url: "/services/azure/azure-administrator",
-    images: "/og-images/azure-admin.png",
-    siteName: "azure-administrator",
-    locale: "de_DE",
-    type: "website",
+  ],
+  image: {
+    src: "/og-images/azure-admin.png",
+    alt: "Azure Administrator Service",
   },
-};
+  url: "/services/azure/azure-administrator",
+});
 
 const serviceHighlights = [
   {
@@ -108,7 +103,7 @@ const optionalSpecializations = [
     h: "Microsoft 365 / Entra ID Integration",
     p: "Für hybride Identitäten, Kollaboration und vereinheitlichte Zugriffsszenarien.",
     img: {
-      src: "/azure/entra-id.webp",
+      src: "/azure/entra-id.png",
       alt: "Azure Entra ID Logo",
       width: 80,
       height: 300,
@@ -208,6 +203,72 @@ const smbFocus = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Was genau ist der oseven Azure Administrator Service?",
+    answer:
+      "Mit dem Azure Administrator Service übernimmt ein zertifizierter Azure-Administrator den professionellen Betrieb, die Sicherheit und die Optimierung Ihrer Microsoft-Azure-Umgebung. Sie erhalten Cloud-Expertise auf Abruf – ohne eigenes internes Team aufbauen zu müssen.",
+  },
+  {
+    question: "Für wen ist dieser Service gedacht?",
+    answer:
+      "Der Service richtet sich an kleine und mittelständische Unternehmen, die Azure bereits nutzen oder einführen möchten, aber keine internen Kapazitäten für den laufenden Betrieb haben. Typische Kunden sind IT-arme Unternehmen, Start-ups oder Organisationen mit hohen Compliance-Anforderungen.",
+  },
+  {
+    question: "Welche Zertifizierungen besitzen Ihre Administratoren?",
+    answer:
+      "Alle oseven Azure Administratoren sind Microsoft Certified: Azure Administrator Associate (AZ-104) und Azure Fundamentals (AZ-900). Viele verfügen zusätzlich über Spezialisierungen wie Azure Security Engineer (AZ-500) oder Solutions Architect Expert (AZ-305).",
+  },
+  {
+    question: "Welche Aufgaben übernimmt der Administrator?",
+    answer:
+      "Ihr Administrator kümmert sich um den gesamten Azure-Betrieb – von virtuellen Maschinen, Datenbanken und Netzwerken bis zu Backup, Monitoring und Sicherheitsrichtlinien. Er optimiert Kosten, implementiert Governance und sorgt für DSGVO- und ISO-27001-Konformität.",
+  },
+  {
+    question:
+      "Behalten wir weiterhin Zugriff und Kontrolle über unsere Umgebung?",
+    answer:
+      "Ja, selbstverständlich. Sie bleiben jederzeit Eigentümer Ihrer Azure-Subscription. Unsere Administratoren arbeiten innerhalb vereinbarter Rollen und dokumentieren alle Änderungen transparent. Sie behalten die volle Kontrolle und Entscheidungsfreiheit.",
+  },
+  {
+    question: "Wie wird Sicherheit und Compliance gewährleistet?",
+    answer:
+      "Wir setzen Microsoft-Best-Practices um: Rollenbasierte Zugriffe, Multi-Faktor-Authentifizierung, Netzwerksegmentierung, Defender for Cloud und Azure Policy. Regelmäßige Audits und Sicherheitsberichte stellen die Einhaltung von DSGVO und ISO 27001 sicher.",
+  },
+  {
+    question: "Wie werden Backups und Wiederherstellung umgesetzt?",
+    answer:
+      "Alle geschäftskritischen Workloads werden mit Azure Backup und Site Recovery abgesichert. Regelmäßige Wiederherstellungstests prüfen die Datenintegrität, und automatische Failover-Pläne garantieren Business-Continuity im Notfall.",
+  },
+  {
+    question: "Wie funktioniert die Kostenoptimierung?",
+    answer:
+      "Wir analysieren Ihre Azure-Kosten mit Cost Management und Advisor, passen Ressourcen an, schalten ungenutzte VMs ab und nutzen Savings Plans oder Reserved Instances. Monatliche Reports zeigen Einsparpotenziale und Optimierungsempfehlungen.",
+  },
+  {
+    question: "Ist der Service skalierbar, wenn unser Bedarf wächst?",
+    answer:
+      "Ja. Der Azure Administrator Service wächst mit Ihrer Umgebung. Wir können das Monitoring erweitern, DevOps-Pipelines integrieren oder Kubernetes- und PaaS-Dienste übernehmen, sobald Ihre Infrastruktur komplexer wird.",
+  },
+  {
+    question: "Wie läuft die Kommunikation mit dem Administrator ab?",
+    answer:
+      "Jeder Kunde erhält einen festen Ansprechpartner. Die Kommunikation erfolgt per E-Mail, Telefon oder Ticket-Portal. Regelmäßige Review-Calls und Statusberichte halten Sie über Systemzustand und Verbesserungen auf dem Laufenden.",
+  },
+  {
+    question:
+      "Was passiert, wenn der Administrator einmal nicht verfügbar ist?",
+    answer:
+      "oseven verfügt über ein eingespieltes Operationsteam mit vollständiger Dokumentation und Übergabeprozessen. Fällt ein Administrator aus, übernimmt ein anderer zertifizierter Kollege sofort – ohne Unterbrechung Ihres Betriebs.",
+  },
+  {
+    question:
+      "Unterstützen Sie auch bei Migrationen oder bestehenden Umgebungen?",
+    answer:
+      "Ja. Vor dem laufenden Betrieb führen wir auf Wunsch ein Azure-Audit oder eine initiale Migration durch. Wir analysieren Ihre bestehende Umgebung, strukturieren sie nach Best Practices und bereiten sie für den Managed Betrieb vor.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -230,6 +291,16 @@ export default function Page() {
             klare Kommunikation.
           </Paragraph>
         </LeftItem>
+        <RightItem>
+          <div className="flex flex-col items-center lg:items-end justify-center h-full">
+            <HubSpotDownloadCard
+              title="Azure Administrator Service"
+              description="Optimieren Sie Ihre Azure-Umgebung mit unserem zertifizierten Administrator."
+              cta="https://eu1.hubs.ly/H0p2FY40"
+              imageSrc="/og-images/azure-admin.png"
+            />
+          </div>
+        </RightItem>
       </HeroSection>
 
       <Section be="light">
@@ -240,24 +311,6 @@ export default function Page() {
             headline: item.heading,
             subline: item.paragraph,
           }))}
-          // steps={[
-          //   {
-          //     headline:
-          //       "Vorgehen des Audits Durchführung eines Audits der Cloud-Infrastruktur",
-          //     subline:
-          //       "Umfassende Überprüfung der Cloud-Umgebung hinsichtlich Architektur, Konfiguration und Performance.",
-          //   },
-          //   {
-          //     headline: "Scope und Assessment der Cloud-Infrastruktur",
-          //     subline:
-          //       "Festlegung der in den Audit-Prozess einbezogenen Konten, Dienste und Regionen, um eine klare Abgrenzung des Prüfumfangs zu gewährleisten. Durchführung von Stakeholder-Befragungen zur ganzheitlichen Erfassung der Anforderungen und Zielsetzungen. Evaluierung der Infrastruktur im Hinblick auf die Umsetzung und Einhaltung der Non- Functional-Requirements (NFA), insbesondere auch der IT-Standards.",
-          //   },
-          //   {
-          //     headline: "Erstellung eines Review-Dokuments",
-          //     subline:
-          //       "Erstellung eines umfassenden Audit-Reports mit klarer  Darstellung des Ist-Zustands, Verweisen zu den gesammelten Nachweisen  sowie identifizierten Risiken. Dokumentation des aktuellen Zustands der  Infrastruktur, technische und prozessuale Bewertung des Cloud-Stacks zur  Transparenz-zwecken.",
-          //   },
-          // ]}
         />
       </Section>
 
@@ -268,13 +321,16 @@ export default function Page() {
         <Paragraph size="lg">
           Jeder oseven Administrator hält zentrale Microsoft-Zertifizierungen
           und erweitert sein Wissen kontinuierlich durch Microsoft-Learn-Labs
-          sowie praktische Projekte.
+          sowie praktische Projekte. Diese Zertifikate sind die
+          Grundvoraussetzung für einen zuverlässigen und sicheren Azure-Betrieb
+          – sie belegen nicht nur technisches Know-how, sondern auch die
+          Fähigkeit, Best Practices im täglichen Betrieb konsequent umzusetzen.
         </Paragraph>
         <SimpleGrid cols={2} className="gap-6 mt-8">
           {certifications.map((cert) => (
             <SimpleCard
-              imgWidth={300}
-              imgHeight={300}
+              imgWidth={200}
+              imgHeight={200}
               imageAlt={cert.imageAlt}
               imageSrc={cert.imageSrc}
               key={cert.heading}
@@ -287,7 +343,7 @@ export default function Page() {
       </Section>
 
       <Section be="lightGradient">
-        <Heading level={2} className="!mt-12">
+        <Heading level={1} className="!mt-12">
           Optionale Spezialisierungen auf Anfrage
         </Heading>
         <Paragraph className="mt-8">
@@ -301,10 +357,17 @@ export default function Page() {
       <Section be="dark">
         <Heading level={1}>Unsere Werkzeuge</Heading>
         <Paragraph size="lg">
-          Wir betreiben Ihre Umgebung mit dem Toolset, auf das auch Microsoft
-          selbst setzt – für Transparenz und einen konsistenten Betrieb.
+          Wir betreiben Ihre Azure-Umgebung mit dem Toolset, auf das auch
+          Microsoft selbst setzt – für maximale Transparenz, Sicherheit und
+          einen konsistenten Betrieb. Unsere Administratoren nutzen modernste
+          Werkzeuge für Überwachung, Automatisierung und Fehlerbehebung, sodass
+          Sie jederzeit volle Kontrolle und Einblick in Ihre Cloud-Ressourcen
+          behalten. So profitieren Sie von Best Practices, die in
+          internationalen Enterprise-Umgebungen erprobt sind, und erhalten einen
+          Betrieb, der sowohl effizient als auch nachvollziehbar dokumentiert
+          ist.
         </Paragraph>
-        <SimpleGrid cols={3} className="gap-6 mt-8">
+        <SimpleGrid cols={3}>
           {toolStack.map((tool) => (
             <SimpleCard
               imageSrc={tool.image.src}
@@ -339,45 +402,12 @@ export default function Page() {
 
       <Section be="dark">
         <FAQs>
-          <FAQItem title="Für welche Unternehmen lohnt sich das?">
-            <Paragraph>
-              Der Service richtet sich an kleine und mittlere Unternehmen, die
-              Azure produktiv nutzen möchten, ohne ein eigenes Cloud-Team
-              aufzubauen. Wir übernehmen Betrieb, Governance und Sicherheit nach
-              Best Practices.
-            </Paragraph>
-          </FAQItem>
-          <FAQItem title="Wie schnell können wir starten?">
-            <Paragraph>
-              Nach einem kurzen Onboarding-Workshop analysieren wir Ihre
-              Umgebung und definieren die nächsten Schritte. In der Regel sind
-              erste Maßnahmen innerhalb weniger Wochen produktiv.
-            </Paragraph>
-          </FAQItem>
-          <FAQItem title="Welche Leistungen sind im laufenden Betrieb enthalten?">
-            <Paragraph>
-              Dazu zählen tägliches Monitoring, Incident-Handling,
-              Kostenoptimierung, Security-Reviews sowie regelmäßige Reports. Wir
-              stimmen Umfang und SLA individuell auf Ihre Anforderungen ab.
-            </Paragraph>
-          </FAQItem>
+          {faqs.map((faq) => (
+            <FAQItem key={faq.question} title={faq.question}>
+              <Paragraph>{faq.answer}</Paragraph>
+            </FAQItem>
+          ))}
         </FAQs>
-      </Section>
-
-      <Section be="light">
-        <Heading level={1}>Auf den Punkt gebracht</Heading>
-        <Paragraph size="lg">
-          OSeven Rent-an-Admin stellt Ihnen einen vollständig zertifizierten
-          Azure Administrator zur Seite, der Ihre Cloud managt, absichert und
-          optimiert – damit Sie sich nicht darum kümmern müssen.
-        </Paragraph>
-        <Paragraph>
-          Sie gewinnen Stabilität, Compliance und Kostentransparenz, ohne eigene
-          Mitarbeitende einstellen, schulen oder halten zu müssen. Ihre Azure
-          Umgebung läuft reibungslos, während sich Ihr IT-Team auf
-          geschäftskritische Aufgaben konzentriert.
-        </Paragraph>
-        <YourContact />
       </Section>
     </>
   );

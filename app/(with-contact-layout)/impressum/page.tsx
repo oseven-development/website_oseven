@@ -5,7 +5,7 @@ import { maxWidthCenter } from "@/static";
 
 export default function Page() {
   return (
-    <Section className={"bg-gradient-to-b from-white to-gray-300"}>
+    <Section be="dark">
       <div className={`${maxWidthCenter} px-4 md:px-6`}>
         {/* <Seo title="Impressum" description="Impressum" keywords="Kontakt Email" /> */}
         <Heading level={1}>Impressum</Heading>

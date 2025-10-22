@@ -1,7 +1,5 @@
 import { HeroSection, LeftItem } from "@/components/hero-section";
-import Section from "@/components/section";
 import { Paragraph } from "@/components/";
-import YourContact from "@/components/content/your-contact";
 
 export default function Page() {
   return (
@@ -16,10 +14,6 @@ export default function Page() {
           </Paragraph>
         </LeftItem>
       </HeroSection>
-
-      <Section className="bg-gray-100">
-        <YourContact></YourContact>
-      </Section>
     </>
   );
 }
