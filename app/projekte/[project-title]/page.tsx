@@ -36,7 +36,7 @@ export default async function Page({
         </LeftItem>
       </HeroSection>
 
-      <Section className="bg-gradient-to-b from-gray-100 to-gray-200 text-center">
+      <Section be="lightGradient" className="text-center">
         <Heading level={1}>Herausforderungen</Heading>
         {data.challanges.map((challange, index) => (
           <Paragraph key={index} size="lg" className="max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ export default async function Page({
         ))}
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <SimpleGrid cols={5}>
           <div className="col-span-2">
             <Heading level={2}>Tätigkeiten</Heading>
@@ -71,14 +71,14 @@ export default async function Page({
         </SimpleGrid>
       </Section>
 
-      <Section>
+      <Section be="dark">
         <div className="text-center text-white">
           <Heading level={2}>Eingesetzte Technologien</Heading>
         </div>
         <TechBubbles technology={data.technology} />
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <YourContact></YourContact>
       </Section>
     </>

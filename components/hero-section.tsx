@@ -26,7 +26,7 @@ export function HeroSection({
   };
   getChildByDisplayName("ChildOne");
   return (
-    <Section className="relative overflow-hidden">
+    <Section be="transparent" className="relative overflow-hidden">
       <Image
         alt={image ? image.alt : "Hero Image"}
         src={image ? image.src : "/hero-image.webp"}

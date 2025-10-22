@@ -25,7 +25,7 @@ export default function Page() {
         </LeftItem>
       </HeroSection>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <Heading level={1}>
             Warum Sie auf jeden Fall ein Cloud-Audit brauchen!
@@ -60,7 +60,7 @@ export default function Page() {
         </SimpleGrid>
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <Steps
           headline="Unser 3-stufiger Cloud-Audit-Prozess"
           subline="Wir verfolgen einen systematischen Ansatz, um eine umfassende Bewertung Ihrer Cloud-Sicherheit und Compliance zu gewährleisten."
@@ -85,7 +85,7 @@ export default function Page() {
         />
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <ImageWith4Elements
           headline="Die Perspektiven eines Cloud Audits"
           subline="Wir analysieren Ihre Cloud-Umgebung aus vier zentralen Perspektiven für maximale Transparenz und Kontrolle."
@@ -120,7 +120,7 @@ export default function Page() {
         />
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <SimpleGrid cols={5}>
           <div className="col-span-2 flex flex-col justify-center">
             <Heading level={1}>Inhalte des Cloud-Audits im Detail</Heading>
@@ -138,7 +138,7 @@ export default function Page() {
         </SimpleGrid>
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <SimpleGrid cols={5}>
           <div className="col-span-3 bg-red-300">
             <Cloud />
@@ -163,7 +163,7 @@ export default function Page() {
         </SimpleGrid>
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <FAQs>
           <FAQItem title="Was ist ein Cloud-Audit?">
             Ein Cloud-Audit ist eine systematische Überprüfung Ihrer
@@ -228,7 +228,7 @@ export default function Page() {
         </FAQs>
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <YourContact />
       </Section>
     </>

@@ -8,6 +8,8 @@ import YourContact from "@/components/content/your-contact";
 import React from "react";
 import Image from "next/image";
 import ListWithIcons from "@/components/layout/list-with-icons";
+import FAQs, { FAQItem } from "@/components/content/faqs";
+import { Metadata } from "next";
 const pillars = [
   {
     headline: "Betriebsmodell",
@@ -100,10 +102,27 @@ const reviewPoints = [
   { h: "", p: "Anpassung von Policies und Governance-Strukturen" },
 ];
 
+export const metadata: Metadata = {
+  title: "Azure Betrieb Analyse",
+  description: "Analyse und Optimierung Ihres Azure-Betriebs",
+  keywords: [
+    "Azure",
+    "Betrieb",
+    "Analyse",
+    "Optimierung",
+    "Managed Service",
+    "Cloud Betrieb",
+    "Azure Governance",
+    "Cloud Sicherheit",
+    "FinOps",
+    "Cloud Monitoring",
+  ].join(", "),
+};
+
 export default function Page() {
   return (
     <>
-      <HeroSection title="Azure Betriebsleitfaden für den Mittelstand">
+      <HeroSection title="Azure Betrieb Analyse">
         <LeftItem>
           <Paragraph size="lg" className="leading-8 text-gray-200 max-w-3xl">
             Wir strukturieren, sichern und betreiben Ihre Microsoft Azure
@@ -120,7 +139,7 @@ export default function Page() {
         </LeftItem>
       </HeroSection>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <div className="text-center max-w-4xl mx-auto">
           <Heading level={1}>Ebene 1 – Strategische Grundlage</Heading>
           <Paragraph>
@@ -131,7 +150,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <Steps
           headline="Das Zielbild für Ihren Azure-Betrieb"
           subline="So schaffen wir die Grundlage für eine sichere und skalierbare Cloud."
@@ -139,7 +158,7 @@ export default function Page() {
         />
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <div className="text-center max-w-4xl mx-auto">
           <Heading level={1}>Betriebsmodell</Heading>
           <Paragraph>
@@ -199,7 +218,7 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <Heading level={1}>Ebene 2 – Operativer Betrieb</Heading>
           <Paragraph>
@@ -209,31 +228,31 @@ export default function Page() {
           </Paragraph>
         </div>
         <SimpleGrid cols={3} className="mt-10">
-          <div className="rounded-lg bg-gray-900 p-6 shadow-sm">
-            <Heading level={2}>Kunde</Heading>
-            <Paragraph>
-              Trifft strategische Entscheidungen, priorisiert Anforderungen und
-              verantwortet Budgetfreigaben.
-            </Paragraph>
-          </div>
-          <div className="rounded-lg  bg-gray-900  p-6 shadow-sm">
-            <Heading level={2}>oseven Operations Team</Heading>
-            <Paragraph>
-              Steuert laufenden Betrieb, Monitoring, Security, Deployments,
-              Backups und FinOps.
-            </Paragraph>
-          </div>
-          <div className="rounded-lg  bg-gray-900  p-6 shadow-sm">
-            <Heading level={2}>Microsoft Support</Heading>
-            <Paragraph>
-              Übernimmt als 3rd Level Hersteller-Support bei
-              Plattform-Vorfällen.
-            </Paragraph>
-          </div>
+          <SimpleCard
+            style="dark"
+            heading={"Kunde"}
+            paragraph={
+              "Trifft strategische Entscheidungen, priorisiert Anforderungen und verantwortet Budgetfreigaben."
+            }
+          />
+          <SimpleCard
+            style="dark"
+            heading={"oseven Operations Team"}
+            paragraph={
+              "Steuert laufenden Betrieb, Monitoring, Security, Deployments, Backups und FinOps."
+            }
+          />
+          <SimpleCard
+            style="dark"
+            heading={"Microsoft Support"}
+            paragraph={
+              "Übernimmt als 3rd Level Hersteller-Support bei Plattform-Vorfällen."
+            }
+          />
         </SimpleGrid>
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <Steps
           headline="Betriebs- und Supportprozesse"
           subline="Strukturierte Abläufe garantieren Sicherheit und Transparenz."
@@ -241,7 +260,7 @@ export default function Page() {
         />
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <Heading level={1}>
             Ebene 3 – Modularer Aufbau &amp; Weiterentwicklung
@@ -255,9 +274,8 @@ export default function Page() {
         <SimpleGrid cols={3} className="mt-10">
           {modules.map((module) => (
             <React.Fragment key={module.title}>
-              {/* <Heading level={2}>{module.title}</Heading>
-              <Paragraph>{module.description}</Paragraph> */}
               <SimpleCard
+                style="dark"
                 imageSrc="/icons/geheimnisvoll.png"
                 imageAlt="CloudConsult Pro Logo"
                 heading={module.title}
@@ -268,7 +286,7 @@ export default function Page() {
         </SimpleGrid>
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <Heading level={1}>Ebene 4 – Governance &amp; Review</Heading>
         </div>
@@ -293,22 +311,89 @@ export default function Page() {
         </SimpleGrid>
       </Section>
 
-      <Section className="text-white">
-        <Heading level={1}>Fazit &amp; Kontakt</Heading>
-        <Paragraph>
-          Ein professionell strukturierter Azure-Betrieb sorgt für Sicherheit,
-          Transparenz und Kostenkontrolle. Wir integrieren den Leitfaden nahtlos
-          in Ihre bestehenden IT-Strukturen – vom initialen Aufbau bis zur
-          kontinuierlichen Optimierung.
-        </Paragraph>
-        <Paragraph>
-          Kontaktieren Sie uns, wenn Sie Ihre Azure-Umgebung bewerten oder
-          professionalisieren möchten. oseven GmbH – Azure Governance &amp;
-          Operations für den Mittelstand.
-        </Paragraph>
+      <Section be="dark">
+        <FAQs>
+          <FAQItem title="Was ist der Azure Betriebsleitfaden?">
+            Der Azure Betriebsleitfaden ist eine praxisnahe Vorlage für
+            mittelständische Unternehmen, um Azure professionell, sicher und
+            kosteneffizient zu betreiben. Er beschreibt Rollen, Prozesse und
+            Governance-Strukturen auf strategischer Ebene.
+          </FAQItem>
+
+          <FAQItem title="Für wen ist der Leitfaden gedacht?">
+            Der Leitfaden richtet sich an IT-Leiter und Cloud-Verantwortliche im
+            Mittelstand, die Azure neu einführen oder bestehende Umgebungen
+            stabilisieren und transparenter gestalten möchten.
+          </FAQItem>
+
+          <FAQItem title="Was bedeutet Managed vs. Unmanaged Betrieb?">
+            Beim Managed-Modell übernimmt OSeven den kompletten Betrieb,
+            inklusive Sicherheit, Monitoring und FinOps. Im Unmanaged-Modell
+            bleibt der Tenant beim Kunden, während OSeven Governance und
+            Überwachung sicherstellt.
+          </FAQItem>
+
+          <FAQItem title="Was ist ein Cloud-Audit?">
+            Ein Cloud-Audit ist eine systematische Überprüfung Ihrer
+            Cloud-Infrastruktur, um Sicherheit, Compliance, Kosten und Leistung
+            zu bewerten. Es identifiziert Risiken, Schwachstellen und
+            Optimierungspotenziale.
+          </FAQItem>
+
+          <FAQItem title="Wie unterstützt OSeven bei der Governance?">
+            OSeven implementiert technische und organisatorische Leitplanken wie
+            Azure Policy, RBAC, Tagging und regelmäßige Security-Reviews, um
+            eine konsistente Governance und Compliance sicherzustellen.
+          </FAQItem>
+
+          <FAQItem title="Wie werden Kosten in Azure kontrolliert?">
+            Über Azure Cost Management, Budgets, Alerts und Tagging-Regeln
+            behalten Sie den Überblick. Zusätzlich analysiert OSeven regelmäßig
+            Ausgaben und Optimierungspotenziale im Rahmen eines FinOps-Reports.
+          </FAQItem>
+
+          <FAQItem title="Wie werden Sicherheitsvorfälle behandelt?">
+            Sicherheitsereignisse werden automatisch durch Microsoft Defender
+            for Cloud erkannt, priorisiert und in den OSeven-Serviceprozess
+            übernommen. Je nach Kritikalität erfolgt eine Eskalation bis zum
+            Microsoft Support.
+          </FAQItem>
+
+          <FAQItem title="Wie funktioniert das Monitoring?">
+            Azure Monitor und Log Analytics überwachen alle produktiven
+            Ressourcen. Abweichungen bei Performance, Verfügbarkeit oder Kosten
+            erzeugen automatisch Alarme und Tickets im OSeven Service Desk.
+          </FAQItem>
+
+          <FAQItem title="Was ist der Unterschied zwischen Backup und Disaster Recovery?">
+            Backups sichern Daten regelmäßig und ermöglichen Wiederherstellung
+            einzelner Systeme. Disaster Recovery repliziert ganze Workloads in
+            eine andere Region, um im Ernstfall den Betrieb fortzuführen.
+          </FAQItem>
+
+          <FAQItem title="Wie werden Änderungen an Azure-Ressourcen umgesetzt?">
+            Änderungen erfolgen ausschließlich dokumentiert über
+            Infrastructure-as-Code (z. B. Terraform oder Bicep). Dadurch bleiben
+            alle Anpassungen nachvollziehbar und reproduzierbar.
+          </FAQItem>
+
+          <FAQItem title="Welche Vorteile hat eine hybride Azure-Umgebung?">
+            Hybride Szenarien kombinieren bestehende lokale Systeme mit
+            Azure-Diensten. Dadurch profitieren Unternehmen von moderner
+            Sicherheit, Skalierbarkeit und geringeren Betriebskosten, ohne ihre
+            Infrastruktur vollständig umzustellen.
+          </FAQItem>
+
+          <FAQItem title="Wie starte ich mit dem OSeven Betriebsleitfaden?">
+            Sie können mit einem kostenlosen Cloud-Assessment beginnen. Dabei
+            prüft OSeven Ihre aktuelle Azure- oder On-Prem-Umgebung und erstellt
+            auf Basis des Leitfadens eine Roadmap für Betrieb, Sicherheit und
+            Kostenoptimierung.
+          </FAQItem>
+        </FAQs>
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <YourContact />
       </Section>
     </>

@@ -26,7 +26,7 @@ export default function Page() {
         </LeftItem>
       </HeroSection>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         {projectList.reverse().map(([key, data], index) => (
           <Link
             key={key}
@@ -81,14 +81,14 @@ export default function Page() {
         ))}
       </Section>
 
-      <Section className="text-white">
+      <Section be="dark">
         <Heading className="text-center" level={1}>
           Unsere Technologie im Überblick
         </Heading>
         <TechBubbles technology={[...p]} />
       </Section>
 
-      <Section className="bg-gray-100">
+      <Section be="light">
         <YourContact></YourContact>
       </Section>
     </>

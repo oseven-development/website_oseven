@@ -3,18 +3,15 @@ import { maxWidthCenter, paddingsGlobal, sectionMargins } from "@/static";
 
 type SectionElementProps = HTMLAttributes<HTMLElement> & {
   children: ReactNode;
-  be?: "dark" | "light" | "transparent" | "darkGradient" | "lightGradient";
+  be?: "dark" | "light";
 };
 
 const variantClasses: Record<NonNullable<SectionElementProps["be"]>, string> = {
   dark: "bg-primary text-white",
   light: "bg-gray-100 text-primary",
-  darkGradient: "bg-gradient-to-b from-primary to-primary/80 text-white",
-  lightGradient: "bg-gradient-to-b from-gray-100 to-gray-200 text-primary",
-  transparent: "",
 };
 
-const Section = ({
+const SectionElement = ({
   be = "dark",
   children,
   className,
@@ -37,4 +34,4 @@ const Section = ({
   );
 };
 
-export default Section;
+export default SectionElement;

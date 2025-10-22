@@ -1,0 +1,108 @@
+Rent-an-Admin – Your Dedicated Azure Administrator on Demand
+
+Many small and medium-sized companies rely on Microsoft Azure — but few have the time, staff, or in-house expertise to manage it safely and efficiently.
+With OSeven Rent-an-Admin, you get a certified Azure Administrator who takes care of your environment as if it were their own: secure, optimized, compliant, and always available.
+
+Our administrators combine enterprise-level cloud expertise with the pragmatic mindset SMBs need — focused on reliability, cost efficiency, and clear communication.
+
+⸻
+
+What Our Azure Administrators Do for You
+
+Comprehensive Operations and Resource Management
+
+We take full responsibility for your Azure infrastructure — provisioning, configuring, and managing all workloads such as virtual machines, databases, and networks.
+Every environment is structured using best-practice conventions: resource groups, tagging, naming standards, and policies that ensure transparency and traceability.
+We maintain subscription hygiene, apply governance controls, and scale resources based on performance and cost insights.
+The result: a stable, well-organized, and easily auditable Azure landscape.
+
+⸻
+
+Continuous Monitoring and Cost Optimization
+
+Our admins continuously monitor the health and performance of your resources through Azure Monitor, Log Analytics, and Azure Advisor.
+We proactively detect under-utilized or over-provisioned resources, right-size compute instances, and automate off-hours shutdowns for non-production workloads.
+By leveraging Azure Cost Management + Billing, we establish budgets, allocate spending by tag, and identify savings opportunities such as Reserved Instances and Savings Plans.
+The outcome is predictable billing and measurable ROI — with monthly reports showing exactly where your money goes.
+
+⸻
+
+Security, Compliance, and Governance
+
+Security and compliance are at the heart of our service.
+Our administrators implement strong Identity and Access Management through Azure Active Directory — enforcing multi-factor authentication, role-based access control, and conditional access policies.
+We configure network security groups, firewalls, and Key Vaults to protect your data.
+Compliance with ISO 27001, GDPR, and BSI frameworks is maintained via Azure Policy and Defender for Cloud continuous assessments.
+Regular reviews ensure that every subscription remains compliant with corporate and legal requirements — so you can pass audits without surprises.
+
+⸻
+
+Backup and Disaster Recovery
+
+Business continuity is non-negotiable.
+We design and maintain robust backup and recovery solutions using Azure Backup and Site Recovery to safeguard VMs, databases, and storage accounts.
+Regular restore testing, replication setup, and backup integrity checks guarantee your data is protected even in a worst-case scenario.
+In the event of an outage, workloads fail over automatically — minimizing downtime and ensuring peace of mind.
+
+⸻
+
+Automation, Efficiency, and Scalability
+
+Our administrators bring automation discipline to every environment.
+They use Infrastructure-as-Code technologies such as Bicep, ARM templates, and Terraform to deploy and manage infrastructure reproducibly.
+Routine operations — like patching, tagging, and reporting — are scripted through Azure CLI and PowerShell Az modules, reducing manual work and human error.
+For dynamic workloads, we configure auto-scaling and serverless architectures, allowing your infrastructure to expand or contract seamlessly with demand.
+
+⸻
+
+Certified Expertise You Can Trust
+
+Our Azure Administrators hold official Microsoft certifications:
+	•	Microsoft Certified: Azure Administrator Associate (AZ-104)
+This certification validates deep expertise in configuring virtual networks, managing compute and storage, handling identities, and monitoring Azure environments.
+It ensures that your administrator can deploy, optimize, and secure Azure workloads according to Microsoft’s own standards.
+	•	Microsoft Certified: Azure Fundamentals (AZ-900)
+A foundational credential covering cloud principles, Azure architecture, and cost models — ensuring every admin understands both the technical and business dimensions of Azure.
+	•	Optional Specializations (as required)
+	•	Azure Security Engineer (AZ-500) for advanced security management
+	•	Azure Solutions Architect (AZ-305) for infrastructure design
+	•	Microsoft 365 / Entra ID Integration for hybrid identity and collaboration scenarios
+
+Each OSeven Administrator undergoes continuous Microsoft Learn and hands-on lab training, keeping skills aligned with the latest Azure features and best practices.
+
+⸻
+
+The Tools We Use
+
+We operate your environment using the same toolset trusted by Microsoft’s own operations teams:
+	•	Azure Portal for visual management and dashboards
+	•	Azure CLI and PowerShell Az for automation and bulk operations
+	•	Azure Monitor, Application Insights, and Log Analytics for observability
+	•	Azure Security Center / Defender for Cloud for real-time threat detection
+	•	Azure Automation, DevOps Pipelines, and Terraform for deployment workflows
+	•	Azure Backup, Site Recovery, and Storage Explorer for data protection
+
+Together, these tools provide transparency, control, and operational consistency — without locking you out of your own cloud.
+
+⸻
+
+Tailored for SMB Reality
+
+OSeven Rent-an-Admin is built for the practical needs of small and medium-sized businesses:
+	•	Cost Efficiency: We design each environment to use only what you need — right-sized VMs, lifecycle rules for storage, and clear budget alerts.
+	•	Scalability: Your infrastructure grows as your business grows — automatically, without over-provisioning.
+	•	Security & Compliance: Enterprise-grade protection with GDPR alignment out of the box.
+	•	Simplicity: Clear communication, human support, and documentation your team can actually understand.
+
+Instead of maintaining an internal cloud team, you rent a senior administrator who brings both the technical depth and the accountability your business deserves.
+
+⸻
+
+In Short
+
+OSeven Rent-an-Admin gives you a fully certified Azure Administrator —
+managing, securing, and optimizing your cloud so you don’t have to.
+
+You gain stability, compliance, and cost control — without hiring, training, or worrying about turnover.
+
+Your Azure environment runs smoothly. Your IT team gets to focus on what matters most: delivering business value.

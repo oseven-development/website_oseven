@@ -4,7 +4,7 @@ import React, { FunctionComponent } from "react";
 import Helmet from "react-helmet";
 import Facebook from "./facebook";
 import Twitter from "./twitter";
-
+import Head from "next/head";
 interface Props {
   title: string;
   description: string;
@@ -19,25 +19,17 @@ const Seo: FunctionComponent<Props> = ({
   keywords,
   article,
 }) => {
-  const seo = {
-    title: title,
-    description: description,
-  };
-
   return (
     <>
-      <Helmet title={seo.title}>
-        <html lang={"DE"} />
-
-        <meta name="description" content={seo.description} />
-        {/* <meta name="image" content={seo.image} /> */}
-
+      <Head>
+        <title>{title}</title>
         <meta name="keywords" content={keywords} />
-
         <meta name="description" content={description} />
         {/* <meta name="image" content={seo.image} /> */}
-      </Helmet>
-      <Facebook
+        {/* <meta name="image" content={seo.image} /> */}
+      </Head>
+
+      {/* <Facebook
         desc={seo.description}
         // image={seo.image}
         title={seo.title}
@@ -50,7 +42,7 @@ const Seo: FunctionComponent<Props> = ({
         // image={seo.image}
         desc={seo.description}
         // username={twitterUsername}
-      />
+      /> */}
     </>
   );
 };

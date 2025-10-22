@@ -41,7 +41,9 @@ export default function Steps({
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className={`grid grid-cols-1 md:grid-cols-${steps.length} gap-8`}
+        className={`grid grid-cols-1 md:grid-cols-${
+          steps.length > 3 ? 3 : steps.length
+        } gap-8`}
       >
         {steps.map((step, index) => (
           <motion.div key={index} variants={itemVariants}>

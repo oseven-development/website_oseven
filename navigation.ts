@@ -4,6 +4,27 @@ const navigation = [
     href: "/services",
     submenu: [
       {
+        name: "Azure Services",
+        links: [
+          {
+            name: "Azure Betrieb Analyse",
+            href: "/services/azure/azure-betrieb-analyse",
+          },
+          // {
+          //   name: "Managed Service IT-Betrieb",
+          //   href: "/services/azure/azure-managed-service-it-betrieb",
+          // },
+          {
+            name: "Azure Administrator",
+            href: "/services/azure/azure-administrator",
+          },
+          // {
+          //   name: "Azure Managed Backup",
+          //   href: "/services/azure/azure-managed-backup",
+          // },
+        ],
+      },
+      {
         name: "Audit",
         links: [
           { name: "Cloud Audit", href: "/services/audit/cloud-audit" },
@@ -11,25 +32,6 @@ const navigation = [
           { name: "CICD-Review", href: "/services/audit/cloud-audit" },
           // { name: "Cost-Review", href: "/services/audit/cost-review" },
           // { name: "CICD-Review", href: "/services/audit/cicd-review" },
-        ],
-      },
-      {
-        name: "Cloud Services",
-        links: [
-          // { name: "Cloud Beratung", href: "/" },
-          // { name: "DevOps", href: "/" },
-          { name: "Azure Operations", href: "/services/cloud/azure-ops" },
-          // {
-          //   name: "Cloud Native Entwicklung",
-          //   href: "/",
-          // },
-          // { name: "Cloud Beratung", href: "/services/cloud/cloud-beratung" },
-          // { name: "DevOps", href: "/services/cloud/devops" },
-          // { name: "Kubernetes", href: "/services/cloud/kubernetes" },
-          // {
-          //   name: "Cloud Native Entwicklung",
-          //   href: "/services/cloud-native-entwicklung",
-          // },
         ],
       },
     ],

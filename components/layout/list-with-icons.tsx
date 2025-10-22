@@ -41,7 +41,11 @@ const ele = [
     h: "Erstellung eines Audit-Reports",
     p: "Zusammenfassung der Analyseergebnisse mit klar definierten Schwachstellen, Risiken und priorisierten Handlungsempfehlungen.",
   },
-];
+] as {
+  h: string;
+  p: string;
+  img?: { src: string; alt: string; width: number; height: number };
+}[];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -61,7 +65,11 @@ const itemVariants = {
 export default function ListWithIcons({
   elements,
 }: {
-  elements?: { h: string; p: string }[];
+  elements?: {
+    h: string;
+    p: string;
+    img?: { src: string; alt: string; width: number; height: number };
+  }[];
 }) {
   return (
     <motion.ol
@@ -72,13 +80,23 @@ export default function ListWithIcons({
     >
       {(elements || ele).map((item, i) => (
         <motion.li key={i} variants={itemVariants} className="flex items-start">
-          <Image
-            src="/file.svg"
-            alt="CloudConsult Pro Logo"
-            width={15}
-            height={15}
-            className="w-8 pt-4"
-          />
+          {item.img ? (
+            <Image
+              src={item.img.src}
+              alt={item.img.alt}
+              width={item.img.width}
+              height={item.img.height}
+              // className="w-16 pt-4"
+            />
+          ) : (
+            <Image
+              src="/file.svg"
+              alt="CloudConsult Pro Logo"
+              width={15}
+              height={15}
+              className="w-8 pt-4"
+            />
+          )}
           <div className="pl-4">
             <Heading level={3}>{item.h}</Heading>
             <Paragraph>{item.p}</Paragraph>
