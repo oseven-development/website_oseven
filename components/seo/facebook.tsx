@@ -1,7 +1,4 @@
-/** @format */
-
 import React from "react";
-import { Helmet } from "react-helmet";
 
 interface Props {
   url?: string;
@@ -23,7 +20,7 @@ export default function Facebook({
   locale,
 }: Props) {
   return (
-    <Helmet>
+    <>
       {name && <meta property="og:site_name" content={name} />}
       <meta property="og:locale" content={locale} />
       <meta property="og:url" content={url} />
@@ -32,6 +29,6 @@ export default function Facebook({
       <meta property="og:description" content={desc} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={desc} />
-    </Helmet>
+    </>
   );
 }

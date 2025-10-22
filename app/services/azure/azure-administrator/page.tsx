@@ -10,9 +10,6 @@ import { Metadata } from "next";
 import ImageWith4Elements from "@/components/content/image-with-4-elements";
 import Steps from "@/components/content/steps";
 
-import Image from "next/image";
-import { image } from "motion/react-client";
-
 export const metadata: Metadata = {
   title: "Azure Administrator",
   description:
