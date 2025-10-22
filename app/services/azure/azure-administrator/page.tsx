@@ -26,6 +26,16 @@ export const metadata: Metadata = {
     "Disaster Recovery",
     "Automation",
   ].join(", "),
+  openGraph: {
+    title: "Azure Administrator",
+    description:
+      "Zertifizierte Azure Administratoren von oseven betreiben, sichern und optimieren Ihre Microsoft Azure Umgebung – mit Governance in Enterprise-Qualität, zugeschnitten auf den Mittelstand.",
+    url: "/services/azure/azure-administrator",
+    images: "/og-images/azure-admin.png",
+    siteName: "azure-administrator",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 const serviceHighlights = [

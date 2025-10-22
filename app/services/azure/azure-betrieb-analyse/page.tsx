@@ -117,6 +117,16 @@ export const metadata: Metadata = {
     "FinOps",
     "Cloud Monitoring",
   ].join(", "),
+  openGraph: {
+    title: "Azure Betrieb Analyse",
+    description:
+      "Analyse und Optimierung Ihres Azure-Betriebs durch zertifizierte Experten.",
+    url: "/services/azure/azure-betrieb-analyse",
+    images: "/og-images/azure-betrieb-analyse.jpg",
+    siteName: "azure-betrieb-analyse",
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function Page() {
