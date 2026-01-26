@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "title": "My First Blog Post",
+    "description": "Home",
+    "keywords": "Home",
+    "ogImage": "Home"
+  },
+  "sections": [
+    {
+      "type": "steps",
+      "variant": "light",
+      "props": {
+        "headline": "headline",
+        "subline": "subline",
+        "steps": [
+          {
+            "headline": "headline",
+            "subline": "subline"
+          },
+          {
+            "headline": "headline",
+            "subline": "subline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "steps",
+      "variant": "dark",
+      "props": {
+        "headline": "headline",
+        "subline": "subline",
+        "steps": [
+          {
+            "headline": "headline",
+            "subline": "subline"
+          },
+          {
+            "headline": "headline",
+            "subline": "subline"
+          },
+          {
+            "headline": "headline",
+            "subline": "subline"
+          }
+        ]
+      }
+    },
+    {
+      "type": "imageWith4Elements",
+      "variant": "light",
+      "props": {
+        "headline": "Maßgeschneidert für den Mittelstand",
+        "subline": "Erhalten Sie einen Azure Administrator, der Enterprise-Know-how mit pragmatischer Umsetzung für mittelständische Unternehmen verbindet.",
+        "image": {
+          "src": "/4-steps-random.png",
+          "alt": "CloudConsult Pro Logo",
+          "width": 160,
+          "height": 60
+        },
+        "steps": [
+          {
+            "headline": "headline",
+            "subline": "headline"
+          },
+          {
+            "headline": "headline",
+            "subline": "headline"
+          },
+          {
+            "headline": "headline",
+            "subline": "headline"
+          },
+          {
+            "headline": "headline",
+            "subline": "headline"
+          }
+        ]
+      }
+    }
+  ]
+}
